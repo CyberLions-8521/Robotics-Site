@@ -1,0 +1,111 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: CyberLions Doc
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+
+    folderitems:
+    - title: Get started
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Introduction
+      url: /mydoc_introduction.html
+      output: web, pdf
+
+    - title: Resources
+      url: /mydoc_resources.html
+      output: web, pdf
+
+  - title: Installation
+    output: web, pdf
+
+    folderitems:
+    - title: Install WPILib and VSCode
+      url: /mydoc_install_wpilib_and_vscode.html
+      output: web, pdf
+
+    - title: Install Git
+      url: /mydoc_install_git.html
+      output: web, pdf
+    
+    - title: Install roboRIO
+      url: /mydoc_install_robio.html
+      output: web, pdf
+    
+  - title: Using VSCode
+    output: web, pdf
+    
+    folderitems:
+      - title: Introduction
+        url: /mydoc_introduction_vsc.html
+        output: web, pdf
+
+      - title: Useful hot keys
+        url: /mydoc_hot_keys.html
+        output: web, pdf
+
+  - title: Using Git/GitHub
+    output: web, pdf
+
+    folderitems:
+      - title: Introduction
+        url: /mydoc_introduction_git.html
+        output: web, pdf
+
+      - title: Git Bash
+        url: /mydoc_git_bash.html
+        output: web, pdf
+      
+      - title: Repositories
+        url: /mydoc_repositories.html
+        output: web, pdf
+
+      - title: Branches
+        url: /mydoc_repositories.html
+        output: web, pdf
+  
+  - title: Using roboRIO
+    output: web, pdf
+
+    folderitems:
+      - title: Introduction
+        url: /mydoc_introduction_roborio.html
+        output: web, pdf
+  
+  - title: Conventions
+    output: web, pdf
+
+    folderitems:
+    - title: Writing neat code
+      url: /mydoc_neat_code.html
+      output: web, pdf
+
+  - title: Troubleshooting
+    output: web, pdf
+
+    folderitems:
+    - title: Troubleshooting
+      url: /mydoc_troubleshooting.html
+      output: web, pdf
+
+# Copyright 2021 Google LLC
