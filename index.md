@@ -8,7 +8,7 @@ permalink: index.html
 summary: This provides quick-rundown on getting started with FRC and its tools. Follow these instructions to set up your robot making environment!
 ---
 
-{% include note.html content="This site is hosted using Jekyll and GitHub pages. If you'd like to edit the site, visit the [site's repository](https://github.com/CyberLions-8521/CyberLions-8521>)." %}
+{% include note.html content="This site is hosted using Jekyll and GitHub pages. If you'd like to edit the site, visit the [site's repository](https://github.com/CyberLions-8521/CyberLions-8521)." %}
 
 ## Setting up the environment
 
