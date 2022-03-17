@@ -4,7 +4,7 @@ tags: [installation]
 keywords: installing, wpilib, vscode
 last_updated: March 17, 2022
 sidebar: mydoc_sidebar
-permalink: mydoc_installing_wpilib_and_vscode.html
+permalink: mydoc_install_wpilib_and_vscode.html
 folder: mydoc
 ---
 
