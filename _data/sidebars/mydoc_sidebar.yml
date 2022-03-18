@@ -36,6 +36,10 @@ entries:
       url: /mydoc_resources.html
       output: web, pdf
 
+    - title: Sample
+      url: /mydoc_sample.html
+      output: web, pdf
+
   - title: Installation
     output: web, pdf
 
