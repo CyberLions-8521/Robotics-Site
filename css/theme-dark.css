@@ -1,0 +1,176 @@
+.summary {
+    color: #696969;
+    border-left: 5px solid #ED1951;
+    font-size:16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {color: #e8e8e8;}
+h3 {color: #b6b6b6; }
+h4 {color: #808080; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.nav > li > a {
+    background-color: #1b1b1b;
+    color: white
+}
+
+.nav > li.active > a {
+    background-color: #ffcc00;
+}
+
+.nav > li > a:hover {
+    background-color: #ffcc00;
+}
+
+.nav > li > a:focus {
+    background-color: #ffcc00;
+}
+
+.nav ul li a {
+    background-color: #2a2a29;
+    border-top: #202020;
+    color: white;
+}
+
+div.navbar-collapse .dropdown-menu > li > a:hover {
+    background-color: #ffcc00;
+}
+
+.nav li.thirdlevel > a {
+    background-color: #FAFAFA !important;
+    color: #248EC2;
+    font-weight: bold;
+}
+
+a {color: #ffcc00;}
+
+a[data-toggle="tooltip"] {
+    color: #649345;
+    font-style: italic;
+    cursor: default;
+}
+
+a:focus, a:active, a:hover {
+    color: #fde68b;
+}
+
+.navbar-inverse {
+    background-color: #353535;
+    border-color: #1b1b1b;
+}
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+     color: #f0f0f0;
+}
+
+a.navbar-brand:hover {
+  color: #f0f0f0;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #015CAE;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #015CAE;
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #248ec2 !important;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #347DBE;
+    border-color: #347DBE;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #347DBE;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-color: #248ec2;
+    border-color: #347DBE;
+}
+
+.printTitle {
+    color: #015CAE !important;
+}
+
+body {color: #f0e7d5; background-color: #252525;}
+body.print h1 {color: #015CAE !important; font-size:28px !important;}
+body.print h2 {color: #595959 !important; font-size:20px !important;}
+body.print h3 {color: #E50E51 !important; font-size:14px !important;}
+body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic !important;}
+
+.anchorjs-link:hover {
+    color: #216f9b;
+}
+
+div.sidebarTitle {
+    color: #015CAE;
+}
+
+li.sidebarTitle {
+  margin-top:20px;
+    font-weight:normal;
+    font-size:130%;
+    color: #ffffff;
+    margin-bottom:10px;
+    margin-left: 5px;
+
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #015CAE;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #015CAE;
+}
+
+hr.shaded {
+    background-color: #2a2a29;
+}
+
+div#toc ul {
+    background-color: #191919;
+}
+
+div#toc >ul::before {
+    color: #ffffff;
+}
+
+div#search-demo-container {
+    color: black;
+}
+
+ul#results-container a {
+    color: black;
+}
+
+table {
+    border-color: #191919;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #2b2b2b;
+}
+
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+    border-top-color: #191919;
+}
