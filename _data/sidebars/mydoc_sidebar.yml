@@ -92,6 +92,14 @@ entries:
         url: /mydoc_introduction_roborio.html
         output: web, pdf
   
+  - title: Using repl.it
+    output: web, pdf
+
+    folderitems:
+      - title: Introduction
+        url: /mydoc_introduction_replit.html
+        output: web, pdf
+  
   - title: Conventions
     output: web, pdf
 
