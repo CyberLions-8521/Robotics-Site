@@ -1,8 +1,8 @@
 ---
 title: Installing WPILib and VSCode
 tags: [installation]
-keywords: installing, wpilib, vscode
-last_updated: March 17, 2022
+keywords: installing
+last_updated: Mar 17, 2022
 summary: "This page lists instructions on installing WPILib and VSCode."
 sidebar: mydoc_sidebar
 permalink: mydoc_install_wpilib_and_vscode.html

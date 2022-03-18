@@ -1,7 +1,7 @@
 ---
 title: Introduction
 sidebar: mydoc_sidebar
-last_updated: March 17, 2022
+last_updated: Mar 17, 2022
 permalink: mydoc_introduction.html
 folder: mydoc
 ---
