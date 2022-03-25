@@ -50,7 +50,7 @@ div.navbar-collapse .dropdown-menu > li > a:hover {
 a {color: #ffcc00;}
 
 a[data-toggle="tooltip"] {
-    color: #649345;
+    color: #ffcc00;
     font-style: italic;
     cursor: default;
 }
