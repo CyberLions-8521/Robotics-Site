@@ -174,3 +174,19 @@ table > tbody > tr:nth-of-type(odd) {
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
     border-top-color: #191919;
 }
+
+div.alert-success a {
+    color: #3c763d
+}
+
+div.alert-info a {
+    color: #31708f
+}
+
+div.alert-warning a {
+    color: #444
+}
+
+div.alert-danger a {
+    color: #a94442
+}
