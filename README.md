@@ -10,6 +10,13 @@ These programming languages are very easy to pick up and we have web developers 
 
 If you have VSCODE installed, getting a live server extension will redirect you to localhost:5500, where you can run this site for testing purposes. Type http://127.0.0.1:5500/ into your web browser. 
 
+
+### To Do List 
+
+- Media Queries
+- Links redirect
+- Content: About Robot (2023), Resources, Gallery, Contacts
+
 ### Resources
 
 There are many ways to familiarize yourself with HTML5, CSS, and JavaScript, with w3schools being a popular resource. 

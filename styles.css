@@ -1,11 +1,13 @@
 /* Main Setup ---------------------------------------------------------------------------------------------------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
 
 :root{
     --mainbgcolor: rgb(249, 249, 249);
     --darkishBlack: rgb(42, 40, 40);
+    --fadeDarkishBlack: rgba(42, 40, 40, 0.75);
 }
 
 *{
@@ -17,8 +19,13 @@ h1, p, a{
     font-family: 'Ubuntu', sans-serif;
 }
 
-html{
+body{
+    padding-bottom: 25vh; /* Having a 25vh padding allows us to position absolute the footer inside the body */
     position: relative;
+}
+
+.contentHidden{
+    visibility: hidden;
 }
 
 /* Animations ---------------------------------------------------------------------------------------------------------------- */
@@ -27,10 +34,25 @@ html{
     animation: fadeFromTop 1.3s ease;
 }
 
+.fadeFromBottom{
+    animation: fadeFromBottom 1.3s ease;
+}
+
 @keyframes fadeFromTop{
     0%{
         opacity: 0;
         transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeFromBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
     }
     100%{
         opacity: 1;
@@ -54,16 +76,18 @@ nav{
     justify-content: center;
     align-items: center;
 
-    gap: 0.5rem;
+    gap: 1rem;
+    max-width: 15vw;
+    width: 100%;
 }
 .cyberlions_title{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
 
     color: white;
 }
 .cyberlions-default-logo-banner img{
-    max-width: 3rem;
+    max-width: 5rem;
     width: 100%;
 }
 
@@ -81,7 +105,7 @@ nav{
 
 li a{
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: white;
     font-weight: 600;
 }
@@ -96,7 +120,7 @@ li a{
 }
 
 .background-wrapper p{
-    font-size: 7rem;
+    font-size: 8rem;
 
     grid-area: one;
     z-index: 1;
@@ -104,17 +128,22 @@ li a{
     color: white;
     font-weight: 700;
     font-family: 'Oswald', sans-serif;
+
+    background: var(--fadeDarkishBlack);
+    box-shadow: 15px 15px 2px #cd2027;
+
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-.background-wrapper img{ /* Main background with Khoa and Kevin */
+.background-wrapper img{ 
     object-fit: cover; /* Crop out excess */
     
     width: 100%;
     max-width: 100vw;
-    max-height: 80vh;
+    min-height: 85vh;
 
     grid-area: one;
-    opacity: 0.85;
 }
 
 /* Main Content --------------------------------------------------------------------------------------------------------------- */
@@ -123,7 +152,7 @@ li a{
     min-height: 80vh;
 
     display: flex;
-    gap: 8rem;
+    gap: 10rem;
 
     justify-content: center;
     align-items: center;
@@ -136,11 +165,13 @@ li a{
 .contentSection img{
     border-radius: 1rem;
     max-height: 50vh;
+
+    max-width: 35vw;
 }
 .contentText{
 
     display: flex;
-    gap: 1rem;
+    gap: 5rem;
     flex-direction: column;
 
     max-width: 45vw;
@@ -148,21 +179,35 @@ li a{
 
 .contentText p{
 
-    font-size: 1.4rem;
-    font-family: sans-serif;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
 
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 .contentText h1{
 
-    font-size: 3rem;
+    font-size: 5rem;
 }
+
+#cyberlions-mission-quote{
+    max-width: 75vw;
+}
+
+#cyberlions-mission-quote p{
+    font-size: 3rem;
+    line-height: 2em;
+    text-align: center;
+
+    font-style: italic;
+}
+
+
 
 /* Footer -------------------------------------------------------------------------------------------------------------------- */
 
 footer{
     background-color: var(--darkishBlack);
-    min-height: 35vh;
+    min-height: 25vh;
 
     display: flex;
     justify-content: space-evenly;
@@ -173,25 +218,41 @@ footer{
     width: 100%;
 }
 
+/* CyberLions logo and team name */
 .footer-logo{
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
-}
 
+}
+.footer-logo img{
+
+    max-width: 10rem;
+    width: 100%;
+}
 
 .footer-sponsers{
-    display: flex;
 
-    gap: 4rem;
+    display: grid;
+    grid-template-areas: 
+    
+    "first nasa"
+    "abbott .";
+
+    gap: 2rem;
 }
-.footer-sponsers img{
-    max-width: 10rem;
-    min-height: 10rem;
-
-    object-fit: contain; /* Fit everything in given space */
+#frc{
+    grid-area: first;
+}
+#nasa{
+    grid-area: nasa;
+    max-width: 7vw;
+}
+#abbott{
+    grid-area: abbott;
+    max-width: 20vw;
+    max-height: 5vh;
 }
 
 .footer-navigation-links ul{
