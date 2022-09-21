@@ -1,0 +1,203 @@
+/* Main Setup ---------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
+
+:root{
+    --mainbgcolor: rgb(249, 249, 249);
+    --darkishBlack: rgb(42, 40, 40);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, p, a{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html{
+    position: relative;
+}
+
+/* Animations ---------------------------------------------------------------------------------------------------------------- */
+
+.fadeFromTop{
+    animation: fadeFromTop 1.3s ease;
+}
+
+@keyframes fadeFromTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header -------------------------------------------------------------------------------------------------------------------- */
+
+nav{
+    background: var(--darkishBlack);
+
+    display: flex;
+    justify-content: center; /* Distribute items evenly */
+
+    padding: 0.5rem;
+}
+
+.cyberlions-default-logo-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+.cyberlions_title{
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    color: white;
+}
+.cyberlions-default-logo-banner img{
+    max-width: 3rem;
+    width: 100%;
+}
+
+.navigation-lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 1rem;
+    align-items: center;
+
+    width: 100%;
+    max-width: 40rem;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* Main Background Starts Here ----------------------------------------------------------------------------------------------- */
+
+.background-wrapper{
+    display: grid;
+    grid-template-areas: "one"; /* Use this to stack the image and paragraph on top of eachother */
+
+    place-items: center;
+}
+
+.background-wrapper p{
+    font-size: 7rem;
+
+    grid-area: one;
+    z-index: 1;
+
+    color: white;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+}
+
+.background-wrapper img{ /* Main background with Khoa and Kevin */
+    object-fit: cover; /* Crop out excess */
+    
+    width: 100%;
+    max-width: 100vw;
+    max-height: 80vh;
+
+    grid-area: one;
+    opacity: 0.85;
+}
+
+/* Main Content --------------------------------------------------------------------------------------------------------------- */
+
+.contentSection{
+    min-height: 80vh;
+
+    display: flex;
+    gap: 8rem;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.contentSectionEven{
+    background: var(--mainbgcolor);
+}
+
+.contentSection img{
+    border-radius: 1rem;
+    max-height: 50vh;
+}
+.contentText{
+
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    max-width: 45vw;
+}
+
+.contentText p{
+
+    font-size: 1.4rem;
+    font-family: sans-serif;
+
+    line-height: 2.5rem;
+}
+.contentText h1{
+
+    font-size: 3rem;
+}
+
+/* Footer -------------------------------------------------------------------------------------------------------------------- */
+
+footer{
+    background-color: var(--darkishBlack);
+    min-height: 35vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+.footer-sponsers{
+    display: flex;
+
+    gap: 4rem;
+}
+.footer-sponsers img{
+    max-width: 10rem;
+    min-height: 10rem;
+
+    object-fit: contain; /* Fit everything in given space */
+}
+
+.footer-navigation-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
