@@ -16,6 +16,7 @@ If you have VSCODE installed, getting a live server extension will redirect you 
 - Media Queries
 - Links redirect
 - Content: About Robot (2023), Resources, Gallery, Contacts
+- Intersection observer fix wrapper from moving
 
 ### Resources
 
