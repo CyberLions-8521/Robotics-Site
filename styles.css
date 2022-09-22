@@ -1,0 +1,286 @@
+/* Main Setup ---------------------------------------------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu&display=swap');
+
+:root{
+    --mainbgcolor: rgb(245, 245, 245);
+    --lionsRed: #cd2027;
+    --darkishBlack: rgb(42, 40, 40);
+    --fadeDarkishBlack: rgba(42, 40, 40, 0.75);
+    --shadedRed: #ff949750;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, p, a{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    padding-bottom: 25vh; /* Having a 25vh padding allows us to position absolute the footer inside the body */
+    position: relative;
+}
+
+.contentHidden{
+    visibility: hidden;
+}
+
+/* Animations ---------------------------------------------------------------------------------------------------------------- */
+
+.fadeFromTop{
+    animation: fadeFromTop 1.3s ease;
+}
+
+.fadeFromBottom{
+    animation: fadeFromBottom 1.3s ease;
+}
+
+@keyframes fadeFromTop{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeFromBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header -------------------------------------------------------------------------------------------------------------------- */
+
+nav{
+    background: var(--darkishBlack);
+
+    display: flex;
+    justify-content: center; /* Distribute items evenly */
+
+    padding: 0.5rem;
+}
+
+.cyberlions-default-logo-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    max-width: 15vw;
+    width: 100%;
+}
+.cyberlions_title{
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    color: white;
+}
+.cyberlions-default-logo-banner img{
+    max-width: 4.5rem;
+    width: 100%;
+}
+
+.navigation-lists{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 1.5rem;
+    align-items: center;
+
+}
+
+li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 600;
+}
+
+/* Main Background Starts Here ----------------------------------------------------------------------------------------------- */
+
+.background-wrapper{
+    display: grid;
+    grid-template-areas: "one"; /* Use this to stack the image and paragraph on top of eachother */
+
+    position: relative;
+    place-items: center;
+}
+
+.background-wrapper img{ 
+    object-fit: cover; /* Crop out excess */
+    
+    width: 100%;
+    max-width: 100vw;
+    min-height: 90vh;
+    max-height: 90vh;
+
+    grid-area: one;
+}
+
+/* Shader for the background image on main page */
+.shader{ 
+    
+    width: 100%; /* same size as the background image which is realtive to the background wrapper */
+    height: 100%;
+
+    grid-area: one;
+
+    background-color: var(--shadedRed);
+    z-index: 1;
+}
+
+.background-wrapper p{
+    font-size: 8rem;
+
+    grid-area: one;
+    z-index: 2;
+
+    color: white;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+
+    background: var(--fadeDarkishBlack);
+    box-shadow: 15px 15px 2px var(--lionsRed);
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    position: absolute;
+    bottom: 15%;
+}
+
+
+
+
+
+/* Main Content --------------------------------------------------------------------------------------------------------------- */
+
+.contentSection{
+    min-height: 80vh;
+
+    display: flex;
+    gap: 10rem;
+
+    justify-content: center;
+    align-items: center;
+}
+.contentSectionEven{
+    background: var(--mainbgcolor);
+}
+
+.contentSection img{
+    border-radius: 1rem;
+    max-height: 50vh;
+
+    max-width: 35vw;
+}
+.contentText{
+
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+
+    max-width: 45vw;
+}
+
+.contentText p{
+
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+
+    line-height: 3rem;
+}
+.contentText h1{
+
+    font-size: 5rem;
+}
+
+#cyberlions-mission-quote{
+    max-width: 75vw;
+}
+
+#cyberlions-mission-quote p{
+    font-size: 3rem;
+    line-height: 2em;
+    text-align: center;
+
+    font-style: italic;
+}
+
+
+
+/* Footer -------------------------------------------------------------------------------------------------------------------- */
+
+footer{
+    background-color: var(--darkishBlack);
+    min-height: 25vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* CyberLions logo and team name */
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+.footer-logo img{
+
+    width: 7rem;
+}
+.footer-logo h1{
+    font-size: 2.5rem;
+}
+
+.footer-sponsers{
+
+    display: grid;
+    grid-template-areas: 
+    
+    "first nasa"
+    "abbott .";
+
+    gap: 1rem;
+}
+#frc{
+    grid-area: first;
+    max-width: 6vw;
+}
+#nasa{
+    grid-area: nasa;
+    max-width: 5vw;
+}
+#abbott{
+    grid-area: abbott;
+    max-width: 5vw;
+}
+
+.footer-navigation-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
