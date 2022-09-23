@@ -25,5 +25,4 @@ const observer = new IntersectionObserver((entries) => {
 }, intersection_controls);
 
 observer.observe(contentSection[0]);
-observer.observe(contentSection[1]);
 observer.observe(contentSection[2]);
