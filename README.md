@@ -4,8 +4,6 @@ Instead of building a website using Editor X or Wix, we can use vanilla HTML, CS
 
 These programming languages are very easy to pick up and we have web developers on the FRC team that can teach you!
 
-**Note:** Currently the github pages API is being used by https://code.whscyberlions.com/, a website that uses Jekyll and Ruby. However, this is an unfinished project. 
-
 ### Serve the website
 
 If you have VSCODE installed, getting a live server extension will redirect you to localhost:5500, where you can run this site for testing purposes. Type http://127.0.0.1:5500/ into your web browser. 
