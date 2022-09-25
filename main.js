@@ -27,3 +27,13 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(contentSection[0]);
 observer.observe(contentSection[1]);
 observer.observe(contentSection[2]);
+
+// MOBILE MENU -------------------------------------------------------------------------------------------------------------------------
+
+const burger = document.querySelector(".mobile-menu-burger");
+
+burger?.addEventListener("click", () => {
+    const mobile_navbar = document.querySelector(".mobile-navigation-lists");
+
+    mobile_navbar.classList.toggle("mobile-navigation-bar-active");
+});
