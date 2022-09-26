@@ -37,3 +37,21 @@ burger?.addEventListener("click", () => {
 
     mobile_navbar.classList.toggle("mobile-navigation-bar-active");
 });
+
+// SOCIAL MEDIA -------------------------------------------------------------------------------------------------------------------------
+
+const instagram = document.getElementById("insta");
+const flickr = document.getElementById("flickr");
+const github = document.getElementById("github"); 
+
+instagram?.addEventListener("click", () => {
+    window.open("https://www.instagram.com/cyberlions8521/");
+});
+
+flickr?.addEventListener("click", () => {
+    window.open("https://www.flickr.com/photos/195051844@N07/");
+});
+
+github?.addEventListener("click", () => {
+    window.open("https://github.com/CyberLions-8521");
+});

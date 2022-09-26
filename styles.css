@@ -264,6 +264,7 @@ footer{
 }
 
 /* CyberLions logo and team name */
+
 .footer-logo{
     display: flex;
     justify-content: center;
@@ -271,6 +272,18 @@ footer{
     gap: 2vh;
 
 }
+.socials{
+    display: flex;
+    gap: 3vh;
+    justify-content: flex-end;
+}
+.socials img{
+    width: 1.5vw;
+}
+.socials img:hover{
+    cursor: pointer;
+}
+
 .footer-logo img{
 
     width: 4vw;
@@ -281,7 +294,7 @@ footer{
     font-weight: 500;
 }
 
-.footer-sponsers{
+.footer-sponsors{
 
     display: grid;
     grid-template-areas: 
@@ -400,12 +413,12 @@ footer{
     .footer-navigation-links ul{
         display: none;
     }
-
-    .footer-sponsers{
+    
+    .footer-sponsors{
         display: flex;
         flex-direction: column;
     }
-    .footer-sponsers img{
+    .footer-sponsors img{
         max-width: 3rem !important;
         width: 100%;
     }
