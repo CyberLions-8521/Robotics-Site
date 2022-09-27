@@ -410,7 +410,7 @@ footer{
         font-size: 1.3rem !important;
     }
     .footer-logo img{
-        max-width: 5rem;
+        max-width: 3.5rem;
         width: 100%;
     }
 
@@ -433,6 +433,11 @@ footer{
         
         bottom: 5%;
         font-size: 0.7rem;
+    }   
+
+    .socials img{
+        max-width: 1rem;
+        width: 100%;
     }
 }
 
@@ -444,6 +449,7 @@ footer{
         text-align: center;
 
         gap: 2rem;
+        padding-top: 2rem;
     }
     .contentText h1, .contentText p{
         font-size: 1.2rem;
@@ -457,6 +463,10 @@ footer{
 
         max-width: 20rem;
         max-height: 20rem;
+
+        margin-bottom: 2rem;
+
+        border-radius: 2rem;
     }
 
     #who-are-cyberlions-section{
