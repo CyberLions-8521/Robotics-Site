@@ -181,21 +181,17 @@ nav{
 
 /* Main Content --------------------------------------------------------------------------------------------------------------- */
 
-#who-are-cyberlions-image{
-
-    width: 100%;
-    max-width: 45vw;
-    max-height: 40vh;
+#who-are-cyberlions-image, #Kevilry-in-action-image{
 
     border-radius: 2vw;
-}
 
-#Kevilry-in-action-image{
-    border-radius: 2vw;
-    max-width: 50vw;
-    max-height: 50vh;
+    min-width: 35vw;
+    min-height: 45vh;
 
-    object-fit: cover;
+    max-width: 35vw;
+    max-height: 45vh;
+
+    object-fit: cover; /* Crop out excess => less squish */
 }
 
 #cyberlions-mission-quote{
