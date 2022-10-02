@@ -25,6 +25,7 @@ h1, p, a{
 body{
     padding-bottom: 35vh; /* Having a 25vh padding allows us to position absolute the footer inside the body */
     position: relative;
+    min-height: 100vh;
 }
 
 .contentHidden{
@@ -126,6 +127,8 @@ nav{
 }
 .cyberlions-default-logo-banner img{
     max-width: 7.5vh;
+
+    cursor: pointer;
 }
 
 .mobile-menu-burger, .mobile-navigation-lists{ /* Hide mobile nav bar by default */
@@ -140,6 +143,8 @@ nav{
 
     position: relative;
     place-items: center;
+
+    max-height: 87vh;
 }
 
 .background-wrapper img{ 
@@ -147,9 +152,14 @@ nav{
     
     width: 100%;
     max-width: 100vw;
-    max-height: 87vh;
+    max-height: inherit;
 
     grid-area: one;
+}
+
+.background-wrapper-contactspage{
+
+    max-height: 50vh;
 }
 
 /* Shader for the background image on main page */
@@ -162,6 +172,13 @@ nav{
 
     background-color: var(--shadedRed);
     z-index: 1;
+
+    position: absolute;
+    top: 0;
+}
+
+.shader-contactspage{
+    max-height: 50vh;
 }
 
 .background-wrapper p{
@@ -344,6 +361,62 @@ footer{
     color: white;
     font-size: 0.8vw;
     font-weight: 600;
+}
+
+/* Contacts Page ------------------------------------------------------------------------------------------------------------- */
+
+.contacts-page-container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 7vh;
+}
+
+.contacts-page-container h1{
+
+    padding-top: 7vh;
+}
+
+.contact-page-information{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    justify-content: flex-start;
+
+    outline: 1px solid grey;
+    padding: 3vh;
+    border-radius: 2.25vh;
+}
+
+.contacts-page-container article{
+    display: flex;
+    gap: 2vw;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contacts-page-container img{
+    max-width: 3vw;
+}
+
+.google-maps-contacts iframe{
+
+    border: 5px solid #cd2027;
+    border-radius: 2.25vh;
+
+    max-width: 75vw;
+    min-width: 75vw;
+
+    min-height: 65vh;
+    max-height: 65vh;
+
+    margin-bottom: 7vh;
 }
 
 /* Media Queries ------------------------------------------------------------------------------------------------------------- */
