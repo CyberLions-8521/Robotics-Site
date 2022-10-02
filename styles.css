@@ -25,6 +25,7 @@ h1, p, a{
 body{
     padding-bottom: 35vh; /* Having a 25vh padding allows us to position absolute the footer inside the body */
     position: relative;
+    min-height: 100vh;
 }
 
 .contentHidden{
@@ -126,6 +127,8 @@ nav{
 }
 .cyberlions-default-logo-banner img{
     max-width: 7.5vh;
+
+    cursor: pointer;
 }
 
 .mobile-menu-burger, .mobile-navigation-lists{ /* Hide mobile nav bar by default */
@@ -140,6 +143,8 @@ nav{
 
     position: relative;
     place-items: center;
+
+    max-height: 87vh;
 }
 
 .background-wrapper img{ 
@@ -147,9 +152,14 @@ nav{
     
     width: 100%;
     max-width: 100vw;
-    max-height: 87vh;
+    max-height: inherit;
 
     grid-area: one;
+}
+
+.background-wrapper-contactspage{
+
+    max-height: 50vh;
 }
 
 /* Shader for the background image on main page */
@@ -162,6 +172,13 @@ nav{
 
     background-color: var(--shadedRed);
     z-index: 1;
+
+    position: absolute;
+    top: 0;
+}
+
+.shader-contactspage{
+    max-height: 50vh;
 }
 
 .background-wrapper p{
@@ -183,11 +200,15 @@ nav{
 
 #who-are-cyberlions-image, #Kevilry-in-action-image{
 
-    width: 100%;
-    max-width: 40vw;
-    max-height: 50vh;
-
     border-radius: 2vw;
+
+    min-width: 35vw;
+    min-height: 45vh;
+
+    max-width: 35vw;
+    max-height: 45vh;
+
+    object-fit: cover; /* Crop out excess => less squish */
 }
 
 #cyberlions-mission-quote{
@@ -264,6 +285,7 @@ footer{
 }
 
 /* CyberLions logo and team name */
+
 .footer-logo{
     display: flex;
     justify-content: center;
@@ -271,6 +293,18 @@ footer{
     gap: 2vh;
 
 }
+.socials{
+    display: flex;
+    gap: 3vh;
+    justify-content: flex-end;
+}
+.socials img{
+    width: 1.5vw;
+}
+.socials img:hover{
+    cursor: pointer;
+}
+
 .footer-logo img{
 
     width: 4vw;
@@ -281,7 +315,7 @@ footer{
     font-weight: 500;
 }
 
-.footer-sponsers{
+.footer-sponsors{
 
     display: grid;
     grid-template-areas: 
@@ -327,6 +361,62 @@ footer{
     color: white;
     font-size: 0.8vw;
     font-weight: 600;
+}
+
+/* Contacts Page ------------------------------------------------------------------------------------------------------------- */
+
+.contacts-page-container{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 7vh;
+}
+
+.contacts-page-container h1{
+
+    padding-top: 7vh;
+}
+
+.contact-page-information{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    justify-content: flex-start;
+
+    outline: 1px solid grey;
+    padding: 3vh;
+    border-radius: 2.25vh;
+}
+
+.contacts-page-container article{
+    display: flex;
+    gap: 2vw;
+
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contacts-page-container img{
+    max-width: 3vw;
+}
+
+.google-maps-contacts iframe{
+
+    border: 5px solid #cd2027;
+    border-radius: 2.25vh;
+
+    max-width: 75vw;
+    min-width: 75vw;
+
+    min-height: 65vh;
+    max-height: 65vh;
+
+    margin-bottom: 7vh;
 }
 
 /* Media Queries ------------------------------------------------------------------------------------------------------------- */
@@ -393,19 +483,19 @@ footer{
         font-size: 1.3rem !important;
     }
     .footer-logo img{
-        max-width: 5rem;
+        max-width: 3.5rem;
         width: 100%;
     }
 
     .footer-navigation-links ul{
         display: none;
     }
-
-    .footer-sponsers{
+    
+    .footer-sponsors{
         display: flex;
         flex-direction: column;
     }
-    .footer-sponsers img{
+    .footer-sponsors img{
         max-width: 3rem !important;
         width: 100%;
     }
@@ -416,6 +506,11 @@ footer{
         
         bottom: 5%;
         font-size: 0.7rem;
+    }   
+
+    .socials img{
+        max-width: 1rem;
+        width: 100%;
     }
 }
 
@@ -427,6 +522,7 @@ footer{
         text-align: center;
 
         gap: 2rem;
+        padding-top: 2rem;
     }
     .contentText h1, .contentText p{
         font-size: 1.2rem;
@@ -440,6 +536,10 @@ footer{
 
         max-width: 20rem;
         max-height: 20rem;
+
+        margin-bottom: 2rem;
+
+        border-radius: 2rem;
     }
 
     #who-are-cyberlions-section{
