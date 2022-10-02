@@ -20,6 +20,7 @@
 
 h1, p, a{
     font-family: 'Ubuntu', sans-serif;
+    color: black;
 }
 
 body{
@@ -274,6 +275,7 @@ nav{
 footer{
     background-color: var(--darkishBlack);
     min-height: 35vh;
+    max-height: 35vh;
 
     display: flex;
     justify-content: space-evenly;
@@ -324,6 +326,8 @@ footer{
     "abbott .";
 
     gap: 2vh;
+
+    place-items: center;
 }
 #frc{
     grid-area: first;
@@ -361,6 +365,93 @@ footer{
     color: white;
     font-size: 0.8vw;
     font-weight: 600;
+}
+
+/* Robots Page --------------------------------------------------------------------------------------------------------------- */
+
+.webpage-header{
+
+    margin-top: 7vh;
+    text-align: center;
+}
+
+.robot-description-container{
+
+    min-height: max-content;
+    display: flex;
+    gap: 10vh;
+
+    justify-content: center;
+    padding: 8vh;
+
+    flex-wrap: wrap;
+}
+
+.robot-description-container img{
+
+    border-radius: 2.25vh;
+    
+    width: 25vw;
+    height: 35vh;
+    object-fit: cover;
+
+    grid-area: image;
+}
+
+.robot-description-container article{
+
+    display: flex;
+    flex-direction: column;
+    
+    min-width: 30vw;
+    gap: 2.5vh;
+    padding: 2vw;
+    border-radius: 2.25vh;
+
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.292);
+    background: #ef4a4f;
+}
+
+.main-information{
+    grid-area: titleandinfo;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+.main-title > h1{
+    font-size: 2vw;
+    color: white;
+    font-family: "lato", sans-serif;
+}
+.main-title > p{
+    color: white;
+}
+
+.robot-description{
+    display: flex;
+    flex-direction: column;
+
+    gap: 1vh;
+}
+.robot-description a{
+    color: rgb(177, 224, 255);
+    text-decoration: none;
+}
+
+.robot-awards{
+    grid-area: awards;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.robot-awards > p{
+    color: wheat;
+}
+.robot-awards > h1{
+    color: white;
 }
 
 /* Contacts Page ------------------------------------------------------------------------------------------------------------- */
@@ -403,6 +494,8 @@ footer{
 
 .contacts-page-container img{
     max-width: 3vw;
+
+    cursor: pointer;
 }
 
 .google-maps-contacts iframe{
@@ -552,4 +645,25 @@ footer{
     #cyberlions-mission-quote p{
         font-size: 1.2rem;
     }
+}
+
+/* Contacts Page Media Query (any device with a width less than or equal to 44.5rem */
+@media (max-width: 44.5rem) { 
+    
+    .contact-page-information{
+
+        outline: none;
+        max-width: 80vw;
+    }
+
+    .contact-page-information img{
+        max-width: 2.5rem;
+    }
+
+    .google-maps-contacts iframe{
+
+        min-height: 15rem;
+        max-height: 15rem;
+    }
+
 }
