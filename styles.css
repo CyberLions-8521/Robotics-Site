@@ -7,10 +7,12 @@
 
 :root{
     --mainbgcolor: rgb(245, 245, 245);
-    --lionsRed: #cd2027;
     --darkishBlack: rgb(42, 40, 40);
     --fadeDarkishBlack: rgba(42, 40, 40, 0.75);
     --shadedRed: #ffb8ba55;
+
+    --lionsRed: #cd2027;
+    --lightLionsRed: #e69da0;
 }
 
 *{
@@ -47,6 +49,10 @@ body{
     animation: fadeInScreen 1.3s ease;
 }
 
+.fadeSlideShow{
+    animation: fadeSlideShow 1.5s ease;
+}
+
 @keyframes fadeFromTop{
     0%{
         opacity: 0;
@@ -74,6 +80,15 @@ body{
         opacity: 0;
     }
     100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideShow {
+    from{
+        opacity: 0.3;
+    }
+    to{
         opacity: 1;
     }
 }
@@ -369,28 +384,24 @@ footer{
 
 /* Robots Page --------------------------------------------------------------------------------------------------------------- */
 
-.webpage-header{
-
-    margin-top: 7vh;
-    text-align: center;
-}
-
 .robot-description-container{
 
     min-height: max-content;
     display: flex;
     gap: 10vh;
 
-    justify-content: center;
-    padding: 8vh;
+    padding: 5vh;
 
+    align-items:inherit;
+    justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .robot-description-container img{
-
-    border-radius: 2.25vh;
     
+    border-radius: 2.25vh;
+
     width: 25vw;
     height: 35vh;
     object-fit: cover;
@@ -400,16 +411,19 @@ footer{
 
 .robot-description-container article{
 
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(200deg , var(--lionsRed) 50%, rgb(255, 184, 184));
+
+    display: grid;
+    grid-template-areas: 
     
-    min-width: 30vw;
+    "image titleandinfo awards";
+
+    min-width: 70vw;
+    max-width: 70vw;
     gap: 2.5vh;
-    padding: 2vw;
+    padding: 1.5vw;
     border-radius: 2.25vh;
 
-    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.292);
-    background: #ef4a4f;
 }
 
 .main-information{
@@ -418,6 +432,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 2.5vh;
+
 }
 .main-title > h1{
     font-size: 2vw;
@@ -436,7 +451,6 @@ footer{
 }
 .robot-description a{
     color: rgb(177, 224, 255);
-    text-decoration: none;
 }
 
 .robot-awards{
@@ -444,6 +458,7 @@ footer{
 
     display: flex;
     flex-direction: column;
+    justify-self: flex-start;
     gap: 1vh;
 }
 
@@ -452,6 +467,79 @@ footer{
 }
 .robot-awards > h1{
     color: white;
+}
+
+/* Sponsors Page ------------------------------------------------------------------------------------------------------------- */
+
+.sponser-gallery-slideshow-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(92vh - 15vh); /* 15vh accounts for our header margin size */
+
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.sponser-gallery-slideshow-container img{
+    max-width: 50vw;
+    max-height: 50vh;
+
+    min-height: 25vh;
+    min-width: 25vw;
+
+}
+
+.sponser-gallery-slideshow-container article{
+    max-width: 50vw;
+    max-height: 50vh;
+
+    min-height: 25vh;
+    min-width: 25vw;
+}
+
+.sponser-gallery-slideshow-image-wrapper{
+
+    display: grid;
+    grid-template-areas: "one";
+
+    place-items: center;
+}
+
+#nasa-sponsor-slideshow{
+    grid-area: one;
+}
+#abbott-sponsor-slideshow{
+    grid-area: one;
+}
+#frc-sponsor-slideshow{
+    grid-area: one;
+}
+
+.sponsor-banner-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7vh;
+}
+
+.sponser-gallery-slideshow-index-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1vw;
+}
+
+.sponser-gallery-slideshow-index-dots div{
+
+    width: 1vw;
+    height: 1vw;
+
+    border-radius: 50%;
+    background-color: var(--lionsRed);
 }
 
 /* Contacts Page ------------------------------------------------------------------------------------------------------------- */
