@@ -13,6 +13,7 @@
 
     --lionsRed: #cd2027;
     --lightLionsRed: #e69da0;
+    --playfulRed: rgb(212, 66, 66);
 }
 
 *{
@@ -33,6 +34,14 @@ body{
 
 .contentHidden{
     visibility: hidden;
+}
+
+.banner-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 7vh;
 }
 
 /* Animations ---------------------------------------------------------------------------------------------------------------- */
@@ -403,7 +412,7 @@ footer{
     "image awards";
 
     padding: 1vh;
-    background: rgb(212, 66, 66);
+    background: var(--playfulRed);
     border-radius: 2.25vh;
 
     width: 35vw;
@@ -500,6 +509,65 @@ footer{
     gap: 1vh;
 }
 
+/* Support Us Page ------------------------------------------------------------------------------------------------------------- */
+
+.sponsor-packet-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    /* this padding prevents it from touching the header and footer as it wraps the actual sponsor packet */
+    padding: 7vh 0vh 12vh 0vh; 
+}
+
+.sponsor-packet{
+
+    min-width: 45vw;
+    padding: 3vh;
+    background: var(--playfulRed);
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 2.25vh;
+    gap: 5vh;
+    box-shadow: 0.1vh 0.1vh 2vh 1vh rgb(185, 185, 185);
+}
+
+.sponsor-benefits-title{
+    color: white;
+    font-size: 2vw;
+}
+
+.sponsor-benefits-content > article > *{
+
+    color: white;
+    border-top: 0.2vh solid rgb(122, 36, 36);
+
+    padding: 2.5vh 0vh 2.5vh 0vh;
+    font-size: 1.15vw;
+}
+
+.sponsor-packet-link{
+
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+    text-decoration: none;
+    font-size: 1.5vw;
+
+    transition: 250ms ease;
+}
+
+.sponsor-packet-link:hover{
+    color: wheat;
+    transition: 250ms ease;
+}
+
 /* Sponsors Page ------------------------------------------------------------------------------------------------------------- */
 
 .sponser-gallery-slideshow-container{
@@ -548,14 +616,6 @@ footer{
     grid-area: one;
 }
 
-.sponsor-banner-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 7vh;
-}
-
 .sponser-gallery-slideshow-index-dots{
     display: flex;
     justify-content: center;
@@ -583,11 +643,6 @@ footer{
     flex-direction: column;
 
     gap: 7vh;
-}
-
-.contacts-page-container h1{
-
-    padding-top: 7vh;
 }
 
 .contact-page-information{
