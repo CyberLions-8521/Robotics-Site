@@ -386,71 +386,109 @@ footer{
 
 .robot-description-container{
 
-    min-height: max-content;
+    margin: 3vw;
+
     display: flex;
-    gap: 10vh;
+    justify-content: space-around;
 
-    padding: 5vh;
-
-    align-items:inherit;
-    justify-content: center;
     flex-wrap: wrap;
-
-}
-
-.robot-description-container img{
-    
-    border-radius: 2.25vh;
-
-    width: 25vw;
-    height: 35vh;
-    object-fit: cover;
-
-    grid-area: image;
-}
+}  
 
 .robot-description-container article{
 
-    background: linear-gradient(200deg , var(--lionsRed) 50%, rgb(255, 184, 184));
-
     display: grid;
-    grid-template-areas: 
-    
-    "image titleandinfo awards";
+    grid-template-areas:
+    "title title"
+    "image info"
+    "image awards";
 
-    min-width: 70vw;
-    max-width: 70vw;
-    gap: 2.5vh;
-    padding: 1.5vw;
+    padding: 1vh;
+    background: rgb(212, 66, 66);
     border-radius: 2.25vh;
 
+    width: 35vw;
+
+    box-shadow: 1vh 1vh rgb(0, 0, 0);
+    padding: 1.5vw;
+
+    transition: 250ms ease;
 }
 
-.main-information{
-    grid-area: titleandinfo;
+.robot-description-container article:hover{
+    transition: 250ms ease;
+    transform: scale(1.05);
+}
 
+.main-title{
     display: flex;
     flex-direction: column;
-    gap: 2.5vh;
+}
 
+.main-title > *{
+    grid-area: title;
+
+    font-weight: 600;
+    color: white;
 }
-.main-title > h1{
+.main-title h1{
     font-size: 2vw;
-    color: white;
-    font-family: "lato", sans-serif;
 }
-.main-title > p{
-    color: white;
+.main-title p{
+    font-size: 1.5vw;
+}
+
+
+.robot-description-container img{
+    grid-area: image;
+    
+    max-width: 20vw;
+    max-height: 25vh;
+
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+    margin: 2vw;
 }
 
 .robot-description{
+    grid-area: info;
+
+    min-width: 9vw;
+    max-width: 9vw;
+
     display: flex;
     flex-direction: column;
 
     gap: 1vh;
 }
-.robot-description a{
-    color: rgb(177, 224, 255);
+.robot-description > *{
+    font-size: 1.15vw;
+
+    color: white;
+    text-decoration: none;
+}
+.robot-title > *{
+    color: lightsalmon;
+}
+
+.robot-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.robot-content > *{
+    color: white;
+    text-decoration: none;
+}
+
+.robot-content a{
+    transition: 250ms ease;
+}
+
+.robot-content a:hover{
+    transition: 250ms ease;
+    color: salmon;
 }
 
 .robot-awards{
@@ -458,15 +496,8 @@ footer{
 
     display: flex;
     flex-direction: column;
-    justify-self: flex-start;
-    gap: 1vh;
-}
 
-.robot-awards > p{
-    color: wheat;
-}
-.robot-awards > h1{
-    color: white;
+    gap: 1vh;
 }
 
 /* Sponsors Page ------------------------------------------------------------------------------------------------------------- */
