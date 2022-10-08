@@ -393,17 +393,25 @@ footer{
 
 /* Robots Page --------------------------------------------------------------------------------------------------------------- */
 
-.robot-description-container{
+.robot-showcase-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 89.1vh;
+}
 
-    margin: 3vw;
+.robot-showcase{
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
+    gap: 5vw;
     flex-wrap: wrap;
 }  
 
-.robot-description-container article{
+.robot-showcase article{
 
     display: grid;
     grid-template-areas:
@@ -423,7 +431,7 @@ footer{
     transition: 250ms ease;
 }
 
-.robot-description-container article:hover{
+.robot-showcase article:hover{
     transition: 250ms ease;
     transform: scale(1.05);
 }
@@ -447,7 +455,7 @@ footer{
 }
 
 
-.robot-description-container img{
+.robot-showcase img{
     grid-area: image;
     
     max-width: 20vw;
@@ -520,7 +528,7 @@ footer{
     flex-direction: column;
 
     /* this padding prevents it from touching the header and footer as it wraps the actual sponsor packet */
-    padding: 7vh 0vh 12vh 0vh; 
+    padding: 7vh 0vh 13vh 0vh; 
 }
 
 .sponsor-packet{
@@ -631,6 +639,32 @@ footer{
 
     border-radius: 50%;
     background-color: var(--lionsRed);
+}
+
+/* Gallery Page ------------------------------------------------------------------------------------------------------------- */
+
+.gallery-wrapper{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 7vh;
+}
+
+.gallery{
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    max-width: 85vw;
+    gap: 2vw;
+}
+
+.gallery img{
+    object-fit: cover;
+
+    border-radius: 2.25vh;
 }
 
 /* Contacts Page ------------------------------------------------------------------------------------------------------------- */
