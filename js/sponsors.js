@@ -60,3 +60,13 @@ cyberlions_header_logo?.addEventListener("click", () => {
 cyberlions_header_text?.addEventListener("click", () => {
     window.location.href = "/";
 });
+
+// MOBILE NAVIGATION ------------------------------------------------------------------------------------------------------------------
+
+const burger = document.querySelector(".mobile-menu-burger");
+
+burger?.addEventListener("click", () => {
+    const mobile_navbar = document.querySelector(".mobile-navigation-lists");
+
+    mobile_navbar.classList.toggle("mobile-navigation-bar-active");
+});

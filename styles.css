@@ -720,7 +720,18 @@ footer{
     margin-bottom: 7vh;
 }
 
-/* Media Queries ------------------------------------------------------------------------------------------------------------- */
+/* Media Queries ================================================================================================================ */
+
+/* Default Changes for Mobile */
+@media (max-width: 44.5rem) {
+    .banner-text{
+
+        font-size: 1.5rem;
+        text-align: center;
+
+        padding: 0rem 1rem;
+    }
+}
 
 /* Mobile Navigation Bar and main background */
 @media (max-width: 44.5rem){
@@ -764,7 +775,8 @@ footer{
     }
 
     .background-wrapper img{
-        min-height: 91vh;
+        min-height: 87vh;
+        max-height: 87vh;
         object-fit: cover;
     }
     .background-wrapper p{
@@ -855,7 +867,8 @@ footer{
     }
 }
 
-/* Contacts Page Media Query (any device with a width less than or equal to 44.5rem */
+/* Media Contacts (any device with a width less than or equal to 44.5rem) ======================================================= */ 
+
 @media (max-width: 44.5rem) { 
     
     .contact-page-information{
@@ -872,6 +885,134 @@ footer{
 
         min-height: 15rem;
         max-height: 15rem;
+    }
+
+}
+
+/* Media Robots ================================================================================================================ */
+
+@media (max-width: 44.5rem) {
+
+    .robot-showcase-container{
+        padding: 4rem;
+    }
+    .robot-showcase{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+    }
+    
+    .robot-showcase article{
+        display: grid;
+        grid-template-areas:
+        "title"
+        "image"
+        "info"
+        "awards";
+    
+        padding: 1rem;
+        background: var(--playfulRed);
+        border-radius: 2.25vh;
+    
+        box-shadow: none;
+        gap: 1rem;
+        width: 20rem;
+    }
+
+    .main-title > *{
+        font-size: 1.5rem !important;
+    }
+
+    #robot-kelv img, #robot-frogbot img{
+        max-width: 10rem;
+        max-height: 10rem;
+    }
+
+    .robot-title > *{
+        font-size: 1.5rem;
+    }
+
+    .robot-description > *{
+        font-size: 1rem;
+    }
+    .robot-description{
+        max-width: max-content;
+    }
+}
+
+/* Support Us ================================================================================================================ */
+
+@media (max-width: 44.5rem) {
+
+    .sponsor-packet-container{
+        padding: 2rem;
+    }
+
+    .sponsor-packet{
+        max-width: 25rem;
+        box-shadow: none;
+    }
+
+    .sponsor-benefits-title{
+        font-size: 1.5rem;
+    }
+
+    .sponsor-benefits-content article > *{
+        font-size: 1rem;
+    }
+
+    .sponsor-packet-link{
+        font-size: 1rem;
+
+        border: 0.2rem solid white;
+        background: white;
+        border-radius: 1rem;
+    }
+}
+
+/* Gallery Mobile ================================================================================================================ */
+
+@media (max-width: 44.5rem) {
+    
+    .gallery-wrapper{
+        padding: 7vh 0vh 7vh 0vh;
+    }
+
+    .gallery{
+        max-width: 20rem;
+    }
+
+    .gallery > *{
+        max-width: 20rem;
+    }
+}
+
+/* Media Sposnors ================================================================================================================ */
+
+@media (max-width: 44.5rem) {
+    
+    .sponser-gallery-slideshow-container{
+        min-height: 70vh;
+        max-height: 70vh;
+    }
+
+    .sponser-gallery-slideshow-image-wrapper > article, .sponser-gallery-slideshow-image-wrapper > article > img{
+        max-width: 15rem;
+
+        min-height: 5rem;
+        max-height: 5rem;
+    }
+
+    .sponser-gallery-slideshow-index-dots{
+        max-width: 20rem;
+
+        display: flex;
+        gap: 1rem;
+    }
+    .sponser-gallery-slideshow-index-dots > *{
+        min-width: 1rem;
+        min-height: 1rem;
     }
 
 }
