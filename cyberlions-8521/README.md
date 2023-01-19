@@ -12,9 +12,8 @@ If you have VSCODE installed, typing npm start will launch a localhost for you. 
 
 The newest version of the cyberlions website is built with ReactJS as its foundation. A couple things to know:
 
-- ReactJS is a **JavaScript** library (made by Facebook) that allows you to reuse HTML code
-- **You don't have to code to contribute!** UI/UX designers are also welcome to contribute suggestions.
 - Before editing the webpage, you should have a strong understanding of <ins>HTML, CSS, and JavaScript</ins> in general
+- ReactJS is a **JavaScript** framework (made by Facebook) that allows you to reuse HTML code
+- **You don't have to code to contribute!** UI/UX designers are also welcome to contribute feature designs
 
 There are many ways to familiarize yourself with HTML5, CSS, and JavaScript, with w3schools being a popular resource. 
-
