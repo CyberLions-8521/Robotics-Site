@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+
 import './App.css';
 
 import {Route, Routes} from "react-router-dom";
@@ -5,13 +7,25 @@ import Home from "./Home";
 import logo from "./images/icons/cyberlions.png";
 
 function App() {
+
+  // useRef to get the navigation element
+  const navigation = useRef();
+
+  // useEffect hook used to chnage navigation background on page switch
+  // [] means to run this callback on every render
+  useEffect(() => {
+    if (window.location.pathname !== "/"){
+      navigation.current.style.backgroundColor = "rgb(42, 40, 40)";
+    }
+  }, []);
+
   return (
   
   // <> is a React Fragment so we can return more than one DOM element
   <>
   
     {/* Example - Navigation Bar => This only renders once when you switch pages. I only ever have to write this code ONCE */}
-    <nav>
+    <nav ref={navigation}>
       <article className="nav-cyberlions-logo">
         <img src={logo} alt="cyberlions logo" draggable="false" />
         <h1>CyberLions 8521</h1>

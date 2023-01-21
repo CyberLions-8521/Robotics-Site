@@ -1,21 +1,23 @@
-import { useState, useEffect, useRef, useElementOnScreen } from 'react';
 import React from 'react'
 
 import banner from "./images/image-cyberlions-banner.jpg"
+import logo from "./images/icons/cyberlions.png";
+
 import cadding from "./images/2023-images/2023-cadding.JPG";
 
 import Section from './helper-components/Section'
 
 export default function Home() {
-  // Find state and visiblity of navigation
-  const [isVisible, setVisible] = useState(false);
-
   return (
     <>
 
         <main>
           <img className='main-team-background' alt="team background" src={banner} />
-          {/* <h1>FRC Team 8521 <br /> CyberLions</h1> */}
+
+          <div className="main-team-logo">
+            <img alt="cyberlions logo" src={logo} />
+            <h1>It's The CyberLions!</h1>
+          </div>
         </main>
 
         <Section 

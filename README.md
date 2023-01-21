@@ -17,3 +17,5 @@ The newest version of the cyberlions website is built with ReactJS as its founda
 - **You don't have to code to contribute!** UI/UX designers are also welcome to contribute feature designs
 
 There are many ways to familiarize yourself with HTML5, CSS, and JavaScript, with w3schools being a popular resource. 
+
+**If you're programming in react, clone the repository and run ```npm install react-scripts --save```. This is a dependency that allows you to run the website locally using ```npm start```.**

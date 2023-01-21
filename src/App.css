@@ -11,8 +11,8 @@
 
 :root{
   --lions-red: #cd2027;
-  --light-lions-red: rgba(255, 170, 170, 0.404);
-  --discord-black: #36393F;
+  --light-lions-red: rgba(65, 146, 222, 0.808);
+  --discord-black: #36393f8c;
   --super-light-grey: rgb(245, 245, 245);
 }
 
@@ -28,6 +28,10 @@
   display: none !important;
 }
 
+.highlight{
+  background: var(--light-lions-red);
+}
+
 /* ==================================================================================================================================== */
 /* NAVIGATION BAR */
 
@@ -36,13 +40,14 @@ nav{
   justify-content: space-between;
   align-items: center;
 
-  background: var(--discord-black);
+  background: transparent;
   color: white;
 
-  position: sticky;
-  width: 100vw;
+  position: absolute;
   z-index: 2;
   top: 0;
+  width: 100%;
+  max-width: 100vw;
 
   padding: 1vh 0;
   box-shadow: 0.1vh 0.1vh 1vh --var(--discord-black);
@@ -59,7 +64,7 @@ nav{
 }
 
 .nav-cyberlions-logo > img{
-  max-width: 4vw;
+  max-width: 3.5vw;
 }
 
 .nav-cyberlions-logo > h1{
@@ -77,11 +82,22 @@ nav > ul{
   padding-right: 2vw;
 }
 
-nav > ul > li > a{
+nav a{
   text-decoration: none;
 
   color: inherit;
   font-size: 2.5vh;
+
+  padding: 0.5vh;
+  background: var(--discord-black);
+  border-radius: 1vh;
+
+  transition: 250ms ease;
+}
+
+nav a:hover{
+  transition: 250ms ease;
+  background: var(--lions-red);
 }
 
 /* ==================================================================================================================================== */
@@ -131,13 +147,15 @@ nav > ul > li > a{
 /* SECTION COMPONENT */
 
 main{
-  min-height: 85vh;
-  max-height: 85vh;
+  min-height: 95vh;
+  max-height: 95vh;
 
   position: relative;
 
   display: grid;
   grid-template-areas: "same";
+
+  place-items: center;
 }
 
 /* Note that ::before and ::after pseduo elements cannot be used with "replaced elements" (external elements like img) */
@@ -149,41 +167,43 @@ main::after{
   top: 0;
   left: 0;
 
-  height: 85vh;
-  width: 100vw;
+  width: 100%;
+  height: 95vh;
 
   opacity: 0.5;
-  z-index: 1;
-  background: var(--light-lions-red);
+  z-index: -1;
+  background: var(--discord-black);
 }
 
 .main-team-background{
   grid-area: same;
 
-  width: 100vw;
   max-height: inherit;
+  width: 100%;
+  max-width: 100vw;
 
   object-fit: cover;
   z-index: -1;
   position: relative;  
 }
 
-main > h1{
+.main-team-logo{
   grid-area: same;
 
-  font-size: 14vh;
-  color: white;
-
-  justify-self: center;
-  align-self: center;
-  
-  font-family: 'Dancing Script', cursive;
-  z-index: 2;
-
-  background: rgba(54,57,63, 0.5);
-  padding: 2vh;
-  text-align: center;
-  border-radius: 2vh;
-  
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
+.main-team-logo > img{
+  max-width: 40vw;
+  max-height: 40vh;
+}
+
+.main-team-logo > h1{
+  font-family: 'Lato', cursive;
+  font-size: 15vh;
+  color: white;
+  max-width: 40vw;
+}
