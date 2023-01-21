@@ -1,0 +1,189 @@
+/* ==================================================================================================================================== */
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
+
+/* ==================================================================================================================================== */
+/* DEFAULT VALUES */
+
+:root{
+  --lions-red: #cd2027;
+  --light-lions-red: rgba(255, 170, 170, 0.404);
+  --discord-black: #36393F;
+  --super-light-grey: rgb(245, 245, 245);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Lato', Courier, monospace;
+  box-sizing: border-box;
+}
+
+.content-gone{
+  display: none !important;
+}
+
+/* ==================================================================================================================================== */
+/* NAVIGATION BAR */
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--discord-black);
+  color: white;
+
+  position: sticky;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+
+  padding: 1vh 0;
+  box-shadow: 0.1vh 0.1vh 1vh --var(--discord-black);
+}
+
+.nav-cyberlions-logo{
+  display: flex;
+  
+  justify-content: center;
+  gap: 1vw;
+  align-items: center;
+
+  padding-left: 2vw;
+}
+
+.nav-cyberlions-logo > img{
+  max-width: 4vw;
+}
+
+.nav-cyberlions-logo > h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3vw;
+
+  color: var(--lions-red);
+}
+
+nav > ul{
+  list-style: none;
+
+  display: flex;
+  gap: 2vw;
+  padding-right: 2vw;
+}
+
+nav > ul > li > a{
+  text-decoration: none;
+
+  color: inherit;
+  font-size: 2.5vh;
+}
+
+/* ==================================================================================================================================== */
+/* SECTION COMPONENT */
+
+.section-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 80vh;
+  max-height: 80vh;
+
+  gap: 7vw;
+  background: white;
+}
+
+.section-container-grey-background{
+  background: var(--super-light-grey);
+}
+
+.section-image{
+  border-radius: 5vh;
+
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+.section-text{
+  max-width: 35vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.section-text > h1{
+  font-size: 6vh;
+}
+
+.section-text > p{
+  font-size: 2.6vh;
+  line-height: 6vh;
+}
+
+/* ==================================================================================================================================== */
+/* SECTION COMPONENT */
+
+main{
+  min-height: 85vh;
+  max-height: 85vh;
+
+  position: relative;
+
+  display: grid;
+  grid-template-areas: "same";
+}
+
+/* Note that ::before and ::after pseduo elements cannot be used with "replaced elements" (external elements like img) */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element */
+main::after{
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 85vh;
+  width: 100vw;
+
+  opacity: 0.5;
+  z-index: 1;
+  background: var(--light-lions-red);
+}
+
+.main-team-background{
+  grid-area: same;
+
+  width: 100vw;
+  max-height: inherit;
+
+  object-fit: cover;
+  z-index: -1;
+  position: relative;  
+}
+
+main > h1{
+  grid-area: same;
+
+  font-size: 14vh;
+  color: white;
+
+  justify-self: center;
+  align-self: center;
+  
+  font-family: 'Dancing Script', cursive;
+  z-index: 2;
+
+  background: rgba(54,57,63, 0.5);
+  padding: 2vh;
+  text-align: center;
+  border-radius: 2vh;
+  
+}
+
