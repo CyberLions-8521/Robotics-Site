@@ -1,18 +1,21 @@
 import React from 'react'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 // In the home page, we have Section components such as "We're a High School Robotics Team Based In Westminster CA"
 // By default React will pass in props as an object. Doing {} destructures the object
 export default function Section({ title, description, picture, pictureLocation }) {
   
     // useRef is a React Hook that allows us to reference a DOM element
-    const sectionContainerRef = useRef();
+    const sectionContainerRef = useRef(null);
   
     // Refs return an object with a current property. This is the DOM element we want to reference
-    if (pictureLocation === "right") {
-        sectionContainerRef.current.classList.add("section-container-grey-background");
-    }
-
+    // useEffect ensures that it runs on render (running before render causes explosion)
+    useEffect(() => {
+        if (pictureLocation === "right") {
+            sectionContainerRef.current.classList.add("section-container-grey-background");
+        }    
+    }, [sectionContainerRef, pictureLocation]);
+    
     return (
     <>
         <div className="section-container" ref={sectionContainerRef}>

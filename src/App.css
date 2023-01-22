@@ -11,9 +11,9 @@
 
 :root{
   --lions-red: #cd2027;
-  --light-lions-red: rgba(65, 146, 222, 0.808);
-  --discord-black: #36393f8c;
+  --discord-black: #1e1f218c;
   --super-light-grey: rgb(245, 245, 245);
+  --super-dark-grey: rgb(42, 40, 40);
 }
 
 *{
@@ -30,6 +30,13 @@
 
 .highlight{
   background: var(--light-lions-red);
+}
+
+.body{
+  min-height: 100vh;
+  position: relative;
+
+  padding-bottom: 30vh;
 }
 
 /* ==================================================================================================================================== */
@@ -89,7 +96,6 @@ nav a{
   font-size: 2.5vh;
 
   padding: 0.5vh;
-  background: var(--discord-black);
   border-radius: 1vh;
 
   transition: 250ms ease;
@@ -108,8 +114,8 @@ nav a:hover{
   justify-content: center;
   align-items: center;
 
-  min-height: 80vh;
-  max-height: 80vh;
+  min-height: 90vh;
+  max-height: 90vh;
 
   gap: 7vw;
   background: white;
@@ -144,11 +150,11 @@ nav a:hover{
 }
 
 /* ==================================================================================================================================== */
-/* SECTION COMPONENT */
+/* LANDING PAGE */
 
 main{
-  min-height: 95vh;
-  max-height: 95vh;
+  min-height: 90vh;
+  max-height: 90vh;
 
   position: relative;
 
@@ -187,7 +193,7 @@ main::after{
   position: relative;  
 }
 
-.main-team-logo{
+.main-team-banner{
   grid-area: same;
 
   display: flex;
@@ -196,14 +202,227 @@ main::after{
   flex-direction: row-reverse;
 }
 
-.main-team-logo > img{
+.main-team-banner > img{
   max-width: 40vw;
   max-height: 40vh;
 }
 
-.main-team-logo > h1{
+.main-team-slogan h1{
   font-family: 'Lato', cursive;
-  font-size: 15vh;
+  font-size: 12vh;
+  font-weight: 100;
+
   color: white;
   max-width: 40vw;
+}
+
+.main-team-slogan p{
+  font-family: 'Lato', cursive;
+  font-size: 4vh;
+  font-weight: 100;
+
+  font-style: italic;
+  color: white;
+  max-width: 40vw;
+}
+
+.main-sponsor-thanks{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background: var(--lions-red);
+}
+
+.main-sponsor-thanks h1{
+  padding: 5vh 0; 
+  font-size: 6vh;
+
+  color: white;
+}
+
+.main-sponsor-thanks-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5vw;
+
+  padding-bottom: 5vh;
+}
+
+.main-sponsor-thanks-icons > img{
+  max-width: 10vw;
+}
+
+.main-support-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  gap: 5vw;
+  padding: 10vh 0;
+}
+
+.main-support-container > article{
+  font-family: 'Lato', cursive;
+  font-size: 4vh;
+
+  display: flex;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.main-support-container p{
+  font-size: 2.6vh;
+  line-height: 6vh;
+
+  max-width: 60vw;
+}
+
+.main-support-container > img{
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 60vw;
+  max-height: 70vh;
+
+  border-radius: 3vh;
+  object-fit: cover;
+}
+
+.main-support-container > a{
+
+  border-radius: 5vh;
+
+  border: 0.3vh solid var(--lions-red);
+  text-decoration: none;
+  color: var(--lions-red);
+
+  padding: 2vh;
+  font-size: 3.5vh;
+
+  transition: 250ms ease;
+}
+
+.main-support-container > a:hover{
+
+  color: white;
+  background: var(--lions-red);
+
+  transition: 250ms ease;
+}
+
+/* ==================================================================================================================================== */
+/* FOOTER */
+
+footer{
+  background: var(--super-dark-grey);
+  color: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  bottom: 0;
+  width: 100%;
+
+  position: absolute;
+  min-height: 30vh;
+  max-height: 30vh;
+}
+
+.footer-copyright{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  font-size: 2vh;
+}
+
+.footer-links ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  gap: 3vh;
+}
+
+.footer-links ul > li > a{
+  text-decoration: none;
+  color: white;
+
+  font-size: 2.6vh;
+  transition: 250ms ease;
+}
+
+.footer-links ul > li > a:hover{
+  transition: 250ms ease;
+  color: var(--lions-red);
+}
+
+.footer-slogan{
+  font-size: 3vh;
+  max-width: 12vw;
+
+  font-style: italic;
+}
+
+.footer-team-name{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+
+  align-items: flex-end;
+}
+
+.footer-team-name-socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3vh;
+}
+
+.footer-team-name-socials img{
+  max-width: 4vw;
+  max-height: 4vh;
+
+  transform: rotate(0deg);
+  transition: 250ms ease;
+}
+
+.footer-team-name-socials img:hover{
+  max-width: 4vw;
+  max-height: 4vh;
+
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: 250ms ease;
+}
+
+
+.footer-team-name-banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3vh;
+}
+
+.footer-team-name-banner > img{
+  max-width: 10vw;
+  max-height: 10vh;
+}
+
+.footer-team-name-banner > h1{
+  font-size: 5vh;
 }
