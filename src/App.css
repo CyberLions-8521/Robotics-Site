@@ -57,7 +57,6 @@ nav{
   max-width: 100vw;
 
   padding: 1vh 0;
-  box-shadow: 0.1vh 0.1vh 1vh --var(--discord-black);
 }
 
 .nav-cyberlions-logo{
@@ -287,16 +286,43 @@ main::after{
   max-width: 60vw;
 }
 
-.main-support-container > img{
+.main-support-images{
+  display: grid;
+
+  grid-template-areas:
+    "debug cheer"
+    "hang plan"
+  ;
+
+  gap: 1vw;
 
   width: 100%;
-  height: 100%;
-
   max-width: 60vw;
-  max-height: 70vh;
+}
+
+.main-support-images > img{
+
+  min-width: 30vw;
+  min-height: 30vh;
+
+  max-width: 30vw;
+  max-height: 30vh;
 
   border-radius: 3vh;
   object-fit: cover;
+}
+
+#main-support-images-hang{
+  grid-area: hang;
+}
+#main-support-images-plan{
+  grid-area: plan;
+}
+#main-support-images-cheer{
+  grid-area: cheer;
+}
+#main-support-images-debug{
+  grid-area: debug;
 }
 
 .main-support-container > a{

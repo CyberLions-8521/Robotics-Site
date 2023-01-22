@@ -6,6 +6,9 @@ import logo from "./images/icons/cyberlions.png"
 import cadding from "./images/2023-images/2023-cadding.jpg"
 import kevilry from "./images/2022-images/2022-kevilry.jpg"
 import competition from "./images/2022-images/2022-go-team.jpg"
+import debugging from "./images/2022-images/2022-debugging.jpg"
+import kevilryHang from "./images/2022-images/2022-kevilry-hang.jpg"
+import planning from "./images/2022-images/2022-planning.jpg"
 
 import nasa from "./images/sponsors/nasa.png"
 import abbott from "./images/sponsors/abbott.png"
@@ -59,7 +62,14 @@ export default function Home() {
               <p>We want to establish a strong robotics foundation for future years to come. Your sponsorship will help our members learn the skills and have the material to design and manufacture a competition-ready robot.</p>
             </article>
             
-            <img alt="Go Team Cyberlions!" src={competition} />
+            <div className="main-support-images">
+              <img id="main-support-images-cheer" alt="Go Team Cyberlions!" src={competition} />
+              <img id="main-support-images-debug" alt="Go Team Cyberlions!" src={debugging} />
+              <img id="main-support-images-hang" alt="Go Team Cyberlions!" src={kevilryHang} />
+              <img id="main-support-images-plan" alt="Go Team Cyberlions!" src={planning} />
+
+            </div>
+
 
             <a href="/support-us">Click To Learn More</a>
         </div>

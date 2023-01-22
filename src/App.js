@@ -120,7 +120,7 @@ function App() {
         </ul>
       </div>
 
-      <p className="footer-copyright">©2023 Larry Le & CyberLions 8521</p>
+      <p className="footer-copyright">©2023 Larry Le All Rights Reserved</p>
     </footer>
   </div>  
   );
