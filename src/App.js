@@ -21,7 +21,7 @@ function App() {
   const flickrLink = useRef();
 
   // useEffect hook used to change navigation background on page switch
-  // [] means to run this callback on every render
+  // [] means to run this callback only once when the component renders for the first time (mount)
   useEffect(() => {
     if (window.location.pathname !== "/"){
       navigation.current.style.backgroundColor = "rgb(42, 40, 40)";
