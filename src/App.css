@@ -11,7 +11,7 @@
 
 :root{
   --lions-red: #cd2027;
-  --discord-black: #1e1f218c;
+  --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
   --super-dark-grey: rgb(42, 40, 40);
 }
@@ -220,7 +220,6 @@ main::after{
   font-size: 4vh;
   font-weight: 100;
 
-  font-style: italic;
   color: white;
   max-width: 40vw;
 }

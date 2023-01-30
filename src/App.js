@@ -4,6 +4,12 @@ import './App.css';
 
 import {Route, Routes} from "react-router-dom";
 import Home from "./Home";
+import Newsletter from './pages/Newsletter';
+import SupportUs from './pages/SupportUs';
+import Media from './pages/Media';
+import Contacts from './pages/Contacts';
+import OurRobots from './pages/OurRobots';
+
 import logo from "./images/icons/cyberlions.png";
 
 import instagram from "./images/icons/socials/instagram_white.png";
@@ -77,7 +83,7 @@ function App() {
         <li><a href="/newsletter">Newsletter</a></li>
         <li><a href="/our-robots">Our Robots</a></li>
         <li><a href="/support-us">Support Us</a></li>
-        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/media">Media</a></li>
         <li><a href="/contacts">Contacts</a></li>
       </ul>
     </nav>
@@ -85,12 +91,11 @@ function App() {
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
       <Route path="/" element={<Home />} />
-      {/* 
-      <Route path="/newsletter" element={} />
-      <Route path="/our-robots" element={} />
-      <Route path="/support-us" element={} />
-      <Route path="/gallery" element={} />
-      <Route path="/contacts" element={} /> */}
+      <Route path="/newsletter" element={<Newsletter />} />
+      <Route path="/our-robots" element={<OurRobots />} />
+      <Route path="/support-us" element={<SupportUs />} />
+      <Route path="/media" element={<Media />} />
+      <Route path="/contacts" element={<Contacts />} />
     </Routes>
 
     <footer>
@@ -115,7 +120,7 @@ function App() {
           <li><a href="/newsletter">Newsletter</a></li>
           <li><a href="/our-robots">Our Robots</a></li>
           <li><a href="/support-us">Support Us</a></li>
-          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/media">Media</a></li>
           <li><a href="/contacts">Contacts</a></li>
         </ul>
       </div>
