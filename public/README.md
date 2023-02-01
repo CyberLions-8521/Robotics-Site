@@ -8,11 +8,11 @@ While testing we launch our app with **``npm start``**. With Github Pages, we're
 
 It works like this:
 ```json
-- "predeploy": "npm run build"
-- "deploy": "gh-pages -d build"
+"predeploy": "npm run build"
+"deploy": "gh-pages -d build"
 
-// "predeploy" compiles the react app into a build folder, which makes it a static website. 
-// "deploy" pushes the build folder to the gh-pages branch.
+"predeploy compiles the react app into a build folder, which makes it a static website." 
+"deploy pushes the build folder to the gh-pages branch."
 ```
 
 **With React, github pages is not running the Main branch**. However, we should still have our most stable version of the website in the main branch.
