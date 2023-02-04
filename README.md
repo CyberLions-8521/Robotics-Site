@@ -8,7 +8,7 @@ If you're a UI/UX designer, you can contribute to the design of the website thro
 
 ### Software Developer
 
-If you're a software developer, it is recommended you have prior experience with HTML, CSS, and especially JavaScript. Our website is built under the React.js framework (made by FaceBook), which allows the reuse of components, including the reuse of HTML.
+If you're a software developer, it is recommended you have prior experience with HTML, CSS, and especially JavaScript. Additionally, you should have a basic understanding of how to operate Github. Our website is built under the React.js framework (made by FaceBook), which allows the reuse of components, including the reuse of HTML.
 
 Don't worry if you don't know React.js, as we have resources and mentors in the team to help you learn. We recommend you ask either the programming lead or the O/M lead for more information before starting to code the website.
 
