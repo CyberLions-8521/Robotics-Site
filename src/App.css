@@ -11,6 +11,7 @@
 
 :root{
   --lions-red: #cd2027;
+  --lions-red-faded: #cd2026c5;
   --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
   --super-dark-grey: rgb(42, 40, 40);
@@ -50,7 +51,7 @@ nav{
   background: transparent;
   color: white;
 
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   width: 100%;
@@ -152,8 +153,8 @@ nav a:hover{
 /* LANDING PAGE */
 
 main{
-  min-height: 95vh;
-  max-height: 95vh;
+  min-height: 100vh;
+  max-height: 100vh;
 
   position: relative;
 
@@ -173,7 +174,7 @@ main::after{
   left: 0;
 
   width: 100%;
-  height: 95vh;
+  height: 100vh;
 
   opacity: 0.5;
   z-index: -1;
@@ -194,34 +195,57 @@ main::after{
 
 .main-team-banner{
   grid-area: same;
+  padding-top: 5vh;
 
   display: flex;
-  gap: 3vw;
+  gap: 5vw;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
-.main-team-banner > img{
-  max-width: 40vw;
-  max-height: 40vh;
+.main-team-banner > h1{
+  color: white;
+  font-size: 7.5vh;
 }
 
-.main-team-slogan h1{
+.main-team-button-hyperlinks{
+  display: flex;
+  gap: 5vw; 
+}
+
+.main-team-button-hyperlinks > a{
+  font-size: 2.5vh;
+  line-height: 5vh;
   font-family: 'Lato', cursive;
-  font-size: 12vh;
-  font-weight: 100;
 
   color: white;
-  max-width: 40vw;
+  max-width: 50vw;
+  text-decoration: none;
+
+  padding: 1vh 2vw;
+  background: var(--lions-red);
 }
 
-.main-team-slogan p{
+.main-team-description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 20vh;
+
+  min-width: 100vw;
+  max-width: 100vw;
+  background: var(--lions-red-faded);
+}
+
+.main-team-description > p{
+  font-size: 3vh;
+  text-align: center;
+  line-height: 5vh;
   font-family: 'Lato', cursive;
-  font-size: 4vh;
-  font-weight: 100;
 
   color: white;
-  max-width: 40vw;
+  max-width: 65vw;
 }
 
 .main-sponsor-thanks{

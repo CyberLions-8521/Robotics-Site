@@ -18,7 +18,7 @@ export default function Section({ title, description, picture, pictureLocation }
         rootMargin: "0px",
 
         // threshold is the percentage of the element that needs to be visible to trigger the callback
-        threshold: 0.5
+        threshold: 0.5 
     }, sectionContainerRef);
 
     // useEffect ensures that it runs on render (running before render causes explosion)

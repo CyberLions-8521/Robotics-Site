@@ -23,13 +23,16 @@ export default function Home() {
           <img className='main-team-background' alt="team background" src={banner} />
 
           <div className="main-team-banner">
-            <img alt="cyberlions logo" src={logo} />
-            
-            <article className="main-team-slogan">
-              <h1>The CyberLions</h1>
-              <p>If you can dream it, you can do it</p>
+            <h1>Opening a Door Into Creative Minds.</h1>
+
+            <article className="main-team-description">
+              <p>Team 8521 CyberLions aims to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their inner leader and motivator.</p>
             </article>
-            
+
+            <article className="main-team-button-hyperlinks">            
+              <a href="/about/">Learn More</a>
+              <a href="/support-us/">Support Us</a>
+            </article>
           </div>
         </main>
 

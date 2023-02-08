@@ -80,22 +80,22 @@ function App() {
       
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/newsletter">Newsletter</a></li>
-        <li><a href="/our-robots">Our Robots</a></li>
-        <li><a href="/support-us">Support Us</a></li>
-        <li><a href="/media">Media</a></li>
-        <li><a href="/contacts">Contacts</a></li>
+        <li><a href="/newsletter/">Newsletter</a></li>
+        <li><a href="/our-robots/">Our Robots</a></li>
+        <li><a href="/support-us/">Support Us</a></li>
+        <li><a href="/media/">Media</a></li>
+        <li><a href="/contacts/">Contacts</a></li>
       </ul>
     </nav>
 
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
       <Route path="/" element={<Home />} />
-      <Route path="/newsletter" element={<Newsletter />} />
-      <Route path="/our-robots" element={<OurRobots />} />
-      <Route path="/support-us" element={<SupportUs />} />
-      <Route path="/media" element={<Media />} />
-      <Route path="/contacts" element={<Contacts />} />
+      <Route path="/newsletter/" element={<Newsletter />} />
+      <Route path="/our-robots/" element={<OurRobots />} />
+      <Route path="/support-us/" element={<SupportUs />} />
+      <Route path="/media/" element={<Media />} />
+      <Route path="/contacts/" element={<Contacts />} />
     </Routes>
 
     <footer>
