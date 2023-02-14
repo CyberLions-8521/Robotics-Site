@@ -90,7 +90,7 @@ function App() {
 
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home navigation={navigation} />} />
       <Route path="/newsletter/" element={<Newsletter />} />
       <Route path="/our-robots/" element={<OurRobots />} />
       <Route path="/support-us/" element={<SupportUs />} />
