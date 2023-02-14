@@ -14,3 +14,7 @@ Don't worry if you don't know React.js, as we have resources and mentors in the 
 
 **If you're programming in react, clone the repository and run `npm install react-scripts --save`. This is a dependency that allows you to run the website locally using `npm start`.**
 
+### Other Resources
+
+- [React JavaScript Formatting Commandments](https://github.com/airbnb/javascript/tree/master/react)
+- [CSS-in-JavaScript Commandments](https://github.com/airbnb/javascript/tree/master/css-in-javascript)
