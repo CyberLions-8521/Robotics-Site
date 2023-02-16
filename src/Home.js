@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import useIntersectionObserver from './hooks/useIntersectionObserver'
 
-import banner from "./images/image-cyberlions-banner.jpg"
+import banner from "./images/image-cyberlions-banner2.jpg"
 import Button from "./helper-components/Button.js"
 
 import kevilry from "./images/robots/kelv-robot.png"
@@ -52,10 +52,10 @@ export default function Home({navigation}) {
           <img className='main-team-background' alt="team background" src={banner} />
 
           <div className="main-team-banner">
-            <h1 ref={mainTeamSlogan}>Opening a Door Into <span className="highlight">Creative Minds.</span></h1>
+            <h1 ref={mainTeamSlogan}>We Are The Cyberlions...</h1>
 
             <article className="main-team-description">
-              <p>Team 8521 CyberLions aims to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their inner leader and motivator.</p>
+              <p>...a high school robotics team that aims to provide our community with hands-on opportunities and mentor ships. We empower our community and give them the chance to show their inner leader and motivator.</p>
             </article>
 
             <article className="main-team-button-hyperlinks">            
