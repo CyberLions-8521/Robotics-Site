@@ -3,12 +3,12 @@ import React from 'react'
 import banner from "./images/image-cyberlions-banner.jpg"
 import logo from "./images/icons/cyberlions.png"
 
-import cadding from "./images/2023-images/2023-cadding.jpg"
-import kevilry from "./images/2022-images/2022-kevilry.jpg"
-import competition from "./images/2022-images/2022-go-team.jpg"
-import debugging from "./images/2022-images/2022-debugging.jpg"
-import kevilryHang from "./images/2022-images/2022-kevilry-hang.jpg"
-import planning from "./images/2022-images/2022-planning.jpg"
+import cadding from "./images/2023-images/cadding.jpg"
+import kevilry from "./images/2022-images/kevilry.jpg"
+import competition from "./images/2022-images/go-team.jpg"
+import debugging from "./images/2022-images/debugging.jpg"
+import kevilryHang from "./images/2022-images/kevilry-hang.jpg"
+import planning from "./images/2022-images/planning.jpg"
 
 import nasa from "./images/sponsors/nasa.png"
 import abbott from "./images/sponsors/abbott.png"
