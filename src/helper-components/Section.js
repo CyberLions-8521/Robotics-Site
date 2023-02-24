@@ -42,7 +42,7 @@ export default function Section({ title, description, picture, pictureLocation }
             {pictureLocation === "left" && <img className="section-image" src={picture} alt="section img" />}
 
             <article className='section-text'>
-                <h1>{sectionContainerVisible && title}</h1>
+                <h1>{title}</h1>
                 <p>{description}</p>
             </article>            
 

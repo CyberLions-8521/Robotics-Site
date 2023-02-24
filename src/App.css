@@ -247,6 +247,7 @@ main::after{
 
   gap: 5vw;
 
+  /* mix-blend-mode: hue; */
   padding-bottom: 5vh;
 }
 

@@ -10,8 +10,12 @@ import debugging from "./images/2022-images/debugging.jpg"
 import kevilryHang from "./images/2022-images/kevilry-hang.jpg"
 import planning from "./images/2022-images/planning.jpg"
 
-import nasa from "./images/sponsors/nasa.png"
-import abbott from "./images/sponsors/abbott.png"
+import Adren from "./images/sponsors/2023/arden-eng.png" 
+import DynamicFabrication from "./images/sponsors/2023/DF.jpg"
+import MorStar from "./images/sponsors/2023/MorStar.png"
+import Sugoi from "./images/sponsors/2023/Sugoi.jpg"
+import TJAero from "./images/sponsors/2023/TJ.png"
+import Vo from "./images/sponsors/2023/Vo.png"
 
 import Section from './helper-components/Section'
 
@@ -51,8 +55,12 @@ export default function Home() {
           <h1>Thank You To Our Sponsors</h1>
 
           <div className="main-sponsor-thanks-icons">
-            <img alt="nasa sponsor" src={nasa} />
-            <img alt="abbott sponsor" src={abbott} />
+            <img alt="Arden Engineering" src={Adren} />
+            <img alt="Dynamic Fabrication" src={DynamicFabrication} />
+            <img alt="MorStar" src={MorStar} />
+            <img alt="sugoi's Stuff" src={Sugoi} />
+            <img alt="TJ Aerospace" src={TJAero} />
+            <img alt="Vo Sandwiches" src={Vo} />
           </div>
         </div>
 
