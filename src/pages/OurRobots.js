@@ -1,7 +1,13 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 
 export default function OurRobots() {
   return (
-    <div>OurRobots</div>
+    <>
+      <Helmet>
+        <title>Our Robots | Cyberlions</title>
+      </Helmet>
+
+    </>
   )
 }

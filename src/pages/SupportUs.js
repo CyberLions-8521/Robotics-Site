@@ -1,7 +1,13 @@
 import React from 'react'
+import { Helmet } from "react-helmet"
 
 export default function SupportUs() {
   return (
-    <div>SupportUs</div>
+    <>
+      <Helmet>
+        <title>Support Us | Cyberlions</title>
+      </Helmet>
+
+    </>
   )
 }

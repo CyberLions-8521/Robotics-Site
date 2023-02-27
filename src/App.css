@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 /* ==================================================================================================================================== */
 /* DEFAULT VALUES */
@@ -14,6 +15,8 @@
   --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
   --super-dark-grey: rgb(42, 40, 40);
+
+  --grey-for-font: #808080;
 }
 
 *{
@@ -247,7 +250,6 @@ main::after{
 
   gap: 5vw;
 
-  /* mix-blend-mode: hue; */
   padding-bottom: 5vh;
 }
 
@@ -348,6 +350,106 @@ main::after{
 }
 
 /* ==================================================================================================================================== */
+/* ABOUT PAGE */
+
+.about-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 15vh;
+}
+
+.about{
+  max-width: 80vw;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5vh;
+}
+
+.about-hero{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5vh;
+  flex-direction: column;
+
+  max-width: 70vw;
+}
+
+.about-hero > h3{
+  font-size: 1.1rem;
+  font-weight: 100;
+
+  color: var(--grey-for-font);
+}
+
+.about-hero > h1{
+  font-size: 3.5rem;
+  color: var(--lions-red);
+
+  font-family: 'Righteous', cursive;
+}
+
+.about-hero > p{
+  font-size: 1.3rem;
+  color: var(--super-dark-grey);
+  line-height: 2.5rem;
+}
+
+.about-images{
+  display: grid;
+  grid-template-areas: 
+  
+  "mechanical design electrical software operations";
+  gap: 1vw;
+
+  position: relative;
+  min-width: 70vw;
+  max-width: 70vw;
+
+  min-height: 45vh;
+
+}
+
+.about-images > img{
+  min-width: 18vw;
+  max-width: 18vw;
+  
+  min-height: 45vh;
+  max-height: 45vh;
+
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+#mechanical{
+  grid-area: mechanical;
+  margin-bottom: 5vh;
+}
+
+#design{
+  grid-area: design;
+  margin-top: 5vh;
+}
+
+#electrical{
+  grid-area: electrical;
+  margin-bottom: 5vh;
+}
+
+#software{
+  grid-area: software;
+  margin-top: 5vh;
+}
+
+#operations{
+  grid-area: operations;
+  margin-bottom: 5vh;
+}
+
+/* ==================================================================================================================================== */
 /* FOOTER */
 
 footer{
@@ -395,11 +497,9 @@ footer{
   color: var(--lions-red);
 }
 
-.footer-slogan{
-  font-size: 3vh;
-  max-width: 12vw;
-
-  font-style: italic;
+.footer-address{
+  font-size: 1.3rem;
+  max-width: 18vw;
 }
 
 .footer-team-name{
