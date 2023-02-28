@@ -499,50 +499,45 @@ main::after{
 
 .about-shameless-plug{
 
-  background-size: round;
-  background: url("./images/2022-images/go-team.jpg");
+  position: relative;
+  min-height: 80vh;
 
-  height: 90vh;
+  margin-bottom: 10vh;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10vh;
-
-  border-radius: 1rem;
-  position: relative;
-  z-index: 0;
-
-  margin-bottom: 15vh;
+  gap: 5vh;
 }
 
-.about-shameless-plug-blur{
-  height: 80vh;
-  width: 80vw;
-  backdrop-filter: blur(0.2rem);
-  opacity: 0.9;
+/* z-index will move image background behind all text */
+.about-shameless-plug img{
+  min-width: 80vw;
+  max-width: 80vw;
 
+  max-height: 80vh;
+
+  border-radius: 2rem;
   position: absolute;
-  z-index: 1;
-
-  border-radius: 1rem;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .about-shameless-plug h1{
   position: relative;
   z-index: 2;
 
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--lions-red);
-  margin-top: 10vh;
+  margin-top: 7vh;
+  padding-left: 7vw;
 }
 
 .about-shameless-plug-text{
   position: relative;
   z-index: 2;
 
-  font-family: 'Tilt Neon', cursive;
-  color: white;
-  font-size: 1.3rem;
+  color: whitesmoke;
+  font-size: 1.2rem;
 
   display: flex;
   flex-direction: column;
@@ -551,24 +546,33 @@ main::after{
   gap: 7vh;
 
   font-weight: bolder;
-  max-width: 70vw;
+  max-width: 60vw;
+  padding-left: 7vw;
+
+  line-height: 2rem;
 }
 
-.about-shameless-plug a{
+.about-shameless-plug-button{
   position: relative;
   z-index: 2;
 
   font-size: 1.5rem;
   color: white;
 
-  border: 0.1rem solid var(--lions-red);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
   text-decoration: none;
   background: var(--lions-red);
 
   min-width: 10vw;
   text-align: center;
+  transition: 250ms ease;
+
+}
+
+.about-shameless-plug-button:hover{
+  transform: scale(1.05);
+  transition: 250ms ease;
 }
 
 /* ==================================================================================================================================== */

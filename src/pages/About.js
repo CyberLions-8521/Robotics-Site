@@ -7,6 +7,8 @@ import software from '../images/2022-images/programming.jpg'
 import operations from '../images/2022-images/operations.jpg'
 import design from '../images/2023-images/design.jpg'
 
+import battle from '../images/2022-images/battle.jpg'
+
 export default function About() {
   return (
         <>
@@ -61,14 +63,14 @@ export default function About() {
                     </main>
 
                     <div className="about-shameless-plug">
-                        <div className="about-shameless-plug-blur"></div>
+                        <img id="battle" alt="battle" src={battle} />
+
 
                         <h1>Help Us Keep Going</h1>
                         <section className="about-shameless-plug-text">
-                            <p>We founded the CyberLions on a random afternoon in 2020, and now we want to establish a strong robotics foundation for future years to come.</p>
                             <p>Your sponsorship will help our members learn the skills and have the material to design and manufacture a competition-ready robot.</p>
 
-                            <a href="/support-us">Learn More</a>
+                            <a className="about-shameless-plug-button" href="/support-us">Learn More</a>
                         </section>                        
                     </div>
                 </div>
