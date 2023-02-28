@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 /* ==================================================================================================================================== */
 /* DEFAULT VALUES */
@@ -366,7 +367,7 @@ main::after{
   display: flex;
   flex-direction: column;
 
-  gap: 5vh;
+  gap: 15vh;
 }
 
 .about-hero{
@@ -404,21 +405,15 @@ main::after{
   
   "mechanical design electrical software operations";
   gap: 1vw;
-
-  position: relative;
-  min-width: 70vw;
-  max-width: 70vw;
-
-  min-height: 45vh;
-
+  justify-content: center;
 }
 
 .about-images > img{
   min-width: 18vw;
   max-width: 18vw;
   
-  min-height: 45vh;
-  max-height: 45vh;
+  min-height: 40vh;
+  max-height: 40vh;
 
   border-radius: 1rem;
   object-fit: cover;
@@ -447,6 +442,133 @@ main::after{
 #operations{
   grid-area: operations;
   margin-bottom: 5vh;
+}
+
+.about-subteams-container{
+  background: white;
+}
+
+.about-subteams-container-hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.about-subteams-container-hero > h1{
+  font-size: 2.5rem;
+}
+
+.about-subteams-container-hero > h2{
+  font-size: 1.5rem;
+  color: var(--grey-for-font);
+  font-family: 'Lato', cursive;
+  font-weight: normal;
+}
+
+.about-subteams{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+
+.about-subteams article{
+  max-width: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  gap: 3vh;
+}
+
+.about-subteams article > h1{
+  color: var(--lions-red);
+}
+
+.about-subteams article > p{
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--grey-for-font);
+}
+
+.about-shameless-plug{
+
+  background-size: round;
+  background: url("./images/2022-images/go-team.jpg");
+
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10vh;
+
+  border-radius: 1rem;
+  position: relative;
+  z-index: 0;
+
+  margin-bottom: 15vh;
+}
+
+.about-shameless-plug-blur{
+  height: 80vh;
+  width: 80vw;
+  backdrop-filter: blur(0.2rem);
+  opacity: 0.9;
+
+  position: absolute;
+  z-index: 1;
+
+  border-radius: 1rem;
+}
+
+.about-shameless-plug h1{
+  position: relative;
+  z-index: 2;
+
+  font-size: 2.5rem;
+  color: var(--lions-red);
+  margin-top: 10vh;
+}
+
+.about-shameless-plug-text{
+  position: relative;
+  z-index: 2;
+
+  font-family: 'Tilt Neon', cursive;
+  color: white;
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7vh;
+
+  font-weight: bolder;
+  max-width: 70vw;
+}
+
+.about-shameless-plug a{
+  position: relative;
+  z-index: 2;
+
+  font-size: 1.5rem;
+  color: white;
+
+  border: 0.1rem solid var(--lions-red);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  background: var(--lions-red);
+
+  min-width: 10vw;
+  text-align: center;
 }
 
 /* ==================================================================================================================================== */

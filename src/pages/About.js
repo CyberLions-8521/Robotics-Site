@@ -31,41 +31,45 @@ export default function About() {
                         <img id="operations" alt="operations" src={operations} />
                     </div>
 
-                    <main className="about-subteams">
-                        <div className="about-subteams-hero">
+                    <main className="about-subteams-container">
+                        <div className="about-subteams-container-hero">
                             <h1>Our Division Subteams</h1>
                             <h2>Being Part of The CyberLions Means You're Part of a Major Role</h2>
                         </div>
 
-                        <article className="about-subteams-mechanical-design">
-                            <h1>Mechanical and Design Team</h1>
-                            <p>Learn design skills and rapid prototyping techniques through CAD and 3d printing.  You're planning, designing, and testing different mechanisms using workshop tools and hardware to manufacture and assemble the robot.</p>
-                        </article>
+                        <div className="about-subteams">
+                            <article className="about-subteams-mechanical-design">
+                                <h1>Mechanical and Design Team</h1>
+                                <p>Learn design skills and rapid prototyping techniques through CAD and 3d printing.  You're planning, designing, and testing different mechanisms using workshop tools and hardware to manufacture and assemble the robot.</p>
+                            </article>
 
-                        <article className="about-subteams-operations">
-                            <h1>Operations Management Team</h1>
-                            <p>Market the team for sponsorships and plan and corrdinate club events. You're in charge of overseeing the club budget and FRC inventory, working closely with club advisors and IPT leads.</p>
-                        </article>
+                            <article className="about-subteams-operations">
+                                <h1>Operations Management Team</h1>
+                                <p>Market the team for sponsorships and plan and corrdinate club events. You're in charge of overseeing the club budget and FRC inventory, working closely with club advisors and IPT leads.</p>
+                            </article>
 
-                        <article className="about-subteams-electrical">
-                            <h1>Electrical Team</h1>
-                            <p>Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.</p>
-                        </article>
+                            <article className="about-subteams-electrical">
+                                <h1>Electrical Team</h1>
+                                <p>Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.</p>
+                            </article>
 
-                        <article className="about-subteams-software">
-                            <h1>Software Team</h1>
-                            <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
-                        </article>
+                            <article className="about-subteams-software">
+                                <h1>Software Team</h1>
+                                <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
+                            </article>
+                        </div>
                     </main>
 
                     <div className="about-shameless-plug">
+                        <div className="about-shameless-plug-blur"></div>
+
                         <h1>Help Us Keep Going</h1>
                         <section className="about-shameless-plug-text">
                             <p>We founded the CyberLions on a random afternoon in 2020, and now we want to establish a strong robotics foundation for future years to come.</p>
                             <p>Your sponsorship will help our members learn the skills and have the material to design and manufacture a competition-ready robot.</p>
-                        </section>
-                        
-                        <a href="/support-us">Learn More</a>
+
+                            <a href="/support-us">Learn More</a>
+                        </section>                        
                     </div>
                 </div>
             </div>
