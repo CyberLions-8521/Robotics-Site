@@ -2,6 +2,7 @@ import React from 'react'
 
 import banner from "./images/image-cyberlions-banner.jpg"
 import logo from "./images/icons/cyberlions.png"
+import sticker from "./images/icons/sticker.png"
 
 import cadding from "./images/2023-images/cadding.jpg"
 import kevilry from "./images/2022-images/kevilry.jpg"
@@ -10,15 +11,16 @@ import debugging from "./images/2022-images/debugging.jpg"
 import kevilryHang from "./images/2022-images/kevilry-hang.jpg"
 import planning from "./images/2022-images/planning.jpg"
 
-import Adren from "./images/sponsors/2023/arden-eng.png" 
-import DynamicFabrication from "./images/sponsors/2023/DF.jpg"
-import MorStar from "./images/sponsors/2023/MorStar.png"
-import Sugoi from "./images/sponsors/2023/Sugoi.jpg"
-import TJAero from "./images/sponsors/2023/TJ.png"
-import Vo from "./images/sponsors/2023/Vo.png"
+import TJAero from "./images/sponsors/2023/TJ-Aero.png"
+import Arden from "./images/sponsors/2023/Arden.png"
+import VoSandwich from "./images/sponsors/2023/Vo-Sandwich.png"
+import DynamicFab from "./images/sponsors/2023/Dynamic-Fab.png"
+import HeimBearings from "./images/sponsors/2023/Heim-Bearings.png"
+import Morstar from "./images/sponsors/2023/Morstar.png"
+import Sugoi from "./images/sponsors/2023/Sugoi-Stuff.png"
+import Sunmerry from "./images/sponsors/2023/Sunmerry.png"
 
 import Section from './helper-components/Section'
-
 export default function Home() {
   return (
     <>
@@ -26,11 +28,11 @@ export default function Home() {
         <img className='main-team-background' alt="team background" src={banner} />
 
         <div className="main-team-banner">
-          <img alt="cyberlions logo" src={logo} />
+          <img alt="cyberlions sticker" src={sticker} />
           
           <article className="main-team-slogan">
             <h1>The CyberLions</h1>
-            <p>If you can dream it, you can do it</p>
+            <p>If you can Cyber, you can Lion</p>
           </article>
           
         </div>
@@ -54,12 +56,14 @@ export default function Home() {
         <h1>Thank You To Our Sponsors</h1>
 
         <div className="main-sponsor-thanks-icons">
-          <img alt="Arden Engineering" src={Adren} />
-          <img alt="Dynamic Fabrication" src={DynamicFabrication} />
-          <img alt="MorStar" src={MorStar} />
-          <img alt="sugoi's Stuff" src={Sugoi} />
-          <img alt="TJ Aerospace" src={TJAero} />
-          <img alt="Vo Sandwiches" src={Vo} />
+          <img alt="TJAero" src={TJAero} />
+          <img alt="Arden" src={Arden} />
+          <img alt="VoSandwich" src={VoSandwich} />
+          <img alt="DynamicFab" src={DynamicFab} />
+          <img alt="HeimBearings" src={HeimBearings} />
+          <img alt="Morstar" src={Morstar} />
+          <img alt="Sugoi Stuff" src={Sugoi} />
+          <img alt="Sunmerry Bakery" src={Sunmerry} />
         </div>
       </div>
 

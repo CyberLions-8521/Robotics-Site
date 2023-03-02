@@ -1,6 +1,20 @@
 import React from 'react'
 import { Helmet } from "react-helmet"
 
+import Profile from "../helper-components/Profile.js"
+import map from "../images/icons/map.svg"
+import bulb from "../images/icons/bulb.png"
+import restaurant from "../images/icons/restaurant.png"
+
+import TJAero from "../images/sponsors/2023/TJ-Aero.png"
+import Arden from "../images/sponsors/2023/Arden.png"
+import VoSandwich from "../images/sponsors/2023/Vo-Sandwich.png"
+import DynamicFab from "../images/sponsors/2023/Dynamic-Fab.png"
+import HeimBearings from "../images/sponsors/2023/Heim-Bearings.png"
+import Morstar from "../images/sponsors/2023/Morstar.png"
+import Sugoi from "../images/sponsors/2023/Sugoi-Stuff.png"
+import Sunmerry from "../images/sponsors/2023/Sunmerry.png"
+
 export default function SupportUs() {
   return (
     <>
@@ -8,6 +22,56 @@ export default function SupportUs() {
         <title>Support Us | Cyberlions</title>
       </Helmet>
 
+      <div className="support-us">
+        <div className="support-us-hero">
+          <h1>More Opportunity For Our Robotics Club!</h1>
+          <p>Learn about what your help means to us.</p>
+        </div>
+
+        {/* What sponsoring CyberLions will entail. Includes link to GoFundMe */}
+        <div className="support-us-content">
+          <section className="support-us-content-benefits">
+
+            <Profile
+              image={map}
+              imageDescription="A picture of a robot"
+              header="Travel Costs"
+              text="Funding can be used to help us compete out-of-state and pay for lodging fees at hotels."
+            />
+
+            <Profile
+              image={bulb}
+              imageDescription="A picture of a robot"
+              header="Future Inspiration"
+              text="You allow us to purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
+            />
+
+            <Profile
+              image={restaurant}
+              imageDescription="A picture of a robot"
+              header="Food!"
+              text="Often an overlooked expense, your contribution means we can build longer: dinner, snacks, and water."
+            />
+          </section>
+
+          <a href="https://www.gofund.me/af92cbf7" target="_blank" rel="noreferrer">Visit Our GoFundMe</a>
+        </div>
+
+        <div className="support-us-sponsors">
+          <h1>Thank You To Our Sponsors</h1>
+
+          <section className="support-us-sponsors-list">
+            <img alt="TJAero" src={TJAero} />
+            <img alt="Arden" src={Arden} />
+            <img alt="VoSandwich" src={VoSandwich} />
+            <img alt="DynamicFab" src={DynamicFab} />
+            <img alt="HeimBearings" src={HeimBearings} />
+            <img alt="Morstar" src={Morstar} />
+            <img alt="Sugoi Stuff" src={Sugoi} />
+            <img alt="Sunmerry Bakery" src={Sunmerry} />
+          </section>
+        </div>
+      </div>
     </>
   )
 }

@@ -16,6 +16,7 @@
   --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
   --super-dark-grey: rgb(42, 40, 40);
+  --mid-dark-grey: rgb(225, 225, 225);
 
   --grey-for-font: #808080;
 }
@@ -107,6 +108,32 @@ nav a{
 nav a:hover{
   transition: 250ms ease;
   background: var(--lions-red);
+}
+
+/* ==================================================================================================================================== */
+/* PROFILE COMPONENT */
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  max-width: 25vw;
+
+  text-align: center;
+  outline: 1px solid red;
+}
+
+.profile > p{
+  font-size: 1.2rem;
+  font-family: 'Lato', Courier, monospace;
+  line-height: 1.75rem;
+}
+
+.profile img{
+  max-width: 5rem;
 }
 
 /* ==================================================================================================================================== */
@@ -249,7 +276,7 @@ main::after{
   justify-content: center;
   align-items: center;
 
-  gap: 5vw;
+  gap: 2rem;
 
   padding-bottom: 5vh;
 }
@@ -545,7 +572,7 @@ main::after{
   align-items: flex-start;
   gap: 7vh;
 
-  font-weight: bolder;
+  font-weight: bold;
   max-width: 60vw;
   padding-left: 7vw;
 
@@ -573,6 +600,89 @@ main::after{
 .about-shameless-plug-button:hover{
   transform: scale(1.05);
   transition: 250ms ease;
+}
+
+/* ==================================================================================================================================== */
+/* NEWSLETTER */
+
+.newsletter-container{
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter img{
+  max-width: 25rem;
+}
+
+.newsletter-hero > h1{
+  font-size: 3.5rem;
+}
+
+.newsletter-hero > p{
+  font-size: 1.3rem;
+}
+
+/* ==================================================================================================================================== */
+/* SUPPORT US */
+
+.support-us{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10vh;
+}
+
+.support-us-hero{
+  background: var(--mid-dark-grey);
+
+  min-width: 100%;
+  min-height: 20vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+
+  justify-content: center;
+
+  padding: 3rem;
+}
+
+.support-us-hero > h1{
+  max-width: 25vw;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  font-size: 2rem;
+}
+
+.support-us-hero > p{
+  font-size: 1.25rem;
+  color: var(--grey-for-font);
+}
+
+.support-us-content-benefits{
+  display: flex;
+  gap: 5vw;
+}
+
+.support-us-sponsors{
+  background: var(--lions-red);
+}
+
+.support-us-sponsors-list > img{
+  max-width: 20vw;
 }
 
 /* ==================================================================================================================================== */
