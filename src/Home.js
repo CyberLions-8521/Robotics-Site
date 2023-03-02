@@ -1,7 +1,6 @@
 import React from 'react'
 
 import banner from "./images/image-cyberlions-banner.jpg"
-import logo from "./images/icons/cyberlions.png"
 import sticker from "./images/icons/sticker.png"
 
 import cadding from "./images/2023-images/cadding.jpg"
