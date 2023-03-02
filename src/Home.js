@@ -15,7 +15,7 @@ import Arden from "./images/sponsors/2023/Arden.png"
 import VoSandwich from "./images/sponsors/2023/Vo-Sandwich.png"
 import DynamicFab from "./images/sponsors/2023/Dynamic-Fab.png"
 import HeimBearings from "./images/sponsors/2023/Heim-Bearings.png"
-import Morstar from "./images/sponsors/2023/Morstar.png"
+import Morstar from "./images/sponsors/2023/MorStar.png"
 import Sugoi from "./images/sponsors/2023/Sugoi-Stuff.png"
 import Sunmerry from "./images/sponsors/2023/Sunmerry.png"
 
