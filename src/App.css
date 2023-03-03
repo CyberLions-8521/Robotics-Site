@@ -6,19 +6,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 /* ==================================================================================================================================== */
 /* DEFAULT VALUES */
 
 :root{
   --lions-red: #cd2027;
+  --light-lions-red: #f03f44;
+
   --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
   --super-dark-grey: rgb(42, 40, 40);
-  --mid-dark-grey: rgb(225, 225, 225);
+  --mid-dark-grey: rgb(224, 224, 224);
 
   --grey-for-font: #808080;
+  --gold: orange;
 }
 
 *{
@@ -117,23 +120,34 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  gap: 2rem;
+  gap: 1.75rem;
   max-width: 25vw;
 
   text-align: center;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+}
+
+.profile > h1{
+  font-size: 1.75rem;
+  color: var(--gold);
 }
 
 .profile > p{
   font-size: 1.2rem;
   font-family: 'Lato', Courier, monospace;
   line-height: 1.75rem;
+
+  /* color: var(--grey-for-font); */
 }
 
 .profile img{
   max-width: 5rem;
+
+  background: var(--gold);
+  border-radius: 1rem;
+  
+  padding: 1rem;
 }
 
 /* ==================================================================================================================================== */
@@ -676,11 +690,11 @@ main::after{
   align-items: center;
   justify-content: center;
 
-  gap: 10vh;
+  gap: 15vh;
 }
 
 .support-us-hero{
-  background: var(--mid-dark-grey);
+  background: var(--super-light-grey);
 
   min-width: 100%;
   min-height: 20vh;
@@ -692,12 +706,13 @@ main::after{
   justify-content: center;
 
   padding: 3rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.586);
 }
 
 .support-us-hero > h1{
   max-width: 25vw;
-  font-weight: bolder;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
 
   font-size: 2rem;
 }
@@ -707,17 +722,73 @@ main::after{
   color: var(--grey-for-font);
 }
 
+.support-us-content{
+  display: flex;
+  flex-direction: column;
+
+  gap: 10vh;
+
+  justify-content: center;
+  align-items: center;
+}
+
 .support-us-content-benefits{
   display: flex;
   gap: 5vw;
 }
 
-.support-us-sponsors{
-  background: var(--lions-red);
+.support-us-content a{
+  text-decoration: none;
+  color: var(--lions-red);
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  transition: 250ms ease;
+  border-radius: 5vh;
+  padding: 1rem;
+  border: 0.3vh solid var(--lions-red)
 }
 
-.support-us-sponsors-list > img{
-  max-width: 20vw;
+.support-us-content a:hover{
+  color: darkseagreen;
+
+  transition: 250ms ease;
+  transform: scale(1.05);
+  border: 0.3vh solid darkseagreen;
+}
+
+.support-us-sponsors{
+  background: var(--lions-red);
+  min-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 10vh;
+}
+
+.support-us-sponsors > h1{
+  font-size: 3rem;
+  color: white;
+  margin-top: 10vh;
+}
+
+.support-us-sponsors-list{
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.support-us-sponsors-list img{
+  max-width: 15vw;
 }
 
 /* ==================================================================================================================================== */

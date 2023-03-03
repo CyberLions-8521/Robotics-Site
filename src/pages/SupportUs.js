@@ -2,9 +2,9 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 
 import Profile from "../helper-components/Profile.js"
-import map from "../images/icons/map.svg"
+import path from "../images/icons/map-marker.png"
 import bulb from "../images/icons/bulb.png"
-import restaurant from "../images/icons/restaurant.png"
+import grape from "../images/icons/grape.png"
 
 import TJAero from "../images/sponsors/2023/TJ-Aero.png"
 import Arden from "../images/sponsors/2023/Arden.png"
@@ -33,22 +33,22 @@ export default function SupportUs() {
           <section className="support-us-content-benefits">
 
             <Profile
-              image={map}
-              imageDescription="A picture of a robot"
+              image={path}
+              imageDescription="Travel Costs"
               header="Travel Costs"
-              text="Funding can be used to help us compete out-of-state and pay for lodging fees at hotels."
+              text="Your funding can be used to help our team compete out-of-state and pay hotel fees so all our members can go."
             />
 
             <Profile
               image={bulb}
-              imageDescription="A picture of a robot"
+              imageDescription="Light Bulb"
               header="Future Inspiration"
-              text="You allow us to purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
+              text="You'll let us to purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
             />
 
             <Profile
-              image={restaurant}
-              imageDescription="A picture of a robot"
+              image={grape}
+              imageDescription="Grape"
               header="Food!"
               text="Often an overlooked expense, your contribution means we can build longer: dinner, snacks, and water."
             />
