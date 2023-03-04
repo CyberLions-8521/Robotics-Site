@@ -635,7 +635,7 @@ main::after{
   font-weight: 800;
 
   font-size: 2rem;
-  color: chocolate
+  color: black;
 }
 
 .support-us-hero > p{
@@ -795,6 +795,99 @@ main::after{
 .contacts-info-google-maps-metadata section > p{
   font-size: 1.1rem;
 } 
+
+/* ==================================================================================================================================== */
+/* OUR ROBOTS */
+
+.our-robots{
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  align-items: center;
+}
+
+.our-robots-hero{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  background: var(--super-dark-grey);
+  min-height: 75vh;
+  min-width: 100%;
+
+  align-items: center;
+}
+
+.our-robots-hero > h1{
+  font-size: 3.5rem;
+  color: white;
+
+  margin-top: 10rem;
+}
+
+.our-robots-hero p{
+  font-size: 1.4rem;
+  color: white;
+}
+
+.our-robots-gallery{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  max-width: 80vw;
+  margin-bottom: 5rem;
+}
+
+.robot{
+  display: flex;
+
+  padding-bottom: 3rem;
+  border-bottom: 0.25rem solid var(--lions-red);
+}
+
+.robot-hero{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+}
+
+.robot-hero > h1{
+  font-size: 2.5rem;
+}
+
+.robot-hero > img{
+  max-width: 25rem;
+}
+
+.robot article{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  min-width: 50vw;
+  max-width: 50vw;
+
+  align-items: center;
+}
+
+.robot article p{
+  font-size: 1.8rem;
+  text-align: center;
+
+  max-width: 30vw;
+}
+
+.robot-awards{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+}
 
 /* ==================================================================================================================================== */
 /* FOOTER */

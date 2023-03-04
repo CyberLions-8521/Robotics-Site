@@ -45,7 +45,7 @@ export default function Contacts() {
             <iframe title="Westminster High School" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=14325%20Goldenwest%20St,%20Westminster,%20CA%2092683+(Westminster%20High%20School)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
 
             <div className="contacts-info-google-maps-metadata">
-            <section>
+              <section>
                 <h1>Email</h1>
                 <p>whslionsrobotics@gmail.com</p>
               </section>
@@ -56,6 +56,7 @@ export default function Contacts() {
               </section>
             </div>
           </div>
+
         </div>
       </div>
     </>
