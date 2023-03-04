@@ -114,86 +114,6 @@ nav a:hover{
 } 
 
 /* ==================================================================================================================================== */
-/* PROFILE COMPONENT */
-
-.profile{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 1.75rem;
-  max-width: 25vw;
-
-  text-align: center;
-  /* outline: 1px solid red; */
-}
-
-.profile > h1{
-  font-size: 1.75rem;
-  color: var(--gold);
-}
-
-.profile > p{
-  font-size: 1.2rem;
-  font-family: 'Lato', Courier, monospace;
-  line-height: 1.75rem;
-
-  /* color: var(--grey-for-font); */
-}
-
-.profile img{
-  max-width: 5rem;
-
-  background: var(--gold);
-  border-radius: 1rem;
-  
-  padding: 1rem;
-}
-
-/* ==================================================================================================================================== */
-/* SECTION COMPONENT */
-
-.section-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 90vh;
-  max-height: 90vh;
-
-  gap: 7vw;
-  background: white;
-}
-
-.section-container-grey-background{
-  background: var(--super-light-grey);
-}
-
-.section-image{
-  border-radius: 5vh;
-
-  max-width: 50vw;
-  max-height: 50vh;
-}
-
-.section-text{
-  max-width: 35vw;
-
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-}
-
-.section-text > h1{
-  font-size: 6vh;
-}
-
-.section-text > p{
-  font-size: 2.6vh;
-  line-height: 6vh;
-}
-
-/* ==================================================================================================================================== */
 /* LANDING PAGE */
 
 main{
@@ -715,6 +635,7 @@ main::after{
   font-weight: 800;
 
   font-size: 2rem;
+  color: chocolate
 }
 
 .support-us-hero > p{
@@ -794,14 +715,86 @@ main::after{
 /* ==================================================================================================================================== */
 /* CONTACTS */
 
-.contacts-google-maps iframe{
-  max-height: 50vh;
-  min-width: 100%;
+.contacts{
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+}
 
+.contacts-banner{
+  min-width: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
+  max-height: 50vh;
+}
+
+.contacts-info{
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.contacts-info-input{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacts-info-input-button{
+  background: red;
+  color: white;
+
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  transition: 250ms ease;
+  max-width: 8rem;
+}
+
+.contacts-info-input-button:hover{
+  background: var(--lions-red);
+  transition: 250ms ease;
+  cursor: pointer;
+}
+
+.contacts-info-google-maps{
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contacts-info-google-maps iframe{
+
+  min-width: 30rem;
+  max-height: 15rem;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.contacts-info-google-maps-metadata{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacts-info-google-maps-metadata section{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contacts-info-google-maps-metadata section > p{
+  font-size: 1.1rem;
+} 
 
 /* ==================================================================================================================================== */
 /* FOOTER */
@@ -905,4 +898,105 @@ footer{
 
 .footer-team-name-banner > h1{
   font-size: 5vh;
+}
+
+/* ==================================================================================================================================== */
+/* PROFILE COMPONENT */
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.75rem;
+  max-width: 25vw;
+
+  text-align: center;
+  /* outline: 1px solid red; */
+}
+
+.profile > h1{
+  font-size: 1.75rem;
+  color: var(--gold);
+}
+
+.profile > p{
+  font-size: 1.2rem;
+  font-family: 'Lato', Courier, monospace;
+  line-height: 1.75rem;
+
+  /* color: var(--grey-for-font); */
+}
+
+.profile img{
+  max-width: 5rem;
+
+  background: var(--gold);
+  border-radius: 1rem;
+  
+  padding: 1rem;
+}
+
+/* ==================================================================================================================================== */
+/* SECTION COMPONENT */
+
+.section-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 90vh;
+  max-height: 90vh;
+
+  gap: 7vw;
+  background: white;
+}
+
+.section-container-grey-background{
+  background: var(--super-light-grey);
+}
+
+.section-image{
+  border-radius: 5vh;
+
+  max-width: 50vw;
+  max-height: 50vh;
+}
+
+.section-text{
+  max-width: 35vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.section-text > h1{
+  font-size: 6vh;
+}
+
+.section-text > p{
+  font-size: 2.6vh;
+  line-height: 6vh;
+}
+
+/* ==================================================================================================================================== */
+/* LABEL COMPONENT */
+
+.label{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label > label{
+  font-size: 1.25rem;
+}
+
+.label > input, .label > textarea{
+  border: 0.1rem solid var(--lions-red);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  min-width: 20rem;
 }
