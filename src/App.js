@@ -6,9 +6,9 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./Home";
 import Newsletter from './pages/Newsletter';
 import SupportUs from './pages/SupportUs';
-import Media from './pages/Media';
 import Contacts from './pages/Contacts';
 import OurRobots from './pages/OurRobots';
+import About from './pages/About'
 
 import logo from "./images/icons/cyberlions.png";
 
@@ -17,7 +17,6 @@ import github from "./images/icons/socials/github_white.png";
 import flickr from "./images/icons/socials/flickr.png";
 
 function App() {
-
   // useRef to get the navigation element
   const navigation = useRef();
 
@@ -31,6 +30,7 @@ function App() {
   useEffect(() => {
     if (window.location.pathname !== "/"){
       navigation.current.style.backgroundColor = "rgb(42, 40, 40)";
+      navigation.current.style.position = "static";
     }
   }, []);
 
@@ -80,10 +80,10 @@ function App() {
       
       <ul>
         <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/newsletter">Newsletter</a></li>
         <li><a href="/our-robots">Our Robots</a></li>
         <li><a href="/support-us">Support Us</a></li>
-        <li><a href="/media">Media</a></li>
         <li><a href="/contacts">Contacts</a></li>
       </ul>
     </nav>
@@ -91,15 +91,15 @@ function App() {
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/our-robots" element={<OurRobots />} />
       <Route path="/support-us" element={<SupportUs />} />
-      <Route path="/media" element={<Media />} />
       <Route path="/contacts" element={<Contacts />} />
     </Routes>
 
     <footer>
-      <p className="footer-slogan">If you can dream it, you can do it</p>
+      <p className="footer-address">Westminster High School <br /> Westminster, CA</p>
        
       <div className="footer-team-name">
         <article className="footer-team-name-banner">
@@ -117,10 +117,10 @@ function App() {
       <div className="footer-links">
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
           <li><a href="/our-robots">Our Robots</a></li>
           <li><a href="/support-us">Support Us</a></li>
-          <li><a href="/media">Media</a></li>
           <li><a href="/contacts">Contacts</a></li>
         </ul>
       </div>
