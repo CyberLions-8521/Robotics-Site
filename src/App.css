@@ -442,6 +442,11 @@ main::after{
 
 .about-subteams-container{
   background: white;
+  max-height: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
 
 .about-subteams-container-hero{
@@ -466,21 +471,38 @@ main::after{
 
 .about-subteams{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 5vw;
+  flex-direction: row-reverse;
+  gap: 3rem;
 }
 
 .about-subteams article{
-  max-width: 35vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  gap: 1rem;
+
+  max-width: 15rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 
   text-align: center;
-  gap: 3vh;
+
+  outline: 0.1rem solid var(--grey-for-font);
+}
+
+#about-mechanical{
+  grid-area: mechanical;
+}
+#about-design{
+  grid-area: design;
+}
+#about-electrical{
+  grid-area: electrical;
+}
+#about-software{
+  grid-area: software;
+}
+#about-operations{
+  grid-area: operations;
 }
 
 .about-subteams article > h1{
