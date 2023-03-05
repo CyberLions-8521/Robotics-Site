@@ -470,9 +470,15 @@ main::after{
 }
 
 .about-subteams{
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 3rem;
+
+  display: grid;
+  grid-template-areas: 
+  "mechanical mechanical design design"
+  "electrical operations operations software";
+
+  justify-content: center;
+  gap: 2rem;
+
 }
 
 .about-subteams article{
@@ -480,7 +486,7 @@ main::after{
   flex-direction: column;
   gap: 1rem;
 
-  max-width: 15rem;
+  max-width: 20rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
 
@@ -491,9 +497,11 @@ main::after{
 
 #about-mechanical{
   grid-area: mechanical;
+  margin-left: 11rem;
 }
 #about-design{
   grid-area: design;
+  /* margin-right: 5rem; */
 }
 #about-electrical{
   grid-area: electrical;
@@ -510,7 +518,7 @@ main::after{
 }
 
 .about-subteams article > p{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   color: var(--grey-for-font);
 }

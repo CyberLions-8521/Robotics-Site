@@ -40,24 +40,24 @@ export default function About() {
                         </div>
 
                         <div className="about-subteams">
-                        <article id="about-electrical">
-                                <h1>Electrical Team</h1>
-                                <p>Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.</p>
+                            <article id="about-mechanical">
+                                <h1>Mechanical Team</h1>
+                                <p>Use machinery and power-tools to fabricate prototypes for robot’s subsystems. You’re expected to organize and understand the mechanics of the robot and assembly.</p>
                             </article>
-                           
+
                             <article id="about-design">
                                 <h1>Design Team</h1>
                                 <p>Learn design skills and rapid prototyping techniques through CAD and 3D printing. You're planning, designing, and experimenting with different designs to come up with a working robot.</p>
                             </article>
 
+                            <article id="about-electrical">
+                                <h1>Electrical Team</h1>
+                                <p>Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.</p>
+                            </article>
+
                             <article id="about-operations">
                                 <h1>Operations Management Team</h1>
                                 <p>Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory, working closely with club advisors and IPT leads.</p>
-                            </article>
-
-                            <article id="about-mechanical">
-                                <h1>Mechanical Team</h1>
-                                <p>Use machinery and power-tools to fabricate prototypes for robot’s subsystems. You’re expected to organize and understand the mechanics of the robot and assembly.</p>
                             </article>
 
                             <article id="about-software">
