@@ -56,7 +56,7 @@ export default function About() {
                             </article>
 
                             <article id="about-operations">
-                                <h1>Operations Management Team</h1>
+                                <h1>Operations/Management Team</h1>
                                 <p>Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory, working closely with club advisors and IPT leads.</p>
                             </article>
 
