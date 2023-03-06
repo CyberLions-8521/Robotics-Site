@@ -47,6 +47,12 @@
   padding-bottom: 30vh;
 }
 
+@media (min-width: 150rem) {
+  .body{
+    padding-bottom: 25vh;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* NAVIGATION BAR */
 
@@ -112,6 +118,26 @@ nav a:hover{
   transition: 250ms ease;
   background: var(--lions-red);
 } 
+
+@media (min-width: 150rem) {
+
+  .nav-cyberlions-logo > img{
+    max-width: 3.25rem;
+  }
+  .nav-cyberlions-logo > h1{
+    font-size: 1.3rem;
+  }
+  .nav-cyberlions-logo{
+    gap: 0.75rem;
+  }
+
+  nav a{
+    font-size: 1.25rem;
+  }
+  nav > ul{
+    gap: 1.5rem;
+  }
+}
 
 /* ==================================================================================================================================== */
 /* LANDING PAGE */
@@ -742,6 +768,34 @@ main::after{
   max-width: 15vw;
 }
 
+@media (min-width: 150rem) {
+
+  .support-us-hero{
+    padding: 0rem 3rem 0rem 3rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.586);
+  }
+
+  .support-us-hero > h1{
+    font-size: 2.5rem;
+  }
+  .support-us-hero > p{
+    font-size: 1.75rem;
+  }
+
+  .support-us-content a{
+    font-size: 2.25rem;
+  }
+
+  .support-us-sponsors-list{
+
+    gap: 5rem;
+  }
+
+  .support-us-sponsors-list img{
+    max-width: 20rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* CONTACTS */
 
@@ -825,6 +879,12 @@ main::after{
 .contacts-info-google-maps-metadata section > p{
   font-size: 1.1rem;
 } 
+
+@media (min-width: 150rem) {
+  .contacts-info-input h1{
+    font-size: 3rem;
+  }
+}
 
 /* ==================================================================================================================================== */
 /* OUR ROBOTS */
@@ -1023,6 +1083,38 @@ footer{
   font-size: 5vh;
 }
 
+@media (min-width: 150rem) {
+  footer{
+    min-height: 25vh;
+    max-height: 25vh;
+    }
+
+  .footer-team-name{
+    gap: 0.1rem;
+  }
+
+  .footer-address{
+    font-size: 2rem;
+  }
+  .footer-copyright{
+    font-size: 1.25rem;
+  }
+  .footer-links ul > li > a{
+    font-size: 1.5rem;
+  }
+  .footer-team-name-banner h1{
+    font-size: 2.75rem;
+  }
+
+  .footer-team-name-banner img{
+    max-width: 6rem;
+  }
+
+  .footer-team-name-socials img{
+    max-width: 2.5rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* PROFILE COMPONENT */
 
@@ -1047,8 +1139,6 @@ footer{
   font-size: 1.2rem;
   font-family: 'Lato', Courier, monospace;
   line-height: 1.75rem;
-
-  /* color: var(--grey-for-font); */
 }
 
 .profile img{
@@ -1058,6 +1148,19 @@ footer{
   border-radius: 1rem;
   
   padding: 1rem;
+}
+
+@media (min-width: 150rem) {
+  .profile img{
+    min-width: 7rem;
+    max-width: 7rem;
+  }
+  .profile > p{
+    font-size: 1.5rem;
+  }
+  .profile > h1{
+    font-size: 2rem;
+  }
 }
 
 /* ==================================================================================================================================== */
@@ -1122,4 +1225,22 @@ footer{
   padding: 0.5rem;
   font-size: 1.25rem;
   min-width: 20rem;
+}
+
+@media (min-width: 150rem) {
+  .label{
+    gap: 1rem;
+  }
+
+  .label > label{
+    font-size: 1.35rem;
+  }
+
+  .label > input, .label > textarea{
+    border: 0.1rem solid var(--lions-red);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    min-width: 20rem;
+  }
 }
