@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import './App.css';
 
@@ -11,6 +11,7 @@ import OurRobots from './pages/OurRobots';
 import About from './pages/About'
 
 import logo from "./images/icons/cyberlions.png";
+import burger from "./images/icons/mobile-menu.png";
 
 import instagram from "./images/icons/socials/instagram_white.png";
 import github from "./images/icons/socials/github_white.png";
@@ -62,8 +63,24 @@ function App() {
       github.removeEventListener("click", githubHandler);
       flickr.removeEventListener("click", flickrHandler);
     }
-
   }, [instagramLink, githubLink, flickrLink])
+
+  const navigationLinks = useRef();
+  let mobileBurgerOpen = false;
+
+  function handleMobileBurger(){
+    switch (mobileBurgerOpen){
+      case false:
+        navigationLinks.current.style.display = "flex";
+        mobileBurgerOpen = true;
+        break;
+      case true:
+        navigationLinks.current.style.display = "none";
+        mobileBurgerOpen = false;
+        break;
+      // no default
+    }
+  }
 
   return (
   
@@ -86,7 +103,22 @@ function App() {
         <li><a href="/support-us">Support Us</a></li>
         <li><a href="/contacts">Contacts</a></li>
       </ul>
+
+      <img id="nav-mobile-burger" alt="mobile navigation" src={burger} onClick={(e) => handleMobileBurger()} />
+
+      <section className="nav-mobile-list" ref={navigationLinks}>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/newsletter">Newsletter</a></li>
+          <li><a href="/our-robots">Our Robots</a></li>
+          <li><a href="/support-us">Support Us</a></li>
+          <li><a href="/contacts">Contacts</a></li>
+        </ul>
+    </section>
     </nav>
+
+
 
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}

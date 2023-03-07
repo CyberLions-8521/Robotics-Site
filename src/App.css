@@ -119,6 +119,13 @@ nav a:hover{
   background: var(--lions-red);
 } 
 
+#nav-mobile-burger{
+  display: none;
+}
+.nav-mobile-list{
+  display: none;
+}
+
 @media (min-width: 150rem) {
 
   .nav-cyberlions-logo > img{
@@ -136,6 +143,51 @@ nav a:hover{
   }
   nav > ul{
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    place-items: center;
+  }
+
+  .nav-cyberlions-logo{
+    gap: 1rem;
+    padding: 0;
+    margin-left: 1rem;
+  }
+  .nav-cyberlions-logo img{
+    max-width: 3.5rem;
+  }
+  .nav-cyberlions-logo > h1{
+    font-size: 1.25rem;
+  }
+
+  nav ul{
+    display: none;
+  }
+  .nav-mobile-list ul{
+    display: block;
+  }
+  .nav-mobile-list ul{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    padding-right: 8rem;
+  }
+  .nav-mobile-list a{
+    font-size: 1.1rem;
+  }
+
+  #nav-mobile-burger{
+    display: block;
+    max-width: 2.5rem;
   }
 }
 
@@ -337,11 +389,7 @@ main::after{
   transition: 250ms ease;
 }
 
-@media (max-width: 700px) {
-  *{
-    outline: 1px solid red;
-  }
-
+@media (max-width: 40rem) {
   .main-team-background{
 
     min-width: 100vw;
