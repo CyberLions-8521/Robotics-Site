@@ -398,17 +398,8 @@ main::after{
     max-height: 100vh;
   }
 
-  .main-team-banner{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-
-    max-width: 50vw;
-  }
-
   .main-team-slogan{
-    text-align: center;
-    max-width: 50vw;
+    display: none;
   }
 
   .main-team-slogan > h1{
@@ -417,6 +408,11 @@ main::after{
 
   .main-team-slogan > P{
     display: none;
+  }
+
+  .main-team-banner img {
+    max-width: 60vw;
+    min-width: 60vw;
   }
 }
 
@@ -1220,7 +1216,6 @@ footer{
   align-items: center;
 
   min-height: 90vh;
-  max-height: 90vh;
 
   gap: 7vw;
   background: white;
@@ -1252,6 +1247,20 @@ footer{
 .section-text > p{
   font-size: 2.6vh;
   line-height: 6vh;
+}
+
+@media (max-width: 40rem) {
+  .section-container{
+    flex-direction: column;
+  }
+
+  .section-text{
+    max-width: 70vw;
+    text-align: center;
+  }
+  .section-text h1{
+    font-size: 2rem;
+  }
 }
 
 /* ==================================================================================================================================== */
