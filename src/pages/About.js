@@ -14,6 +14,12 @@ export default function About() {
         <>
             <Helmet>
                 <title>About | Cyberlions</title>
+
+                <meta
+                    name="description"
+                    content="We Are The Cyberlions, a high school robotics team that aims to provide our community with hands-on opportunities and mentor ships. We empower our community and give them the chance to show their inner leader and motivator. Our Robotics team is challenged under strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots"
+                />
+
             </Helmet>
 
             {/* about-container AKA the about's parent, is neccessary to center the about div which has all the content in it */}

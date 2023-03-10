@@ -97,7 +97,7 @@ function App() {
       
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/about-us">About</a></li>
         <li><a href="/newsletter">Newsletter</a></li>
         <li><a href="/our-robots">Our Robots</a></li>
         <li><a href="/support-us">Support Us</a></li>
@@ -109,7 +109,7 @@ function App() {
       <section className="nav-mobile-list" ref={navigationLinks}>
       <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about-us">About</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
           <li><a href="/our-robots">Our Robots</a></li>
           <li><a href="/support-us">Support Us</a></li>
@@ -118,12 +118,10 @@ function App() {
     </section>
     </nav>
 
-
-
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/about-us" element={<About />} />
       <Route path="/newsletter" element={<Newsletter />} />
       <Route path="/our-robots" element={<OurRobots />} />
       <Route path="/support-us" element={<SupportUs />} />
@@ -149,7 +147,7 @@ function App() {
       <div className="footer-links">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/about-us">About</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
           <li><a href="/our-robots">Our Robots</a></li>
           <li><a href="/support-us">Support Us</a></li>
