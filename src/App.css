@@ -766,11 +766,7 @@ main::after{
   .about-subteams{
     display: grid;
     grid-template-areas:
-    "mechanical ."
-    ". design"
-    "electrical ."
-    ". operations"
-    "software .";
+    "mechanical design electrical software operations";
 
     gap: 2rem;
   }
@@ -848,7 +844,6 @@ main::after{
   justify-content: center;
 
   padding: 3rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.586);
 }
 
 .support-us-hero > h1{
@@ -938,16 +933,21 @@ main::after{
 
   .support-us-hero{
     padding: 0rem 3rem 0rem 3rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.586);
   }
 
   .support-us-hero > h1{
     font-size: 2.5rem;
+    max-width: 30rem;
+
+    margin-left: 5rem;
   }
   .support-us-hero > p{
     font-size: 1.75rem;
+    margin-left: 5rem;
   }
-
+  .support-us-hero > p{
+    margin-left: 5rem;
+  }
   .support-us-content a{
     font-size: 2.25rem;
   }
@@ -1304,7 +1304,7 @@ footer{
 .profile > p{
   font-size: 1.2rem;
   font-family: 'Lato', Courier, monospace;
-  line-height: 1.75rem;
+  line-height: 3.5rem;
 }
 
 .profile img{
