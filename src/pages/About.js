@@ -13,7 +13,7 @@ export default function About() {
   return (
         <>
             <Helmet>
-                <title>About | Cyberlions</title>
+                <title>Team 8521 - About</title>
 
                 <meta
                     name="description"

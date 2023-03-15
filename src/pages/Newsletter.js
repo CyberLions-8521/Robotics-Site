@@ -7,7 +7,7 @@ export default function Newsletter() {
   return (
     <>
       <Helmet>
-        <title>Newsletter | Cyberlions</title>
+        <title>Team 8521 - Newsletter</title>
       </Helmet>
 
       <div className="newsletter-container">

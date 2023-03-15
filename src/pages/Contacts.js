@@ -23,7 +23,7 @@ export default function Contacts() {
   return (
     <>
       <Helmet>
-        <title>Contacts | Cyberlions</title>
+        <title>Team 8521 - Contacts</title>
       </Helmet>
 
       <div className="contacts">

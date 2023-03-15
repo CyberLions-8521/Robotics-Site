@@ -19,7 +19,7 @@ export default function SupportUs() {
   return (
     <>
       <Helmet>
-        <title>Support Us | Cyberlions</title>
+        <title>Team 8521 - Support Us</title>
       </Helmet>
 
       <div className="support-us">
