@@ -39,7 +39,7 @@ export default function About() {
                         <img id="operations" alt="operations" src={operations} />
                     </div>
 
-                    <main className="about-subteams-container">
+                    <div className="about-subteams-container">
                         <div className="about-subteams-container-hero">
                             <h1>Our Subteams</h1>
                             <h2>Being Part of The CyberLions Means You're Part of a Major Role</h2>
@@ -71,7 +71,7 @@ export default function About() {
                                 <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
                             </article>
                         </div>
-                    </main>
+                    </div>
 
                     <div className="about-shameless-plug">
                         <img id="battle" alt="battle" src={battle} />

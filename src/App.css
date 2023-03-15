@@ -506,6 +506,7 @@ main::after{
   flex-direction: column;
 
   gap: 15vh;
+  position: relative;
 }
 
 .about-hero{
@@ -746,6 +747,9 @@ main::after{
 @media (min-width: 150rem) {
   .about{
     gap: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .about-hero > h3{
@@ -761,6 +765,12 @@ main::after{
   #about-mechanical{
     margin-left: 0rem;
   }
+
+  .about-subteams-container{
+    /* max-width: 100rem; */
+    display: flex;
+    gap: 10rem;
+  }
   .about-subteams-container-hero h1{
     font-size: 3.5rem;
   }
@@ -770,24 +780,41 @@ main::after{
     "mechanical design electrical software operations";
 
     gap: 2rem;
+    min-width: 150rem;
   }
 
   .about-subteams article{
 
     outline: none;
-    max-width: 40rem;
     gap: 2.5rem;
+    max-width: 25rem;
   }
   .about-subteams article > h1{
     font-size: 2rem;
 
-    text-align: left;
+    text-align: center;
   }
   .about-subteams article > p{
     font-size: 1.3rem;
 
-    text-align: left;
+    text-align: center;
   }
+
+  .about-shameless-plug{
+    min-width: 100rem;
+    max-width: 100rem;
+
+    margin-bottom: 0
+  }
+  .about-shameless-plug img{
+    min-width: 100rem;
+    max-width: 100rem;
+  }
+  .about-shameless-plug-text p{
+    font-size: 1.5rem;
+    max-width: 65rem;
+    font-weight: 700;
+  } 
 }
 
 /* ==================================================================================================================================== */
@@ -1102,7 +1129,7 @@ main::after{
 
   padding-bottom: 3rem;
   gap: 5rem;
-  border-bottom: 0.15rem solid var(--lions-red);
+  border-bottom: 0.1rem solid var(--lions-red);
 }
 
 .robot img{
@@ -1124,11 +1151,49 @@ main::after{
 .robot-hero-metadata > h2{
   font-size: 1.15rem;
   color: var(--grey-for-font);
-  font-style: italic;
+  /* font-style: italic; */
 }
 .robot-hero > p{
   font-size: 1.25rem;
   color: var(--grey-for-font);
+}
+
+@media (min-width: 150rem) {
+
+  .our-robots{
+    gap: 5rem;
+  }
+
+  .our-robots-hero{
+    min-height: 45rem;
+    max-height: 45rem;
+
+    min-width: 90rem;
+    max-width: 90rem;
+
+    margin-top: 5rem;
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .our-robots-hero > h1{
+    margin-top: 0;
+  }
+  
+  .robot{
+    max-width: 90rem;
+    gap: 7rem;
+  }
+  .robot img{
+    border-radius: 1.5rem;
+  }
+  .robot-hero > p{
+    font-size: 1.28rem;
+    line-height: 2.15rem;
+  }
 }
 
 /* ==================================================================================================================================== */
