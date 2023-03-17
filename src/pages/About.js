@@ -8,6 +8,9 @@ import operations from '../images/2022-images/operations.jpg'
 import design from '../images/2023-images/design.jpg'
 
 import battle from '../images/2022-images/battle.jpg'
+import robbie from '../images/2023-images/robbie-move.jpg'
+import build from '../images/2023-images/build.jpg'
+import cheer from '../images/2023-images/cheer.jpg'
 
 export default function About() {
   return (
@@ -70,6 +73,11 @@ export default function About() {
                                 <h1>Programming Team</h1>
                                 <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
                             </article>
+
+                            <img id="about-robbie" alt="robbie" src={robbie} />
+                            <img id="about-build" alt="build" src={build} />
+                            <img id="about-cheer" alt="cheer" src={cheer} />
+
                         </div>
                     </div>
 
