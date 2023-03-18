@@ -74,9 +74,17 @@ export default function About() {
                                 <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
                             </article>
 
-                            <img id="about-robbie" alt="robbie" src={robbie} />
-                            <img id="about-build" alt="build" src={build} />
-                            <img id="about-cheer" alt="cheer" src={cheer} />
+                            {/* Section element exist to add after psuedo elements for shading */}
+                            <section>
+                                <img id="about-robbie" alt="robbie" src={robbie} />
+                            </section>
+                            <section>
+                                <img id="about-build" alt="build" src={build} />
+                            </section>
+                            <section>
+                                <img id="about-cheer" alt="cheer" src={cheer} />
+                            </section>
+
 
                         </div>
                     </div>

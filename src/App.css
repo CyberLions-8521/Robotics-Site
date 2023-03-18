@@ -394,6 +394,11 @@ main::after{
 }
 
 @media (max-width: 40rem) {
+  main{
+    min-height: 95vh;
+    max-height: 95vh;
+  }
+
   .main-team-background{
 
     min-width: 100vw;
@@ -403,20 +408,20 @@ main::after{
   }
 
   .main-team-slogan{
-    display: none;
+    max-width: 20rem;
   }
 
   .main-team-slogan > h1{
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
   }
 
-  .main-team-slogan > P{
+  .main-team-slogan > p{
     display: none;
   }
 
   .main-team-banner img {
-    max-width: 60vw;
-    min-width: 60vw;
+    display: none;
   }
 }
 
@@ -518,21 +523,18 @@ main::after{
 
   max-width: 70vw;
 }
-
 .about-hero > h3{
   font-size: 1.1rem;
   font-weight: 100;
 
   color: var(--grey-for-font);
 }
-
 .about-hero > h1{
   font-size: 3.5rem;
   color: var(--lions-red);
 
   font-family: 'Righteous', cursive;
 }
-
 .about-hero > p{
   font-size: 1.3rem;
   color: var(--super-dark-grey);
@@ -563,22 +565,18 @@ main::after{
   grid-area: mechanical;
   margin-bottom: 5vh;
 }
-
 #design{
   grid-area: design;
   margin-top: 5vh;
 }
-
 #electrical{
   grid-area: electrical;
   margin-bottom: 5vh;
 }
-
 #software{
   grid-area: software;
   margin-top: 5vh;
 }
-
 #operations{
   grid-area: operations;
   margin-bottom: 5vh;
@@ -592,20 +590,17 @@ main::after{
   flex-direction: column;
   gap: 5em;
 }
-
 .about-subteams-container-hero{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   gap: 1rem;
 }
 
 .about-subteams-container-hero > h1{
   font-size: 2.5rem;
 }
-
 .about-subteams-container-hero > h2{
   font-size: 1.5rem;
   color: var(--grey-for-font);
@@ -614,7 +609,6 @@ main::after{
 }
 
 .about-subteams{
-
   display: grid;
   grid-template-areas: 
   "mechanical design electrical software"
@@ -624,16 +618,17 @@ main::after{
   gap: 2rem;
   grid-auto-rows: 1fr;
   grid-auto-columns: 1fr;
-
-
 }
-
 .about-subteams article{
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
   max-width: 20rem;
+
+  min-height: 20rem;
+  max-height: 20rem;
+
   padding: 0.5rem;
   border-radius: 0.25rem;
 
@@ -641,14 +636,51 @@ main::after{
 
   outline: 0.1rem solid var(--grey-for-font);
 }
+.about-subteams article > h1{
+  color: var(--lions-red);
+}
+.about-subteams article > p{
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--grey-for-font);
+}
+.about-subteams img{
+  max-width: 20rem;
+
+  min-height: 20rem;
+  max-height: 20rem;
+  object-fit: cover;
+
+  border-radius: 0.25rem;
+}
+.about-subteams section{
+  position: relative;
+
+  min-height: 20rem;
+  max-height: 20rem;
+
+  border-radius: 0.25rem;
+  outline: 0.1rem solid var(--lions-red);
+}
+.about-subteams section::after{
+  content: "";
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+
+  background: var(--lions-red);
+  opacity: 0.15;
+  z-index: 1;
+  border-radius: 0.25rem;
+}
 
 #about-mechanical{
   grid-area: mechanical;
-  /* margin-left: 11rem; */
 }
 #about-design{
   grid-area: design;
-  /* margin-right: 5rem; */
 }
 #about-electrical{
   grid-area: electrical;
@@ -661,29 +693,13 @@ main::after{
 }
 #about-cheer{
   grid-area: cheer;
+  position: relative;
 }
 #about-build{
   grid-area: build;
 }
 #about-robbie{
   grid-area: robbie;
-}
-
-.about-subteams article > h1{
-  color: var(--lions-red);
-}
-.about-subteams article > p{
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: var(--grey-for-font);
-}
-.about-subteams img{
-  max-width: 20rem;
-  min-height: 20rem;
-  object-fit: cover;
-
-  border-radius: 0.25rem;
-  outline: 0.1rem solid var(--grey-for-font);
 }
 
 .about-shameless-plug{
@@ -697,12 +713,25 @@ main::after{
   flex-direction: column;
   gap: 5vh;
 }
+.about-shameless-plug::after{
+  content: "";
+  position: absolute;
+  min-width: 80vw;
+
+  min-height: 80vh;
+  max-height: 80vh;
+
+  opacity: 0.4;
+  border-radius: 2rem;
+  background: var(--discord-black);
+}
 
 /* z-index will move image background behind all text */
 .about-shameless-plug img{
   min-width: 80vw;
   max-width: 80vw;
 
+  min-height: 80vh;
   max-height: 80vh;
 
   border-radius: 2rem;
@@ -710,7 +739,6 @@ main::after{
   z-index: -1;
   object-fit: cover;
 }
-
 .about-shameless-plug h1{
   position: relative;
   z-index: 2;
@@ -803,6 +831,9 @@ main::after{
     min-width: 150rem;
   }
 
+  .about-subteams section{
+    display: none;
+  }
   .about-subteams article{
 
     outline: none;
@@ -824,7 +855,8 @@ main::after{
     min-width: 100rem;
     max-width: 100rem;
 
-    margin-bottom: 0
+    margin-bottom: 0;
+    position: relative;
   }
   .about-shameless-plug img{
     min-width: 100rem;
