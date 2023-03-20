@@ -659,6 +659,8 @@ main::after{
   min-height: 20rem;
   max-height: 20rem;
 
+  max-width: 20rem;
+
   border-radius: 0.25rem;
   outline: 0.1rem solid var(--lions-red);
 }
@@ -666,6 +668,7 @@ main::after{
   content: "";
   position: absolute;
   min-width: 100%;
+
   min-height: 100%;
   top: 0;
   left: 0;
@@ -705,6 +708,8 @@ main::after{
 .about-shameless-plug{
 
   position: relative;
+
+  /* Min height neccessary because shameless-plug to relative to the entire about element */
   min-height: 80vh;
 
   margin-bottom: 10vh;
@@ -853,15 +858,38 @@ main::after{
 
   .about-shameless-plug{
     min-width: 100rem;
-    max-width: 100rem;
+    min-height: 70vh;
 
-    margin-bottom: 0;
     position: relative;
+    margin-bottom: 0;
   }
+  .about-shameless-plug::after{
+    content: "";
+    position: absolute;
+    min-width: 100rem;
+  
+    min-height: 50rem;
+    max-height: 50rem;
+  
+    opacity: 0.4;
+    border-radius: 2rem;
+    background: var(--discord-black);
+  }
+  
+  /* z-index will move image background behind all text */
   .about-shameless-plug img{
     min-width: 100rem;
     max-width: 100rem;
+  
+    min-height: 50rem;
+    max-height: 50rem;
+  
+    border-radius: 2rem;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
   }
+  
   .about-shameless-plug-text p{
     font-size: 1.5rem;
     max-width: 65rem;
