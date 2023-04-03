@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import './App.css';
 
@@ -10,8 +10,9 @@ import Contacts from './pages/Contacts';
 import OurRobots from './pages/OurRobots';
 import About from './pages/About'
 
+import Modal from './helper-components/Modal';
 import logo from "./images/icons/cyberlions.png";
-import burger from "./images/icons/mobile-menu.png";
+import burgerImage from "./images/icons/mobile-menu.png";
 
 import instagram from "./images/icons/socials/instagram_white.png";
 import github from "./images/icons/socials/github_white.png";
@@ -21,11 +22,6 @@ function App() {
   // useRef to get the navigation element
   const navigation = useRef();
 
-  // useRef to set eventlisteners for footer socials
-  const instagramLink = useRef();
-  const githubLink = useRef();
-  const flickrLink = useRef();
-
   // useEffect hook used to change navigation background on page switch
   // [] means to run this callback only once when the component renders for the first time (mount)
   useEffect(() => {
@@ -33,7 +29,18 @@ function App() {
       navigation.current.style.backgroundColor = "rgb(42, 40, 40)";
       navigation.current.style.position = "static";
     }
+
+    // If the window viewport is the size of mobile phones
+    else if (window.innerWidth < (40 * 16)){
+      navigation.current.style.backgroundColor = "rgb(42, 40, 40)";
+      navigation.current.style.position = "static";
+    }
   }, []);
+
+  // useRef to set eventlisteners for footer socials
+  const instagramLink = useRef();
+  const githubLink = useRef();
+  const flickrLink = useRef();
 
   // useEffect hook used to set eventlisteners for footer socials (run when they render)
   useEffect(() => {
@@ -65,28 +72,17 @@ function App() {
     }
   }, [instagramLink, githubLink, flickrLink])
 
-  const navigationLinks = useRef();
-  let mobileBurgerOpen = false;
+  const [burger, setBurger] = useState(false);
+  const body = useRef();
 
-  function handleMobileBurger(){
-    switch (mobileBurgerOpen){
-      case false:
-        navigationLinks.current.style.display = "flex";
-        mobileBurgerOpen = true;
-        break;
-      case true:
-        navigationLinks.current.style.display = "none";
-        mobileBurgerOpen = false;
-        break;
-      // no default
-    }
+  const handleMobileBurger = () => {
+    setBurger(!burger);
   }
 
   return (
-  
   // <> is a React Fragment so we can return more than one DOM element
   // We can either use a fragment or a div
-  <div className="body">
+  <div className="body" ref={body}>
   
     {/* Example - Navigation Bar => This only renders once when you switch pages. I only ever have to write this code ONCE */}
     <nav ref={navigation}>
@@ -104,10 +100,13 @@ function App() {
         <li><a href="/contacts">Contacts</a></li>
       </ul>
 
-      <img id="nav-mobile-burger" alt="mobile navigation" src={burger} onClick={(e) => handleMobileBurger()} />
+      <img id="nav-mobile-burger" alt="mobile navigation" src={burgerImage} onClick={(e) => handleMobileBurger()} />
+    </nav>
 
-      <section className="nav-mobile-list" ref={navigationLinks}>
-      <ul>
+    {/* Mobile Navigation Bar */}
+    <Modal 
+      content={
+        <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/about-us">About</a></li>
           <li><a href="/newsletter">Newsletter</a></li>
@@ -115,8 +114,13 @@ function App() {
           <li><a href="/support-us">Support Us</a></li>
           <li><a href="/contacts">Contacts</a></li>
         </ul>
-    </section>
-    </nav>
+      }
+
+      check={burger}
+
+      // Pass callback function that updates the burger state when the exit modal is clicked
+      checkFunction={handleMobileBurger}
+    />
 
     <Routes>
       {/* Creating routes for each React page. Clicking on the nav bar lines directs you to these paths */}
