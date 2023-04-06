@@ -199,6 +199,7 @@ main{
   display: grid;
   grid-template-areas: "same";
 
+  /* Grid is not very centered on mobile */
   place-items: center;
 }
 
@@ -389,8 +390,12 @@ main::after{
 
 @media (max-width: 40rem) {
   main{
-    min-height: 95vh;
-    max-height: 95vh;
+    min-height: 70vh;
+    max-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-team-background{
@@ -402,19 +407,82 @@ main::after{
   }
 
   .main-team-slogan{
-    max-width: 20rem;
+    max-width: 35rem;
   }
-
   .main-team-slogan > h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    max-width: none;
     text-align: center;
+
+    font-family: 'Righteous', cursive;
   }
 
-  .main-team-slogan > p{
+  .main-team-banner{ 
+    /* Relative to the main element. Centered because main element is justify-content/align-items by default which centers everything */
+    position: absolute;
+  }
+  .main-team-banner img {
     display: none;
   }
 
-  .main-team-banner img {
+  .main-sponsor-thanks h1{
+    font-size: 1.25rem;
+  }
+  .main-sponsor-thanks-icons{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-sponsor-thanks-icons > img{
+    max-width: 6.5rem;
+  }
+
+  .main-support-container{
+    padding: 5vh 0vh 5vh 0vh;
+  }
+  .main-support-container article{
+    min-width: 22rem;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .main-support-container article > h1{
+    font-size: 1.25rem;
+
+    text-align: left;
+
+  }
+  .main-support-container p{
+    max-width: 22rem;
+    text-align: left;
+
+    font-size: 1.35rem;
+    line-height: 2.75rem;
+  }
+
+  .main-support-images{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+  .main-support-container a{
+    font-size: 1.25rem;
+    padding: 0.75rem;
+
+    margin-top: 1.25rem;
+  }
+  .main-support-images img{
+
+    max-width: none;
+    border-radius: 0.25rem;
+  }
+
+  #main-support-images-plan{
+    display: none;
+  }
+  #main-support-images-hang{
     display: none;
   }
 }
@@ -423,8 +491,6 @@ main::after{
   main{
     min-height: 53rem;
     max-height: 53rem;  
-
-    /* box-shadow: 0 0 1rem var(--discord-black); */
   }
 
   .main-team-slogan > h1{
@@ -1374,6 +1440,21 @@ footer{
   font-size: 5vh;
 }
 
+@media (max-width: 40rem) {
+  .footer-links{
+    display: none;
+  }
+  .footer-address{
+    display: none;
+  }
+
+  .footer-team-name-banner h1{
+    font-size: 2rem;
+  }
+  .footer-team-name-socials img{
+    max-width: 1.75rem;
+  }
+}
 @media (min-width: 150rem) {
   footer{
     min-height: 25vh;
@@ -1500,14 +1581,23 @@ footer{
 @media (max-width: 40rem) {
   .section-container{
     flex-direction: column;
+
+    padding: 3rem 0rem 3rem 0rem;
+  }
+  .section-image{
+    border-radius: 0.25rem;
+    min-width: 22rem;
   }
 
   .section-text{
-    max-width: 70vw;
-    text-align: center;
+    min-width: 22rem;
   }
   .section-text h1{
-    font-size: 2rem;
+    font-size: 1.25rem;
+  }
+  .section-text p{
+    font-size: 1.35rem;
+    line-height: 2.75rem;
   }
 }
 
@@ -1516,7 +1606,6 @@ footer{
     min-height: 50rem;
     gap: 10rem;
   }
-
   .section-image{
     max-width: 40rem;
     max-height: 40rem;
