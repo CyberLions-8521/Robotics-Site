@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <img className='main-team-background' alt="team background" src={banner} ref={backgroundBanner} />
+        <img className='main-team-background' alt="team background" ref={backgroundBanner} />
 
         <div className="main-team-banner">
           <img alt="cyberlions sticker" src={sticker} />
