@@ -1,22 +1,20 @@
-## **Contribution**
+## Contribution
 
-Instead of building a website using Editor X or Wix, we can use HTML, CSS, & JS to create a dynamic and informative page deployed by GitHub Pages this year. In the long run, I believe it is easier to websites this way: Editor X and Wix use block-based code which is extremely limiting and causes more lag in comparison to HTML, CSS, & JS. 
+The Cyberlions Robotics website is a student-run project for our team 8521. We are looking for talented individuals to help us build a website that is informative, dynamic, and easy to use. This does not neccessary mean you are coding, and we have roles for Software Developers and UI/UX Designers.
 
-- These programming languages are very easy to pick up and we have web developers on the FRC team that can teach you!
+### UI/UX Designer
 
-## **Serve the website**
+If you're a UI/UX designer, you can contribute to the design of the website through an application called InVision. InVision is similar to a drawing tool but makes the design of websites easier. https://larrylarriee.invisionapp.com/projects/Website-UI-amp-UX-cldb15ko0bjxf0154d8w4j2fi/overview
 
-If you have VSCODE installed, typing npm start will launch a localhost for you. It should be http://127.0.0.1:3000/ your web browser. 
+### Software Developer
 
-## **Important**
+If you're a software developer, it is recommended you have prior experience with HTML, CSS, and especially JavaScript. Additionally, you should have a basic understanding of how to operate Github. Our website is built under the React.js framework (made by FaceBook), which allows the reuse of components, including the reuse of HTML.
 
-The newest version of the cyberlions website is built with ReactJS as its foundation. A couple things to know:
+Don't worry if you don't know React.js, as we have resources and mentors in the team to help you learn. We recommend you ask either the programming lead or the O/M lead for more information before starting to code the website.
 
-- Before editing the webpage, you should have a strong understanding of <ins>HTML, CSS, and JavaScript</ins> in general
-- ReactJS is a **JavaScript** framework (made by Facebook) that allows you to reuse HTML code
-- **You don't have to code to contribute!** UI/UX designers are also welcome to contribute feature designs
+**If you're programming in react, clone the repository and run `npm install react-scripts --save`. This is a dependency that allows you to run the website locally using `npm start`.**
 
-There are many ways to familiarize yourself with HTML5, CSS, and JavaScript, with w3schools being a popular resource. 
+### Other Resources
 
-**If you're programming in react, clone the repository and run ```npm install react-scripts --save```. This is a dependency that allows you to run the website locally using ```npm start```.**
-
+- [React JavaScript Formatting Commandments](https://github.com/airbnb/javascript/tree/master/react)
+- [CSS-in-JavaScript Commandments](https://github.com/airbnb/javascript/tree/master/css-in-javascript)

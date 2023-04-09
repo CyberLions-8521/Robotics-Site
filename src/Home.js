@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import banner from "./images/image-cyberlions-banner.jpg"
+import bannerMobile from "./images/2023-images/minh-banner.jpg"
+
 import sticker from "./images/icons/sticker.png"
 
 import cadding from "./images/2023-images/cadding.jpg"
@@ -21,10 +23,38 @@ import Sunmerry from "./images/sponsors/2023/Sunmerry.png"
 
 import Section from './helper-components/Section'
 export default function Home() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const backgroundBanner = useRef();
+
+  // Passing a callback function is better practice than passing a setState function (which won't work across files like a callback will)
+  const changeScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+
+    // When mounting, you instally add an event listener which will track the window's width for you
+    // useEffect runs whenever the screenWidth state changes
+    window.addEventListener("resize", () => changeScreenWidth());
+    
+    if (screenWidth < (40 * 16)){
+      backgroundBanner.current.src = bannerMobile;
+    }
+    else{
+      backgroundBanner.current.src = banner;
+    }
+    
+    // When unmounting, you remove the event listener
+    return () => {
+      window.removeEventListener("resize", changeScreenWidth());
+    } 
+  }, [screenWidth]);
+  
   return (
     <>
       <main>
-        <img className='main-team-background' alt="team background" src={banner} />
+        <img className='main-team-background' alt="team background" src={banner} ref={backgroundBanner} />
 
         <div className="main-team-banner">
           <img alt="cyberlions sticker" src={sticker} />

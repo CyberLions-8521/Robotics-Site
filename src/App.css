@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 /* ==================================================================================================================================== */
 /* DEFAULT VALUES */
@@ -17,11 +18,15 @@
 
   --discord-black: #1e1f21eb;
   --super-light-grey: rgb(245, 245, 245);
+  --less-super-light-grey: #d6d6d6;
   --super-dark-grey: rgb(42, 40, 40);
   --mid-dark-grey: rgb(224, 224, 224);
 
   --grey-for-font: #808080;
   --gold: orange;
+
+  /* To Do: Add this variable into CSS elements */
+  --mobile-height: 22rem;
 }
 
 *{
@@ -47,6 +52,12 @@
   padding-bottom: 30vh;
 }
 
+@media (min-width: 150rem) {
+  .body{
+    padding-bottom: 25vh;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* NAVIGATION BAR */
 
@@ -59,7 +70,7 @@ nav{
   color: white;
 
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   width: 100%;
   max-width: 100vw;
@@ -113,6 +124,72 @@ nav a:hover{
   background: var(--lions-red);
 } 
 
+#nav-mobile-burger{
+  display: none;
+}
+.nav-mobile-list{
+  display: none;
+}
+
+@media (min-width: 150rem) {
+
+  .nav-cyberlions-logo > img{
+    max-width: 3.25rem;
+  }
+  .nav-cyberlions-logo > h1{
+    font-size: 1.3rem;
+  }
+  .nav-cyberlions-logo{
+    gap: 0.75rem;
+  }
+
+  nav a{
+    font-size: 1.25rem;
+  }
+  nav > ul{
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    place-items: center;
+  }
+
+  .nav-cyberlions-logo{
+    gap: 1rem;
+    padding: 0;
+    margin-left: 1rem;
+  }
+  .nav-cyberlions-logo img{
+    max-width: 3.5rem;
+  }
+  .nav-cyberlions-logo > h1{
+    font-size: 1.25rem;
+  }
+
+  nav ul{
+    list-style: none;
+
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    padding-right: 8rem;
+  }
+  .nav-mobile-list a{
+    font-size: 1.1rem;
+  }
+
+  #nav-mobile-burger{
+    display: block;
+    max-width: 2.5rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* LANDING PAGE */
 
@@ -125,6 +202,7 @@ main{
   display: grid;
   grid-template-areas: "same";
 
+  /* Grid is not very centered on mobile */
   place-items: center;
 }
 
@@ -172,12 +250,12 @@ main::after{
 }
 
 .main-team-slogan h1{
-  font-family: 'Lato', cursive;
+  font-family: 'Tilt Warp', cursive;
   font-size: 12vh;
   font-weight: 100;
 
   color: white;
-  max-width: 40vw;
+  max-width: 45vw;
 }
 
 .main-team-slogan p{
@@ -228,6 +306,8 @@ main::after{
 
   gap: 5vw;
   padding: 10vh 0;
+
+  background: white;
 }
 
 .main-support-container > article{
@@ -311,9 +391,14 @@ main::after{
   transition: 250ms ease;
 }
 
-@media (max-width: 700px) {
-  *{
-    outline: 1px solid red;
+@media (max-width: 40rem) {
+  main{
+    min-height: 70vh;
+    max-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-team-background{
@@ -324,25 +409,151 @@ main::after{
     max-height: 100vh;
   }
 
-  .main-team-banner{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+  .main-team-slogan{
+    max-width: 35rem;
+  }
+  .main-team-slogan > h1{
+    font-size: 2.5rem;
+    max-width: none;
+    text-align: center;
 
-    max-width: 50vw;
+    font-family: 'Righteous', cursive;
   }
 
-  .main-team-slogan{
-    text-align: center;
-    max-width: 50vw;
+  .main-team-banner{ 
+    /* Relative to the main element. Centered because main element is justify-content/align-items by default which centers everything */
+    position: absolute;
+  }
+  .main-team-banner img {
+    display: none;
+  }
+
+  .main-sponsor-thanks h1{
+    font-size: 1.25rem;
+  }
+  .main-sponsor-thanks-icons{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-sponsor-thanks-icons > img{
+    max-width: 6.5rem;
+  }
+
+  .main-support-container{
+    padding: 5vh 0vh 5vh 0vh;
+  }
+  .main-support-container article{
+    min-width: 22rem;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .main-support-container article > h1{
+    font-size: 1.25rem;
+
+    text-align: left;
+
+  }
+  .main-support-container p{
+    max-width: 22rem;
+    text-align: left;
+
+    font-size: 1.35rem;
+    line-height: 2.75rem;
+  }
+
+  .main-support-images{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+  .main-support-container a{
+    font-size: 1.25rem;
+    padding: 0.75rem;
+
+    margin-top: 1.25rem;
+  }
+  .main-support-images img{
+
+    max-width: none;
+    border-radius: 0.25rem;
+  }
+
+  #main-support-images-plan{
+    display: none;
+  }
+  #main-support-images-hang{
+    display: none;
+  }
+}
+
+@media (min-width: 150rem) {
+  main{
+    min-height: 53rem;
+    max-height: 53rem;  
   }
 
   .main-team-slogan > h1{
-    font-size: 3rem;
+    font-size: 6rem;
+  }
+  .main-team-slogan > p{
+    font-size: 2.25rem;
   }
 
-  .main-team-slogan > P{
-    display: none;
+  .main-team-banner > img{
+    max-width: 35rem;
+  }
+
+  .main-sponsor-thanks > h1{
+    font-size: 3rem;
+  }
+  .main-sponsor-thanks-icons{
+    gap: 8rem;
+  } 
+  .main-sponsor-thanks-icons > img{
+    max-width: 10rem;
+  } 
+
+  .main-support-container{
+    padding: 7rem 0;
+    gap: 5rem;
+  }
+  .main-support-container a{
+    max-width: 20rem;
+    font-size: 2rem;
+
+    padding: 1rem;
+  }
+
+  .main-support-container article{
+    max-width: 60rem;
+  }
+  .main-support-container article > h1{
+    font-size: 3rem;
+  }
+  .main-support-container article > p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .main-support-images{
+    max-width: 50rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+  }
+  .main-support-images img{
+    min-width: 30rem;
+    max-width: 30rem;
+
+    min-height: 20rem;
+    max-height: 20rem;
   }
 }
 
@@ -364,6 +575,7 @@ main::after{
   flex-direction: column;
 
   gap: 15vh;
+  position: relative;
 }
 
 .about-hero{
@@ -374,21 +586,18 @@ main::after{
 
   max-width: 70vw;
 }
-
 .about-hero > h3{
   font-size: 1.1rem;
   font-weight: 100;
 
   color: var(--grey-for-font);
 }
-
 .about-hero > h1{
   font-size: 3.5rem;
   color: var(--lions-red);
 
   font-family: 'Righteous', cursive;
 }
-
 .about-hero > p{
   font-size: 1.3rem;
   color: var(--super-dark-grey);
@@ -419,22 +628,18 @@ main::after{
   grid-area: mechanical;
   margin-bottom: 5vh;
 }
-
 #design{
   grid-area: design;
   margin-top: 5vh;
 }
-
 #electrical{
   grid-area: electrical;
   margin-bottom: 5vh;
 }
-
 #software{
   grid-area: software;
   margin-top: 5vh;
 }
-
 #operations{
   grid-area: operations;
   margin-bottom: 5vh;
@@ -448,20 +653,17 @@ main::after{
   flex-direction: column;
   gap: 5em;
 }
-
 .about-subteams-container-hero{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   gap: 1rem;
 }
 
 .about-subteams-container-hero > h1{
   font-size: 2.5rem;
 }
-
 .about-subteams-container-hero > h2{
   font-size: 1.5rem;
   color: var(--grey-for-font);
@@ -470,23 +672,26 @@ main::after{
 }
 
 .about-subteams{
-
   display: grid;
   grid-template-areas: 
-  "mechanical mechanical design design"
-  "electrical operations operations software";
+  "mechanical design electrical software"
+  "operations robbie cheer build ";
 
   justify-content: center;
   gap: 2rem;
-
+  grid-auto-rows: 1fr;
+  grid-auto-columns: 1fr;
 }
-
 .about-subteams article{
   display: flex;
   flex-direction: column;
   gap: 1rem;
 
   max-width: 20rem;
+
+  min-height: 20rem;
+  max-height: 20rem;
+
   padding: 0.5rem;
   border-radius: 0.25rem;
 
@@ -494,14 +699,54 @@ main::after{
 
   outline: 0.1rem solid var(--grey-for-font);
 }
+.about-subteams article > h1{
+  color: var(--lions-red);
+}
+.about-subteams article > p{
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--grey-for-font);
+}
+.about-subteams img{
+  max-width: 20rem;
+
+  min-height: 20rem;
+  max-height: 20rem;
+  object-fit: cover;
+
+  border-radius: 0.25rem;
+}
+.about-subteams section{
+  position: relative;
+
+  min-height: 20rem;
+  max-height: 20rem;
+
+  max-width: 20rem;
+
+  border-radius: 0.25rem;
+  outline: 0.1rem solid var(--lions-red);
+}
+.about-subteams section::after{
+  content: "";
+  position: absolute;
+  min-width: 100%;
+
+  min-height: 100%;
+  top: 0;
+  left: 0;
+
+  /* background: var(--lions-red); */
+  opacity: 0.15;
+  z-index: 1;
+  border-radius: 0.25rem;
+}
 
 #about-mechanical{
   grid-area: mechanical;
-  margin-left: 11rem;
 }
 #about-design{
   grid-area: design;
-  /* margin-right: 5rem; */
 }
 #about-electrical{
   grid-area: electrical;
@@ -512,20 +757,22 @@ main::after{
 #about-operations{
   grid-area: operations;
 }
-
-.about-subteams article > h1{
-  color: var(--lions-red);
+#about-cheer{
+  grid-area: cheer;
+  position: relative;
 }
-
-.about-subteams article > p{
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: var(--grey-for-font);
+#about-build{
+  grid-area: build;
+}
+#about-robbie{
+  grid-area: robbie;
 }
 
 .about-shameless-plug{
 
   position: relative;
+
+  /* Min height neccessary because shameless-plug to relative to the entire about element */
   min-height: 80vh;
 
   margin-bottom: 10vh;
@@ -534,12 +781,25 @@ main::after{
   flex-direction: column;
   gap: 5vh;
 }
+.about-shameless-plug::after{
+  content: "";
+  position: absolute;
+  min-width: 80vw;
+
+  min-height: 80vh;
+  max-height: 80vh;
+
+  opacity: 0.4;
+  border-radius: 2rem;
+  background: var(--discord-black);
+}
 
 /* z-index will move image background behind all text */
 .about-shameless-plug img{
   min-width: 80vw;
   max-width: 80vw;
 
+  min-height: 80vh;
   max-height: 80vh;
 
   border-radius: 2rem;
@@ -547,7 +807,6 @@ main::after{
   z-index: -1;
   object-fit: cover;
 }
-
 .about-shameless-plug h1{
   position: relative;
   z-index: 2;
@@ -601,6 +860,229 @@ main::after{
   transition: 250ms ease;
 }
 
+@media (max-width: 40rem) {
+  .about-container{
+    padding-top: 4rem;
+  }
+  .about{
+    gap: 3rem;
+    max-width: 22rem;
+  }
+
+  .about-hero{
+    gap: 1.5rem;
+    max-width: none;
+  }
+  .about-hero h1{
+    font-size: 2.75rem;
+  }
+  .about-hero h3{
+    font-size: 1.35rem;
+  }
+  .about-hero p{
+    font-size: 1.2rem;
+  }
+
+  .about-images{
+    grid-template-areas:
+      "mechanical design"
+      "electrical software"
+    ;
+
+    gap: 0.5rem;
+  }
+
+  #operations{
+    display: none;
+  }
+  #mechanical, #design, #electrical, #software{
+    margin: 0;
+
+    min-width: 10.75rem;
+    max-width: 10.75rem;
+
+    border-radius: 0.25rem;
+  }
+
+  .about-subteams-container-hero{
+    align-items: flex-start;
+  }
+  .about-subteams-container-hero h1{
+    font-size: 1.75rem;
+  }
+  .about-subteams-container-hero h2{
+    font-size: 1.25rem;
+  }
+
+  .about-subteams-container{
+    gap: 3rem;
+  }
+  .about-subteams{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-subteams article{
+    padding: 0.75rem 0.75rem 0rem 0.75rem;
+
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+  .about-subteams article h1{
+    text-align: start;
+    font-size: 1.5rem;
+  }
+  .about-subteams article p{
+    text-align: start;
+    font-size: 1.25rem;
+  }
+
+  .about-subteams section{
+    display: none;
+  }
+
+  .about-shameless-plug{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+  .about-shameless-plug::after{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    min-height: 70vh;
+    max-height: 70vh;
+
+    border-radius: 0.25rem;
+  }
+  
+  .about-shameless-plug img{
+    border-radius: 0.25rem;
+
+    min-width: 22rem;
+    max-width: 22rem;
+
+    min-height: 70vh;
+    max-height: 70vh;
+  }
+  .about-shameless-plug h1{
+    font-size: 2rem;
+    font-style: italic;
+
+    padding-top: 1rem;
+    max-width: 80vw;
+  }
+
+  .about-shameless-plug-text{
+    max-width: 80vw;
+  }
+  .about-shameless-plug-text p{
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 150rem) {
+  .about{
+    gap: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-hero > h3{
+    font-size: 2.5rem;
+  }
+  .about-hero > h1{
+    font-size: 4.5rem;
+  }
+  .about-hero > p{
+    font-size: 1.75rem;
+  }
+
+  #about-mechanical{
+    margin-left: 0rem;
+  }
+
+  .about-subteams-container{
+    /* max-width: 100rem; */
+    display: flex;
+    gap: 10rem;
+  }
+  .about-subteams-container-hero h1{
+    font-size: 3.5rem;
+  }
+  .about-subteams{
+    display: grid;
+    grid-template-areas:
+    "mechanical design electrical software operations";
+
+    gap: 2rem;
+    min-width: 150rem;
+  }
+
+  .about-subteams section{
+    display: none;
+  }
+  .about-subteams article{
+
+    outline: none;
+    gap: 2.5rem;
+    max-width: 25rem;
+  }
+  .about-subteams article > h1{
+    font-size: 2rem;
+
+    text-align: center;
+  }
+  .about-subteams article > p{
+    font-size: 1.3rem;
+
+    text-align: center;
+  }
+
+  .about-shameless-plug{
+    min-width: 100rem;
+    min-height: 70vh;
+
+    position: relative;
+    margin-bottom: 0;
+  }
+  .about-shameless-plug::after{
+    content: "";
+    position: absolute;
+    min-width: 100rem;
+  
+    min-height: 50rem;
+    max-height: 50rem;
+  
+    opacity: 0.4;
+    border-radius: 2rem;
+    background: var(--discord-black);
+  }
+  
+  /* z-index will move image background behind all text */
+  .about-shameless-plug img{
+    min-width: 100rem;
+    max-width: 100rem;
+  
+    min-height: 50rem;
+    max-height: 50rem;
+  
+    border-radius: 2rem;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+  }
+  
+  .about-shameless-plug-text p{
+    font-size: 1.5rem;
+    max-width: 65rem;
+    font-weight: 700;
+  } 
+}
+
 /* ==================================================================================================================================== */
 /* NEWSLETTER */
 
@@ -630,6 +1112,36 @@ main::after{
   font-size: 1.3rem;
 }
 
+@media (max-width: 40rem) {
+  .newsletter{
+    max-width: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .newsletter img{
+    max-width: 10rem;
+  }
+
+  .newsletter-hero{
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .newsletter-hero h1{
+    font-size: 2rem;
+
+    text-align: center;
+  }
+  .newsletter-hero p{
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* SUPPORT US */
 
@@ -656,7 +1168,6 @@ main::after{
   justify-content: center;
 
   padding: 3rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.586);
 }
 
 .support-us-hero > h1{
@@ -740,6 +1251,90 @@ main::after{
 
 .support-us-sponsors-list img{
   max-width: 15vw;
+}
+
+@media (max-width: 40rem) {
+
+  .support-us{
+    gap: 3rem;
+  }
+  .support-us-hero{
+    padding: 0rem 0rem 0rem 1.75rem;
+
+    min-height: 18rem;
+  }
+  .support-us-hero h1{
+    font-size: 1.75rem;
+    max-width: 22rem;
+  }
+
+  .support-us-content{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    gap: 3rem;
+  }
+  .support-us-content-benefits{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+
+  .support-us-sponsors h1{
+
+    margin-top: 3rem;
+    font-size: 1.75rem;
+
+    max-width: 22rem;
+  }
+  .support-us-sponsors-list{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .support-us-sponsors-list img{
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+}
+
+@media (min-width: 150rem) {
+
+  .support-us-hero{
+    padding: 0rem 3rem 0rem 3rem;
+  }
+
+  .support-us-hero > h1{
+    font-size: 2.5rem;
+    max-width: 30rem;
+
+    margin-left: 5rem;
+  }
+  .support-us-hero > p{
+    font-size: 1.75rem;
+    margin-left: 5rem;
+  }
+  .support-us-hero > p{
+    margin-left: 5rem;
+  }
+  .support-us-content a{
+    font-size: 2.25rem;
+  }
+
+  .support-us-sponsors-list{
+
+    gap: 5rem;
+  }
+
+  .support-us-sponsors-list img{
+    max-width: 15rem;
+  }
 }
 
 /* ==================================================================================================================================== */
@@ -826,6 +1421,31 @@ main::after{
   font-size: 1.1rem;
 } 
 
+@media (max-width: 40rem) {
+  .contacts-info{
+    flex-direction: column;
+    gap: 5rem;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts-info-input{
+    min-width: 22rem;
+    max-width: 22rem; 
+  }
+  .contacts-info-google-maps, .contacts-info-google-maps iframe{
+    min-width: 22rem;
+    max-width: 22rem; 
+  }
+}
+
+@media (min-width: 150rem) {
+  .contacts-info-input h1{
+    font-size: 3rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* OUR ROBOTS */
 
@@ -874,7 +1494,16 @@ main::after{
   display: flex;
 
   padding-bottom: 3rem;
-  border-bottom: 0.25rem solid var(--lions-red);
+  gap: 5rem;
+  border-bottom: 0.15rem solid var(--less-super-light-grey);
+}
+
+.robot img{
+  min-width: 30rem;
+  max-width: 30rem;
+  object-fit: cover;
+
+  border-radius: 0.25rem;
 }
 
 .robot-hero{
@@ -882,41 +1511,104 @@ main::after{
   flex-direction: column;
   gap: 2rem;
 
-  align-items: center;
+  align-items: flex-start;
 }
 
-.robot-hero > h1{
-  font-size: 2.5rem;
+.robot-hero-metadata > h2{
+  font-size: 1.15rem;
+  color: var(--grey-for-font);
+  /* font-style: italic; */
+}
+.robot-hero > p{
+  font-size: 1.25rem;
+  color: var(--grey-for-font);
 }
 
-.robot-hero > img{
-  max-width: 25rem;
+@media (max-width: 40rem) {
+
+  .our-robots{
+    gap: 5rem;
+  }
+
+  .our-robots-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 18rem;
+  }
+  .our-robots-hero h1{
+    margin-top: 0;
+    font-size: 2rem;
+
+    max-width: 20rem;
+  }
+  .our-robots-hero p{
+    max-width: 20rem;
+    font-size: 1.2rem;
+  }
+
+  .our-robots-gallery{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    gap: 3.5rem;
+  }
+  .robot{
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  .robot img{
+    min-width: 22rem;
+    max-width: 22rem;
+  }
+  .robot-hero p{
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+  }
 }
 
-.robot article{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+@media (min-width: 150rem) {
 
-  min-width: 50vw;
-  max-width: 50vw;
+  .our-robots{
+    gap: 5rem;
+  }
 
-  align-items: center;
-}
+  .our-robots-hero{
+    min-height: 45rem;
+    max-height: 45rem;
 
-.robot article p{
-  font-size: 1.8rem;
-  text-align: center;
+    min-width: 90rem;
+    max-width: 90rem;
 
-  max-width: 30vw;
-}
+    margin-top: 5rem;
+    border-radius: 2rem;
 
-.robot-awards{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .our-robots-hero > h1{
+    margin-top: 0;
+  }
+  
+  .robot{
+    max-width: 90rem;
+    gap: 7rem;
+  }
+  .robot img{
+    border-radius: 1.5rem;
+  }
+  .robot-hero > p{
+    font-size: 1.28rem;
+    line-height: 2.15rem;
+  }
 }
 
 /* ==================================================================================================================================== */
@@ -1023,6 +1715,53 @@ footer{
   font-size: 5vh;
 }
 
+@media (max-width: 40rem) {
+  .footer-links{
+    display: none;
+  }
+  .footer-address{
+    display: none;
+  }
+
+  .footer-team-name-banner h1{
+    font-size: 2rem;
+  }
+  .footer-team-name-socials img{
+    max-width: 1.75rem;
+  }
+}
+@media (min-width: 150rem) {
+  footer{
+    min-height: 25vh;
+    max-height: 25vh;
+    }
+
+  .footer-team-name{
+    gap: 0.1rem;
+  }
+
+  .footer-address{
+    font-size: 2rem;
+  }
+  .footer-copyright{
+    font-size: 1.25rem;
+  }
+  .footer-links ul > li > a{
+    font-size: 1.5rem;
+  }
+  .footer-team-name-banner h1{
+    font-size: 2.75rem;
+  }
+
+  .footer-team-name-banner img{
+    max-width: 6rem;
+  }
+
+  .footer-team-name-socials img{
+    max-width: 2.5rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* PROFILE COMPONENT */
 
@@ -1045,10 +1784,8 @@ footer{
 
 .profile > p{
   font-size: 1.2rem;
+  line-height: 2rem;
   font-family: 'Lato', Courier, monospace;
-  line-height: 1.75rem;
-
-  /* color: var(--grey-for-font); */
 }
 
 .profile img{
@@ -1060,6 +1797,36 @@ footer{
   padding: 1rem;
 }
 
+@media (max-width: 40rem) {
+  .profile{
+    min-width: 22rem;
+    max-width: 22rem;
+
+    padding: 1rem;
+    background: var(--gold);
+    
+    gap: 1.25rem;
+    border-radius: 0.2rem;
+  }
+  .profile h1{
+    color: white;
+  }
+}
+
+@media (min-width: 150rem) {
+  .profile img{
+    min-width: 7rem;
+    max-width: 7rem;
+  }
+  .profile > p{
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+  }
+  .profile > h1{
+    font-size: 2rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* SECTION COMPONENT */
 
@@ -1069,7 +1836,6 @@ footer{
   align-items: center;
 
   min-height: 90vh;
-  max-height: 90vh;
 
   gap: 7vw;
   background: white;
@@ -1103,6 +1869,52 @@ footer{
   line-height: 6vh;
 }
 
+@media (max-width: 40rem) {
+  .section-container{
+    flex-direction: column;
+
+    padding: 3rem 0rem 3rem 0rem;
+  }
+  .section-image{
+    border-radius: 0.25rem;
+    min-width: 22rem;
+  }
+
+  .section-text{
+    min-width: 22rem;
+  }
+  .section-text h1{
+    font-size: 1.25rem;
+  }
+  .section-text p{
+    font-size: 1.35rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 150rem) {
+  .section-container{
+    min-height: 50rem;
+    gap: 10rem;
+  }
+  .section-image{
+    max-width: 40rem;
+    max-height: 40rem;
+  }
+
+  .section-text{
+    max-width: 35rem;
+    gap: 2rem;
+  }
+  .section-text > h1{
+    font-size: 3rem;
+  }
+  .section-text > P{
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+  }
+}
+
 /* ==================================================================================================================================== */
 /* LABEL COMPONENT */
 
@@ -1122,4 +1934,81 @@ footer{
   padding: 0.5rem;
   font-size: 1.25rem;
   min-width: 20rem;
+}
+
+@media (min-width: 150rem) {
+  .label{
+    gap: 1rem;
+  }
+
+  .label > label{
+    font-size: 1.35rem;
+  }
+
+  .label > input, .label > textarea{
+    border: 0.1rem solid var(--lions-red);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    min-width: 20rem;
+  }
+}
+
+/* ==================================================================================================================================== */
+/* MODAL COMPONENT */
+
+@media (max-width: 40rem) {
+  .modal{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    min-width: 100vw;
+    min-height: 100vh;
+    
+    z-index: 1; 
+    background: rgb(42, 40, 40, 0.550);
+  }
+  
+  .modal-content{
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    gap: 6rem;
+    justify-content: center;
+    padding-top: 3rem;
+
+    min-width: 22rem; 
+    min-height: 22rem;
+
+    border-radius: 0.5rem;
+    background: var(--lions-red);
+  }
+
+  .modal-content img{
+    max-width: 3rem;
+    max-height: 3rem;
+  }  
+
+  .modal-content ul{
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .modal-content a{
+    text-decoration: none;
+    color: white;
+
+    font-weight: 1000;
+    font-family: 'Ubuntu', sans-serif;
+  }
 }

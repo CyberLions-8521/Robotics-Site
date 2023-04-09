@@ -8,12 +8,21 @@ import operations from '../images/2022-images/operations.jpg'
 import design from '../images/2023-images/design.jpg'
 
 import battle from '../images/2022-images/battle.jpg'
+import robbie from '../images/2023-images/robbie-move.jpg'
+import build from '../images/2023-images/build.jpg'
+import cheer from '../images/2023-images/cheer.jpg'
 
 export default function About() {
   return (
         <>
             <Helmet>
-                <title>About | Cyberlions</title>
+                <title>Team 8521 - About</title>
+
+                <meta
+                    name="description"
+                    content="We Are The Cyberlions, a high school robotics team that aims to provide our community with hands-on opportunities and mentor ships. We empower our community and give them the chance to show their inner leader and motivator. Our Robotics team is challenged under strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots"
+                />
+
             </Helmet>
 
             {/* about-container AKA the about's parent, is neccessary to center the about div which has all the content in it */}
@@ -33,7 +42,7 @@ export default function About() {
                         <img id="operations" alt="operations" src={operations} />
                     </div>
 
-                    <main className="about-subteams-container">
+                    <div className="about-subteams-container">
                         <div className="about-subteams-container-hero">
                             <h1>Our Subteams</h1>
                             <h2>Being Part of The CyberLions Means You're Part of a Major Role</h2>
@@ -64,8 +73,21 @@ export default function About() {
                                 <h1>Programming Team</h1>
                                 <p> Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.</p>
                             </article>
+
+                            {/* Section element exist to add after psuedo elements for shading */}
+                            <section>
+                                <img id="about-robbie" alt="robbie" src={robbie} />
+                            </section>
+                            <section>
+                                <img id="about-build" alt="build" src={build} />
+                            </section>
+                            <section>
+                                <img id="about-cheer" alt="cheer" src={cheer} />
+                            </section>
+
+
                         </div>
-                    </main>
+                    </div>
 
                     <div className="about-shameless-plug">
                         <img id="battle" alt="battle" src={battle} />

@@ -6,7 +6,7 @@ import path from "../images/icons/map-marker.png"
 import bulb from "../images/icons/bulb.png"
 import grape from "../images/icons/grape.png"
 
-import TJAero from "../images/sponsors/2023/TJ-Aero.png"
+import TJAero from "../images/sponsors/2023/TJ-Aero-2.png"
 import Arden from "../images/sponsors/2023/Arden.png"
 import VoSandwich from "../images/sponsors/2023/Vo-Sandwich.png"
 import DynamicFab from "../images/sponsors/2023/Dynamic-Fab.png"
@@ -19,7 +19,7 @@ export default function SupportUs() {
   return (
     <>
       <Helmet>
-        <title>Support Us | Cyberlions</title>
+        <title>Team 8521 - Support Us</title>
       </Helmet>
 
       <div className="support-us">
