@@ -1274,6 +1274,14 @@ main::after{
 
     gap: 3rem;
   }
+  .support-us-content a{
+    font-size: 1.25rem;
+    padding: 0.75rem;
+
+    margin-top: 1.25rem;
+    transition: 250ms ease;
+  }
+
   .support-us-content-benefits{
     display: flex;
     flex-direction: column;
