@@ -30,7 +30,7 @@ export default function Section({ title, description, picture, pictureLocation }
     
     // test that runs when anything rerenders
     useEffect(() => {
-        // console.log(sectionContainerVisible);
+        console.log(sectionContainerVisible);
     });
 
     return (
