@@ -134,17 +134,17 @@ nav a:hover{
 @media (min-width: 150rem) {
 
   .nav-cyberlions-logo > img{
-    max-width: 3.25rem;
+    max-width: 2.75rem;
   }
   .nav-cyberlions-logo > h1{
-    font-size: 1.3rem;
+    font-size: 1.15rem;
   }
   .nav-cyberlions-logo{
     gap: 0.75rem;
   }
 
   nav a{
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
   nav > ul{
     gap: 1.5rem;
@@ -984,20 +984,29 @@ main::after{
 
 @media (min-width: 150rem) {
   .about{
-    gap: 10rem;
+    gap: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .about-hero > h3{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .about-hero > h1{
-    font-size: 4.5rem;
+    font-size: 3.65rem;
   }
   .about-hero > p{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    max-width: 80rem;
+  }
+
+  .about-images img{
+    min-width: 20rem;
+    min-height: 25rem;
+
+    max-width: 20rem;
+    max-height: 25rem;
   }
 
   #about-mechanical{
@@ -1007,7 +1016,7 @@ main::after{
   .about-subteams-container{
     /* max-width: 100rem; */
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
   }
   .about-subteams-container-hero h1{
     font-size: 3.5rem;
@@ -1525,6 +1534,7 @@ main::after{
 .robot-hero-metadata > h2{
   font-size: 1.1rem;
   color: var(--grey-for-font);
+  font-weight: 500;
 }
 .robot-hero > p{
   font-size: 1.2rem;
@@ -1871,6 +1881,7 @@ footer{
 
 .section-text > h1{
   font-size: 6vh;
+  color: orange;
 }
 
 .section-text > p{
