@@ -69,14 +69,14 @@ export default function Home() {
 
       <Section 
         title="We're a High School Robotics Team Based In Westminster CA" 
-        description="Founded in 2020, team 8521 is a robotics team aiming to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their inner leader and innovator."
+        description="Founded in 2020, Team 8521 is a robotics team aiming to provide our community with hands-on opportunities and mentorships. We want to empower our community and give them the chance to show their leader and innovator ability."
         picture={cadding}      
         pictureLocation="left"
       />
 
       <Section 
         title="We Compete In The FIRST Robotics Competition" 
-        description="FRC is an international competition where teams design and build a robot each year to compete in different tasks like scoring balls into goals, balancing robots on balance beams, placing tubes into inner racks, etc., which changes annually."
+        description="FRC is an international competition where teams fundraise, design, build, and program a robot each year to compete in games involving various tasks, which change annually."
         picture={kevilry}      
         pictureLocation="right"
       />
@@ -99,7 +99,7 @@ export default function Home() {
       <div className="main-support-container">
           <article>
             <h1>You Can Support Us!</h1>
-            <p>We want to establish a strong robotics foundation for future years to come. Your sponsorship will help our members learn the skills and have the material to design and manufacture a competition-ready robot.</p>
+            <p>We want to establish a strong foundation for STEM students for years to come. Your support will help our members learn the skills and have the materials to design and manufacture a competition-ready robot.</p>
           </article>
           
           <div className="main-support-images">

@@ -690,7 +690,6 @@ main::after{
   max-width: 20rem;
 
   min-height: 20rem;
-  max-height: 20rem;
 
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -862,7 +861,7 @@ main::after{
 
 @media (max-width: 40rem) {
   .about-container{
-    padding-top: 4rem;
+    padding-top: 3.25rem;
   }
   .about{
     gap: 3rem;
@@ -1501,7 +1500,7 @@ main::after{
 .robot{
   display: flex;
 
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
   gap: 5rem;
   border-bottom: 0.15rem solid var(--less-super-light-grey);
 }
@@ -1512,6 +1511,7 @@ main::after{
   object-fit: cover;
 
   border-radius: 0.25rem;
+  box-shadow: 0.75rem 0.75rem var(--less-super-light-grey);
 }
 
 .robot-hero{
@@ -1523,12 +1523,11 @@ main::after{
 }
 
 .robot-hero-metadata > h2{
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--grey-for-font);
-  /* font-style: italic; */
 }
 .robot-hero > p{
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--grey-for-font);
 }
 
@@ -1574,6 +1573,8 @@ main::after{
   .robot img{
     min-width: 22rem;
     max-width: 22rem;
+
+    box-shadow: none;
   }
   .robot-hero p{
     font-size: 1.1rem;

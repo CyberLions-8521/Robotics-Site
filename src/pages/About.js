@@ -30,8 +30,8 @@ export default function About() {
                 <div className="about">
                     <div className="about-hero">
                         <h3>Why Even Have CyberLions?</h3>
-                        <h1>CyberLions Give Highschoolers Real Life Experience</h1>
-                        <p>Our Robotics team is challenged under strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots.  </p>
+                        <h1>CyberLions Provide Highschoolers With Real-Life Experience</h1>
+                        <p>Our robotics team is challenged by strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots.</p>
                     </div>
 
                     <div className="about-images">
@@ -45,13 +45,13 @@ export default function About() {
                     <div className="about-subteams-container">
                         <div className="about-subteams-container-hero">
                             <h1>Our Subteams</h1>
-                            <h2>Being Part of The CyberLions Means You're Part of a Major Role</h2>
+                            <h2>Being A CyberLion Means You’ll Play a Major Role</h2>
                         </div>
 
                         <div className="about-subteams">
                             <article id="about-mechanical">
                                 <h1>Mechanical Team</h1>
-                                <p>Use machinery and power-tools to fabricate prototypes for robot’s subsystems. You’re expected to organize and understand the mechanics of the robot and assembly.</p>
+                                <p>Use machinery and power tools to fabricate prototypes for robot subsystems. You’re expected to organize and understand the mechanics of the robot and its assembly.</p>
                             </article>
 
                             <article id="about-design">
@@ -66,7 +66,7 @@ export default function About() {
 
                             <article id="about-operations">
                                 <h1>Operations/Management Team</h1>
-                                <p>Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory, working closely with club advisors and IPT leads.</p>
+                                <p>Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory and working closely with club advisors and IPT leads.</p>
                             </article>
 
                             <article id="about-software">
