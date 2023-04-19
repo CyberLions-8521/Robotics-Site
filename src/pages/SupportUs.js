@@ -24,7 +24,7 @@ export default function SupportUs() {
 
       <div className="support-us">
         <div className="support-us-hero">
-          <h1>More Opportunity For Our Robotics Club!</h1>
+          <h1>More Opportunities For Our Robotics Club!</h1>
           <p>Learn about what your help means to us.</p>
         </div>
 
@@ -36,21 +36,21 @@ export default function SupportUs() {
               image={path}
               imageDescription="Travel Costs"
               header="Travel Costs"
-              text="Your funding can be used to help our team compete out-of-state and pay hotel fees so all our members can go."
+              text="Your funding helps our team compete in more events, including out-of-state competitions, and pay hotel fees so all our members can go."
             />
 
             <Profile
               image={bulb}
               imageDescription="Light Bulb"
               header="Future Inspiration"
-              text="You'll let us to purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
+              text="You'll help us purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
             />
 
             <Profile
               image={grape}
               imageDescription="Grape"
               header="Food!"
-              text="Often an overlooked expense, your contribution means we can build longer: dinner, snacks, and water."
+              text="Often an overlooked expense, your contribution means we can build longer: providing dinner, snacks, and water."
             />
           </section>
 
