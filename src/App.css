@@ -134,17 +134,17 @@ nav a:hover{
 @media (min-width: 150rem) {
 
   .nav-cyberlions-logo > img{
-    max-width: 2.75rem;
+    max-width: 3.25rem;
   }
   .nav-cyberlions-logo > h1{
-    font-size: 1.15rem;
+    font-size: 1.3rem;
   }
   .nav-cyberlions-logo{
     gap: 0.75rem;
   }
 
   nav a{
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
   nav > ul{
     gap: 1.5rem;
@@ -984,20 +984,20 @@ main::after{
 
 @media (min-width: 150rem) {
   .about{
-    gap: 5rem;
+    gap: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .about-hero > h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .about-hero > h1{
-    font-size: 3.65rem;
+    font-size: 4.5rem;
   }
   .about-hero > p{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     max-width: 80rem;
   }
 
@@ -1881,7 +1881,6 @@ footer{
 
 .section-text > h1{
   font-size: 6vh;
-  color: orange;
 }
 
 .section-text > p{
