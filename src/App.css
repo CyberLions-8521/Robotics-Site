@@ -998,6 +998,15 @@ main::after{
   }
   .about-hero > p{
     font-size: 1.75rem;
+    max-width: 80rem;
+  }
+
+  .about-images img{
+    min-width: 20rem;
+    min-height: 25rem;
+
+    max-width: 20rem;
+    max-height: 25rem;
   }
 
   #about-mechanical{
@@ -1007,7 +1016,7 @@ main::after{
   .about-subteams-container{
     /* max-width: 100rem; */
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
   }
   .about-subteams-container-hero h1{
     font-size: 3.5rem;
@@ -1525,6 +1534,7 @@ main::after{
 .robot-hero-metadata > h2{
   font-size: 1.1rem;
   color: var(--grey-for-font);
+  font-weight: 500;
 }
 .robot-hero > p{
   font-size: 1.2rem;
@@ -2019,5 +2029,29 @@ footer{
 
     font-weight: 1000;
     font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+/* ==================================================================================================================================== */
+/* ANIMATION */
+
+.rainbowCycleColors{
+  animation: changeColor 5s ease-in-out infinite; 
+  
+  /* animation: changeColor 2s forwards ease */ /* forwards does not reset the animation */
+}
+
+@keyframes changeColor {
+  0%{
+    color: white;
+    transform: rotate(-3deg);
+  }
+  50%{
+    color: var(--gold);
+    transform: rotate(3deg);
+  }
+  100%{
+    color: white;
+    transform: rotate(-3deg);
   }
 }

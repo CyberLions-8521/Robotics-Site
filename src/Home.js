@@ -26,10 +26,19 @@ export default function Home() {
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const backgroundBanner = useRef();
+  const stickerCyberlion = useRef();
+  const easterEgg = useRef();
 
   // Passing a callback function is better practice than passing a setState function (which won't work across files like a callback will)
   const changeScreenWidth = () => {
     setScreenWidth(window.innerWidth);
+  }
+
+  // Whenever the cyberlion sticker is clicked, this function runs
+  const mutateEasterEgg = () => {
+    easterEgg.current.classList.toggle("content-gone");
+
+    easterEgg.current.classList.toggle("rainbowCycleColors");
   }
 
   useEffect(() => {
@@ -45,23 +54,32 @@ export default function Home() {
       backgroundBanner.current.src = banner;
     }
     
-    // When unmounting, you remove the event listener
+    // When unmounting (on next render), you remove the event listener
     return () => {
       window.removeEventListener("resize", changeScreenWidth());
     } 
   }, [screenWidth]);
   
+  useEffect(() => {
+    let cyberlionSticker = stickerCyberlion.current;
+    cyberlionSticker.addEventListener("click", mutateEasterEgg);
+
+    return () => {
+      cyberlionSticker.removeEventListener("click", mutateEasterEgg);
+    }
+  }, []);
+
   return (
     <>
       <main>
         <img className='main-team-background' alt="team background" ref={backgroundBanner} />
 
         <div className="main-team-banner">
-          <img alt="cyberlions sticker" src={sticker} />
+          <img ref={stickerCyberlion} alt="cyberlions sticker" src={sticker} />
           
           <article className="main-team-slogan">
             <h1>The CyberLions</h1>
-            <p>If you can Cyber, you can Lion</p>
+            <p ref={easterEgg} className="content-gone">If you can Cyber, you can Lion</p>
           </article>
           
         </div>
