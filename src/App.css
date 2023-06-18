@@ -2032,3 +2032,27 @@ footer{
     font-family: 'Ubuntu', sans-serif;
   }
 }
+
+/* ==================================================================================================================================== */
+/* ANIMATION */
+
+.rainbowCycleColors{
+  animation: changeColor 5s ease-in-out infinite; 
+  
+  /* animation: changeColor 2s forwards ease */ /* forwards does not reset the animation */
+}
+
+@keyframes changeColor {
+  0%{
+    color: white;
+    transform: rotate(-3deg);
+  }
+  50%{
+    color: var(--gold);
+    transform: rotate(3deg);
+  }
+  100%{
+    color: white;
+    transform: rotate(-3deg);
+  }
+}
