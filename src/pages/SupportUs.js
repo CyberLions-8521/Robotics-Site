@@ -54,7 +54,7 @@ export default function SupportUs() {
             />
           </section>
 
-          <a href="https://www.gofundme.com/f/frc-team-20222023" target="_blank" rel="noreferrer">Visit Our GoFundMe</a>
+          <a href="https://gofund.me/c310ade8" target="_blank" rel="noreferrer">Visit Our GoFundMe</a>
         </div>
 
         <div className="support-us-sponsors">
