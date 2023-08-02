@@ -40,6 +40,12 @@
 .content-gone{
   display: none !important;
 }
+.content-hidden{
+  visibility: hidden !important;
+
+  transition: 750ms ease;
+  opacity: 0;
+}
 
 .highlight{
   background: var(--light-lions-red);
@@ -188,6 +194,34 @@ nav a:hover{
     display: block;
     max-width: 2.5rem;
   }
+}
+
+/* ==================================================================================================================================== */
+/* SCROLL TO TOP FEATURE */
+
+.back-to-top{
+  background: var(--less-super-light-grey);
+
+  max-width: 4rem;
+
+  position: fixed;
+  z-index: 10;
+  bottom: 2rem;
+  right: 2rem;
+
+  border-radius: 50%;
+  transition: 100ms ease-in-out;
+}
+
+.back-to-top img{
+  max-width: 100%;
+
+  cursor: pointer;
+  padding: .35rem;
+}
+.back-to-top:hover{
+  background: var(--mid-dark-grey);
+  transition: 100ms ease-in-out;
 }
 
 /* ==================================================================================================================================== */

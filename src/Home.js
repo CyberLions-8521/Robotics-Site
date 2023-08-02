@@ -4,6 +4,7 @@ import banner from "./images/image-cyberlions-banner.jpg"
 import bannerMobile from "./images/2023-images/minh-banner.jpg"
 
 import sticker from "./images/icons/sticker.png"
+import Scroll from './helper-components/Scroll'
 
 import cadding from "./images/2023-images/cadding.jpg"
 import kevilry from "./images/2022-images/kevilry.jpg"
@@ -132,6 +133,7 @@ export default function Home() {
           <a href="/support-us">Click To Learn More</a>
       </div>
 
+      <Scroll />
     </>
   )
 }
