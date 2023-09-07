@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet"
 import contactsBanner from "../images/icons/contacts-banner2.jpg"
 import Label from "../helper-components/Label.js"
 
+import Scroll from '../helper-components/Scroll'
+
 export default function Contacts() {
   const nameRef = useRef();
   const emailRef = useRef();
@@ -59,6 +61,8 @@ export default function Contacts() {
 
         </div>
       </div>
+
+      <Scroll />
     </>
   )
 }

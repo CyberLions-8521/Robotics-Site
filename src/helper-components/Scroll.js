@@ -38,7 +38,7 @@ export default function Scroll() {
     }, [])
 
   return (
-    <section className="back-to-top" ref={backToTopReference}>
+    <section className="back-to-top content-hidden" ref={backToTopReference}>
         <img alt="back to top" src={angleForButton} />
     </section>
   )

@@ -15,6 +15,8 @@ import Morstar from "../images/sponsors/2023/MorStar.png"
 import Sugoi from "../images/sponsors/2023/Sugoi-Stuff.png"
 import Sunmerry from "../images/sponsors/2023/Sunmerry.png"
 
+import Scroll from '../helper-components/Scroll'
+
 export default function SupportUs() {
   return (
     <>
@@ -72,6 +74,8 @@ export default function SupportUs() {
           </section>
         </div>
       </div>
+
+      <Scroll />
     </>
   )
 }

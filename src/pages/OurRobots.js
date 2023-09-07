@@ -6,6 +6,8 @@ import kevilry from "../images/robots/kelv.jpg"
 import froggers from "../images/robots/froggers.jpg"
 import robbie from "../images/robots/robbie.png"
 
+import Scroll from '../helper-components/Scroll'
+
 export default function OurRobots() {
   return (
     <>
@@ -43,6 +45,8 @@ export default function OurRobots() {
         </div>
 
       </div>  
+
+      <Scroll />
     </>
   )
 }
