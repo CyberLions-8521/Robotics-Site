@@ -329,6 +329,7 @@ main::after{
 
 .main-sponsor-thanks-icons > img{
   max-width: 10vw;
+  mix-blend-mode:multiply;
 }
 
 .main-support-container{
@@ -1293,6 +1294,7 @@ main::after{
 
 .support-us-sponsors-list img{
   max-width: 15vw;
+  mix-blend-mode:multiply;
 }
 
 @media (max-width: 40rem) {

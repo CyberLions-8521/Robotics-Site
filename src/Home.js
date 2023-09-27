@@ -13,16 +13,10 @@ import debugging from "./images/2022-images/debugging.jpg"
 import kevilryHang from "./images/2022-images/kevilry-hang.jpg"
 import planning from "./images/2022-images/planning.jpg"
 
-import TJAero from "./images/sponsors/2023/TJ-Aero.png"
-import Arden from "./images/sponsors/2023/Arden.png"
-import VoSandwich from "./images/sponsors/2023/Vo-Sandwich.png"
-import DynamicFab from "./images/sponsors/2023/Dynamic-Fab.png"
-import HeimBearings from "./images/sponsors/2023/Heim-Bearings.png"
-import Morstar from "./images/sponsors/2023/MorStar.png"
-import Sugoi from "./images/sponsors/2023/Sugoi-Stuff.png"
-import Sunmerry from "./images/sponsors/2023/Sunmerry.png"
+import wowLawGroup from "./images/sponsors/2024/wow-law-group.jpg"
 
 import Section from './helper-components/Section'
+
 export default function Home() {
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -104,14 +98,7 @@ export default function Home() {
         <h1>Thank You To Our Sponsors</h1>
 
         <div className="main-sponsor-thanks-icons">
-          <img alt="TJAero" src={TJAero} />
-          <img alt="Arden" src={Arden} />
-          <img alt="VoSandwich" src={VoSandwich} />
-          <img alt="DynamicFab" src={DynamicFab} />
-          <img alt="HeimBearings" src={HeimBearings} />
-          <img alt="Morstar" src={Morstar} />
-          <img alt="Sugoi Stuff" src={Sugoi} />
-          <img alt="Sunmerry Bakery" src={Sunmerry} />
+          <img alt="WoW Law Group" src={wowLawGroup} />
         </div>
       </div>
 
