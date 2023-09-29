@@ -6,14 +6,9 @@ import path from "../images/icons/map-marker.png"
 import bulb from "../images/icons/bulb.png"
 import grape from "../images/icons/grape.png"
 
-import TJAero from "../images/sponsors/2023/TJ-Aero-2.png"
-import Arden from "../images/sponsors/2023/Arden.png"
-import VoSandwich from "../images/sponsors/2023/Vo-Sandwich.png"
-import DynamicFab from "../images/sponsors/2023/Dynamic-Fab.png"
-import HeimBearings from "../images/sponsors/2023/Heim-Bearings.png"
-import Morstar from "../images/sponsors/2023/MorStar.png"
-import Sugoi from "../images/sponsors/2023/Sugoi-Stuff.png"
-import Sunmerry from "../images/sponsors/2023/Sunmerry.png"
+import wowLawGroup from "../images/sponsors/2024/wow-law-group.jpg"
+
+import Scroll from '../helper-components/Scroll'
 
 export default function SupportUs() {
   return (
@@ -61,17 +56,12 @@ export default function SupportUs() {
           <h1>Thank You To Our Sponsors</h1>
 
           <section className="support-us-sponsors-list">
-            <img alt="TJAero" src={TJAero} />
-            <img alt="Arden" src={Arden} />
-            <img alt="VoSandwich" src={VoSandwich} />
-            <img alt="DynamicFab" src={DynamicFab} />
-            <img alt="HeimBearings" src={HeimBearings} />
-            <img alt="Morstar" src={Morstar} />
-            <img alt="Sugoi Stuff" src={Sugoi} />
-            <img alt="Sunmerry Bakery" src={Sunmerry} />
+            <img alt="Wow Law Group" src={wowLawGroup} />
           </section>
         </div>
       </div>
+
+      <Scroll />
     </>
   )
 }

@@ -12,6 +12,8 @@ import robbie from '../images/2023-images/robbie-move.jpg'
 import build from '../images/2023-images/build.jpg'
 import cheer from '../images/2023-images/cheer.jpg'
 
+import Scroll from '../helper-components/Scroll'
+
 export default function About() {
   return (
         <>
@@ -102,6 +104,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
+
+            <Scroll />
         </>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 
 import sticker from "../images/icons/sticker.png"
+import Scroll from '../helper-components/Scroll'
 
 export default function Newsletter() {
   return (
@@ -20,6 +21,8 @@ export default function Newsletter() {
           </div>
         </div>
       </div>
+
+      <Scroll />
     </>
   )
 }
