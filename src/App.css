@@ -307,6 +307,7 @@ main::after{
   display: flex;
   flex-direction: column;
 
+  justify-content: center;
   align-items: center;
 
   background: var(--lions-red);
@@ -327,11 +328,13 @@ main::after{
   gap: 2rem;
 
   padding-bottom: 5vh;
+
+  max-width: 75vw;
+  flex-wrap: wrap;
 }
 
 .main-sponsor-thanks-icons > img{
-  max-width: 10vw;
-  mix-blend-mode:multiply;
+  max-width: 13vw;
 }
 
 .main-support-container{
@@ -468,9 +471,10 @@ main::after{
   .main-sponsor-thanks h1{
     font-size: 1.25rem;
   }
+
   .main-sponsor-thanks-icons{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .main-sponsor-thanks-icons > img{
     max-width: 6.5rem;
@@ -1285,18 +1289,20 @@ main::after{
 
 .support-us-sponsors-list{
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   gap: 2rem;
 
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 5vh;
+
+  max-width: 75vw;
+  flex-wrap: wrap;
 }
 
 .support-us-sponsors-list img{
-  max-width: 15vw;
-  mix-blend-mode:multiply;
+  max-width: 13vw;
 }
 
 @media (max-width: 40rem) {
@@ -1332,6 +1338,7 @@ main::after{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
 
     min-width: 22rem;
     max-width: 22rem;
@@ -1349,8 +1356,11 @@ main::after{
     max-width: 22rem;
 
     display: flex;
+    justify-content: flex-start;
+
     flex-wrap: wrap;
     gap: 2rem;
+    max-width: 75vw;
   }
   .support-us-sponsors-list img{
     min-width: 9.5rem;
@@ -1382,12 +1392,12 @@ main::after{
   }
 
   .support-us-sponsors-list{
-
+    max-width:75vw;
     gap: 5rem;
   }
 
   .support-us-sponsors-list img{
-    max-width: 15rem;
+    max-width: 13vw;
   }
 }
 

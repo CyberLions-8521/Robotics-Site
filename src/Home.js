@@ -13,7 +13,15 @@ import debugging from "./images/2022-images/debugging.jpg"
 import kevilryHang from "./images/2022-images/kevilry-hang.jpg"
 import planning from "./images/2022-images/planning.jpg"
 
-import wowLawGroup from "./images/sponsors/2024/wow-law-group.jpg"
+import wowLawGroup from "./images/sponsors/2024/wow-law-group-2.png"
+import ardenEngi from "./images/sponsors/2023/Arden2.png"
+import dynamicFab from "./images/sponsors/2023/Dynamic-Fab.png"
+import heimBearings from "./images/sponsors/2023/Heim-Bearings.png"
+import morStar from "./images/sponsors/2023/MorStar.png"
+import sugoiStuff from "./images/sponsors/2023/Sugoi-Stuff.png"
+import sunMerry from "./images/sponsors/2023/Sunmerry.png"
+import tjAero from "./images/sponsors/2023/TJ-Aero-3.png"
+import voSandwich from "./images/sponsors/2023/Vo-Sandwich.png"
 
 import Section from './helper-components/Section'
 
@@ -97,9 +105,17 @@ export default function Home() {
       <div className="main-sponsor-thanks">
         <h1>Thank You To Our Sponsors</h1>
 
-        <div className="main-sponsor-thanks-icons">
-          <img alt="WoW Law Group" src={wowLawGroup} />
-        </div>
+          <div className="main-sponsor-thanks-icons">
+            <img alt="WoW Law Group" src={wowLawGroup} />
+            <img alt="Arden Enginnering" src={ardenEngi} />
+            <img alt="Dynamic Fabrications" src={dynamicFab} />
+            <img alt="Heim Bearings" src={heimBearings} />
+            <img alt="Morstar Electric" src={morStar} />
+            <img alt="Sugoi Stuff" src={sugoiStuff} />
+            <img alt="Sunmerry" src={sunMerry} />
+            <img alt="TJ Aerospace" src={tjAero} />
+            <img alt="Vo Sandwiches" src={voSandwich} />
+          </div>
       </div>
 
       <div className="main-support-container">
