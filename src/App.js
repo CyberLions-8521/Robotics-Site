@@ -159,7 +159,7 @@ function App() {
         </ul>
       </div>
 
-      <p className="footer-copyright">©2023 Larry Le All Rights Reserved</p>
+      <p className="footer-copyright">©2023 Larry Le MIT License</p>
     </footer>
   </div>  
   );
