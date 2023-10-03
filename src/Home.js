@@ -81,7 +81,7 @@ export default function Home() {
           <img ref={stickerCyberlion} alt="cyberlions sticker" src={sticker} />
           
           <article className="main-team-slogan">
-            <h1>Poopy Doopy Fart</h1>
+            <h1>The CyberLions</h1>
             <p ref={easterEgg} className="content-gone">If you can Cyber, you can Lion</p>
           </article>
           

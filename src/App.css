@@ -290,7 +290,7 @@ main::after{
   font-size: 12vh;
   font-weight: 100;
 
-  color: rgb(97, 73, 41);
+  color: rgb(255, 255, 255);
   max-width: 45vw;
 }
 
@@ -299,7 +299,7 @@ main::after{
   font-size: 4vh;
   font-weight: 100;
 
-  color: rgb(97, 73, 41);
+  color: rgb(255, 255, 255);
   max-width: 40vw;
 }
 
