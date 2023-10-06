@@ -290,7 +290,7 @@ main::after{
   font-size: 12vh;
   font-weight: 100;
 
-  color: white;
+  color: rgb(255, 2, 2);
   max-width: 45vw;
 }
 
@@ -765,7 +765,7 @@ main::after{
   max-width: 20rem;
 
   border-radius: 0.25rem;
-  outline: 0.1rem solid var(--lions-red);
+  outline: 0.1rem solid gray;
 }
 .about-subteams section::after{
   content: "";
