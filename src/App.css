@@ -294,10 +294,6 @@ main::after{
   max-width: 45vw;
 }
 
-.main-team-slogan h1{
-  color: red;
-}
-
 .main-team-slogan p{
   font-family: 'Lato', cursive;
   font-size: 4vh;
