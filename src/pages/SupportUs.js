@@ -6,15 +6,17 @@ import path from "../images/icons/map-marker.png"
 import bulb from "../images/icons/bulb.png"
 import grape from "../images/icons/grape.png"
 
-import wowLawGroup from "../images/sponsors/2024/wow-law-group-2.png"
 import ardenEngi from "../images/sponsors/2023/Arden2.png"
 import dynamicFab from "../images/sponsors/2023/Dynamic-Fab.png"
 import heimBearings from "../images/sponsors/2023/Heim-Bearings.png"
 import morStar from "../images/sponsors/2023/MorStar.png"
+import signImaging from "../images/sponsors/2024/Sign-Imaging.png"
 import sugoiStuff from "../images/sponsors/2023/Sugoi-Stuff.png"
 import sunMerry from "../images/sponsors/2023/Sunmerry.png"
 import tjAero from "../images/sponsors/2023/TJ-Aero-3.png"
 import voSandwich from "../images/sponsors/2023/Vo-Sandwich.png"
+import westCoastCivil from "../images/sponsors/2024/West-Coast-Civil.png"
+import wowLawGroup from "../images/sponsors/2024/wow-law-group-2.png"
 
 import Scroll from '../helper-components/Scroll'
 
@@ -64,15 +66,18 @@ export default function SupportUs() {
           <h1>Thank You To Our Sponsors</h1>
 
           <section className="support-us-sponsors-list">
-            <img alt="WoW Law Group" src={wowLawGroup} />
             <img alt="Arden Enginnering" src={ardenEngi} />
             <img alt="Dynamic Fabrications" src={dynamicFab} />
             <img alt="Heim Bearings" src={heimBearings} />
             <img alt="Morstar Electric" src={morStar} />
+            <img alt="Sign Imaging" src={signImaging} />
             <img alt="Sugoi Stuff" src={sugoiStuff} />
             <img alt="Sunmerry" src={sunMerry} />
             <img alt="TJ Aerospace" src={tjAero} />
             <img alt="Vo Sandwiches" src={voSandwich} />
+            <img alt="West Coast Civil" src={westCoastCivil} />
+            <img alt="WoW Law Group" src={wowLawGroup} />
+
           </section>
         </div>
       </div>
