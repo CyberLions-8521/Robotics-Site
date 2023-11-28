@@ -16,6 +16,7 @@ import planning from "./images/2022-images/planning.jpg"
 import ardenEngi from "./images/sponsors/2023/Arden2.png"
 import dynamicFab from "./images/sponsors/2023/Dynamic-Fab.png"
 import heimBearings from "./images/sponsors/2023/Heim-Bearings.png"
+import iClever from "./images/sponsors/2024/iClever.png"
 import morStar from "./images/sponsors/2023/MorStar.png"
 import signImaging from "./images/sponsors/2024/Sign-Imaging.png"
 import sugoiStuff from "./images/sponsors/2023/Sugoi-Stuff.png"
@@ -111,6 +112,7 @@ export default function Home() {
             <img alt="Arden Enginnering" src={ardenEngi} />
             <img alt="Dynamic Fabrications" src={dynamicFab} />
             <img alt="Heim Bearings" src={heimBearings} />
+            <img alt="iClever" src={iClever} />
             <img alt="Morstar Electric" src={morStar} />
             <img alt="Sign Imaging" src={signImaging} />
             <img alt="Sugoi Stuff" src={sugoiStuff} />
