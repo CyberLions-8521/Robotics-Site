@@ -9,6 +9,24 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --cyberlions-red: #c73737;
+  --cyberlions-brown: #331E00;
+}
+
+body {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #FFFDF0;
+  max-width: 1920px;
+}
+
 .cyberlions-desktop-header {
   width: 100%;
   height: 10rem;
@@ -18,31 +36,23 @@
 }
 
 .cyberlions-desktop-nav {
-  width: 65vw;
-  color: #5a6275;
+  padding: 2rem;
+  width: 100vw;
+  color: #331E00;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  position: relative;
 }
 
 .cyberlions-desktop-nav-logo {
   font-weight: 700;
+  font-size: 1.2rem;
   color: inherit;
   text-decoration: none;
 
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  position: absolute;
-  left: 0;
-}
-
-.cyberlions-desktop-nav span {
-  position: absolute;
-  right: 0;
 }
 
 .cyberlions-nav-logo-background {
@@ -52,7 +62,7 @@
   align-items: center;
   width: 2.3rem;
   height: 2.3rem;
-  background-color: #5a6275;
+  background-color: var(--cyberlions-brown);
 }
 
 .cyberlions-desktop-nav-logo img {
@@ -62,12 +72,15 @@
 .cyberlions-desktop-nav-links {
   display: flex;
   list-style: none;
+  gap: 8rem;
 }
 
 .cyberlions-desktop-nav-links a {
-  padding: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
   color: inherit;
-  text-decoration: underline;
+  text-decoration: underline --cyberlions-brown;
+  text-decoration-thickness: 0.15rem;
   text-underline-offset: 0.2rem;
   transition: text-underline-offset 0.3s ease;
 }
@@ -76,91 +89,88 @@
   text-underline-offset: 0.4rem;
 }
 
-.active {
-  color: white;
-  border-radius: 1rem;
-  background-color: #5a6275;
-}
-
 .active a {
+  color: white;
+  border-radius: 0.5rem;
+  background-color: var(--cyberlions-brown);
   text-decoration: none;
 }
 
 .hero-container {
   width: 100%;
+  height: 11rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .hero-container-content {
-  height: 25rem;
-  display: flex;
-  align-items: center;
-
-  gap: 3rem;
-}
-
-.hero-logo-background {
-  border-radius: 50%;
-  background-color: #5a6275;
-  width: 19rem;
-  height: 19rem;
-
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hero-container-content img {
-  width: 20rem;
+  position: relative;
+  translate: 6rem 20rem;
+  z-index: 1;
 }
 
 .hero-content-text {
+  color: var(--cyberlions-brown);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero-content-text h1 {
-  color: rgb(219, 31, 31);
-  width: 30rem;
+  color: inherit;
+  width: 50rem;
   font-size: 5rem;
 }
 
 .hero-content-text p {
-  width: 28rem;
+  color: inherit;
+  width: fit-content;
   font-size: 1.8rem;
 }
 
+.hero-content-image {
+  display: flex;
+}
+
+.hero-content-image .image-split {
+  width: 266.6666667px;
+  height: 450px;
+  background: url(./assets/cyberlions-banner.jpg);
+  background-size: cover;
+}
+
+.image-split {
+  margin-right: -7.5%;
+  -webkit-clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%); 
+  clip-path: polygon(0% 0, 75% 0, 100% 100%, 25% 100%); 
+}
+
+.image-split:nth-child(2) {
+  background-position-x: 533.3333334px;
+}
+
+.image-split:last-child {
+  background-position-x: 266.6666667px;
+}
+
 .hero-section-divider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.hero-section-divider svg {
+  min-width: 1440px;
+  max-width: 1920px;
   position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 152px;
-}
-
-.hero-section-divider .shape-fill {
-  fill: #FFFFFF;
+  translate: 0 1rem;
 }
 
 .section-divider {
   position: relative;
   width: 100%;
   height: 1000rem;
-  background-color: #5a6275;
+  background-color: var(--cyberlions-red);
 }
 
 .section-container {
@@ -178,7 +188,7 @@
 }
 
 .section-container-background {
-  box-shadow: 1rem 1rem 4px #4b5161;
+  box-shadow: 1rem 1rem #a02828;
   border-radius: 2.5rem;
   padding: 2rem;
   background-color: white;
@@ -213,7 +223,7 @@
 
 .hidden {
   transform: translateY(100%);
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 
 .show {

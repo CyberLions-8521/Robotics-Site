@@ -12,7 +12,7 @@ export default function Navbar() {
                     <div className="cyberlions-nav-logo-background">
                         <img src={logo} alt='cyberlions-logo' />
                     </div>
-                    Cyberlion 8521
+                    Cyberlions 8521
                 </Link>
                 <ul className='cyberlions-desktop-nav-links'>
                     <CustomLink to="/about">About</CustomLink>
@@ -21,9 +21,6 @@ export default function Navbar() {
                     <CustomLink to="/support-us">Support Us</CustomLink>
                     <CustomLink to="/contacts">Contacts</CustomLink>
                 </ul>
-                <span class="material-symbols-outlined">
-                    light_mode
-                </span>
             </nav>
         </header>
 
