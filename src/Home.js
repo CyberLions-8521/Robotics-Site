@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react'
-import cadding from './assets/cadding.jpg'
-import kevilry from "./assets/kevilry.jpg"
+import cadding from './assets/images/cadding.jpg'
+import kevilry from "./assets/images/kevilry.jpg"
 
 import Gallery from './components/Gallery';
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Kevilry from '../assets/kevilry.jpg'
+import Kevilry from '../assets/images/kevilry.jpg'
 
 export default function Gallery() {
     return (

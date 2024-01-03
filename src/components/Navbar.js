@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
-import logo from '../assets/cyberlions.png'
+import logo from '../assets/images/cyberlions.png'
 
 export default function Navbar() {
   return (
