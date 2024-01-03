@@ -2,6 +2,8 @@ import { React, useEffect } from 'react'
 import cadding from './assets/cadding.jpg'
 import kevilry from "./assets/kevilry.jpg"
 
+import Gallery from './components/Gallery';
+
 export default function Home() {
 
     /* Checks if elements are intersecting with view port, applies .show class on intersecting elements */
@@ -62,6 +64,7 @@ export default function Home() {
                     </div>
                 </section>
             </section>
+            <Gallery />
         </section>
     </>
   )
