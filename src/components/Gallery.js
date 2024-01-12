@@ -1,29 +1,47 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
-import Kevilry from '../assets/robots/kelv.jpg'
-import Robbie from '../assets/robots/robbie.png'
-import Froggers from '../assets/robots/froggers.jpg'
+// imports found in index.js
+import { Kevilry, Robbie, Froggers } from '../index.js';
 
 export default function Gallery() {
 
     const gallery = useRef("gallery");
-    const galleryDesc = useRef("galleryDesc")
     let galleryToggle = 0;
     let galleryImages = [Robbie, Kevilry, Froggers];
+    const galleryDesc = useRef("galleryDesc")
+
+    let imageDescription = "";
+
+    let [leftButtonClicked, setLeftButtonClicked] = useState(false);
+    let [rightButtonClicked, setRightButtonClicked] = useState(false);
+
     let galleryDescList = [
         "Robbie was designed for the Charged Up FRC event for 2023. It is a 6-wheel tank drive with an arm that is able to pick up cones and cubes. There is also a basic autonomous routine to help the alliance win extra points.",
         "The Kevilry is the first FRC robot able to compete in a full game. Our robot can autonomously intake, store, and shoot cargo into hub targets, as well as hang from the medium bar in the endgame hangar.",
         "Froggers is the first FRC robot we produced in our school. Our robot has the ability to detect and autonomously move towards power cells. In addition, with its intake system, we can collect power cells and transport them around."
     ]
-    let galleryDescription = "fard";
+
+    let modifyLeftButton = () => {
+        setLeftButtonClicked(true);
+    }
+    let modifyRightButton = () => {
+        setRightButtonClicked(true);
+    }
+
+    // In order for the gallery description to exist across renders, you need to set a useEffect and probably a useState as well
+    useEffect(() => {
+
+    }, [leftButtonClicked, rightButtonClicked]);
+
 
     let toggleGallery = (direction) => {
-        if (direction === "left") {
-            galleryToggle = galleryToggle - 1;
-        } else if (direction === "right"){
-            galleryToggle = galleryToggle + 1;
-        }
-        gallery.current.src = (galleryImages[Math.abs(galleryToggle) % galleryImages.length]);
+        (direction === "left") ? galleryToggle -= 1 : galleryToggle += 1;
+
+        gallery.current.src = galleryImages[Math.abs(galleryToggle) % galleryImages.length];
+
+        // https://stackoverflow.com/questions/29044518/safe-alternative-to-dangerouslysetinnerhtml
+        imageDescription = galleryDescList[Math.abs(galleryToggle) % galleryImages.length];
+        console.log(imageDescription);
     }
 
     return (
@@ -33,14 +51,15 @@ export default function Gallery() {
                     Learn about our robots.
                 </div>
                 <div className='galleryBody'>
-                    <div className='galleryImageContainer'>
-                        <div className='galleryArrow galleryRight'></div>
-                        <img className='galleryImage' src={Kevilry} alt={"Froggers"} ref={gallery} onCLick={galleryLeft}></img>
-                        <div className='galleryArrow galleryLeft'></div>
+                    <article className='galleryImageContainer'>
+                        
+                        <div className='galleryArrow galleryRight' onClick={modifyLeftButton}></div>
+                        <img className='galleryImage' src={Kevilry} alt={"Froggers"} ref={gallery}></img>
+                        <div className='galleryArrow galleryLeft' onClick={modifyRightButton}></div>
 
-                    </div>
+                    </article>
                 </div>
-                <div className='galleryCaption' ref={galleryDesc}>{galleryDescription}</div>
+                <p className='galleryCaption' ref={galleryDesc}>{imageDescription}</p>
             </div>
         </section>
     )
