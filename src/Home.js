@@ -21,6 +21,29 @@ export default function Home() {
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
 
+    const CustomNewsletter = () => {
+        const newsletterTitle = "Cyberpride Newsletter";
+
+        const newsletterArticles = [
+            { title: "Article 1", preview: "Some text" },
+            { title: "Article 2", preview: "Some text" },
+            { title: "Article 3", preview: "Some text" },
+        ];
+        
+        const newsletterContactInfo = {
+            email: "whslionsrobotics@gmail.com",
+            address: "14325 Goldenwest St, Westminster, CA 92683"
+        };
+
+        return (
+            <NewsletterHome
+                title={newsletterTitle}
+                articles={newsletterArticles}
+                contactInfo={newsletterContactInfo}
+            />
+        );
+    };
+
   return (
     <>
         <div className='hero-container'>
@@ -65,6 +88,7 @@ export default function Home() {
                 </section>
             </section>
             <Gallery />
+            <NewsletterHome />
         </section>
     </>
   )
