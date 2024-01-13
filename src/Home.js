@@ -3,6 +3,7 @@ import cadding from './assets/images/cadding.jpg'
 import kevilry from "./assets/images/kevilry.jpg"
 
 import Gallery from './components/Gallery';
+import NewsletterHome from './components/NewsletterHome';
 
 export default function Home() {
 
@@ -20,6 +21,29 @@ export default function Home() {
         const hiddenElements = document.querySelectorAll('.hidden');
         hiddenElements.forEach((el) => observer.observe(el));
     }, []);
+
+    const CustomNewsletter = () => {
+        const newsletterTitle = "Cyberpride Newsletter";
+
+        const newsletterArticles = [
+            { title: "Article 1", preview: "Some text" },
+            { title: "Article 2", preview: "Some text" },
+            { title: "Article 3", preview: "Some text" },
+        ];
+        
+        const newsletterContactInfo = {
+            email: "whslionsrobotics@gmail.com",
+            address: "14325 Goldenwest St, Westminster, CA 92683"
+        };
+
+        return (
+            <NewsletterHome
+                title={newsletterTitle}
+                articles={newsletterArticles}
+                contactInfo={newsletterContactInfo}
+            />
+        );
+    };
 
   return (
     <>
@@ -65,6 +89,7 @@ export default function Home() {
                 </section>
             </section>
             <Gallery />
+            <CustomNewsletter />
         </section>
     </>
   )
