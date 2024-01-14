@@ -1,20 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-const CustomNewsletter = ({ title, articles, contactInfo }) => {
+const NewsletterHome = ({ title, articles, contactInfo }) => {
     return (
-        <div>
+        <div className="newsletterTitle">
             <h1>{title}</h1>
-            {articles.map((article, index) => (
-                <div key={index}>
-                    <h2>{article.title}</h2>
-                    <p>{article.preview}</p>
-                    {/* Add more content here, such as images, links, etc... */}
-                </div>
-            ))}
-            <p>Email: {contactInfo.email}</p>
-            {/* Add more contact information as needed */}
+            <div className="newsletterArticles">
+                {articles.map((article, index) => (
+                    <div key={index}>
+                        <h2>{article.title}</h2>
+                        <p>{article.preview}</p>
+                        {/* Add more content here, such as images, links, etc... */}
+                    </div>
+                ))}
+            </div>
+            <div className="newsletterContactInfo">
+                <p>Email: {contactInfo.email}</p>
+                {/* Add more contact information as needed */}
+            </div>
         </div>
     );
 };
 
-export default CustomNewsletter;
+export default NewsletterHome;

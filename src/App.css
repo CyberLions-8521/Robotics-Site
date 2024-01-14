@@ -325,7 +325,7 @@ body {
 
 /* NewsletterHome */
 
-.newsLetter {
+.newsletterTitle {
   font-family: Arial, sans-serif;
   padding: 1.25rem;
   border: 0.125rem solid #ccc;
@@ -334,16 +334,16 @@ body {
   background-color: #f9f9f9;
 }
 
-.newsLetter h1 {
+.newsletterTitle h1 {
   text-align: center;
   color: #333;
 }
 
-.articles {
+.newsletterArticles {
   margin-top: 1.25rem;
 }
 
-.article {
+.newsletterArticles h1 {
   margin-bottom: 1.25rem;
   padding: 0.625rem;
   border: 0.063rem solid #ddd;
@@ -351,17 +351,17 @@ body {
   background-color: #fff;
 }
 
-.article h2 {
+.newsletterArticles h2 {
   color: #007bff;
 }
 
-.contact-info {
+.newsletterContactInfo {
   margin-top: 1.25rem;
-  border-top: 1.25rem;
+  border-top: 0.125rem solid #ccc;
   padding-top: 1.25rem;
 }
 
-.contact-info p {
+.newsletterContactInfo p {
   margin: 0.313rem 0;
 }
 

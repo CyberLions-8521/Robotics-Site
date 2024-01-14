@@ -23,7 +23,7 @@ export default function Home() {
     }, []);
 
     const CustomNewsletter = () => {
-        const newsletterTitle = "Cyberpride Newsletter";
+        const newsletterTitle = "CYBERPRIDE NEWSLETTER";
 
         const newsletterArticles = [
             { title: "Article 1", preview: "Some text" },
