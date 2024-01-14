@@ -3,6 +3,7 @@ import cadding from './assets/images/cadding.jpg'
 import kevilry from "./assets/images/kevilry.jpg"
 
 import Gallery from './components/Gallery';
+import NewsletterHome from './components/NewsletterHome';
 
 export default function Home() {
 
@@ -88,7 +89,7 @@ export default function Home() {
                 </section>
             </section>
             <Gallery />
-            <NewsletterHome />
+            <CustomNewsletter />
         </section>
     </>
   )

@@ -322,3 +322,47 @@ body {
 }
 
 /*end gallery*/
+
+/* NewsletterHome */
+
+.newsLetter {
+  font-family: Arial, sans-serif;
+  padding: 1.25rem;
+  border: 0.125rem solid #ccc;
+  border-radius: 0.5rem;
+  margin: 1.25rem;
+  background-color: #f9f9f9;
+}
+
+.newsLetter h1 {
+  text-align: center;
+  color: #333;
+}
+
+.articles {
+  margin-top: 1.25rem;
+}
+
+.article {
+  margin-bottom: 1.25rem;
+  padding: 0.625rem;
+  border: 0.063rem solid #ddd;
+  border-radius: 0.25rem;
+  background-color: #fff;
+}
+
+.article h2 {
+  color: #007bff;
+}
+
+.contact-info {
+  margin-top: 1.25rem;
+  border-top: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.contact-info p {
+  margin: 0.313rem 0;
+}
+
+/* end NewsletterHome */

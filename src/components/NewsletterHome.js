@@ -1,5 +1,6 @@
-import React from 'react';
-const Newsletter = ({ title, articles, contactInfo }) => {
+import React from 'react'
+
+const CustomNewsletter = ({ title, articles, contactInfo }) => {
     return (
         <div>
             <h1>{title}</h1>
@@ -16,4 +17,4 @@ const Newsletter = ({ title, articles, contactInfo }) => {
     );
 };
 
-export default Newsletter;
+export default CustomNewsletter;
