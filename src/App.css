@@ -326,12 +326,15 @@ body {
 /* NewsletterHome */
 
 .newsletterTitle {
-  font-family: Arial, sans-serif;
-  padding: 1.25rem;
-  border: 0.125rem solid #ccc;
-  border-radius: 0.5rem;
-  margin: 1.25rem;
-  background-color: #f9f9f9;
+  box-shadow: 1rem 1rem #a02828;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  background-color: white;
+  width: 75rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .newsletterTitle h1 {
@@ -357,7 +360,7 @@ body {
 
 .newsletterContactInfo {
   margin-top: 1.25rem;
-  border-top: 0.125rem solid #ccc;
+  border-top: 1.25rem;
   padding-top: 1.25rem;
 }
 
