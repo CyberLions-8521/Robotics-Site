@@ -88,7 +88,7 @@ export default function Home() {
                     </div>
                 </section>
             </section>
-            {/* <Gallery /> */}
+            <Gallery />
             <CustomNewsletter />
         </section>
     </>

@@ -339,8 +339,7 @@ body {
   padding: 1.25rem;
   border: 0.125rem solid #ccc;
   border-radius: 0.5rem;
-  margin-inline: 1.25rem;
-  margin-bottom: 1.25rem;
+  margin: 1.25rem;
   background-color: #f9f9f9;
 }
 
@@ -367,7 +366,7 @@ body {
 
 .newsletterContactInfo {
   margin-top: 1.25rem;
-  border-top: 0.125rem solid #ccc;
+  border-top: 1.25rem;
   padding-top: 1.25rem;
 }
 
