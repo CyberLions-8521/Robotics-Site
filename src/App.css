@@ -10,34 +10,39 @@
 }
 
 :root {
+  --desktop-content-width: 88rem;
   --cyberlions-red: #c73737;
   --cyberlions-brown: #331E00;
+  --cyberlion-light-brown: #593605;
 }
 
 body {
   max-width: 100%;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   overflow-x: hidden;
 }
 
 .container {
-  background-color: #FFFDF0;
-  max-width: 1920px;
+  background-color: var(--cyberlions-red);
+  max-width: 93rem;
 }
 
+/* NAVBAR */
+
 .cyberlions-desktop-header {
-  width: 100%;
+  width: 93rem;
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .cyberlions-desktop-nav {
   padding: 2rem;
-  width: 100vw;
+  width: var(--desktop-content-width);
   color: #331E00;
   display: flex;
   justify-content: space-between;
@@ -96,22 +101,25 @@ body {
   text-decoration: none;
 }
 
-.hero-container {
-  width: 100%;
-  height: 11rem;
+/* END NAVBAR */
 
+/* HERO */
+
+.hero-container {
+  background-color: #FFFDF0;
+  width: 100%;
+  height: 40rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .hero-container-content {
-  width: 100%;
+  width: --desktop-content-width;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  translate: 6rem 20rem;
+  translate: 6rem 10rem;
   z-index: 1;
 }
 
@@ -124,18 +132,13 @@ body {
 
 .hero-content-text h1 {
   color: inherit;
-  width: 50rem;
+  width: 46.5rem;
   font-size: 5rem;
-}
-
-.hero-content-text p {
-  color: inherit;
-  width: fit-content;
-  font-size: 1.8rem;
 }
 
 .hero-content-image {
   display: flex;
+  transform: translateX(-5.3rem);
 }
 
 .hero-content-image .image-split {
@@ -163,18 +166,22 @@ body {
   min-width: 1440px;
   max-width: 1920px;
   position: relative;
-  translate: 0 1rem;
+  translate: 0 -4rem;
 }
+
+/* END HERO */
+
+/* MAIN BODY */
 
 .section-divider {
   position: relative;
   width: 100%;
-  max-height: 1000rem;
+  max-height: fit-content;
   background-color: var(--cyberlions-red);
 }
 
 .section-container {
-  margin-top: 20rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -230,7 +237,9 @@ body {
   transform: translateY(0);
 }
 
-/* gallery */
+/* END MAIN BODY */
+
+/* GALLERY */
 
 .gallery {
   height: 55rem;
@@ -321,16 +330,17 @@ body {
   height: 32rem;
 }
 
-/*end gallery*/
+/* END GALLERY */
 
-/* NewsletterHome */
+/* NEWSLETTERHOME */
 
 .newsletterTitle {
   font-family: Arial, sans-serif;
   padding: 1.25rem;
   border: 0.125rem solid #ccc;
   border-radius: 0.5rem;
-  margin: 1.25rem;
+  margin-inline: 1.25rem;
+  margin-bottom: 1.25rem;
   background-color: #f9f9f9;
 }
 
@@ -365,4 +375,93 @@ body {
   margin: 0.313rem 0;
 }
 
-/* end NewsletterHome */
+/* END NEWSLETTERHOME */
+
+/* FOOTER */
+footer {
+  background-color: var(--cyberlions-brown);
+  color: white;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  gap: 10rem;
+}
+
+.footer-team-name {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: end;
+}
+
+.footer-team-name-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+.footer-team-name-banner img {
+  max-width: 8rem;
+}
+
+.footer-team-name-banner h1 {
+  font-size: 3rem;
+}
+
+
+.footer-team-name-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-team-name-socials img {
+  max-width: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-team-name-socials img:hover {
+  transform: rotate(-360deg);
+}
+
+.footer-team-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-team-contacts-email {
+  background-color: var(--cyberlion-light-brown);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.footer-team-contacts-email img {
+  max-width: 2rem;
+}
+
+.footer-team-contacts-address {
+  background-color: var(--cyberlion-light-brown);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.footer-team-contacts-address img {
+  max-width: 2rem;
+}
+
+.footer-copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.25rem;
+}
+
+/* END FOOTER */

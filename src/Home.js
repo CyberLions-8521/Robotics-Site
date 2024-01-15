@@ -51,11 +51,11 @@ export default function Home() {
             <section className='hero-container-content'>
                 <article className='hero-content-text'>    
                     <h1 className='hidden'>
-                        CYBERLIONS 8521
+                        Lions Lead.
                     </h1>
-                    <p className='hidden'>
-                        Lions Lead. Robots Reign.
-                    </p>
+                    <h1 className='hidden'>
+                        Robots Reign.
+                    </h1>
                 </article>
                 <article className="hero-content-image">
                     <span className="image-split" />
