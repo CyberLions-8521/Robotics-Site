@@ -2,7 +2,7 @@ import { React, useEffect } from 'react'
 import cadding from './assets/images/cadding.jpg'
 import kevilry from "./assets/images/kevilry.jpg"
 
-import Gallery from './components/Gallery';
+// import Gallery from './components/Gallery';
 import NewsletterHome from './components/NewsletterHome';
 
 export default function Home() {
@@ -88,7 +88,7 @@ export default function Home() {
                     </div>
                 </section>
             </section>
-            <Gallery />
+            {/* <Gallery /> */}
             <CustomNewsletter />
         </section>
     </>

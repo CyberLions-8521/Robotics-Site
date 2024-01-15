@@ -63,11 +63,11 @@ export default function App() {
           </div>
           <article className="footer-team-contacts">
             <article className="footer-team-contacts-email">
-              <img src={envelope}/>
+              <img src={envelope} alt="envelope icon" />
               <p>whslionsrobotics@gmail.com</p>
             </article>
             <article className="footer-team-contacts-address" onClick={mapLink}>
-              <img src={marker}/>
+              <img src={marker} alt="marker icon" />
               <p>14325 Goldenwest St, Westminster, CA 92683</p>
             </article>
           </article>

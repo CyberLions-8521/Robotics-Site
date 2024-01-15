@@ -394,7 +394,7 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .footer-team-name-banner {
