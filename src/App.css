@@ -285,13 +285,13 @@ body {
   transition: 0.2s;
 }
 
-.galleryLeft {
+.galleryRight {
   border-radius: 0rem 2rem 2rem 0rem;
   left:7.5rem;
   background-image: url("assets/svg/rightArrow.svg");
 }
 
-.galleryRight {
+.galleryLeft {
   border-radius: 2rem 0rem 0rem 2rem;
   right:7.5rem;
   background-image: url("assets/svg/leftArrow.svg");
