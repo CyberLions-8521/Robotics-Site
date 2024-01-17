@@ -13,18 +13,19 @@ export default function Gallery() {
     let [galleryToggle, setGalleryToggle] = useState(0);
 
     let galleryImages = [Robbie, Kevilry, Froggers];
-    let galleryDescList = [
-        "Robbie was designed for the Charged Up FRC event for 2023. It is a 6-wheel tank drive with an arm that is able to pick up cones and cubes. There is also a basic autonomous routine to help the alliance win extra points.",
-        "The Kevilry is the first FRC robot able to compete in a full game. Our robot can autonomously intake, store, and shoot cargo into hub targets, as well as hang from the medium bar in the endgame hangar.",
-        "Froggers is the first FRC robot we produced in our school. Our robot has the ability to detect and autonomously move towards power cells. In addition, with its intake system, we can collect power cells and transport them around."
-    ];
 
     let [leftButtonClicked, setLeftButtonClicked] = useState(false);
     let [rightButtonClicked, setRightButtonClicked] = useState(false);
 
     useEffect(() => {
+        const galleryDescList = [
+            "Robbie was designed for the Charged Up FRC event for 2023. It is a 6-wheel tank drive with an arm that is able to pick up cones and cubes. There is also a basic autonomous routine to help the alliance win extra points.",
+            "The Kevilry is the first FRC robot able to compete in a full game. Our robot can autonomously intake, store, and shoot cargo into hub targets, as well as hang from the medium bar in the endgame hangar.",
+            "Froggers is the first FRC robot we produced in our school. Our robot has the ability to detect and autonomously move towards power cells. In addition, with its intake system, we can collect power cells and transport them around."
+        ];
+        
         setImageDescription(galleryDescList[Math.abs(galleryToggle) % galleryImages.length]);
-    }, [galleryToggle]);
+    }, [galleryToggle, galleryImages.length]);
 
     let modifyLeftButton = () => {
         setLeftButtonClicked(true);
