@@ -1411,13 +1411,6 @@ main::after{
   margin-bottom: 3.5rem;
 }
 
-.contacts-banner{
-  min-width: 100%;
-  max-width: 100%;
-
-  object-fit: cover;
-  max-height: 50vh;
-}
 
 .contacts-info{
   display: flex;
@@ -1429,10 +1422,11 @@ main::after{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background: #DEE0E3;
 }
 
 .contacts-info-input-button{
-  background: red;
+  background: #CF3C36;
   color: white;
 
   border: none;
@@ -1452,38 +1446,6 @@ main::after{
   cursor: pointer;
 }
 
-.contacts-info-google-maps{
-
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.contacts-info-google-maps iframe{
-
-  min-width: 30rem;
-  max-height: 15rem;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contacts-info-google-maps-metadata{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contacts-info-google-maps-metadata section{
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contacts-info-google-maps-metadata section > p{
-  font-size: 1.1rem;
-} 
 
 @media (max-width: 40rem) {
   .contacts-info{
@@ -1498,10 +1460,7 @@ main::after{
     min-width: 22rem;
     max-width: 22rem; 
   }
-  .contacts-info-google-maps, .contacts-info-google-maps iframe{
-    min-width: 22rem;
-    max-width: 22rem; 
-  }
+
 }
 
 @media (min-width: 150rem) {

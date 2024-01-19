@@ -29,15 +29,18 @@ export default function Contacts() {
       </Helmet>
 
       <div className="contacts">
-        <img className="contacts-banner" alt="cyberlions banner contacts" src={contactsBanner} />
 
         <div className="contacts-info">
-          <div className="contacts-info-input">
+
+          <div className="contact-content">
             <h1>Talk to our robotics team!</h1>
             <p>Learn about how we'll represent your company</p>
             <p>Watch our team in action and how we build and prototype our robots</p>
             <h3>Be one of our awesome supporters!</h3>
+          </div>
+          <div className="contacts-info-input">
 
+        
             <Label type="nowrap" header="Name:" id={nameRef} />
             <Label type="nowrap" header="Email:" id={emailRef} />
             <Label type="nowrap" header="Phone Number (Optional):" id={phoneRef} />
@@ -46,21 +49,6 @@ export default function Contacts() {
             <button className="contacts-info-input-button" onClick={submitForm}>Submit</button>
           </div>
 
-          <div className="contacts-info-google-maps">
-            <iframe title="Westminster High School" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=14325%20Goldenwest%20St,%20Westminster,%20CA%2092683+(Westminster%20High%20School)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a></iframe>
-
-            <div className="contacts-info-google-maps-metadata">
-              <section>
-                <h1>Email</h1>
-                <p>whslionsrobotics@gmail.com</p>
-              </section>
-
-              <section>
-                <h1>Address</h1>
-                <p>14325 Goldenwest St,<br /> Westminster, CA 92683</p>
-              </section>
-            </div>
-          </div>
 
         </div>
       </div>
