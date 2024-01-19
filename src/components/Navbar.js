@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
-import logo from '../assets/images/cyberlions.png'
+import logo from '../assets/images/square-logo.png'
 
 export default function Navbar() {
   return (
@@ -9,10 +9,8 @@ export default function Navbar() {
         <header className='cyberlions-desktop-header'>
             <nav className='cyberlions-desktop-nav'>
                 <Link className='cyberlions-desktop-nav-logo' to="/">
-                    <div className="cyberlions-nav-logo-background">
-                        <img src={logo} alt='cyberlions-logo' />
-                    </div>
-                    Cyberlions 8521
+                    <img src={logo} alt='cyberlions-logo' />
+                    <p>Cyberlions 8521</p>
                 </Link>
                 <ul className='cyberlions-desktop-nav-links'>
                     <CustomLink to="/about">About</CustomLink>

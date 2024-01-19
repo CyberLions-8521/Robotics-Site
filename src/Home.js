@@ -63,8 +63,8 @@ export default function Home() {
                     <span className="image-split" />
                 </article>
             </section>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#c73737" fill-opacity="1" d="M0,160L80,181.3C160,203,320,245,480,245.3C640,245,800,203,960,154.7C1120,107,1280,53,1360,26.7L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400">
+                    <path fill="#c73737" fill-opacity="1" d="M0,160L80,181.3C160,203,400,245,480,245.3C640,245,800,203,960,154.7C1120,107,1280,53,1360,26.7L1440,0L1440,400L1360,400C1280,400,1120,400,960,400C800,400,640,400,480,400C400,400,160,400,80,400L0,400Z"></path>
                 </svg>
         </div>
         <section className='section-divider'>

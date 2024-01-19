@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,15 +13,16 @@
 }
 
 :root {
-  --desktop-content-width: 88rem;
   --cyberlions-red: #c73737;
   --cyberlions-brown: #331E00;
   --cyberlion-light-brown: #593605;
 
   --main-font: 'Lato', sans-serif;
   --subtext-font: 'Poppins', sans-serif;
+  --bolder-font: 'Open Sans', sans-serif;
 
-  --max-width: 95rem;
+  --desktop-max-width: 95rem;
+  --laptop-max-width: 80rem;
 }
 
 body {
@@ -44,8 +46,8 @@ body {
 
 @media (min-width: 130rem) {
   .container{
-    min-width: var(--max-width);
-    max-width: var(--max-width);  
+    min-width: var(--desktop-max-width);
+    max-width: var(--desktop-max-width);  
   }
 
   .cyberlions-desktop-header {
@@ -69,8 +71,7 @@ h1{
 }
 
 .cyberlions-desktop-nav {
-  padding: 2rem;
-  width: var(--desktop-content-width);
+  width: var(--laptop-max-width);
   color: #331E00;
   display: flex;
   justify-content: space-between;
@@ -88,24 +89,21 @@ h1{
   gap: 1rem;
 }
 
-.cyberlions-nav-logo-background {
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.3rem;
-  height: 2.3rem;
-  background-color: var(--cyberlions-brown);
+.cyberlions-desktop-nav-logo p{
+  color: var(--cyberlions-red);
+  font-size: 1.5rem;
+  font-family: var(--bolder-font);
+  letter-spacing: 0.2rem;
 }
 
 .cyberlions-desktop-nav-logo img {
-  width: 2.5rem;
+  width: 3.5rem;
 }
 
 .cyberlions-desktop-nav-links {
   display: flex;
   list-style: none;
-  gap: 8rem;
+  gap: 6rem;
 }
 
 .cyberlions-desktop-nav-links a {
@@ -139,17 +137,18 @@ h1{
   min-height: 40rem;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 
 }
 
 .hero-container-content {
-  width: --desktop-content-width;
+  width: var(--desktop-content-width);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  translate: 6rem 10rem;
   z-index: 1;
+  translate: 6rem 10rem;
 }
 
 .hero-content-text {
@@ -215,8 +214,7 @@ h1{
 
 .section-container-background {
   border-radius: 2.5rem;
-  padding: 2rem;
-  width: 85rem;
+  width: var(--laptop-max-width);
 
   display: flex;
   justify-content: center;
