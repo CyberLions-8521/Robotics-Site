@@ -24,12 +24,18 @@ export default function Home() {
 
     const CustomNewsletter = () => {
         const newsletterTitle1 = "CYBERPRIDE";
-        const newsletterTitle2 = "NEWSLETTER"
+        const newsletterTitle2 = "NEWSLETTER";
+        const header1 = "How to smell cheese";
+        const text1 = "That stinky smell comes from the microbial breakdown of proteins in the cheese, a process that releases pungent gases, like the volatile fatty acids propanoic acid and isovaleric acid. Microbes also break down methionine into stinky sulfur compounds (methanethiol, dimethylsulfide, dimethyltrisulfide)."
+
+        
 
         return (
             <Newsletter
                 title1={newsletterTitle1}
                 title2={newsletterTitle2}
+                articleHeader={header1}
+                articleText={text1}
             />
         );
     };

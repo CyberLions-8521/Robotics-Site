@@ -346,6 +346,10 @@ h1{
 /* NEWSLETTERHOME */
 
 .newsletterBox {
+  display: flex;
+  display: inline-block;
+  position: center;
+  background-color: #f9f9f9;
   line-height: 7rem;
   height: 30.0rem;
   width: 117.0rem;
@@ -353,9 +357,6 @@ h1{
   margin-left: 5.25rem;
   margin-bottom: 5.25rem;
   margin-top: 5.25rem;
-  display: flex;
-  display: inline-block;
-  background-color: #f9f9f9;
 }
 
 .newsletterTitle1 {
@@ -367,6 +368,29 @@ h1{
 .newsletterTitle2 {
   margin-left: 2rem;
   font-size: 3rem;
+}
+
+.articleBox {
+  display: flex;
+  display: inline-block;
+  background-color: #f9f9f9;
+  margin-right: 5.25rem;
+  margin-left: 5.25rem;
+  margin-bottom: 5.25rem;
+  margin-top: 5.25rem;
+  height: 40.0rem;
+  width: 39.0rem;
+}
+
+.articleHeader {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.articleText {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
 }
 
 /* END NEWSLETTERHOME */
