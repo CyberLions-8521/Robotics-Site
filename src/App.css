@@ -347,12 +347,10 @@ h1{
 
 .newsletterBox {
   display: flex;
-  display: inline-block;
-  position: center;
   background-color: #f9f9f9;
   line-height: 7rem;
-  height: 30.0rem;
-  width: 117.0rem;
+  max-height: 30rem;
+  max-width: 120rem;
   margin-right: 5.25rem;
   margin-left: 5.25rem;
   margin-bottom: 5.25rem;
@@ -366,7 +364,8 @@ h1{
 }
 
 .newsletterTitle2 {
-  margin-left: 2rem;
+  margin-top: 22rem;
+  margin-right: 20rem;
   font-size: 3rem;
 }
 
@@ -378,8 +377,8 @@ h1{
   margin-left: 5.25rem;
   margin-bottom: 5.25rem;
   margin-top: 5.25rem;
-  height: 40.0rem;
-  width: 39.0rem;
+  height: 40rem;
+  max-width: 40rem;
 }
 
 .articleHeader {
