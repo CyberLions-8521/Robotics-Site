@@ -1,5 +1,4 @@
-import React from 'react'
-import { useEffect, useRef } from 'react';
+import React,{ useEffect, useRef } from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 // In the home page, we have Section components such as "We're a High School Robotics Team Based In Westminster CA"
@@ -34,7 +33,6 @@ export default function Section({ title, description, picture, pictureLocation }
     });
 
     return (
-    <>
         <div className="section-container" ref={sectionContainerRef}>
 
             {/* If picture is not empty, render the image (if statement shorthand) */}
@@ -48,7 +46,5 @@ export default function Section({ title, description, picture, pictureLocation }
 
             {pictureLocation === "right" && <img className="section-image" src={picture} alt="section img" />}
         </div>
-
-    </>
   )
 }
