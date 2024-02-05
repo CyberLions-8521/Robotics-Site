@@ -3,7 +3,7 @@ import cadding from './assets/images/cadding.jpg'
 import kevilry from "./assets/images/kevilry.jpg"
 
 import Gallery from './components/Gallery';
-import NewsletterHome from './components/NewsletterHome';
+import Newsletter from './components/Newsletter';
 
 export default function Home() {
 
@@ -23,28 +23,17 @@ export default function Home() {
     }, []);
 
     const CustomNewsletter = () => {
-        const newsletterTitle = "CYBERPRIDE NEWSLETTER";
-
-        const newsletterArticles = [
-            { title: "Article 1", preview: "Some text" },
-            { title: "Article 2", preview: "Some text" },
-            { title: "Article 3", preview: "Some text" },
-        ];
-        
-        const newsletterContactInfo = {
-            email: "whslionsrobotics@gmail.com",
-            address: "14325 Goldenwest St, Westminster, CA 92683"
-        };
+        const newsletterTitle1 = "CYBERPRIDE";
+        const newsletterTitle2 = "NEWSLETTER"
 
         return (
-            <NewsletterHome
-                title={newsletterTitle}
-                articles={newsletterArticles}
-                contactInfo={newsletterContactInfo}
+            <Newsletter
+                title1={newsletterTitle1}
+                title2={newsletterTitle2}
             />
         );
     };
-
+   
   return (
     <>
         <div className='hero-container'>

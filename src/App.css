@@ -345,44 +345,28 @@ h1{
 
 /* NEWSLETTERHOME */
 
-.newsletterTitle {
-  font-family: Arial, sans-serif;
-  padding: 1.25rem;
-  border: 0.125rem solid #ccc;
-  border-radius: 0.5rem;
-  margin: 1.25rem;
+.newsletterBox {
+  line-height: 7rem;
+  height: 30.0rem;
+  width: 117.0rem;
+  margin-right: 5.25rem;
+  margin-left: 5.25rem;
+  margin-bottom: 5.25rem;
+  margin-top: 5.25rem;
+  display: flex;
+  display: inline-block;
   background-color: #f9f9f9;
 }
 
-.newsletterTitle h1 {
-  text-align: center;
-  color: #333;
+.newsletterTitle1 {
+  margin-top: 15rem;
+  margin-left: 2rem;
+  font-size: 3rem;
 }
 
-.newsletterArticles {
-  margin-top: 1.25rem;
-}
-
-.newsletterArticles h1 {
-  margin-bottom: 1.25rem;
-  padding: 0.625rem;
-  border: 0.063rem solid #ddd;
-  border-radius: 0.25rem;
-  background-color: #fff;
-}
-
-.newsletterArticles h2 {
-  color: #007bff;
-}
-
-.newsletterContactInfo {
-  margin-top: 1.25rem;
-  border-top: 1.25rem;
-  padding-top: 1.25rem;
-}
-
-.newsletterContactInfo p {
-  margin: 0.313rem 0;
+.newsletterTitle2 {
+  margin-left: 2rem;
+  font-size: 3rem;
 }
 
 /* END NEWSLETTERHOME */
