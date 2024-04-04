@@ -2,10 +2,16 @@ import React from 'react'
 
 import { legalDefinitions } from '../data/Dictionary.js'
 import TidyList from '../helper-components/TidyList'
+import { Helmet } from 'react-helmet'
 
 export default function Legal() {
 
     return (
+        <>
+        <Helmet>
+            <title>Robo Scouts Privacy Policy</title>
+        </Helmet>
+
         <div className="legal-container">
             <div className="legal">
                 
@@ -88,5 +94,6 @@ export default function Legal() {
                 </section>
             </div>
         </div>
+    </>
     )
 }
