@@ -131,7 +131,7 @@ function App() {
       <Route path="/our-robots" element={<OurRobots />} />
       <Route path="/support-us" element={<SupportUs />} />
       <Route path="/contacts" element={<Contacts />} />
-      <Route path="/roboscouts-legal" element={<Legal />} />
+      <Route path="/robo-scouts-legal" element={<Legal />} />
     </Routes>
 
     <footer>
