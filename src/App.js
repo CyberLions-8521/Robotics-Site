@@ -9,6 +9,7 @@ import SupportUs from './pages/SupportUs';
 import Contacts from './pages/Contacts';
 import OurRobots from './pages/OurRobots';
 import About from './pages/About'
+import Legal from './pages/Legal';
 
 import Modal from './helper-components/Modal';
 import logo from "./images/icons/cyberlions.png";
@@ -130,6 +131,7 @@ function App() {
       <Route path="/our-robots" element={<OurRobots />} />
       <Route path="/support-us" element={<SupportUs />} />
       <Route path="/contacts" element={<Contacts />} />
+      <Route path="/roboscouts-legal" element={<Legal />} />
     </Routes>
 
     <footer>
@@ -159,7 +161,7 @@ function App() {
         </ul>
       </div>
 
-      <p className="footer-copyright">©2023 Larry Le MIT License</p>
+      <p className="footer-copyright">©2024 Larry Le MIT License</p>
     </footer>
   </div>  
   );
