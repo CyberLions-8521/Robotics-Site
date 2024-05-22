@@ -7,7 +7,6 @@ import About from './pages/About'
 import Newsletter from './pages/Newsletter'
 import OurRobots from './pages/OurRobots'
 import SupportUs from './pages/SupportUs'
-import Contacts from './pages/Contacts'
 import cyberlions from './assets/images/cyberlions.png'
 import instagram from './assets/images/icons/socials/instagram_white.png'
 import youtube from './assets/images/icons/socials/youtube_white.png'
@@ -47,7 +46,6 @@ export default function App() {
           <Route path='/newsletter' element={<Newsletter />} />
           <Route path='/our-robots' element={<OurRobots />} />
           <Route path='/support-us' element={<SupportUs />} />
-          <Route path='/contacts' element={<Contacts />} />
         </Routes>
         <footer>
           <div className="footer-team-name">

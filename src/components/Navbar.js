@@ -17,7 +17,6 @@ export default function Navbar() {
                     <CustomLink to="/newsletter">Newsletter</CustomLink>
                     <CustomLink to="/our-robots">Our Robots</CustomLink>
                     <CustomLink to="/support-us">Support Us</CustomLink>
-                    <CustomLink to="/contacts">Contacts</CustomLink>
                 </ul>
             </nav>
         </header>
