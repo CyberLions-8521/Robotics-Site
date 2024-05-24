@@ -6,6 +6,7 @@ const NewsletterHome = ({ title1, title2, articleHeader, articleText }) => {
         
         <div className="newsletterBox">
             <div className="newsletterTitle1">
+                what's good gang
             <h1>{title1}</h1>
         </div>
         <div className="newsletterTitle2">

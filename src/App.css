@@ -161,9 +161,51 @@ footer{
 }
 
 /* ==================================================================================================================================== */
+/* NEWSLETTER */
+*{
+  outline: red 1px solid
+}
+
+.newsletter-body {
+  width:100vw;
+  height:100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-top {
+  padding: 12rem 15rem;
+  width:70%;
+  height:110rem;
+  position: relative;
+}
+
+.newsletter-header {
+  width: 70rem;
+  line-height: 12rem;
+
+  font-size: 13rem;
+  font-weight: lighter;
+  font-family: 'Koulen', sans-serif;
+  color:rgb(158, 52, 52);
+  -webkit-text-stroke: 0.4rem white;
+}
+
+.newsletter-mascot {
+  width:50rem;
+  position: absolute;
+  top:2rem;
+  left: 50rem;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* ==================================================================================================================================== */
 /* ROBO SCOUTS LEGAL PAGE */
 
-/* since className .legal p is below this selector, we need to decleare !important */
+/* since className .legal p is below this selector, we need to declare !important */
 .header-main {
   font-size: 2.25rem !important;
   font-weight: 1000;
