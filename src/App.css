@@ -8,13 +8,33 @@
   --primary-color-3: #1C1C1C;
 
   --hyperlink-color: #7DA2FF;
+  --default-width: 80vw;
+  --footer-height: 35vh;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+body {
   position: relative;
   min-height: 100vh;
+
+  padding-bottom: var(--footer-height);
+}
+.content-container {
+  display: flex;
+  max-width: 100vw;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  width: var(--default-width);
+
+  outline: 1px solid red;
 }
 
 /* ==================================================================================================================================== */
@@ -30,7 +50,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 5rem;
   min-width: 80vw;
   max-width: 80vw;
 
@@ -38,50 +58,106 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   list-style: none;
 }
 nav a {
   color: white;
   font-family: 'Koulen', sans-serif;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .nav-branding {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .nav-branding-image-logo {
-  max-width: 3rem;
+  max-width: 3.5rem;
 }
 .nav-branding-logo-text {
   font-family: 'Koulen', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 footer{
-  min-height: 30vh;
   background: var(--primary-color-1);
 
   position: absolute;
   bottom: 0;
-  min-width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  min-height: var(--footer-height);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-branding {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
 }
 .footer-branding-image-logo {
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 10rem;
 }
 .footer-branding-logo-text {
   font-family: 'Koulen', sans-serif;
+  color: white;
   font-size: 5rem;
+}
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+
+  color: white;
+  font-family: 'Koulen', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+/* ==================================================================================================================================== */
+/* HERO */
+
+.hero {
+  /* specifiy width because content does not stretch a width of the whole screen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hero-background { 
+  background: var(--primary-color-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5rem 0;
+}
+.hero-content {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 80vw;
+  max-width: 80vw;
+}
+.hero-content-text p {
+  color: white;
+  font-family: 'Koulen', sans-serif;
+  font-size: 6rem;
+  line-height: 7rem;
+}
+#hero-content-text-two {
+  padding-left: 8rem;
+}
+
+.hero-content-image {
+  max-width: 30rem;
+  border-radius: 2rem;
 }
 
 /* ==================================================================================================================================== */
