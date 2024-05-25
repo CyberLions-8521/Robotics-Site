@@ -3,6 +3,9 @@ import { React } from 'react'
 import HeroBanner from '../assets/images/cyberlions-banner.jpg'
 import Section from '../components/Section'
 import Edgar from '../assets/images/edgar.png'
+import Vet from '../assets/images/cyberlions-veteran.jpg'
+import RobotReveal from '../assets/images/robot-2024.png'
+import RobotBackdrop from '../assets/images/IMG_5098.JPG'
 
 export default function Home() {
 
@@ -33,7 +36,29 @@ export default function Home() {
           pictureLocation={'left'} 
         />
 
+        <Section 
+          title={'We’re also Competitors in FIRST Robotics'} 
+          description={'designing, building, teamworking, and making connections with other Robotics teams around the nation, and also internationally.'} 
+          picture={Vet} 
+          pictureLocation={'right'} 
+        />
+
+        <div className='large-quote'>
+          <p className='large-quote-quote'>"I love this team."</p>
+          <p className='large-quote-author'>- Gregory Berger, Mentor</p>
+        </div>
+
+        <div className='robot-reveal-hero'>
+          <section className='robot-reveal-hero-text'>
+            <p className='robot-reveal-hero-text-title'>Say Hi To Rommeus, Our Latest Robot</p>
+            <p className='robot-reveal-hero-text-description'>The Work of Over 50 Robotics Members</p>
+          </section>
+
+          <img className='robot-reveal-hero-image' src={RobotReveal} alt='Robot Reveal' />
+        </div>
+
       </div>
+      <img className='robot-reveal-hero-backdrop' src={RobotBackdrop} alt='Robot Reveal' />
     </div>
   )
 }

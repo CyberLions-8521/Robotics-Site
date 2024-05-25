@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 :root{
   --primary-color-1: #C94309;
@@ -35,7 +36,8 @@ body {
   width: var(--default-width);
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10rem;
+  padding-bottom: 10rem;
 }
 
 /* ==================================================================================================================================== */
@@ -127,6 +129,7 @@ footer{
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 90vh;
 }
 .hero-background { 
   background: var(--primary-color-1);
@@ -169,24 +172,103 @@ footer{
   justify-content: center;
   align-items: center;
 
-  gap: 5rem;
+  gap: 6rem;
 }
 .section-image {
   max-width: 30rem;
   border-radius: 2rem;
+  object-fit: cover;
 }
 .section-text {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 45vw;
 }
 .section-text h1 {
-  font-family: 'Koulen', sans-serif;
+  font-family: 'League Spartan', sans-serif;
   font-size: 3rem;
+  line-height: 4.5rem;
 }
 .section-text p {
   font-family: 'Lato', Courier, monospace;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+/* ==================================================================================================================================== */
+/* QUOTE */
+
+.large-quote {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  padding: 4rem;
+  background: var(--primary-color-1);
+
+  /* added margin for backdrop */
+  margin-bottom: 5rem;
+}
+.large-quote-quote {
+  font-family: "Lilita One", sans-serif;
+  font-size: 7.5rem;
+  color: white;
+}
+.large-quote-author {
+  font-family: "Lilita One", sans-serif;
+  font-size: 3.25rem;
+  color: white;
+}
+
+/* ==================================================================================================================================== */
+/* ROBOT REVEAL */
+
+.robot-reveal-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+}
+.robot-reveal-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 30rem;
+}
+.robot-reveal-hero-text-title {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 6rem;
+  line-height: 7rem;
+  font-weight: 700;
+  color: var(--primary-color-2);
+}
+.robot-reveal-hero-text-description {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+.robot-reveal-hero-image {
+  max-width: 30rem;
+  border-radius: 15rem;
+}
+.robot-reveal-hero-backdrop {
+  position: absolute;
+  bottom: 35vh;
+  width: 100%;
+  height: 50rem;
+  background: var(--primary-color-1);
+  opacity: 0.5;
+  z-index: -1;
+  object-fit: cover;
+
+  /* editing property of the image by adding a linear gradient to it as if it were a background */
+  /* https://educate.ceros.com/studio-6p6lqous/post/image-masking-TUGdAmdrEooDi4F */
+  mask-image: linear-gradient(to bottom, transparent, white);
 }
 
 /* ==================================================================================================================================== */
