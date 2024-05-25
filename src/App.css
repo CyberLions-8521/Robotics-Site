@@ -33,8 +33,9 @@ body {
 }
 .container {
   width: var(--default-width);
-
-  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 
 /* ==================================================================================================================================== */
@@ -158,6 +159,34 @@ footer{
 .hero-content-image {
   max-width: 30rem;
   border-radius: 2rem;
+}
+
+/* ==================================================================================================================================== */
+/* SECTION COMPONENT */
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5rem;
+}
+.section-image {
+  max-width: 30rem;
+  border-radius: 2rem;
+}
+.section-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-text h1 {
+  font-family: 'Koulen', sans-serif;
+  font-size: 3rem;
+}
+.section-text p {
+  font-family: 'Lato', Courier, monospace;
+  font-size: 1.5rem;
 }
 
 /* ==================================================================================================================================== */

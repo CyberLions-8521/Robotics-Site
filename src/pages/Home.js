@@ -1,6 +1,8 @@
 import { React } from 'react'
 
 import HeroBanner from '../assets/images/cyberlions-banner.jpg'
+import Section from '../components/Section'
+import Edgar from '../assets/images/edgar.png'
 
 export default function Home() {
 
@@ -24,7 +26,12 @@ export default function Home() {
 
       <div className='container'>
 
-        <p>Hi</p>
+        <Section 
+          title={'We’re a robotics team in Westminster, California'} 
+          description={'founded in 2020 as a non-profit. Team 8521 focuses on diversity, inclusion, and provide our members hands-on opportunities to practice real engineering and marketing.'} 
+          picture={Edgar} 
+          pictureLocation={'left'} 
+        />
 
       </div>
     </div>
