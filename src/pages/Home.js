@@ -3,7 +3,7 @@ import { React } from 'react'
 import HeroBanner from '../assets/images/cyberlions-banner.jpg'
 import Section from '../components/Section'
 import Edgar from '../assets/images/edgar.png'
-import Vet from '../assets/images/cyberlions-veteran.jpg'
+import Vet from '../assets/images/cyberlions-veteran.png'
 import RobotReveal from '../assets/images/robot-2024.png'
 import RobotBackdrop from '../assets/images/IMG_5098.JPG'
 
@@ -58,7 +58,9 @@ export default function Home() {
         </div>
 
       </div>
-      <img className='robot-reveal-hero-backdrop' src={RobotBackdrop} alt='Robot Reveal' />
+
+      {/* option to add a backdrop to the robot reveal */}
+      {/* <img className='robot-reveal-hero-backdrop' src={RobotBackdrop} alt='Robot Reveal' /> */}
     </div>
   )
 }
