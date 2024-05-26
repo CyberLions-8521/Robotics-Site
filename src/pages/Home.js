@@ -5,7 +5,7 @@ import Section from '../components/Section'
 import Edgar from '../assets/images/edgar.png'
 import Vet from '../assets/images/cyberlions-veteran.png'
 import RobotReveal from '../assets/images/robot-2024.png'
-import RobotBackdrop from '../assets/images/IMG_5098.JPG'
+// import RobotBackdrop from '../assets/images/IMG_5098.JPG'
 
 export default function Home() {
 
