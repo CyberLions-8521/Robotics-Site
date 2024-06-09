@@ -1,10 +1,59 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 
 export default function About() {
-  
+
+  let [selectedRole, setSelectedRole] = useState(0);
+
+  const roles = ['MECHANICAL', 'DESIGN', 'PROGRAMMING', 'ELECTRICAL', 'OPERATION MANAGEMENT'];
+  const rolesDescriptions = ['skibidi', 'ohio', 'gyat', 'rizzler', 'fanum'];
+
+  function handleSelectedRole(index) {
+    setSelectedRole(index);
+  }
+
   return (
-    <p>hi</p>
+    <div className='about-container'>
+      <section className='about-container-content'>
+        <header className='about-content-header'>
+          <p className='about-content-subtext'>
+            WHY EVEN HAVE CYBERLIONS?
+          </p>
+          <h1 className='about-content-header-text'>
+            CYBERLIONS PROVIDE HIGHSCHOOLERS WITH REAL-LIFE EXPERIENCE
+          </h1>
+          <p className='about-content-text'>
+            Our robotics team is challenged by strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots. 
+          </p>
+        </header>
+        <section className='about-subteam-container'>
+          <article className='about-subteam-selector'>
+            <h1>SUBTEAM ROLES</h1>
+            <ul className='about-subteam-selection'>
+              {roles.map((role, index) => {
+                return (
+                  <li key={index} 
+                      className={selectedRole === index ? 'about-subteam-selection-button selected' : 'about-subteam-selection-button'}
+                      onClick={() => handleSelectedRole(index)}>
+                    {role}
+                  </li>
+                )
+              })}
+            </ul>
+          </article>
+          <div className='about-subteam-divider'/>
+          <article className='about-subteam-details'>
+            {selectedRole !== null && <p>{rolesDescriptions[selectedRole]}</p>}
+          </article>
+        </section>
+        <section className='about-subteam-signup'>
+          <article className='about-subteam-signup-text'>  
+            <h1>Think You'll Fit In?</h1>
+            <p>We're always looking for new members. If being a CyberLion sounds right to you, sign up today!</p>
+            <button>SIGN UP</button>
+          </article>
+          <img alt='cyberlions preview'/>
+        </section>
+      </section>
+    </div>
   )
 }
-
