@@ -44,10 +44,15 @@ body {
 /* NAVIGATION AND FOOTER */
 
 .nav-background {
-  background: var(--primary-color-1);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.nav-background-color-default {
+  background: var(--primary-color-1);
+}
+.nav-background-color-dark {
+  background: var(--primary-color-3);
 }
 nav {
   display: flex;
@@ -76,6 +81,9 @@ nav a {
   align-items: center;
   gap: 1.5rem;
 }
+.nav-branding:hover {
+  cursor: pointer;
+}
 .nav-branding-image-logo {
   max-width: 3.5rem;
 }
@@ -86,8 +94,6 @@ nav a {
 }
 
 footer{
-  background: var(--primary-color-1);
-
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -96,6 +102,12 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.footer-background-color-default {
+  background: var(--primary-color-1);
+}
+.footer-background-color-dark {
+  background: var(--primary-color-3);
 }
 .footer-branding {
   display: flex;
@@ -554,4 +566,66 @@ footer{
 .about-subteam-signup img {
   width: 60%;
   height: 100%;
+}
+
+/* ==================================================================================================================================== */
+/* ROBOT SHOWCASE */
+
+.robot-showcase {
+  position: relative;
+
+  width: 100%;
+  height: 95vh;
+}
+.robot-showcase-background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: relative;
+  z-index: -1;
+}
+.robot-showcase-year {
+  position: absolute;
+  top: 2rem;
+  right: 10rem;
+
+  color: white;
+  font-family: 'Koulen', sans-serif;
+  font-size: 3rem;
+}
+.robot-showcase-description {
+  width: 18rem;
+  position: absolute;
+  bottom: 10rem;
+  left: 5rem;
+}
+.robot-showcase-description::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color-3);
+  outline: 2rem solid var(--primary-color-3);
+  opacity: 0.4;
+  z-index: -1;
+}
+.robot-showcase-description-robot-name {
+  color: white;
+  font-family: 'Koulen', sans-serif;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+.robot-showcase-description-specs-title {
+  color: white;
+  font-family: 'Koulen', sans-serif;
+  font-size: 2rem;
+}
+.robot-showcase-description-specs-ul {
+  list-style: none;
+}
+.robot-showcase-description-specs-li {
+  color: white;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.5rem;
 }
