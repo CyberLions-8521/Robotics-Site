@@ -1,90 +1,63 @@
 import React from 'react'
-import { Helmet } from "react-helmet"
-
-import Profile from "../helper-components/Profile.js"
-import path from "../images/icons/map-marker.png"
-import bulb from "../images/icons/bulb.png"
-import grape from "../images/icons/grape.png"
-
-import ardenEngi from "../images/sponsors/2023/Arden2.png"
-import dynamicFab from "../images/sponsors/2023/Dynamic-Fab.png"
-import heimBearings from "../images/sponsors/2023/Heim-Bearings.png"
-import iClever from "../images/sponsors/2024/iClever.png"
-import morStar from "../images/sponsors/2023/MorStar.png"
-import signImaging from "../images/sponsors/2024/Sign-Imaging.png"
-import sugoiStuff from "../images/sponsors/2023/Sugoi-Stuff.png"
-import sunMerry from "../images/sponsors/2023/Sunmerry.png"
-import tjAero from "../images/sponsors/2023/TJ-Aero-3.png"
-import voSandwich from "../images/sponsors/2023/Vo-Sandwich.png"
-import westCoastCivil from "../images/sponsors/2024/West-Coast-Civil.png"
-import wowLawGroup from "../images/sponsors/2024/wow-law-group-2.png"
-
-import Scroll from '../helper-components/Scroll'
+import iClever from '../assets/sponsors/2024/iClever.png'
+import SignImaging from '../assets/sponsors/2024/Sign-Imaging.png'
+import WestCoastCivil from '../assets/sponsors/2024/West-Coast-Civil.png'
+import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
+import SugoiStuff from '../assets/sponsors/2023/Sugoi-Stuff.png'
+import TJAerospace from '../assets/sponsors/2023/TJ-Aero-3.png'
+import Sunmerry from '../assets/sponsors/2023/Sunmerry.png'
+import VoSandwiches from '../assets/sponsors/2023/Vo-Sandwich.png'
+import MorStar from '../assets/sponsors/2023/MorStar.png'
+import DynamicFab from '../assets/sponsors/2023/Dynamic-Fab.png'
+import Arden from '../assets/sponsors/2023/Arden2.png'
+import HeimBearings from '../assets/sponsors/2023/Heim-Bearings.png'
 
 export default function SupportUs() {
   return (
-    <>
-      <Helmet>
-        <title>Team 8521 - Support Us</title>
-      </Helmet>
-
-      <div className="support-us">
-        <div className="support-us-hero">
-          <h1>More Opportunities For Our Robotics Club!</h1>
-          <p>Learn about what your help means to us.</p>
-        </div>
-
-        {/* What sponsoring CyberLions will entail. Includes link to GoFundMe */}
-        <div className="support-us-content">
-          <section className="support-us-content-benefits">
-
-            <Profile
-              image={path}
-              imageDescription="Travel Costs"
-              header="Travel Costs"
-              text="Your funding helps our team compete in more events, including out-of-state competitions, and pay hotel fees so all our members can go."
-            />
-
-            <Profile
-              image={bulb}
-              imageDescription="Light Bulb"
-              header="Future Inspiration"
-              text="You'll help us purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM."
-            />
-
-            <Profile
-              image={grape}
-              imageDescription="Grape"
-              header="Food!"
-              text="Often an overlooked expense, your contribution means we can build longer: providing dinner, snacks, and water."
-            />
-          </section>
-
-          <a href="https://gofund.me/c310ade8" target="_blank" rel="noreferrer">Visit Our GoFundMe</a>
-        </div>
-
-        <div className="support-us-sponsors">
-          <h1>Thank You To Our Sponsors</h1>
-
-          <section className="support-us-sponsors-list">
-            <img alt="Arden Enginnering" src={ardenEngi} />
-            <img alt="Dynamic Fabrications" src={dynamicFab} />
-            <img alt="Heim Bearings" src={heimBearings} />
-            <img alt="iClever" src={iClever} />
-            <img alt="Morstar Electric" src={morStar} />
-            <img alt="Sign Imaging" src={signImaging} />
-            <img alt="Sugoi Stuff" src={sugoiStuff} />
-            <img alt="Sunmerry" src={sunMerry} />
-            <img alt="TJ Aerospace" src={tjAero} />
-            <img alt="Vo Sandwiches" src={voSandwich} />
-            <img alt="West Coast Civil" src={westCoastCivil} />
-            <img alt="WoW Law Group" src={wowLawGroup} />
-
-          </section>
+    <div className='support-container'>
+      <div className='headline'>
+        <div className='support-headline'>
+          <h1 className='support-header'>WE WOULD BE THRILLED TO HAVE YOU AS A SPONSOR</h1>
+          <h2 className='support-subheader'>LEARN ABOUT THE BENEFITS YOU WOULD PROVIDE TO OUR TEAM</h2>
         </div>
       </div>
 
-      <Scroll />
-    </>
+      <div className='support-info'>
+        <div className='support-section-1'>
+          <p className='support-text-1'>#1 TRAVEL COSTS</p>
+          <p className='support-text-2'>Your funding helps our team compete in more events, including out-of-state competitions, and pay hotel fees so all of our members can go.</p>
+        </div>
+        <div className='support-section-2'>
+          <p className='support-text-1'>#2 FUTURE INSPIRATION</p>
+          <p className='support-text-2'>You'll help us purchase robotics equipment, teach incoming members, and allow the CyberLions to grow within STEM.</p>
+        </div>
+        <div className='support-section-1'>
+          <p className='support-text-1'>#3 FOOD!</p>
+          <p className='support-text-2'>Often an overlooked expense, your contribution means we can build longer: providing dinner, snacks, and water.</p>
+        </div>
+      </div>
+
+      <div className='support-sponsors'>
+        <h1 className='support-header'>HUGE THANK YOU TO OUR CURRENT SPONSORS</h1>
+        <div className='support-sponsor-images'>
+          <img alt='iClever' src={iClever} className='sponsor-img'/>
+          <img alt='Sign Imaging' src={SignImaging} className='sponsor-img'/>
+          <img alt='West Coast Civil' src={WestCoastCivil} className='sponsor-img'/>
+          <img alt='WOW Law Group' src={WowLawGroup} className='sponsor-img'/>
+          <img alt='Sugoi Stuff' src={SugoiStuff} className='sponsor-img'/>
+          <img alt='TJ Aerospace' src={TJAerospace} className='sponsor-img'/>
+          <img alt='Sunmerry' src={Sunmerry} className='sponsor-img'/>
+          <img alt='Vo Sandwiches' src={VoSandwiches} className='sponsor-img'/>
+          <img alt='MorStar' src={MorStar} className='sponsor-img'/>
+          <img alt='Dynamic Fab' src={DynamicFab} className='sponsor-img'/>
+          <img alt='Arden' src={Arden} className='sponsor-img'/>
+          <img alt='Heim Bearings' src={HeimBearings} className='sponsor-img'/>
+        </div>
+        <p className='support-subheader'>CONTACT US AT WHSLIONSROBOTICS@GMAIL.COM</p>
+        <p className='support-subheader'>
+          WE ALSO HAVE A <a href="https://gofund.me/96ab06ee" target="_blank" rel="noopener noreferrer" class="support-link">GOFUNDME</a> :)
+          </p>
+      </div>
+    </div>
   )
 }
