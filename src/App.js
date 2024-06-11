@@ -74,8 +74,8 @@ export default function App() {
             />
         </Routes>
 
-        <footer class='footer-background-color-default'>
-            <section ref={footer} className='footer-branding'>
+        <footer ref={footer} class='footer-background-color-default'>
+            <section className='footer-branding'>
                 <img className='footer-branding-image-logo' src={SquareLogo} alt='Square Logo' />
                 <p className='footer-branding-logo-text'>Cyberlions 8521</p>
             </section>
