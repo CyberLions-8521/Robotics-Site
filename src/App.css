@@ -299,7 +299,7 @@ footer{
   margin-right: 20rem;
 }
 .support-header {
-  font-size: 7.5rem;
+  font-size: 5rem;
   line-height: 8.5rem;
   font-family: 'Koulen', sans-serif;
   font-weight: 400;
@@ -332,10 +332,9 @@ footer{
   margin-right: 10rem;
 }
 .support-sponsor-images{
-  margin-top: 3rem;
+  margin: 5rem 0rem;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
   justify-content: center;
 }
 .sponsor-img{
@@ -487,6 +486,7 @@ footer{
   max-width: 80rem;
   border-radius: 0.75rem;
   background-color: #e9e9e9;
+  width: 100%;
 }
 
 .about-subteam-selector {
@@ -494,6 +494,7 @@ footer{
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 1rem;
+  min-width: 17rem;
 }
 
 .about-subteam-selector h1 {
@@ -512,6 +513,7 @@ footer{
   font-family: 'Lato', Courier, monospace;
   cursor: pointer;
   list-style: none;
+  font-size: 1rem;
 }
 
 .about-subteam-divider {
@@ -519,36 +521,45 @@ footer{
   width: 0.15rem;
 }
 
+.about-subteam-details {
+  max-width: 40rem;
+}
 .about-subteam-details p {
   font-family: 'Lato', Courier, monospace;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .selected {
-  font-size: 1.10rem;
+  font-size: 1.1rem;
   font-weight: 1000;
   color: var(--primary-color-1);
 }
 
 .about-subteam-signup {
-  margin-top: 4.5rem;
+  margin: 10rem 0rem;
   display: flex;
-  min-height: 20rem;
+  justify-content: space-between;
 }
 
 .about-subteam-signup-text {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
+
+  max-width: 35rem;
 }
 
 .about-subteam-signup-text h1 {
-  font-family: 'Koulen', sans-serif;
-  font-size: 3rem;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 4rem;
+  color: var(--primary-color-2)
 }
 
 .about-subteam-signup-text p {
   font-family: 'Lato', Courier, monospace;
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 4rem;
 }
 
 .about-subteam-signup-text button {
@@ -559,13 +570,17 @@ footer{
   background-color: var(--primary-color-1);
   color: white;
   font-size: 1.25rem;
-  max-width: 35%;
-  min-height: 20%;
+  max-width: 10rem;
+
+  /* do not specify a min-height as a % for the button when the parent container does not have a definite height. It will overflow due to logic */
+  min-height: 4rem;
 }
 
 .about-subteam-signup img {
-  width: 60%;
-  height: 100%;
+  max-width: 35rem;
+  max-height: 35rem;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 
 /* ==================================================================================================================================== */

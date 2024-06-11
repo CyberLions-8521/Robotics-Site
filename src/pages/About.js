@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
-
+import RobbieMove from '../assets/images/robbie-move.jpg'
 export default function About() {
 
   let [selectedRole, setSelectedRole] = useState(0);
 
   const roles = ['MECHANICAL', 'DESIGN', 'PROGRAMMING', 'ELECTRICAL', 'OPERATION MANAGEMENT'];
-  const rolesDescriptions = ['skibidi', 'ohio', 'gyat', 'rizzler', 'fanum'];
+  const rolesDescriptions = [
+    "Use machinery and power tools to fabricate prototypes for robot subsystems. You’re expected to organize and understand the mechanics of the robot and its assembly.",
+    "Learn design skills and rapid prototyping techniques through CAD and 3D printing. You're planning, designing, and experimenting with different designs to come up with a working robot.",
+    "Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.",
+    " Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.",
+    "Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory and working closely with club advisors and IPT leads."
+  ];
 
   function handleSelectedRole(index) {
     setSelectedRole(index);
@@ -51,7 +57,7 @@ export default function About() {
             <p>We're always looking for new members. If being a CyberLion sounds right to you, sign up today!</p>
             <button>SIGN UP</button>
           </article>
-          <img alt='cyberlions preview'/>
+          <img src={RobbieMove} alt='cyberlions preview'/>
         </section>
       </section>
     </div>
