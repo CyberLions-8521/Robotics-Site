@@ -15,7 +15,7 @@ export default function Newsletter() {
             Updates on our team's progress and accomplishments.
           </div>
         </div>
-        <img src={Mascot} className='newsletter-mascot'></img>
+        <img src={Mascot} className='newsletter-mascot' alt='Cyberlions Logo'></img>
       </div>
       
       <div className='newsletter-content'>
@@ -24,7 +24,7 @@ export default function Newsletter() {
             Newsletter
           </div>
           {/* from inside google doc: file --> share --> publish to web --> embed */}
-          <iframe className='newsletter-embed' src="https://docs.google.com/document/d/e/2PACX-1vSVZCZ-ljA1I8thZG4QW2Bv1DHZJu0XlFNedCBHAbf88pKnAxK1dsXfJsjPiaWeKYCMUyNjTPZxcw2a/pub?embedded=true"></iframe>
+          <iframe title='Newsletter' className='newsletter-embed' src="https://docs.google.com/document/d/e/2PACX-1vSVZCZ-ljA1I8thZG4QW2Bv1DHZJu0XlFNedCBHAbf88pKnAxK1dsXfJsjPiaWeKYCMUyNjTPZxcw2a/pub?embedded=true"></iframe>
         </div>
         <div className='newsletter-instagram'>
           <div className='newsletter-subheader'>

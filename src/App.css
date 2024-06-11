@@ -243,7 +243,7 @@ footer{
 }
 
 .newsletter-instagram {
-  /* I'm not sure how to make the instagram embed non-square; I'll have to look into the npm package later. */
+  /* I'm not sure how to make the instagram embed non-square; I'll have to look into the npm package (react-social-media-embed) later. */
 }
 
 /* ==================================================================================================================================== */
