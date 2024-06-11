@@ -33,8 +33,6 @@ body {
 }
 .container {
   width: var(--default-width);
-
-  outline: 1px solid red;
 }
 
 /* ==================================================================================================================================== */
@@ -162,44 +160,90 @@ footer{
 
 /* ==================================================================================================================================== */
 /* NEWSLETTER */
-*{
-  outline: red 1px solid
-}
 
 .newsletter-body {
   width:100vw;
-  height:100%;
+  height:140rem;
 
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .newsletter-top {
-  padding: 12rem 15rem;
-  width:70%;
-  height:110rem;
+  padding: 5rem 15rem;
+  height: 40rem;
   position: relative;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .newsletter-header {
   width: 70rem;
   line-height: 12rem;
 
-  font-size: 13rem;
+  font-size: 12rem;
   font-weight: lighter;
   font-family: 'Koulen', sans-serif;
-  color:rgb(158, 52, 52);
+  color:rgb(180, 46, 46);
   -webkit-text-stroke: 0.4rem white;
 }
 
+.newsletter-description {
+  width: 40rem;
+  line-height: 3rem;
+
+  font-size: 3rem;
+  font-weight: lighter;
+  font-family: 'Koulen', sans-serif;
+  color:rgb(0, 0, 0);
+}
+
 .newsletter-mascot {
-  width:50rem;
+  width:43em;
   position: absolute;
-  top:2rem;
-  left: 50rem;
+  top: 1rem;
+  left: 43rem;
   opacity: 0.3;
   z-index: -1;
+}
+
+.newsletter-content {
+  height: 40rem;
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.newsletter-subheader {
+  font-size: 3rem;
+  width: 40rem;
+  color:rgb(54, 119, 211);
+  font-weight: lighter;
+  font-family: 'Koulen', sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-embed {
+  width:40rem;
+  height:40rem;
+
+  outline: 0.2rem solid rgb(211, 54, 54); 
+}
+
+.newsletter-drive {
+  flex-direction: column;
+  gap:4rem;
+}
+
+.newsletter-instagram {
+  /* I'm not sure how to make the instagram embed non-square; I'll have to look into the npm package later. */
 }
 
 /* ==================================================================================================================================== */
