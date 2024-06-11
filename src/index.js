@@ -1,24 +1,19 @@
-import  React from "react";
-import { createRoot } from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 
-import App from './App'
-
-// export deconstructed prop into image as Kelvry
-// export { default as Kevilry } from './assets/robots/kelv.jpg';
-
-// The difference between regular web development and react is that react uses a "virtual DOM". React also renders in a "root" element because of this (check public folder < index.html)
-const root = createRoot(document.getElementById('root'));
-
+// The difference between regular web development and react is that react uses a "virtual DOM" 
+// React also renders in a "root" element because of this (check public folder < index.html)
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
-    {/* BrowserRouter allows for nested routing. I can create routes in this file or App.js or other child files */}
+
+    {/* Wrap entire <App /> in <BrowserRouter> to enable routing for all pages */}
     <BrowserRouter>
       <App />
     </BrowserRouter>
-
+    
   </React.StrictMode>
 );
 

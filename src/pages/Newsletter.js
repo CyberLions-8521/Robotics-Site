@@ -1,39 +1,28 @@
-import { React } from 'react'
-import { InstagramEmbed } from 'react-social-media-embed';
+import React from 'react'
+import { Helmet } from "react-helmet"
 
-import Mascot from '../assets/images/cyberlions-mascot.png'
+import sticker from "../images/icons/sticker.png"
+import Scroll from '../helper-components/Scroll'
 
 export default function Newsletter() {
   return (
-    <div className='newsletter-body'>
-      <div className='newsletter-top'>
-        <div display='flex' flexDirection='column'>
-          <div className='newsletter-header'>
-            WHAT'S BEEN GOING ON?
+    <>
+      <Helmet>
+        <title>Team 8521 - Newsletter</title>
+      </Helmet>
+
+      <div className="newsletter-container">
+        <div className="newsletter">
+          <img alt="cyberlions sticker" src={sticker} />
+
+          <div className="newsletter-hero">
+            <h1>You're Early!</h1>
+            <p>This page is still in progress, but is on track to being complete. Check back soon!</p>
           </div>
-          <div className='newsletter-description'>
-            Updates on our team's progress and accomplishments.
-          </div>
-        </div>
-        <img src={Mascot} className='newsletter-mascot' alt='Cyberlions Logo'></img>
-      </div>
-      
-      <div className='newsletter-content'>
-        <div className='newsletter-drive'>
-          <div className='newsletter-subheader'>
-            Newsletter
-          </div>
-          {/* from inside google doc: file --> share --> publish to web --> embed */}
-          <iframe title='Newsletter' className='newsletter-embed' src="https://docs.google.com/document/d/e/2PACX-1vSVZCZ-ljA1I8thZG4QW2Bv1DHZJu0XlFNedCBHAbf88pKnAxK1dsXfJsjPiaWeKYCMUyNjTPZxcw2a/pub?embedded=true"></iframe>
-        </div>
-        <div className='newsletter-instagram'>
-          <div className='newsletter-subheader'>
-            Instagram (@cyberlions8521)
-          </div>
-          {/* Instagram's embed doesn't work in react for some reason */}
-          <InstagramEmbed url='https://www.instagram.com/cyberlions8521/' className='newsletter-embed'></InstagramEmbed>
         </div>
       </div>
-    </div>
+
+      <Scroll />
+    </>
   )
 }
