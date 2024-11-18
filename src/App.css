@@ -442,6 +442,31 @@ footer{
   font-family: 'League Spartan', sans-serif;
   color: white;
 }
+
+.support-tier {
+  margin: 2rem 0rem 0rem 4rem;
+
+  font-size: 5rem;
+  font-family: 'League Spartan', sans-serif;
+  color: white;
+}
+
+.support-sponsor-text {
+  font-size: 3rem;
+  font-family: 'Koulen', sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
+.support-bullets {
+  padding-left: 12rem;
+  margin: 1rem 0rem;
+  gap: 3rem;
+/* 
+  display: flex;
+  flex-direction: row; */
+}
+
 .support-link {
   color: var(--hyperlink-color);
   text-decoration: none;
