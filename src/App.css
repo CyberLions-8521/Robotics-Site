@@ -74,6 +74,17 @@ nav a {
   font-family: 'Koulen', sans-serif;
   text-decoration: none;
   font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+nav a:hover{
+  font-size: 1.6rem;
+  transition: 0.2s;
+}
+
+nav a:active{
+  font-size: 1.5rem;
+  transition: 0.2s;
 }
 
 .nav-branding {
@@ -81,16 +92,30 @@ nav a {
   align-items: center;
   gap: 1.5rem;
 }
+
 .nav-branding:hover {
   cursor: pointer;
 }
+
 .nav-branding-image-logo {
   max-width: 3.5rem;
 }
+
 .nav-branding-logo-text {
   font-family: 'Koulen', sans-serif;
   font-size: 1.5rem;
   color: white;
+  transition: 0.2s;
+}
+
+.nav-branding-logo-text:hover {
+  font-size: 1.6rem;  
+  transition: 0.2s;
+}
+
+.nav-branding-logo-text:active {
+  font-size: 1.5rem;
+  transition: 0.2s;
 }
 
 footer{
@@ -622,6 +647,7 @@ footer{
   flex-direction: column;
   gap: 2rem;
   margin-left: 1.5rem;
+  transition: 0.2s;
 }
 
 .about-subteam-selection-button {
@@ -638,17 +664,20 @@ footer{
 
 .about-subteam-details {
   max-width: 40rem;
+  transition: 0.2s;
 }
 .about-subteam-details p {
   font-family: 'Lato', Courier, monospace;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  transition: 0.2s;
 }
 
 .selected {
   font-size: 1.1rem;
   font-weight: 1000;
   color: var(--primary-color-1);
+  transition: 0.2s;
 }
 
 .about-subteam-signup {
