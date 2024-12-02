@@ -2,7 +2,7 @@ import React from 'react'
 // import iClever from '../assets/sponsors/2024/iClever.png'
 // import SignImaging from '../assets/sponsors/2024/Sign-Imaging.png'
 // import WestCoastCivil from '../assets/sponsors/2024/West-Coast-Civil.png'
-// import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
+import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 // import SugoiStuff from '../assets/sponsors/2023/Sugoi-Stuff.png'
 // import TJAerospace from '../assets/sponsors/2023/TJ-Aero-3.png'
 // import Sunmerry from '../assets/sponsors/2023/Sunmerry.png'
@@ -67,9 +67,16 @@ name:'WOW Law',
 sponsorType:'Gold',
 logo:{LOGO},
 
-
+Could be a good React component ^
 */
 
+/*
+Note for sponsor tiers:
+Golden Lions should have the biggest logos so they can get more recognition. 
+Some sponsors requested this specifically.
+*/
+
+//Have yet to add BAE Systems, will have to throw it into an art editor to edit it and upload the image source here
 
 export default function SupportUs() {
   return (
@@ -97,16 +104,27 @@ export default function SupportUs() {
       </div>
 
       <div className='support-sponsors'>
-        <h1 className='support-header'>HUGE THANK YOU TO OUR CURRENT SPONSORS</h1>
+        <h1 className='support-sponsors-header'>HUGE THANK YOU TO OUR CURRENT SPONSORS</h1>
           <div className='support-sponsor-text' >
-            <h2 className='support-tier'>Golden Lions</h2>
-            <ul className='support-bullets'>{listGoldSponsors}</ul>
-            <h2 className='support-tier'>Silver Lions</h2>
-            <ul className='support-bullets'>{listSilverSponsors}</ul>
-            <h2 className='support-tier'>Bronze Lions</h2>
-            <ul className='support-bullets'>{listBronzeSponsors}</ul>
-            <h2 className='support-tier'>Product Donations</h2>
-            <ul className='support-bullets'>{listProductSponsors}</ul>
+            
+            <div className='support-sponsor-tier-text'>
+              <h2 className='support-sponsor-tier'>Golden Lions</h2>
+              <p className='support-sponsor-tier-price'>$1000+</p>
+            </div>
+            <div className='support-tiergroup-gold'>
+              <img src={WowLawGroup} className='support-gold-logo'/>
+            </div>
+            
+            <div className='support-sponsor-tier-text'>
+              <h2 className='support-sponsor-tier'>Silver Lions</h2>
+              <p className='support-sponsor-tier-price'>$500+</p>
+            </div>
+
+            <div className='support-sponsor-tier-text'>
+              <h2 className='support-sponsor-tier'>Bronze Lions</h2>
+              <p className='support-sponsor-tier-price'>$50+</p>
+            </div>
+
           </div>
         <p className='support-subheader'>CONTACT US AT WHSLIONSROBOTICS@GMAIL.COM</p>
         <p className='support-subheader'>
