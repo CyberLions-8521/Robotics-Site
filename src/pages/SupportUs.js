@@ -13,6 +13,8 @@ import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 // import Arden from '../assets/sponsors/2023/Arden2.png'
 // import HeimBearings from '../assets/sponsors/2023/Heim-Bearings.png'
 
+
+/*
 const goldSponsors = [
   'WOW Law Group',
 ];
@@ -41,7 +43,8 @@ const productDonations = [
   'TAP Electronics',
   'Phillips Steel',
 ]
-
+*/
+/*
 const listGoldSponsors = goldSponsors.map(sponsor =>
   <li>{sponsor}</li>
 );
@@ -57,6 +60,7 @@ const listBronzeSponsors = bronzeSponsors.map(sponsor =>
 const listProductSponsors = productDonations.map(sponsor =>
   <li>{sponsor}</li>
 );
+*/
 
 /* at some point make these a list and function with key and value properties.
   this would also allow them to have logos.
@@ -113,8 +117,8 @@ export default function SupportUs() {
               <p className='support-sponsor-tier-price'>$1000+</p>
             </div>
             <div className='support-tiergroup-gold'>
-              <img src={WowLawGroup} className='support-gold-logo'/>
-              <img src={BAESystems} className='support-gold-logo'/>
+              <img src={WowLawGroup} className='support-gold-logo' alt='WOW Law Group Logo'/>
+              <img src={BAESystems} className='support-gold-logo' alt='BAE Systems Logo'/>
             </div>
             
             <div className='support-sponsor-tier-text'>
