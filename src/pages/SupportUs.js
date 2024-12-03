@@ -3,6 +3,7 @@ import React from 'react'
 // import SignImaging from '../assets/sponsors/2024/Sign-Imaging.png'
 // import WestCoastCivil from '../assets/sponsors/2024/West-Coast-Civil.png'
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
+import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 // import SugoiStuff from '../assets/sponsors/2023/Sugoi-Stuff.png'
 // import TJAerospace from '../assets/sponsors/2023/TJ-Aero-3.png'
 // import Sunmerry from '../assets/sponsors/2023/Sunmerry.png'
@@ -113,6 +114,7 @@ export default function SupportUs() {
             </div>
             <div className='support-tiergroup-gold'>
               <img src={WowLawGroup} className='support-gold-logo'/>
+              <img src={BAESystems} className='support-gold-logo'/>
             </div>
             
             <div className='support-sponsor-tier-text'>

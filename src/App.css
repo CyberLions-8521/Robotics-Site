@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 :root{
-  --primary-color-1: #C94309;
+  --primary-color-1: #c90909;
   --primary-color-2: #4176FF;
   --primary-color-3: #1C1C1C;
 
@@ -18,12 +18,14 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   position: relative;
   min-height: 100vh;
 
   padding-bottom: var(--footer-height);
 }
+
 .content-container {
   display: flex;
   max-width: 100vw;
@@ -32,12 +34,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .container {
   width: var(--default-width);
   display: flex;
   flex-direction: column;
   gap: 13rem;
   padding-bottom: 10rem;
+}
+
+img{
+  pointer-events: none;
 }
 
 /* ==================================================================================================================================== */
@@ -242,9 +249,8 @@ footer{
 
 .newsletter-body {
   width: 100vw;
-
   /* there should be no overflow when I comment out min-height. this is a bug that needs to be fixed */
-  min-height: 200vh;
+  min-height: 120vh;
 
   display: flex;
   align-items: center;
@@ -502,7 +508,10 @@ footer{
 
 .support-tiergroup-gold{
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  gap: 10rem;
 }
 
 .support-gold-logo{
@@ -711,6 +720,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-decoration: none;
 
   max-width: 35rem;
 }
@@ -736,9 +746,18 @@ footer{
   color: white;
   font-size: 1.25rem;
   max-width: 10rem;
+  transition: 0.2s;
 
   /* do not specify a min-height as a % for the button when the parent container does not have a definite height. It will overflow due to logic */
   min-height: 4rem;
+}
+
+.about-subteam-signup-text button:hover {
+  border: 0.2rem solid var(--primary-color-1);
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: white;
+  color: var(--primary-color-1);
 }
 
 .about-subteam-signup img {

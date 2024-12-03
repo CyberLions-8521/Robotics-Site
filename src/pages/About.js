@@ -55,7 +55,9 @@ export default function About() {
           <article className='about-subteam-signup-text'>  
             <h1>Think You'll Fit In?</h1>
             <p>We're always looking for new members. If being a CyberLion sounds right to you, sign up today!</p>
-            <button>SIGN UP</button>
+            <a href="https://forms.gle/m2SS7en7DTRzL3qX6" className='about-subteam-signup-text' target="_blank" rel="noopener noreferrer">
+              <button>SIGN UP</button>
+            </a>
           </article>
           <img src={RobbieMove} alt='cyberlions preview'/>
         </section>
