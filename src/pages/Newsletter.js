@@ -21,7 +21,7 @@ export default function Newsletter() {
       <div className='newsletter-content'>
         <div className='newsletter-drive'>
           <div className='newsletter-subheader'>
-            Newsletter
+            Newsletter (Coming Soon!)
           </div>
           {/* from inside google doc: file --> share --> publish to web --> embed */}
           <iframe title='Newsletter' className='newsletter-embed' src="https://docs.google.com/document/d/e/2PACX-1vSVZCZ-ljA1I8thZG4QW2Bv1DHZJu0XlFNedCBHAbf88pKnAxK1dsXfJsjPiaWeKYCMUyNjTPZxcw2a/pub?embedded=true"></iframe>

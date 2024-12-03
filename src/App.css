@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 :root{
-  --primary-color-1: #C94309;
+  --primary-color-1: #c90909;
   --primary-color-2: #4176FF;
   --primary-color-3: #1C1C1C;
 
@@ -18,12 +18,14 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   position: relative;
   min-height: 100vh;
 
   padding-bottom: var(--footer-height);
 }
+
 .content-container {
   display: flex;
   max-width: 100vw;
@@ -32,12 +34,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .container {
   width: var(--default-width);
   display: flex;
   flex-direction: column;
   gap: 13rem;
   padding-bottom: 10rem;
+}
+
+img{
+  pointer-events: none;
 }
 
 /* ==================================================================================================================================== */
@@ -74,6 +81,17 @@ nav a {
   font-family: 'Koulen', sans-serif;
   text-decoration: none;
   font-size: 1.5rem;
+  transition: 0.2s;
+}
+
+nav a:hover{
+  font-size: 1.6rem;
+  transition: 0.2s;
+}
+
+nav a:active{
+  font-size: 1.5rem;
+  transition: 0.2s;
 }
 
 .nav-branding {
@@ -81,16 +99,30 @@ nav a {
   align-items: center;
   gap: 1.5rem;
 }
+
 .nav-branding:hover {
   cursor: pointer;
 }
+
 .nav-branding-image-logo {
   max-width: 3.5rem;
 }
+
 .nav-branding-logo-text {
   font-family: 'Koulen', sans-serif;
   font-size: 1.5rem;
   color: white;
+  transition: 0.2s;
+}
+
+.nav-branding-logo-text:hover {
+  font-size: 1.6rem;  
+  transition: 0.2s;
+}
+
+.nav-branding-logo-text:active {
+  font-size: 1.5rem;
+  transition: 0.2s;
 }
 
 footer{
@@ -217,9 +249,8 @@ footer{
 
 .newsletter-body {
   width: 100vw;
-
   /* there should be no overflow when I comment out min-height. this is a bug that needs to be fixed */
-  min-height: 200vh;
+  min-height: 120vh;
 
   display: flex;
   align-items: center;
@@ -421,21 +452,23 @@ footer{
   margin: 0rem 10rem;
   padding-bottom: 4rem;
 }
-.support-sponsor-images{
-  margin: 3rem 0rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.support-sponsors-header {
+  text-align: center;
+  font-size: 6.6rem;
+  line-height: 8.5rem;
+  font-family: 'Koulen', sans-serif;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.20rem;
 }
-.sponsor-img{
-  max-height: 7rem;
-  margin: 2rem;
-}
+
 .support-text-1 {
   font-size: 3.75rem;
   font-family: 'Koulen', sans-serif;
   color: white;
 }
+
 .support-text-2 {
   font-size: 2.75rem;
   line-height: 4rem;
@@ -458,14 +491,36 @@ footer{
   font-weight: normal;
 }
 
-.support-bullets {
-  padding-left: 12rem;
-  margin: 1rem 0rem;
-  gap: 3rem;
+.support-sponsor-tier-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.support-sponsor-tier{
+  font-weight: normal;
+}
+
+.support-sponsor-tier-price{
+  text-decoration: underline;
+}
+
+.support-tiergroup-gold{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.support-gold-logo{
+  height: 30rem;
+}
+
 /* 
   display: flex;
   flex-direction: row; */
-}
 
 .support-link {
   color: var(--hyperlink-color);
@@ -622,6 +677,7 @@ footer{
   flex-direction: column;
   gap: 2rem;
   margin-left: 1.5rem;
+  transition: 0.2s;
 }
 
 .about-subteam-selection-button {
@@ -638,17 +694,20 @@ footer{
 
 .about-subteam-details {
   max-width: 40rem;
+  transition: 0.2s;
 }
 .about-subteam-details p {
   font-family: 'Lato', Courier, monospace;
   font-size: 1.5rem;
   line-height: 2.5rem;
+  transition: 0.2s;
 }
 
 .selected {
   font-size: 1.1rem;
   font-weight: 1000;
   color: var(--primary-color-1);
+  transition: 0.2s;
 }
 
 .about-subteam-signup {
@@ -661,6 +720,7 @@ footer{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-decoration: none;
 
   max-width: 35rem;
 }
@@ -686,9 +746,18 @@ footer{
   color: white;
   font-size: 1.25rem;
   max-width: 10rem;
+  transition: 0.2s;
 
   /* do not specify a min-height as a % for the button when the parent container does not have a definite height. It will overflow due to logic */
   min-height: 4rem;
+}
+
+.about-subteam-signup-text button:hover {
+  border: 0.2rem solid var(--primary-color-1);
+  transition: 0.2s;
+  cursor: pointer;
+  background-color: white;
+  color: var(--primary-color-1);
 }
 
 .about-subteam-signup img {

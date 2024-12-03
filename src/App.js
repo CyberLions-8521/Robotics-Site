@@ -76,8 +76,13 @@ export default function App() {
 
         <footer ref={footer} class='footer-background-color-default'>
             <section className='footer-branding'>
-                <img className='footer-branding-image-logo' src={SquareLogo} alt='Square Logo' />
-                <p className='footer-branding-logo-text'>Cyberlions 8521</p>
+                <div className='brand-name'>
+                    <img className='footer-branding-image-logo' src={SquareLogo} alt='Square Logo' />
+                    <p className='footer-branding-logo-text'>Cyberlions 8521</p>
+                </div>
+                <div className='socials'>
+                    
+                </div>
             </section>
 
             <p className='footer-copyright'>©2024 Larry Le MIT License</p>
