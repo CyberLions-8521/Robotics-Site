@@ -248,9 +248,11 @@ footer{
 /* NEWSLETTER */
 
 .newsletter-body {
-  width: 100vw;
+  /*There is some weird spacing with the width of the newsletter page. Newsletter-body not the problem*/
+  /*border: 2px solid blue;*/
+  width: 100%;
   /* there should be no overflow when I comment out min-height. this is a bug that needs to be fixed */
-  min-height: 120vh;
+  min-height: 230vh;
 
   display: flex;
   align-items: center;
@@ -433,7 +435,9 @@ footer{
   font-weight: 400;
   color: white;
   letter-spacing: 0.10rem;
+  margin-bottom: 4rem;
 }
+
 .support-info{
   margin-top: 10rem;
   margin-left: 10rem;
@@ -515,7 +519,7 @@ footer{
 }
 
 .support-gold-logo{
-  height: 30rem;
+  height: 50vh;
 }
 
 /* 
