@@ -81,6 +81,12 @@ Golden Lions should have the biggest logos so they can get more recognition.
 Some sponsors requested this specifically.
 */
 
+/* REMOVED GOFUNDME SECTION (CLOSED)
+<p className='support-subheader'>
+          WE ALSO HAVE A <a href="https://gofund.me/96ab06ee" target="_blank" rel="noopener noreferrer" class="support-link">GOFUNDME</a>
+          </p>
+*/
+
 //Have yet to add BAE Systems, will have to throw it into an art editor to edit it and upload the image source here
 
 export default function SupportUs() {
@@ -133,9 +139,6 @@ export default function SupportUs() {
 
           </div>
         <p className='support-subheader'>CONTACT US AT WHSLIONSROBOTICS@GMAIL.COM</p>
-        <p className='support-subheader'>
-          WE ALSO HAVE A <a href="https://gofund.me/96ab06ee" target="_blank" rel="noopener noreferrer" class="support-link">GOFUNDME</a>
-          </p>
       </div>
     </div>
   )
