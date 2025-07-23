@@ -43,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                    <li><Link to='/about'>About</Link></li>
-                    <li><Link to='/newsletter'>Newsletter</Link></li>
-                    <li><Link to='/our-robots'>Our Robots</Link></li>
-                    <li><Link to='/support-us'>Support Us</Link></li>
+                    <li><Link to='/Robotics-Site/#/about'>About</Link></li>
+                    <li><Link to='/Robotics-Site/#/newsletter'>Newsletter</Link></li>
+                    <li><Link to='/Robotics-Site/#/our-robots'>Our Robots</Link></li>
+                    <li><Link to='/Robotics-Site/#/support-us'>Support Us</Link></li>
                 </ul>
             </nav>
         </div>
