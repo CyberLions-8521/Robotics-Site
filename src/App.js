@@ -58,19 +58,19 @@ export default function App() {
                 element={<Home />} 
             />
             <Route 
-                path="/about" 
+                path="/Robotics-Site/#/about" 
                 element={<About />} 
             />
             <Route 
-                path="/newsletter" 
+                path="/Robotics-Site/#/newsletter" 
                 element={<Newsletter />} 
             />
             <Route 
-                path="/our-robots" 
+                path="/Robotics-Site/#/our-robots" 
                 element={<OurRobots />} 
             />
             <Route 
-                path="/support-us" 
+                path="/Robotics-Site/#/support-us" 
                 element={<SupportUs />} 
             />
         </Routes>
