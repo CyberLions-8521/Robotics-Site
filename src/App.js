@@ -43,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                    <li><Link to="/Robotics-Site/#/about">About</Link></li>
-                    <li><Link to="/Robotics-Site/#/newsletter">Newsletter</Link></li>
-                    <li><Link to="/Robotics-Site/#/our-robots">Our Robots</Link></li>
-                    <li><Link to="/Robotics-Site/#/support-us">Support Us</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/newsletter">Newsletter</Link></li>
+                    <li><Link to="/our-robots">Our Robots</Link></li>
+                    <li><Link to="/support-us">Support Us</Link></li>
                 </ul>
             </nav>
         </div>
@@ -58,19 +58,19 @@ export default function App() {
                 element={<Home />} 
             />
             <Route 
-                path="/Robotics-Site/#/about" 
+                path="/about" 
                 element={<About />} 
             />
             <Route 
-                path="/Robotics-Site/#/newsletter" 
+                path="/newsletter" 
                 element={<Newsletter />} 
             />
             <Route 
-                path="/Robotics-Site/#/our-robots" 
+                path="/our-robots" 
                 element={<OurRobots />} 
             />
             <Route 
-                path="/Robotics-Site/#/support-us" 
+                path="/support-us" 
                 element={<SupportUs />} 
             />
         </Routes>
