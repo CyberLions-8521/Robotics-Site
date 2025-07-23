@@ -1,5 +1,5 @@
 import { React, useRef, useEffect } from 'react'
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { Route, Routes, useLocation, useNavigate, Link } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
@@ -43,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/about">About</a>
-                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/newsletter">Newsletter</a>
-                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/our-robots">Our Robots</a>
-                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/support-us">Support Us</a>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/newsletter">Newsletter</Link></li>
+                    <li><Link to="/our-robots">Our Robots</Link></li>
+                    <li><Link to="/support-us">Support Us</Link></li>
                 </ul>
             </nav>
         </div>
