@@ -1,5 +1,5 @@
 import { React, useRef, useEffect } from 'react'
-import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
@@ -43,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/newsletter">Newsletter</Link></li>
-                    <li><Link to="/our-robots">Our Robots</Link></li>
-                    <li><Link to="/support-us">Support Us</Link></li>
+                    <a href="/Robotics-Site/#/about">About</a>
+                    <a href="/Robotics-Site/#/newsletter">Newsletter</a>
+                    <a href="/Robotics-Site/#/our-robots">Our Robots</a>
+                    <a href="/Robotics-Site/#/support-us">Support Us</a>
                 </ul>
             </nav>
         </div>
