@@ -1,6 +1,6 @@
 import  React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./App.css";
 
 import App from './App'
@@ -13,11 +13,9 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    
-    {/* BrowserRouter allows for nested routing. I can create routes in this file or App.js or other child files */}
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>
 );
