@@ -1,5 +1,5 @@
 import { React, useRef, useEffect } from 'react'
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import './App.css'
 
 import Home from './pages/Home'
@@ -11,9 +11,10 @@ import SupportUs from './pages/SupportUs'
 import SquareLogo from './assets/images/square-logo.png';
 
 export default function App() {
+    const navigate = useNavigate();
 
     function openHome() {
-        window.location.href = '/';
+        navigate('/');
     }
 
     let location = useLocation();
@@ -42,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                <li><a href='/about'>About</a></li>
-                <li><a href='/newsletter'>Newsletter</a></li>
-                <li><a href='/our-robots'>Our Robots</a></li>
-                <li><a href='/support-us'>Support Us</a></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to='/newsletter'>Newsletter</Link></li>
+                    <li><Link to='/our-robots'>Our Robots</Link></li>
+                    <li><Link to='/support-us'>Support Us</Link></li>
                 </ul>
             </nav>
         </div>
