@@ -43,10 +43,10 @@ export default function App() {
                 </section>
 
                 <ul>
-                    <a href="/Robotics-Site/#/about">About</a>
-                    <a href="/Robotics-Site/#/newsletter">Newsletter</a>
-                    <a href="/Robotics-Site/#/our-robots">Our Robots</a>
-                    <a href="/Robotics-Site/#/support-us">Support Us</a>
+                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/about">About</a>
+                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/newsletter">Newsletter</a>
+                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/our-robots">Our Robots</a>
+                    <a href="https://cyberlions-8521.github.io/Robotics-Site/#/support-us">Support Us</a>
                 </ul>
             </nav>
         </div>
