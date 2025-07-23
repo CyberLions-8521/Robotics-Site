@@ -1,7 +1,7 @@
 {
   "name": "cyberlions-8521",
   "version": "0.1.0",
-  "homepage": "https://cyberlions-8521.github.io/Robotics-Site/#",
+  "homepage": "https://cyberlions-8521.github.io/Robotics-Site",
   "private": true,
   "dependencies": {
     "@smakss/react-scroll-direction": "^2.1.1",
