@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Robotics-Site/static/css/main.f5ae3a50.css",
+    "main.js": "/Robotics-Site/static/js/main.d3bc8f2f.js",
+    "static/media/rommenus.jpg": "/Robotics-Site/static/media/rommenus.e2fdb5335a207fe50bd7.jpg",
+    "static/media/robot-2024.png": "/Robotics-Site/static/media/robot-2024.e9cc1699cb9f7677d4c9.png",
+    "static/media/cyberlions-veteran.png": "/Robotics-Site/static/media/cyberlions-veteran.96a0069cd8ccb5e33151.png",
+    "static/media/edgar.png": "/Robotics-Site/static/media/edgar.47649fa05bd3f3611c13.png",
+    "static/media/robbie.jpg": "/Robotics-Site/static/media/robbie.2e0ea8e8393d78f9815c.jpg",
+    "static/media/kevilry-2.jpg": "/Robotics-Site/static/media/kevilry-2.ef45e778cf1c63e41b43.jpg",
+    "static/media/cyberlions-mascot.png": "/Robotics-Site/static/media/cyberlions-mascot.63159f1e97f439f90d6e.png",
+    "static/media/cyberlions-banner.jpg": "/Robotics-Site/static/media/cyberlions-banner.c9ca0151d1afc8ce7c5b.jpg",
+    "static/media/robbie-move.jpg": "/Robotics-Site/static/media/robbie-move.c2b878f5ce297e5889f1.jpg",
+    "static/media/square-logo.png": "/Robotics-Site/static/media/square-logo.ad519fc507fcec78ac70.png",
+    "static/media/BAE-Systems.png": "/Robotics-Site/static/media/BAE-Systems.d2a830d245a1bc8d127c.png",
+    "static/media/wow-law-group-2.png": "/Robotics-Site/static/media/wow-law-group-2.3b7173d4718b22463c4d.png",
+    "index.html": "/Robotics-Site/index.html",
+    "main.f5ae3a50.css.map": "/Robotics-Site/static/css/main.f5ae3a50.css.map",
+    "main.d3bc8f2f.js.map": "/Robotics-Site/static/js/main.d3bc8f2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5ae3a50.css",
+    "static/js/main.d3bc8f2f.js"
+  ]
+}
