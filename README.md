@@ -12,7 +12,7 @@ Don't worry if you don't know React.js, as we have resources and mentors in the 
 
 ### Deploying to GitHub Pages
 
-This website is currently being deployed on GitHub Pages from the /docs folder. To properly deploy to GitHub Pages, run `npm run build` and copy the contents created in /build to /docs. 
+This website is currently being deployed on GitHub Pages from the /docs folder. To properly deploy to GitHub Pages, run **`npm run build`** and copy the contents created in /build to /docs. 
 
 ### Other Resources
 
