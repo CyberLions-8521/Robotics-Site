@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Robotics-Site/static/css/main.6c3633d7.css",
-    "main.js": "/Robotics-Site/static/js/main.af14cffd.js",
+    "main.js": "/Robotics-Site/static/js/main.490408b2.js",
     "static/media/rommenus.jpg": "/Robotics-Site/static/media/rommenus.e2fdb5335a207fe50bd7.jpg",
     "static/media/robot-2024.png": "/Robotics-Site/static/media/robot-2024.e9cc1699cb9f7677d4c9.png",
     "static/media/cyberlions-veteran.png": "/Robotics-Site/static/media/cyberlions-veteran.96a0069cd8ccb5e33151.png",
@@ -18,10 +18,10 @@
     "static/media/wow-law-group-2.png": "/Robotics-Site/static/media/wow-law-group-2.3b7173d4718b22463c4d.png",
     "index.html": "/Robotics-Site/index.html",
     "main.6c3633d7.css.map": "/Robotics-Site/static/css/main.6c3633d7.css.map",
-    "main.af14cffd.js.map": "/Robotics-Site/static/js/main.af14cffd.js.map"
+    "main.490408b2.js.map": "/Robotics-Site/static/js/main.490408b2.js.map"
   },
   "entrypoints": [
     "static/css/main.6c3633d7.css",
-    "static/js/main.af14cffd.js"
+    "static/js/main.490408b2.js"
   ]
 }
