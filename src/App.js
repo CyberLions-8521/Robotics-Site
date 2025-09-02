@@ -13,7 +13,7 @@ import SquareLogo from './assets/images/square-logo.png';
 export default function App() {
 
     function openHome() {
-        window.location.href = `${process.env.PUBLIC_URL || ''}/`;
+        window.location.href = 'https://cyberlions-8521.github.io/Robotics-Site/';
     }
 
     let location = useLocation();
