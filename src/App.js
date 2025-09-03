@@ -1,5 +1,6 @@
 import { React, useRef, useEffect } from 'react'
 import { Route, Routes, useLocation, Link } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import './App.css'
 
 import Home from './pages/Home'
@@ -11,26 +12,12 @@ import SupportUs from './pages/SupportUs'
 import SquareLogo from './assets/images/square-logo.png';
 
 export default function App() {
+    let nav = useRef();
+    let footer = useRef();
 
     function openHome() {
         window.location.href = '/';
     }
-
-    let location = useLocation();
-    let nav = useRef();
-    let footer = useRef();
-    
-    useEffect(() => {
-        let ourRobotsBGNav = 'nav-background-color-dark';
-        let ourRobotsBGFooter = 'footer-background-color-dark';
-
-        // The reason we only need this if statement is because the dark background overrides 
-        // the default background (CSS reads from top to bottom)
-        if (location.pathname === '/our-robots') {
-            nav.current.classList.add(ourRobotsBGNav);
-            footer.current.classList.add(ourRobotsBGFooter);
-        }
-    }, [location]);
 
     return (
     <>
@@ -84,8 +71,7 @@ export default function App() {
                     
                 </div>
             </section>
-
-            <p className='footer-copyright'>©2024 Larry Le MIT License</p>
+            <p className='footer-copyright'>©2025 by 8521 CyberLions</p>
         </footer>
     </>
     )
