@@ -1,7 +1,6 @@
 import { React, useRef, useState } from 'react'
 import { Route, Routes, useLocation, Link } from 'react-router-dom'
 import { Container, Nav, Navbar, NavDropdown, Form, Button } from 'react-bootstrap'
-import Logo from './assets/images/8521-logo.png'
 import './App.css'
 
 import Home from './pages/Home'
@@ -10,7 +9,10 @@ import Newsletter from './pages/Newsletter'
 import OurRobots from './pages/OurRobots'
 import SupportUs from './pages/SupportUs'
 
-import SquareLogo from './assets/images/square-logo.png';
+import Logo from './assets/images/8521-logo.png'
+import GitHubLogo from './assets/icons/socials/github_white.png'
+import InstagramLogo from './assets/icons/socials/instagram_white.png'
+import YoutubeLogo from './assets/icons/socials/youtube_white.png'
 
 export default function App() {
     let nav = useRef();
@@ -108,6 +110,7 @@ export default function App() {
                         <Form.Group>
                             <Form.Control 
                                 name="name" 
+                                className="footer-info-box"
                                 placeholder="Your Name"
                                 value={form.name}
                                 onChange={handleChange} 
@@ -118,6 +121,7 @@ export default function App() {
                             <Form.Control 
                                 type="email" 
                                 name="email" 
+                                className="footer-info-box"
                                 placeholder="yourname@example.com"
                                 value={form.email} 
                                 onChange={handleChange} 
@@ -126,6 +130,7 @@ export default function App() {
                         <Form.Group>
                             <Form.Control 
                                 name="subject" 
+                                className="footer-info-box"
                                 placeholder="Subject"
                                 value={form.subject} 
                                 onChange={handleChange} 
@@ -144,8 +149,25 @@ export default function App() {
                             />
                         </Form.Group>
                     </div>
-                    <Button type="submit" variant="primary" className="mt-3 footer-button">Send</Button>
+                    <Button type="submit" variant="primary" className="mt-3 footer-button">Send an Inquiry Through Email</Button>
                 </Form>
+            </Container>
+            <Container className="footer-contact-container">
+                <h1>CONTACT US</h1>
+                <p>Westminster High School</p>
+                <p>14325 Goldenwest St., Westminster, CA 92683</p>
+                <p><strong>Email:</strong> whslionsrobotics@gmail.com</p>
+                <Container className="footer-socials-container">
+                    <a href="https://github.com/CyberLions-8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={GitHubLogo} alt="GitHub Logo" />
+                    </a>
+                    <a href="https://www.instagram.com/cyberlions8521/" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={InstagramLogo} alt="Instagram Logo" />
+                    </a>
+                    <a href="https://www.youtube.com/@cyberlions8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={YoutubeLogo} alt="YouTube Logo" />
+                    </a>
+                </Container>
             </Container>
             <p className='footer-copyright'>©2025 by 8521 CyberLions</p>
         </footer>

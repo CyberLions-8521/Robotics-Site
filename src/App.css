@@ -27,6 +27,11 @@ p {
   font-weight: 400;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: 'Koulen', sans-serif;
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -35,6 +40,21 @@ body {
 
 img{
   pointer-events: none;
+}
+
+strong{
+  font-weight: none;
+  font-family: 'Lato', Courier, monospace;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg) scale(1); }
+  15% { transform: rotate(-7deg) scale(1.05); }
+  30% { transform: rotate(7deg) scale(1.05); }
+  45% { transform: rotate(-7deg) scale(1.05); }
+  60% { transform: rotate(7deg) scale(1.05); }
+  75% { transform: rotate(-7deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
 }
 
 /* ==================================================================================================================================== */
@@ -95,7 +115,6 @@ img{
 
 .nav-background-color-default {
   background: var(--primary-color-1);
-  border: 2px solid red;
 }
 
 footer{
@@ -107,8 +126,10 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 
   background: var(--primary-color-1);
+  gap: 5rem;
 }
 
 .footer-form{
@@ -124,6 +145,14 @@ footer{
   font-family: 'Lato', Courier, monospace;
   font-size: 1rem;
 }
+
+.footer-info-box {
+  min-width: 22rem;
+  max-width: 22rem;
+  min-height: 2rem;
+  max-height: 2rem;
+}
+
 .footer-message-box {
   resize: none;
   width: 30rem;
@@ -138,7 +167,7 @@ footer{
   align-self: flex-start;
   background: var(--primary-color-2);
   border: none;
-  font-family: 'Koulen', sans-serif;
+  border: 2px solid var(--primary-color-2);
   border-radius: 0.5rem;
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -149,6 +178,32 @@ footer{
   color: var(--primary-color-2);
   transition: 0.3s;
   cursor: pointer;
+}
+
+.footer-contact-container {
+  color: var(--primary-color-3);
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact-container h1 {
+  font-size: 3rem;
+}
+
+.footer-socials-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.footer-socials-icon {
+  max-width: 2.5rem;
+  transition: 0.3s;
+}
+.footer-socials-icon:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  animation: wiggle 0.7s linear;
 }
 
 .footer-copyright {
