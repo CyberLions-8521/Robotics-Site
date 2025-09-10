@@ -10,6 +10,7 @@ import OurRobots from './pages/OurRobots'
 import SupportUs from './pages/SupportUs'
 
 import Logo from './assets/images/8521-logo.png'
+import StickerLogo from './assets/images/logo-sticker.png'
 import GitHubLogo from './assets/icons/socials/github_white.png'
 import InstagramLogo from './assets/icons/socials/instagram_white.png'
 import YoutubeLogo from './assets/icons/socials/youtube_white.png'
@@ -39,26 +40,9 @@ export default function App() {
 
     return (
     <>
-        {/*
-        <div ref={nav} className='nav-background-color-default nav-background'>
-            <nav>
-                <section onClick={openHome} className='nav-branding'>
-                <img className='nav-branding-image-logo' src={SquareLogo} alt='Square Logo' />
-                <p className='nav-branding-logo-text'>Cyberlions 8521</p>
-                </section>
-
-                <ul>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/newsletter">Newsletter</Link></li>
-                    <li><Link to="/our-robots">Our Robots</Link></li>
-                    <li><Link to="/support-us">Support Us</Link></li>
-                </ul>
-            </nav>
-        </div>
-        */}
         <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default">
         <Container className='nav-container'>
-            <Navbar.Brand className="nav-brand" href="#home">
+            <Navbar.Brand className="nav-brand" href="/">
                 <img 
                     src={Logo}
                     className="d-inline-block align-top nav-logo" 
@@ -104,6 +88,24 @@ export default function App() {
         </Routes>
 
         <footer ref={footer} className='footer-background-color-default'>
+            <img src={StickerLogo} alt="Sticker Logo" className='footer-sticker-logo' />
+            <Container className="footer-contact-container">
+                <h1>CONTACT US</h1>
+                <p>Westminster High School</p>
+                <p>14325 Goldenwest St., Westminster, CA 92683</p>
+                <p><strong>Email:</strong> whslionsrobotics@gmail.com</p>
+                <Container className="footer-socials-container">
+                    <a href="https://github.com/CyberLions-8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={GitHubLogo} alt="GitHub Logo" />
+                    </a>
+                    <a href="https://www.instagram.com/cyberlions8521/" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={InstagramLogo} alt="Instagram Logo" />
+                    </a>
+                    <a href="https://www.youtube.com/@cyberlions8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={YoutubeLogo} alt="YouTube Logo" />
+                    </a>
+                </Container>
+            </Container>
             <Container>
                 <Form onSubmit={handleSubmit}>
                     <div className="footer-form">
@@ -151,23 +153,6 @@ export default function App() {
                     </div>
                     <Button type="submit" variant="primary" className="mt-3 footer-button">Send an Inquiry Through Email</Button>
                 </Form>
-            </Container>
-            <Container className="footer-contact-container">
-                <h1>CONTACT US</h1>
-                <p>Westminster High School</p>
-                <p>14325 Goldenwest St., Westminster, CA 92683</p>
-                <p><strong>Email:</strong> whslionsrobotics@gmail.com</p>
-                <Container className="footer-socials-container">
-                    <a href="https://github.com/CyberLions-8521" target="_blank" rel="noopener noreferrer">
-                        <img className="footer-socials-icon" src={GitHubLogo} alt="GitHub Logo" />
-                    </a>
-                    <a href="https://www.instagram.com/cyberlions8521/" target="_blank" rel="noopener noreferrer">
-                        <img className="footer-socials-icon" src={InstagramLogo} alt="Instagram Logo" />
-                    </a>
-                    <a href="https://www.youtube.com/@cyberlions8521" target="_blank" rel="noopener noreferrer">
-                        <img className="footer-socials-icon" src={YoutubeLogo} alt="YouTube Logo" />
-                    </a>
-                </Container>
             </Container>
             <p className='footer-copyright'>©2025 by 8521 CyberLions</p>
         </footer>

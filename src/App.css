@@ -5,7 +5,7 @@
 
 :root{
   --primary-color-1: #1C1C1C;
-  --primary-color-2: #C90909;
+  --primary-color-2: #dd2323;
   --primary-color-3: #ffffff;
 
   --hyperlink-color: #7DA2FF;
@@ -36,10 +36,6 @@ body {
   position: relative;
   min-height: 100vh;
   padding-bottom: var(--footer-height);
-}
-
-img{
-  pointer-events: none;
 }
 
 strong{
@@ -129,7 +125,7 @@ footer{
   flex-direction: row;
 
   background: var(--primary-color-1);
-  gap: 5rem;
+  gap: 2.5rem;
 }
 
 .footer-form{
@@ -180,6 +176,10 @@ footer{
   cursor: pointer;
 }
 
+.footer-sticker-logo {
+  max-width: 20rem;
+}
+
 .footer-contact-container {
   color: var(--primary-color-3);
   margin-left: 2rem;
@@ -196,14 +196,15 @@ footer{
   gap: 1rem;
   margin-top: 1rem;
 }
+
 .footer-socials-icon {
   max-width: 2.5rem;
   transition: 0.3s;
+  transform: rotate(0deg) scale(1);
 }
 .footer-socials-icon:hover {
-  transition: 0.3s;
   cursor: pointer;
-  animation: wiggle 0.7s linear;
+  animation: wiggle 1s infinite;
 }
 
 .footer-copyright {
@@ -218,6 +219,10 @@ footer{
 
 /* ==================================================================================================================================== */
 /* HOME */
+.home-carousel {
+  max-width: var(--default-width);
+  margin: 2rem auto 4rem auto;
+}
 
 /* COMPONENT - SECTION */
 .section-container {
