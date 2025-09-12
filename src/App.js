@@ -40,7 +40,7 @@ export default function App() {
 
     return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default">
+        <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default fixed-top">
         <Container className='nav-container'>
             <Navbar.Brand className="nav-brand" href="/">
                 <img 
@@ -53,11 +53,11 @@ export default function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto nav-tabgroup">
-                <Nav.Link className="nav-tab" href="/">Home</Nav.Link>
-                <Nav.Link className="nav-tab" href="/about">About</Nav.Link>
-                <Nav.Link className="nav-tab" href="/newsletter">Newsletter</Nav.Link>
-                <Nav.Link className="nav-tab" href="/our-robots">Our Robots</Nav.Link>
-                <Nav.Link className="nav-tab" href="/support-us">Support Us</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/">Home</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/about">About</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/newsletter">Newsletter</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/our-robots">Our Robots</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/support-us">Support Us</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
