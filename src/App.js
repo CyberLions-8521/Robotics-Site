@@ -10,7 +10,7 @@ import OurRobots from './pages/OurRobots'
 import SupportUs from './pages/SupportUs'
 
 import Logo from './assets/images/8521-logo.png'
-import StickerLogo from './assets/images/logo-sticker.png'
+import StickerLogo from './assets/images/chillguy-sticker.png'
 import GitHubLogo from './assets/icons/socials/github_white.png'
 import InstagramLogo from './assets/icons/socials/instagram_white.png'
 import YoutubeLogo from './assets/icons/socials/youtube_white.png'
@@ -40,7 +40,7 @@ export default function App() {
 
     return (
     <>
-        <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default fixed-top">
+        <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default sticky-top">
         <Container className='nav-container'>
             <Navbar.Brand className="nav-brand" href="/">
                 <img 

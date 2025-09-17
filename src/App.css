@@ -129,6 +129,7 @@ footer{
 
   background: var(--primary-color-1);
   gap: 2.5rem;
+  z-index: 10;
 }
 
 .footer-form{
@@ -180,6 +181,7 @@ footer{
 }
 
 .footer-sticker-logo {
+  margin-left: 2rem;
   max-width: 20rem;
 }
 
@@ -223,42 +225,34 @@ footer{
 /* ==================================================================================================================================== */
 /* HOME */
 .home-carousel {
-  max-width: 50rem;
-  margin: 2rem auto 4rem auto;
+  max-width: auto;
+  margin: 0;
+  width: auto;
 }
 
-/* COMPONENT - SECTION */
-.section-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 6rem;
-}
-.section-image {
-  max-width: 30rem;
-  border-radius: 2rem;
+/* COMPONENT - CAROUSEL IMAGE */
+.carousel-image{
+  width: 100vw;
+  height: 60vh;
   object-fit: cover;
-  box-shadow: 0rem 1rem var(--primary-color-2);
-}
-.section-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 45vw;
-}
-.section-text h1 {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 3.2rem;
-  line-height: 4.6rem;
-}
-.section-text p {
-  font-family: 'Lato', Courier, monospace;
-  font-size: 1.3rem;
-  line-height: 2.6rem;
-  font-weight: 400;
+  object-position: center;
+  display: block;
 }
 
+.carousel-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background: rgba(0, 0, 0, 0.5); 
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-image-container h3 {
+  font-size: 3rem;
+}
 /* ==================================================================================================================================== */
 /*/ ABOUT */
 
