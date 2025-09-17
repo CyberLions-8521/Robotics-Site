@@ -5,9 +5,8 @@ import './App.css'
 
 import Home from './pages/Home'
 import About from './pages/About'
-import Newsletter from './pages/Newsletter'
-import OurRobots from './pages/OurRobots'
-import SupportUs from './pages/SupportUs'
+import Robots from './pages/Robots'
+import Sponsors from './pages/Sponsors'
 
 import Logo from './assets/images/8521-logo.png'
 import StickerLogo from './assets/images/chillguy-sticker.png'
@@ -55,9 +54,8 @@ export default function App() {
             <Nav className="me-auto nav-tabgroup">
                 <Nav.Link className="nav-tab" as={Link} to="/">Home</Nav.Link>
                 <Nav.Link className="nav-tab" as={Link} to="/about">About</Nav.Link>
-                <Nav.Link className="nav-tab" as={Link} to="/newsletter">Newsletter</Nav.Link>
-                <Nav.Link className="nav-tab" as={Link} to="/our-robots">Our Robots</Nav.Link>
-                <Nav.Link className="nav-tab" as={Link} to="/support-us">Support Us</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/robots">Robots</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/sponsors">Sponsors</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
@@ -74,16 +72,12 @@ export default function App() {
                 element={<About />} 
             />
             <Route 
-                path="/newsletter" 
-                element={<Newsletter />} 
+                path="/robots" 
+                element={<Robots />} 
             />
             <Route 
-                path="/our-robots" 
-                element={<OurRobots />} 
-            />
-            <Route 
-                path="/support-us" 
-                element={<SupportUs />} 
+                path="/sponsors" 
+                element={<Sponsors />} 
             />
         </Routes>
 
