@@ -46,6 +46,8 @@ strong{
   font-family: 'Lato', Courier, monospace;
 }
 
+/* ==================================================================================================================================== */
+/* ANIMATIONS */
 @keyframes wiggle {
   0% { transform: rotate(0deg) scale(1); }
   15% { transform: rotate(-7deg) scale(1.05); }
@@ -54,6 +56,29 @@ strong{
   60% { transform: rotate(7deg) scale(1.05); }
   75% { transform: rotate(-7deg) scale(1.05); }
   100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-on-load {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1s ease-out forwards; 
+  animation-delay: 0.5s; 
 }
 
 /* ==================================================================================================================================== */
@@ -236,7 +261,7 @@ footer{
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 2rem 10rem;
+  padding: 5rem 10rem;
 }
 
 .home-cards {

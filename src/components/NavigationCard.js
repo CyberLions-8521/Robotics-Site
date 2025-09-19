@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function NavigationCard({ imgSrc, title, text, buttonText, buttonLink }) {
     return (
-        <Card className="navigation-card" style={{ width: '20rem' }}>
+        <Card className="navigation-card" style={{ width: '20rem'}}>
             <Card.Img variant="top" src={imgSrc} />
             <Card.Body>
                 <Card.Title style={{ fontSize: '2rem', color: 'var(--primary-color-2)' }}>{title}</Card.Title>
