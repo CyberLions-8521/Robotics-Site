@@ -249,6 +249,28 @@ footer{
 
 /* ==================================================================================================================================== */
 /* HOME */
+.home-hero-header {
+  position: absolute;
+  width: 100vw;
+  height: 60vh; /* match carousel height */
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  z-index: 99;
+  pointer-events: none; /* allows carousel controls to be clickable */
+}
+
+.home-hero-header h1 {
+  font-size: 8rem;
+  color: var(--primary-color-3);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  font-family: 'Koulen', sans-serif;
+  margin: 0;
+}
+
 .home-carousel {
   max-width: auto;
   margin: 0;
@@ -261,7 +283,14 @@ footer{
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 10rem;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 60rem;
+  margin-top: 5rem;
 }
 
 .home-cards {
@@ -293,10 +322,6 @@ footer{
   z-index: 1;
 }
 
-.carousel-image-container h3 {
-  font-size: 3rem;
-}
-
 /* COMPONENT - NAVIGATION CARD */
 .navigation-card-button {
   background: var(--primary-color-2);
@@ -309,8 +334,18 @@ footer{
 }
 
 .navigation-card-img {
-  transition: filter 0.5s, opacity 0.5s;
+  width: 20rem;         
+  height: 15rem;        
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
 }
+
+.navigation-card-img.color {
+  filter: grayscale(0%);
+}
+
 /* ==================================================================================================================================== */
 /*/ ABOUT */
 

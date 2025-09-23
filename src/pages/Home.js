@@ -3,6 +3,8 @@ import { Carousel, Container } from 'react-bootstrap'
 import CarouselImage from '../components/CarouselImage'
 import NavigationCard from '../components/NavigationCard'
 
+import AltLogo from '../assets/images/8521-alt-logo.png'
+
 import Banner1 from '../assets/images/fairbotics.jpg'
 import Banner2 from '../assets/images/fairboticsalliance.jpg'
 import Banner3 from '../assets/images/fairboticsdriveteam2.jpg'
@@ -11,10 +13,6 @@ import Banner4 from '../assets/images/fairboticsdriveteam1.jpg'
 import CardImg1 from '../assets/images/joshandnick.jpg'
 import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
-
-import CardImg1Grayscale from '../assets/images/joshandnickgrayscale.JPG'
-import CardImg2Grayscale from '../assets/images/kevilrygrayscale.JPG'
-import CardImg3Grayscale from '../assets/images/FRCoutreachgrayscale.PNG'
 
 export default function Home() {
   const h1ref = useRef();
@@ -38,46 +36,43 @@ export default function Home() {
 
   return (
     <>
+      <Container className="home-hero-header">
+        <img src={AltLogo} alt="CyberLions 8521 Logo" className="home-hero-logo" />
+        <h1>Lions Roar. Robots Rev.</h1>
+      </Container>
       <Carousel className='home-carousel' interval={3000} onPause={"hover"}>
         <Carousel.Item>
           <CarouselImage 
             imageSrc={Banner1} 
             altText="First slide" 
-            captionHeader="First slide label" 
-            captionText="Nulla vitae elit libero, a pharetra augue mollis interdum." 
           />
         </Carousel.Item>
         <Carousel.Item>
           <CarouselImage 
             imageSrc={Banner2} 
             altText="Second slide" 
-            captionHeader="Second slide label" 
-            captionText="Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
           />
         </Carousel.Item>
         <Carousel.Item>
           <CarouselImage 
             imageSrc={Banner3} 
             altText="Third slide" 
-            captionHeader="Third slide label" 
-            captionText="Praesent commodo cursus magna, vel scelerisque nisl consectetur." 
           />
         </Carousel.Item>
         <Carousel.Item>
           <CarouselImage 
             imageSrc={Banner4} 
-            altText="Fourth slide" 
-            captionHeader="Fourth slide label" 
-            captionText="Praesent commodo cursus magna, vel scelerisque nisl consectetur." 
+            altText="Fourth slide"
           />
         </Carousel.Item>
       </Carousel>
       <Container className="home-info">
-  <h1 ref={h1ref} style={{fontSize: '3rem', color: 'var(--primary-color-2)'}} className="fade-on-scroll">We're a robotics team located in Westminster, California</h1>
-        <p ref={h2ref} className="fade-on-scroll">Founded in 2020 as a non-profit, Team 8521 focuses on diversity, inclusion, and providing our members hands-on opportunities to practice real engineering and marketing.</p>
+        <Container className="home-header">
+          <h1 ref={h1ref} style={{fontSize: '4rem', color: 'var(--primary-color-2)'}} className="fade-on-scroll">We're a robotics team located in Westminster, California</h1>
+          <p ref={h2ref} className="fade-on-scroll">Founded in 2020 as a non-profit, Team 8521 focuses on diversity, inclusion, and providing our members hands-on opportunities to practice real engineering and marketing.</p>
+        </Container>
         <Container className="home-cards">
           <NavigationCard
-            imgSrcGrayscale={CardImg1Grayscale}
             imgSrc={CardImg1}
             title="ABOUT THE TEAM"
             text="Learn about our team culture, mission, and values."
@@ -85,7 +80,6 @@ export default function Home() {
             buttonLink="/about"
           />
           <NavigationCard
-            imgSrcGrayscale={CardImg2Grayscale}
             imgSrc={CardImg2}
             title="OUR ROBOTS"
             text="Check out our robots, including specs, released code, and CAD."
@@ -93,7 +87,6 @@ export default function Home() {
             buttonLink="/robots"
           />
           <NavigationCard
-            imgSrcGrayscale={CardImg3Grayscale}
             imgSrc={CardImg3}
             title="SPONSORS"
             text="See our sponsors, as well as how you can support our team."

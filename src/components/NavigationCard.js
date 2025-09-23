@@ -3,14 +3,14 @@ import { useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export default function NavigationCard({ imgSrcGrayscale, imgSrc, title, text, buttonText, buttonLink }) {
+export default function NavigationCard({ imgSrc, title, text, buttonText, buttonLink }) {
     const [hovered, setHovered] = useState(false);
     return (
         <Card className="navigation-card" style={{ width: '20rem'}}>
             <Card.Img 
                 variant="top" 
-                className="navigation-card-img"
-                src={hovered ? imgSrc : imgSrcGrayscale} 
+                className={`navigation-card-img${hovered ? ' color' : ''}`}
+                src={imgSrc} 
                 onMouseEnter={() => setHovered(true)} 
                 onMouseLeave={() => setHovered(false)} 
             />
