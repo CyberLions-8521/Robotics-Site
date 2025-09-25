@@ -320,6 +320,25 @@ footer{
   margin: 5rem 0;
 }
 
+.home-sponsors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.home-sponsors-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;  
+}
+
 /* COMPONENT - CAROUSEL IMAGE */
 .carousel-image{
   width: 100vw;
@@ -364,6 +383,41 @@ footer{
   filter: grayscale(0%);
 }
 
+.home-timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5rem;
+  gap: 3rem;  
+  max-width: 60rem;
+}
+
+.home-timeline-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+/* COMPONENT - TIMELINE ITEM */
+
+/* COMPONENT - SPONSOR LOGO */
+.sponsor-logo {
+  max-height: 15rem;
+  max-width: 25rem; 
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.logo-black {
+  filter: invert(1) brightness(0.8) contrast(2);
+}
+
+.sponsor-logo:hover {
+  max-height: 17rem;
+  max-width: 27rem;
+  transition: 0.3s;
+}
 /* ==================================================================================================================================== */
 /*/ ABOUT */
 

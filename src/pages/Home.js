@@ -2,25 +2,39 @@ import React, { useEffect, useRef } from 'react'
 import { Carousel, Container } from 'react-bootstrap'
 import CarouselImage from '../components/CarouselImage'
 import NavigationCard from '../components/NavigationCard'
+import TimelineItem from '../components/TimelineItem'
+import SponsorLogo from '../components/SponsorLogo'
 
+//Hero Header Logo
 import AltLogo from '../assets/images/8521-alt-logo.png'
 
+//Banner Images
 import Banner1 from '../assets/images/fairbotics.jpg'
 import Banner2 from '../assets/images/fairboticsalliance.jpg'
 import Banner3 from '../assets/images/fairboticsdriveteam2.jpg'
 import Banner4 from '../assets/images/fairboticsdriveteam1.jpg'
 
+//Navigation Card Images
 import CardImg1 from '../assets/images/joshandnick.jpg'
 import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
+
+//Timeline Images
+
+//Sponsor Logos
+import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
+import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
+import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
+import eKadence from '../assets/sponsors/2025/eKadence.png'
 
 export default function Home() {
   const h1ref = useRef();
   const h2ref = useRef();
 
+  //handle fade-in on scroll effect
   useEffect(() => {
     function onScroll() {
-      [h1ref, h2ref].forEach(ref => {
+      [h1ref, h2ref ].forEach(ref => {
         if (!ref.current) return;
         const top = ref.current.getBoundingClientRect().top;
         const triggerPoint = window.innerHeight * 0.7;
@@ -33,6 +47,12 @@ export default function Home() {
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  //timeline data
+  const timelineData = [
+    { year: 2020, title: "Team Founded", description: "insert creative description here" },
+    { year: 2021, title: "First Competition", description: "insert creative description here" },
+  ]
 
   return (
     <>
@@ -66,33 +86,73 @@ export default function Home() {
           />
         </Carousel.Item>
       </Carousel>
-      <Container className="home-info">
-        <Container className="home-header">
-          <h1 ref={h1ref} style={{fontSize: '4rem', color: 'var(--primary-color-2)'}} className="fade-on-scroll">We're a robotics team located in Westminster, California</h1>
-          <p ref={h2ref} className="fade-on-scroll">Founded in 2020 as a non-profit, Team 8521 focuses on diversity, inclusion, and providing our members hands-on opportunities to practice real engineering and marketing.</p>
+      <Container className="home-container" fluid>
+        <Container className="home-info">
+          <Container className="home-header">
+            <h1 ref={h1ref} style={{fontSize: '4rem', color: 'var(--primary-color-2)'}} className="fade-on-scroll">We're a robotics team located in Westminster, California</h1>
+            <p ref={h2ref} className="fade-on-scroll">Founded in 2020 as a non-profit, Team 8521 focuses on diversity, inclusion, and providing our members hands-on opportunities to practice real engineering and marketing.</p>
+          </Container>
+          <Container className="home-cards">
+            <NavigationCard
+              imgSrc={CardImg1}
+              title="ABOUT THE TEAM"
+              text="Learn about our team culture, mission, and values."
+              buttonText="Learn more"
+              buttonLink="/about"
+            />
+            <NavigationCard
+              imgSrc={CardImg2}
+              title="OUR ROBOTS"
+              text="Check out our robots, including specs, released code, and CAD."
+              buttonText="Learn more"
+              buttonLink="/robots"
+            />
+            <NavigationCard
+              imgSrc={CardImg3}
+              title="SPONSORS"
+              text="See our sponsors, as well as how you can support our team."
+              buttonText="Learn more"
+              buttonLink="/sponsors"
+            />
+          </Container>
         </Container>
-        <Container className="home-cards">
-          <NavigationCard
-            imgSrc={CardImg1}
-            title="ABOUT THE TEAM"
-            text="Learn about our team culture, mission, and values."
-            buttonText="Learn more"
-            buttonLink="/about"
-          />
-          <NavigationCard
-            imgSrc={CardImg2}
-            title="OUR ROBOTS"
-            text="Check out our robots, including specs, released code, and CAD."
-            buttonText="Learn more"
-            buttonLink="/robots"
-          />
-          <NavigationCard
-            imgSrc={CardImg3}
-            title="SPONSORS"
-            text="See our sponsors, as well as how you can support our team."
-            buttonText="Learn more"
-            buttonLink="/sponsors"
-          />
+        <Container className="home-timeline">
+          <h1 style={{fontSize: '4rem', color: 'var(--primary-color-2)'}}>Our Journey</h1>
+          <Container className="home-timeline-items">
+            {timelineData.map((item, index) => (
+              <TimelineItem key={index} {...item} />
+            ))}
+          </Container>
+        </Container>
+        <Container className="home-sponsors">
+          <p>Team 8521 CyberLions is proud to be supported by:</p>
+          <Container className="home-sponsors-logos">
+            <SponsorLogo
+              className="logo-black"
+              logoSrc={WowLawGroup}
+              altText="Wow Law Group Logo"
+              linkUrl="https://www.wowlawgroup.com/"
+            />
+            <SponsorLogo
+              className="logo-black"
+              logoSrc={BAESystems}
+              altText="BAE Systems Logo"
+              linkUrl="https://www.baesystems.com/en"
+            />
+            <SponsorLogo
+              className="logo-black"
+              logoSrc={GeneHaasFoundation}
+              altText="Gene Haas Foundation Logo"
+              linkUrl="https://www.ghaasfoundation.org/"
+            />
+            <SponsorLogo
+              className="logo-black"
+              logoSrc={eKadence}
+              altText="eKadence Logo"
+              linkUrl="https://ekadence.org/"
+            />
+          </Container>
+          <p>To learn how you can support our team, visit our sponsors page.</p>
         </Container>
       </Container>
     </>
