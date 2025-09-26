@@ -20,6 +20,8 @@ import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
 
 //Timeline Images
+import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
+import TimelineImg2023 from '../assets/images/cyberlions-veteran.png'
 
 //Sponsor Logos
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
@@ -48,10 +50,32 @@ export default function Home() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  //timeline data
+  //Timeline Data
   const timelineData = [
-    { year: 2020, title: "Team Founded", description: "insert creative description here" },
-    { year: 2021, title: "First Competition", description: "insert creative description here" },
+    { year: 2020,
+      title: "Team Founded", 
+      description: "Team established in 2020",
+      imgSrc: TimelineImg2022,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2022,
+      title: "Rookie Year",
+      description: "Competed in Orange County Regional with a record of 8-8-0, winning the Rookie All-Star Award, Regional Finalists, and Highest Rookie Seed.",
+      imgSrc: TimelineImg2022,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2023,
+      title: "Charged Up",
+      description: "Competed in Orange County Regional and Silicon Valley Regional.",
+      imgSrc: TimelineImg2023,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2024,
+      title: "Crescendo",
+      description: "Competed in Orange County Regional and Silicon Valley Regional.",
+      imgSrc: TimelineImg2023,
+      imgAlt: "CyberLions Veteran"
+    },
   ]
 
   return (
@@ -120,36 +144,43 @@ export default function Home() {
           <h1 style={{fontSize: '4rem', color: 'var(--primary-color-2)'}}>Our Journey</h1>
           <Container className="home-timeline-items">
             {timelineData.map((item, index) => (
-              <TimelineItem key={index} {...item} />
+              <TimelineItem 
+                key={index}
+                year={item.year}
+                title={item.title}
+                description={item.description}
+                imgSrc={item.imgSrc}
+                imgAlt={item.imgAlt}
+              />
             ))}
           </Container>
         </Container>
         <Container className="home-sponsors">
-          <p>Team 8521 CyberLions is proud to be supported by:</p>
+          <p>Team 8521 CyberLions is proud to be sponsored by:</p>
           <Container className="home-sponsors-logos">
             <SponsorLogo
-              className="logo-black"
               logoSrc={WowLawGroup}
               altText="Wow Law Group Logo"
               linkUrl="https://www.wowlawgroup.com/"
+              isBlack
             />
             <SponsorLogo
-              className="logo-black"
               logoSrc={BAESystems}
               altText="BAE Systems Logo"
               linkUrl="https://www.baesystems.com/en"
+              isBlack
             />
             <SponsorLogo
-              className="logo-black"
               logoSrc={GeneHaasFoundation}
               altText="Gene Haas Foundation Logo"
               linkUrl="https://www.ghaasfoundation.org/"
+              isBlack
             />
             <SponsorLogo
-              className="logo-black"
               logoSrc={eKadence}
               altText="eKadence Logo"
               linkUrl="https://ekadence.org/"
+              isBlack
             />
           </Container>
           <p>To learn how you can support our team, visit our sponsors page.</p>

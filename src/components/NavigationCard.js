@@ -6,13 +6,17 @@ import { Link } from 'react-router-dom';
 export default function NavigationCard({ imgSrc, title, text, buttonText, buttonLink }) {
     const [hovered, setHovered] = useState(false);
     return (
-        <Card className="navigation-card" style={{ width: '20rem'}}>
+        <Card 
+            className="navigation-card" 
+            style={{ width: '20rem'}}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+        >
             <Card.Img 
                 variant="top" 
                 className={`navigation-card-img${hovered ? ' color' : ''}`}
                 src={imgSrc} 
-                onMouseEnter={() => setHovered(true)} 
-                onMouseLeave={() => setHovered(false)} 
+                alt={title}
             />
             <Card.Body>
                 <Card.Title style={{ fontSize: '2rem', color: 'var(--primary-color-2)' }}>{title}</Card.Title>
@@ -22,8 +26,6 @@ export default function NavigationCard({ imgSrc, title, text, buttonText, button
                 to={buttonLink} 
                 variant="primary" 
                 className='navigation-card-button'
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
                 >
                     {buttonText}
                 </Button>
