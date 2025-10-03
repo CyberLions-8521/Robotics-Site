@@ -9,10 +9,11 @@ import SponsorLogo from '../components/SponsorLogo'
 import AltLogo from '../assets/images/8521-alt-logo.png'
 
 //Banner Images
-import Banner1 from '../assets/images/fairbotics.jpg'
-import Banner2 from '../assets/images/fairboticsalliance.jpg'
-import Banner3 from '../assets/images/fairboticsdriveteam2.jpg'
-import Banner4 from '../assets/images/fairboticsdriveteam1.jpg'
+import Banner1 from '../assets/images/AVRTeam2025.jpg'
+import Banner2 from '../assets/images/fairbotics.jpg'
+import Banner3 from '../assets/images/fairboticsalliance.jpg'
+import Banner4 from '../assets/images/fairboticsdriveteam2.jpg'
+import Banner5 from '../assets/images/fairboticsdriveteam1.jpg'
 
 //Navigation Card Images
 import CardImg1 from '../assets/images/joshandnick.jpg'
@@ -20,8 +21,11 @@ import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
 
 //Timeline Images
+import TimelineImg2020 from '../assets/images/FIRSTLogo.png'
 import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
-import TimelineImg2023 from '../assets/images/cyberlions-veteran.png'
+import TimelineImg2023 from '../assets/images/robbie-move.jpg'
+import TimelineImg2024 from '../assets/images/rommenus.jpg'
+import TimelineImg2025 from '../assets/images/reefscape-field-2025.jpg'
 
 //Sponsor Logos
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
@@ -55,7 +59,7 @@ export default function Home() {
     { year: 2020,
       title: "Team Founded", 
       description: "Team established in 2020",
-      imgSrc: TimelineImg2022,
+      imgSrc: TimelineImg2020,
       imgAlt: "CyberLions Veteran"
     },
     { year: 2022,
@@ -72,10 +76,17 @@ export default function Home() {
     },
     { year: 2024,
       title: "Crescendo",
-      description: "Competed in Orange County Regional and Silicon Valley Regional.",
-      imgSrc: TimelineImg2023,
+      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Spirit Award.",
+      imgSrc: TimelineImg2024,
       imgAlt: "CyberLions Veteran"
     },
+    {
+      year: 2025,
+      title: "REEFSCAPE",
+      description: "Competed in Orange County Regional and Aerospace Valley Regional.",
+      imgSrc: TimelineImg2025,
+      imgAlt: "CyberLions Veteran"
+    }
   ]
 
   return (
@@ -107,6 +118,12 @@ export default function Home() {
           <CarouselImage 
             imageSrc={Banner4} 
             altText="Fourth slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <CarouselImage
+            imageSrc={Banner5}
+            altText="Fifth slide"
           />
         </Carousel.Item>
       </Carousel>

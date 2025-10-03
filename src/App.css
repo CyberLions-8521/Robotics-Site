@@ -406,7 +406,7 @@ footer{
   flex: 1 1 20rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 0.5rem;
+  border-radiuss: 0.5rem;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
