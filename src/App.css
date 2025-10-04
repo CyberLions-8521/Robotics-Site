@@ -35,6 +35,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Koulen', sans-serif;
 }
 
+a {
+  color: var(--hyperlink-color);
+  text-decoration: underline;
+  font-family: 'Lato', Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+li {
+  font-family: 'Lato', Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -46,6 +62,9 @@ strong{
   font-family: 'Lato', Courier, monospace;
 }
 
+.no-bullets {
+  list-style-type: none;
+}
 /* ==================================================================================================================================== */
 /* ANIMATIONS */
 @keyframes wiggle {
@@ -406,7 +425,7 @@ footer{
   flex: 1 1 20rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radiuss: 0.5rem;
+  border-radius: 0.5rem;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -513,7 +532,13 @@ footer{
 
   position: relative;
   z-index: -1;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
 }
+.robot-showcase-background-image.color{
+  filter: grayscale(0%);
+}
+
 .robot-showcase-year {
   position: absolute;
   top: 2rem;
@@ -524,18 +549,32 @@ footer{
   font-size: 3rem;
 }
 .robot-showcase-description {
-  width: 18rem;
+  width: 25rem;
   position: absolute;
   bottom: 10rem;
   left: 5rem;
+}
+
+.robot-showcase-description-link {
+  color: white;
+  text-decoration: underline;
+}
+.robot-showcase-description-link:hover {
+  color: var(--hyperlink-color);
+  cursor: pointer;
+}
+.robot-showcase-description-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 .robot-showcase-description::before {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--primary-color-3);
-  outline: 2rem solid var(--primary-color-3);
+  background: var(--primary-color-2);
+  outline: 2rem solid var(--primary-color-2);
   opacity: 0.4;
   z-index: -1;
 }
@@ -545,15 +584,13 @@ footer{
   font-size: 4rem;
   line-height: 5rem;
 }
-.robot-showcase-description-specs-title {
+.robot-showcase-description-title {
   color: white;
   font-family: 'Koulen', sans-serif;
   font-size: 2rem;
 }
-.robot-showcase-description-specs-ul {
-  list-style: none;
-}
-.robot-showcase-description-specs-li {
+
+.robot-showcase-description-li {
   color: white;
   font-family: 'League Spartan', sans-serif;
   font-size: 1.5rem;

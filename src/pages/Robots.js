@@ -1,15 +1,29 @@
 import React from 'react'
 import RobotShowcase from '../components/RobotShowcase'
 
-import rommenus from '../assets/images/rommenus.jpg'
-import robbie from '../assets/images/robbie.jpg'
-import kevilry2 from '../assets/images/kevilry-2.jpg'
+import Robot2025 from '../assets/images/tappy-field-2025.jpg'
+import Robot2024 from '../assets/images/rommenus.jpg'
+import Robot2023 from '../assets/images/robbie.jpg'
+import Robot2022 from '../assets/images/kevilry-2.jpg'
 
 export default function OurRobots() {
   return (
     <>
       <RobotShowcase
-        robotBGImage={rommenus}
+        robotBGImage={Robot2025}
+        robotYear={'Reefscape 2025'}
+        robotName={'Tappy'}
+        robotSpecs={
+          {
+            one: 'Swerve Drivebase',
+            two: 'Autonomous',
+            three: 'Passive Intake System'
+          }
+        }
+      />
+    
+      <RobotShowcase
+        robotBGImage={Robot2024}
         robotYear={'Crescendo 2024'}
         robotName={'Rommeus Seraph'}
         robotSpecs={
@@ -22,7 +36,7 @@ export default function OurRobots() {
       />
 
       <RobotShowcase
-        robotBGImage={robbie}
+        robotBGImage={Robot2023}
         robotYear={'Charged up 2023'}
         robotName={'robbie'}
         robotSpecs={
@@ -35,7 +49,7 @@ export default function OurRobots() {
       />
 
       <RobotShowcase
-        robotBGImage={kevilry2}
+        robotBGImage={Robot2022}
         robotYear={'rapid react 2022'}
         robotName={'Kevilry'}
         robotSpecs={
