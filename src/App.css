@@ -36,12 +36,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--hyperlink-color);
+  color: var(--primary-color-3);
   text-decoration: underline;
   font-family: 'Lato', Courier, monospace;
   font-size: 1.2rem;
   line-height: 2.4rem;
   font-weight: 400;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--hyperlink-color);
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 li {
@@ -102,10 +109,11 @@ strong{
 
 /* ==================================================================================================================================== */
 /* NAVIGATION AND FOOTER */
-.nav-container {
+.nav-container, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden !important;
 }
 
 .nav-brand {
@@ -135,6 +143,7 @@ strong{
   max-height: 60vh;
   overflow-y: auto;
   gap: 1rem;
+  overflow: hidden !important;
 }
 
 .nav-tab {
@@ -549,25 +558,18 @@ footer{
   font-size: 3rem;
 }
 .robot-showcase-description {
-  width: 25rem;
+  width: 28rem;
   position: absolute;
   bottom: 10rem;
   left: 5rem;
 }
 
-.robot-showcase-description-link {
-  color: white;
-  text-decoration: underline;
-}
-.robot-showcase-description-link:hover {
-  color: var(--hyperlink-color);
-  cursor: pointer;
-}
 .robot-showcase-description-row {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
+
 .robot-showcase-description::before {
   content: '';
   position: absolute;
@@ -578,6 +580,7 @@ footer{
   opacity: 0.4;
   z-index: -1;
 }
+
 .robot-showcase-description-robot-name {
   color: white;
   font-family: 'Koulen', sans-serif;

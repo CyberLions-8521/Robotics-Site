@@ -20,6 +20,8 @@ export default function OurRobots() {
             three: 'Passive Intake System'
           }
         }
+        CADLink={{}}
+        codeLink={{}}
       />
     
       <RobotShowcase
@@ -33,6 +35,8 @@ export default function OurRobots() {
             three: 'Top Intake system'
           }
         }
+        CADLink={{}}
+        codeLink={{}}
       />
 
       <RobotShowcase
@@ -46,6 +50,8 @@ export default function OurRobots() {
             three: 'Claw Intake system'
           }  
         }
+        CADLink={{}}
+        codeLink={{}}
       />
 
       <RobotShowcase
@@ -58,7 +64,9 @@ export default function OurRobots() {
             two: 'Autonomous',
             three: 'Top Intake system'
           }
-        }          
+        }
+        CADLink={{}}
+        codeLink={{}}          
       />
     </>
   )
