@@ -32,8 +32,34 @@ export default function RobotShowcase({ robotBGImage, robotYear, robotName, robo
                     <section className='robot-showcase-description-specs'>
                         <p className='robot-showcase-description-title'>Resources</p>
                         <ul className='robot-showcase-description-ul'>
-                            <li className='robot-showcase-description-li'><a className='robot-showcase-description-li' href={CADlink} target="_blank" rel="noopener noreferrer">CAD &#x2197;</a></li>
-                            <li className='robot-showcase-description-li'><a className='robot-showcase-description-li' href={codeLink} target="_blank" rel="noopener noreferrer">Codebase &#x2197;</a></li>
+                            <li className='robot-showcase-description-li'>
+                                {CADlink ? (
+                                    <a
+                                        className='robot-showcase-description-li'
+                                        href={CADlink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        CAD &#x2197;
+                                    </a>
+                                ) : (
+                                    <li className="robot-showcase-description-li">CAD (N/A)</li>
+                                )}
+                            </li>
+                            <li className='robot-showcase-description-li'>
+                                {codeLink ? (
+                                    <a
+                                        className='robot-showcase-description-li'
+                                        href={codeLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Codebase &#x2197;
+                                    </a>
+                                ) : (
+                                    <li className="robot-showcase-description-li">Codebase (N/A)</li>
+                                )}
+                            </li>
                         </ul>
                     </section>
                 </section>

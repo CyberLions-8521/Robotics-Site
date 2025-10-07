@@ -20,8 +20,8 @@ export default function OurRobots() {
             three: 'Passive Intake System'
           }
         }
-        CADLink={{}}
-        codeLink={{}}
+        CADLink=''
+        codeLink='https://github.com/CyberLions-8521/Reefscape-2025'
       />
     
       <RobotShowcase
@@ -36,7 +36,7 @@ export default function OurRobots() {
           }
         }
         CADLink={{}}
-        codeLink={{}}
+        codeLink='https://github.com/CyberLions-8521/Crescendo2024'
       />
 
       <RobotShowcase
@@ -50,8 +50,8 @@ export default function OurRobots() {
             three: 'Claw Intake system'
           }  
         }
-        CADLink={{}}
-        codeLink={{}}
+        CADLink=''
+        codeLink='https://github.com/CyberLions-8521/ChargedUpFRC2023'
       />
 
       <RobotShowcase
@@ -65,8 +65,8 @@ export default function OurRobots() {
             three: 'Top Intake system'
           }
         }
-        CADLink={{}}
-        codeLink={{}}          
+        CADLink=''
+        codeLink='https://github.com/CyberLions-8521/RapidReactFRC'
       />
     </>
   )
