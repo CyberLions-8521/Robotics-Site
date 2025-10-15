@@ -1,28 +1,83 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useEffect, useState, useCallback } from 'react'
+import { Container, Accordion, Card } from 'react-bootstrap'
+
+//Background Images (currently pasted from sponsors page, but can import different backgrounds later)
+import BackgroundImg1 from '../assets/images/FRCoutreach.png'
+import BackgroundImg2 from '../assets/images/AVRTeam2025.jpg'
+import BackgroundImg3 from '../assets/images/cyberlions-banner.jpg'
+import BackgroundImg4 from '../assets/images/fairboticsdriveteam1.jpg'
+import BackgroundImg5 from '../assets/images/edgar.png'
+import BackgroundImg6 from '../assets/images/fairboticsalliance.jpg'
+
+const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
 export default function About() {
+  const [imgHeight, setImgHeight] = useState(`${100 / images.length}vh`);
+  // Updates image height to match support-us-container height
+  const updateImgHeight = useCallback(() => {
+    const totalHeight = document.documentElement.scrollHeight;
+    setImgHeight(`${totalHeight / images.length}px`);
+  }, []);
 
-  /*
-  //Previous code for subteam selection
-  
-  let [selectedRole, setSelectedRole] = useState(0);
+  useEffect(() => {
+    updateImgHeight(); // Run on mount
+    window.addEventListener('resize', updateImgHeight);
 
-  const roles = ['MECHANICAL', 'DESIGN', 'PROGRAMMING', 'ELECTRICAL', 'OPERATION MANAGEMENT'];
-  const rolesDescriptions = [
-    "Use machinery and power tools to fabricate prototypes for robot subsystems. You’re expected to organize and understand the mechanics of the robot and its assembly.",
-    "Learn design skills and rapid prototyping techniques through CAD and 3D printing. You're planning, designing, and experimenting with different designs to come up with a working robot.",
-    "Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.",
-    "Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.",
-    "Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory and working closely with club advisors and IPT leads."
-  ];
+    // Run after all images load
+    const imgs = document.querySelectorAll('.background-img');
+    imgs.forEach(img => {
+      img.addEventListener('load', updateImgHeight);
+    });
 
-  function handleSelectedRole(index) {
-    setSelectedRole(index);
-  }
-  */
+    return () => {
+      window.removeEventListener('resize', updateImgHeight);
+      imgs.forEach(img => {
+        img.removeEventListener('load', updateImgHeight);
+      });
+    };
+  }, [updateImgHeight, images.length]);
 
   return (
     <>
+    <div className='about-background'>
+      <div className='about-background-overlay'></div>
+      {images.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          className="background-img"
+          style={{ height: imgHeight }}
+          alt={`Background ${idx + 1}`}
+        />
+      ))}
+    </div>
+
+    <Container className="about-container" fluid>
+      <h1>About the CyberLions</h1>
+      <p>Insert creative and inspiring description here</p>
+      <Container className="about-why-robotics">
+          <iframe 
+            width="1000" 
+            height="563" 
+            src="https://www.youtube.com/embed/8KKq_N7rqac?si=iWQP-olUheRZfCtI&autoplay=1&mute=1&loop=1&playlist=8KKq_N7rqac" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+          >
+          </iframe>
+          <div className="about-why-robotics-text">
+            <h1>Why Do Robotics?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+      </Container>
+      <Container className='about-subteams'>
+        <h1>Real world experience</h1>
+        <p>Explanation of subteams</p>
+      </Container>
+    </Container>
     </>
   )
 }

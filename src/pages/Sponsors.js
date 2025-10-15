@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState, useRef, useCallback } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { Container } from 'react-bootstrap'
 
 import SponsorLogo from '../components/SponsorLogo'
@@ -33,7 +33,7 @@ export default function SupportUs() {
     window.addEventListener('resize', updateImgHeight);
 
     // Run after all images load
-    const imgs = document.querySelectorAll('.sponsors-background-img');
+    const imgs = document.querySelectorAll('.background-img');
     imgs.forEach(img => {
       img.addEventListener('load', updateImgHeight);
     });
@@ -55,7 +55,7 @@ export default function SupportUs() {
         <img
           key={idx}
           src={img}
-          className="sponsors-background-img"
+          className="background-img"
           style={{ height: imgHeight }}
           alt={`Background ${idx + 1}`}
         />

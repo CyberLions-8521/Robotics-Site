@@ -74,6 +74,16 @@ strong{
 .no-bullets {
   list-style-type: none;
 }
+
+.background-img {
+  width: 100vw;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: -2;
+  filter: grayscale(100%);
+}
+
 /* ==================================================================================================================================== */
 /* ANIMATIONS */
 @keyframes wiggle {
@@ -484,7 +494,67 @@ footer{
 }
 /* ==================================================================================================================================== */
 /*/ ABOUT */
+.about-background {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+.about-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); 
+  pointer-events: none;
+  z-index: -1;
+}
+.about-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem 2rem;
+}
 
+.about-why-robotics {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-why-robotics-text {
+  width: 50%;
+  flex-direction: column;
+}
+
+.about-subteams {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 60rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.about-container h1 {
+  font-size: 5rem;
+  color: var(--primary-color-2);
+}
+
+.about-container p {
+  font-size: 1.5rem;
+  color: var(--primary-color-3);
+}
 /* ==================================================================================================================================== */
 /* OUR ROBOTS */
 
@@ -622,7 +692,7 @@ footer{
   left: 0; 
   width: 100vw;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.7); 
   pointer-events: none;
   z-index: -1;
 }
@@ -638,15 +708,6 @@ footer{
   pointer-events: none;
   display: flex;
   flex-direction: column;
-}
-
-.sponsors-background-img {
-  width: 100vw;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: -2;
-  filter: grayscale(100%);
 }
 
 .support-us-container {
