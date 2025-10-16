@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Carousel, Container } from 'react-bootstrap'
 import CarouselImage from '../components/CarouselImage'
 import NavigationCard from '../components/NavigationCard'
-import TimelineItem from '../components/TimelineItem'
 import SponsorLogo from '../components/SponsorLogo'
 
 //Hero Header Logo
@@ -19,13 +18,6 @@ import Banner5 from '../assets/images/fairboticsdriveteam1.jpg'
 import CardImg1 from '../assets/images/joshandnick.jpg'
 import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
-
-//Timeline Images
-import TimelineImg2020 from '../assets/images/FIRSTLogo.png'
-import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
-import TimelineImg2023 from '../assets/images/robbie-move.jpg'
-import TimelineImg2024 from '../assets/images/rommenus.jpg'
-import TimelineImg2025 from '../assets/images/reefscape-field-2025.jpg'
 
 //Sponsor Logos
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
@@ -53,41 +45,6 @@ export default function Home() {
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  //Timeline Data
-  const timelineData = [
-    { year: 2020,
-      title: "Team Founded", 
-      description: "Team established in 2020",
-      imgSrc: TimelineImg2020,
-      imgAlt: "CyberLions Veteran"
-    },
-    { year: 2022,
-      title: "Rookie Year",
-      description: "Competed in Orange County Regional with a record of 8-8-0, winning the Rookie All-Star Award, Regional Finalists, and Highest Rookie Seed.",
-      imgSrc: TimelineImg2022,
-      imgAlt: "CyberLions Veteran"
-    },
-    { year: 2023,
-      title: "Charged Up",
-      description: "Competed in Orange County Regional and Silicon Valley Regional.",
-      imgSrc: TimelineImg2023,
-      imgAlt: "CyberLions Veteran"
-    },
-    { year: 2024,
-      title: "Crescendo",
-      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Spirit Award.",
-      imgSrc: TimelineImg2024,
-      imgAlt: "CyberLions Veteran"
-    },
-    {
-      year: 2025,
-      title: "REEFSCAPE",
-      description: "Competed in Orange County Regional and Aerospace Valley Regional.",
-      imgSrc: TimelineImg2025,
-      imgAlt: "CyberLions Veteran"
-    }
-  ]
 
   return (
     <>
@@ -157,21 +114,7 @@ export default function Home() {
             />
           </Container>
         </Container>
-        <Container className="home-timeline">
-          <h1 style={{fontSize: '4rem', color: 'var(--primary-color-2)'}}>Our Journey</h1>
-          <Container className="home-timeline-items">
-            {timelineData.map((item, index) => (
-              <TimelineItem 
-                key={index}
-                year={item.year}
-                title={item.title}
-                description={item.description}
-                imgSrc={item.imgSrc}
-                imgAlt={item.imgAlt}
-              />
-            ))}
-          </Container>
-        </Container>
+
         <Container className="home-sponsors">
           <p>Team 8521 CyberLions is proud to be sponsored by:</p>
           <Container className="home-sponsors-logos">

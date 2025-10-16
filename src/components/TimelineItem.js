@@ -1,8 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 import { Card } from 'react-bootstrap';
 
 export default function TimelineItem({ year, title, description, imgSrc, imgAlt }) {
-  const [hovered, setHovered] = React.useState(false);
+  const [hovered, setHovered] = useState(false);
   return (
     <Card 
       className="timeline-item mb-4"
@@ -17,7 +18,7 @@ export default function TimelineItem({ year, title, description, imgSrc, imgAlt 
             alt={imgAlt} 
         />
         <Card.Title style={{marginTop: '1rem'} }>{year} - {title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Text style={{color: 'var(--primary-color-1)', fontSize: '1.2rem'}}>{description}</Card.Text>
       </Card.Body>
     </Card>
   );
