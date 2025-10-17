@@ -130,6 +130,34 @@ strong{
 /* GENERAL COMPONENTS 
 the following components can generally be used throughout any page of the website.*/
 
+/* COMPONENT - INFO SECTION */
+.info-section-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-section-img {
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+
+.info-section-img.color {
+  filter: grayscale(0%);
+}
+
+.info-section-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* COMPONENT - TIMELINE ITEM */
 .timeline-item {
   min-height: 20rem;
@@ -558,6 +586,10 @@ footer{
 }
 
 .about-community {
+  margin-top: 2rem;
+}
+
+.about-join-us {
   margin-top: 2rem;
 }
 

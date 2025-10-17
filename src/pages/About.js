@@ -3,6 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { Container } from 'react-bootstrap'
 
 import SubteamCard from '../components/SubteamCard'
+import InfoSection from '../components/InfoSection'
 import TimelineItem from '../components/TimelineItem'
 
 //Background Images (currently pasted from sponsors page, but can import different backgrounds later)
@@ -154,12 +155,32 @@ export default function About() {
 
         <Container className='about-outreach'>
           <h1>Outreach & Impact</h1>
-          <p>Explanation of outreach</p>
+          <InfoSection
+            imgSrc={BackgroundImg2}
+            imgAlt="Outreach Image"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            imgLeft={true}
+          />
         </Container>
 
         <Container className='about-community'>
           <h1>Community</h1>
-          <p>Explanation of community</p>
+          <InfoSection
+            imgSrc={BackgroundImg2}
+            imgAlt="Community Image"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            imgLeft={false}
+          />
+        </Container>
+
+        <Container className='about-join-us'>
+          <h1>Join the Pride</h1>
+          <InfoSection
+            imgSrc={BackgroundImg2}
+            imgAlt="Join Us Image"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            imgLeft={true}
+          />
         </Container>
 
         <Container className="about-timeline">
@@ -176,10 +197,6 @@ export default function About() {
               />
             ))}
           </Container>
-        </Container>
-
-        <Container className='about-join-us'>
-          <h1>Join the Pride</h1>
         </Container>
 
 
