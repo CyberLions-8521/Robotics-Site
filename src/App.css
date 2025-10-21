@@ -204,7 +204,12 @@ the following components can generally be used throughout any page of the websit
   transition: 0.3s;
 }
 /* ==================================================================================================================================== */
-
+/* BOOTSTRAP MODIFICATIONS */
+/* NAVBAR TOGGLER */
+.navbar .navbar-toggler {
+  border-color: 1px solid var(--primary-color-3);
+  background: var(--primary-color-2);
+}
 /* ==================================================================================================================================== */
 /* NAVIGATION AND FOOTER */
 .nav-container, .navbar {
@@ -497,7 +502,7 @@ footer{
 }
 
 .navigation-card-img {
-  width: 20rem;         
+  width: 100%;         
   height: 15rem;        
   object-fit: cover;
   object-position: center;
@@ -628,8 +633,8 @@ footer{
 }
 
 .subteam-card-img {
-  width: 25rem;
-  height: auto;
+  width: 100%;
+  height: 14rem;
   object-fit: cover;
   object-position: center;
   border-radius: 0.5rem;

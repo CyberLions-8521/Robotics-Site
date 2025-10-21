@@ -15,13 +15,22 @@ import BackgroundImg5 from '../assets/images/edgar.png'
 import BackgroundImg6 from '../assets/images/fairboticsalliance.jpg'
 
 //Subteam Images
+import BuildTeamImg from '../assets/images/BuildTeam.JPG'
+import ElectricalImg from '../assets/images/Electrical.JPG'
+import ProgrammingImg from '../assets/images/Programming.jpg'
+import OperationsImg from '../assets/images/OperationsManagement.jpg'
+
+//Images for Info Sections
+import OutreachImg from '../assets/images/2025girlscouts.jpg'
+import CommunityImg from '../assets/images/AVRTeam2025.jpg'
+import JoinUsImg from '../assets/images/JoinUs.jpg'
 
 //Timeline Images
 import TimelineImg2020 from '../assets/images/FIRSTLogo.png'
 import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
 import TimelineImg2023 from '../assets/images/robbie-move.jpg'
 import TimelineImg2024 from '../assets/images/rommenus.jpg'
-import TimelineImg2025 from '../assets/images/reefscape-field-2025.jpg'
+import TimelineImg2025 from '../assets/images/tappy-2.jpg'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -63,7 +72,7 @@ export default function About() {
     {
       year: 2025,
       title: "REEFSCAPE",
-      description: "Competed in Orange County Regional and Aerospace Valley Regional.",
+      description: "Competed in Orange County Regional and Aerospace Valley Regional. During our off-season competitions, we became alliance captains for the first time and won the Judges Award at Socal Showdown.",
       imgSrc: TimelineImg2025,
       imgAlt: "CyberLions Veteran"
     }
@@ -130,25 +139,25 @@ export default function About() {
           <SubteamCard
             title="Build Team"
             description="The Build Team is responsible for designing and constructing the physical components of the robot. This includes mechanical design, fabrication, assembly, and maintenance. They work closely with the Programming Team to ensure that the robot meets all competition requirements and performs optimally."
-            imgSrc={BackgroundImg1}
+            imgSrc={BuildTeamImg}
             imgAlt="Build Team"
           />
           <SubteamCard
             title="Electrical"
             description="The Electrical Team is responsible for designing and implementing the robot's electrical systems, including wiring, sensors, and power distribution. They work closely with the Build Team to ensure that all electrical components are properly integrated and function as intended."
-            imgSrc={BackgroundImg1}
+            imgSrc={ElectricalImg}
             imgAlt="Electrical Team"
           />
           <SubteamCard
             title="Programming"
             description="The Programming Team is responsible for writing the code that controls the robot, including autonomous navigation and teleoperated control. They work closely with the Build Team to ensure that the software and hardware components integrate seamlessly."
-            imgSrc={BackgroundImg1}
+            imgSrc={ProgrammingImg}
             imgAlt="Programming Team"
           />
           <SubteamCard
             title="Operations & Management"
             description="The Operations & Management Team is responsible for overseeing the entire robotics program, including budgeting, scheduling, and team coordination. They ensure that all subteams work together effectively and that the project stays on track."
-            imgSrc={BackgroundImg1}
+            imgSrc={OperationsImg}
             imgAlt="Operations & Management Team"
           />
         </div>
@@ -156,7 +165,7 @@ export default function About() {
         <Container className='about-outreach'>
           <h1>Outreach & Impact</h1>
           <InfoSection
-            imgSrc={BackgroundImg2}
+            imgSrc={OutreachImg}
             imgAlt="Outreach Image"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             imgLeft={true}
@@ -166,7 +175,7 @@ export default function About() {
         <Container className='about-community'>
           <h1>Community</h1>
           <InfoSection
-            imgSrc={BackgroundImg2}
+            imgSrc={CommunityImg}
             imgAlt="Community Image"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             imgLeft={false}
@@ -176,7 +185,7 @@ export default function About() {
         <Container className='about-join-us'>
           <h1>Join the Pride</h1>
           <InfoSection
-            imgSrc={BackgroundImg2}
+            imgSrc={JoinUsImg}
             imgAlt="Join Us Image"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             imgLeft={true}

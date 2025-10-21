@@ -1,6 +1,6 @@
-import { React, useRef, useState } from 'react'
+import { React, useEffect, useRef, useState } from 'react'
 import { Route, Routes, useLocation, Link } from 'react-router-dom'
-import { Container, Nav, Navbar, NavDropdown, Form, Button } from 'react-bootstrap'
+import { Container, Nav, Navbar, Form, Button } from 'react-bootstrap'
 import './App.css'
 
 import Home from './pages/Home'
@@ -15,8 +15,9 @@ import InstagramLogo from './assets/icons/socials/instagram_white.png'
 import YoutubeLogo from './assets/icons/socials/youtube_white.png'
 
 export default function App() {
-    let nav = useRef();
     let footer = useRef();
+
+    const location = useLocation();
 
     const [form, setForm] = useState({
         name: '',
@@ -25,10 +26,17 @@ export default function App() {
         message: '',
     });
 
+    //Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [location]);
+
+    //Footer form input change handler
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
+    //Footer form submission handler
     const handleSubmit = e => {
         e.preventDefault();
         const mailto = `mailto:whslionsrobotics@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(

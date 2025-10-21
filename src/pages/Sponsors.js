@@ -78,13 +78,13 @@ export default function SupportUs() {
       <Container className='sponsor-tier'>
         <h1>Silver Lions</h1>
         <p>Contributions of over $500</p>
-        <p>No sponsors in this category (yet) ^-^</p>
+        <p style={{fontSize: '1rem'}}>No sponsors in this category (yet) ^-^</p>
       </Container>
 
       <Container className='sponsor-tier'>
         <h1>Bronze Lions</h1>
         <p>Contributions of over $50</p>
-        <p>No sponsors in this category (yet) ^-^</p>
+        <p style={{fontSize: '1rem'}}>No sponsors in this category (yet) ^-^</p>
       </Container>
 
       <Container className='sponsor-tier'>
@@ -93,7 +93,7 @@ export default function SupportUs() {
         <ul>
           <li>
             <a href="https://share.google/plhoQrRGBCeic3gj5" target="_blank" rel="noopener noreferrer">
-              Hot Com Tam
+              HOT° Com Tam
             </a>
           </li>
         </ul>
