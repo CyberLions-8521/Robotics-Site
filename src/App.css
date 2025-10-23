@@ -158,6 +158,16 @@ the following components can generally be used throughout any page of the websit
   justify-content: center;
 }
 
+@media (max-width: 900px) {
+  .info-section-container {
+    flex-direction: column;
+  }
+  .info-section-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /* COMPONENT - TIMELINE ITEM */
 .timeline-item {
   min-height: 20rem;
@@ -546,6 +556,14 @@ footer{
   padding: 5rem 2rem;
 }
 
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 60rem;
+  text-align: center;
+}
+
 .about-why-robotics {
   display: flex;
   flex-direction: row;
@@ -553,8 +571,30 @@ footer{
   margin-top: 2rem;
 }
 
+.about-why-robotics-video {
+  min-width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-why-robotics-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .about-why-robotics {
+    flex-direction: column;
+  }
+  .about-why-robotics-video, .about-why-robotics-text {
+    width: 100%;
+  }
+}
+
 .about-why-robotics-text {
-  width: 50%;
   flex-direction: column;
 }
 

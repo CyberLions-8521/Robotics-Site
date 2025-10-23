@@ -112,9 +112,12 @@ export default function About() {
     </div>
 
     <Container className="about-container" fluid>
-      <h1>About the CyberLions</h1>
-      <p>Insert creative and inspiring description here</p>
+      <Container className='about-header'>
+        <h1>About the CyberLions</h1>
+        <p style={{ textAlign: 'center' }}>Our team is dedicated to fostering a love for STEM and providing members with the opportunity to engage in valuable hands-on learning experiences, including leadership, teamwork, and problem-solving skills (and of course, working with robots). As a non-profit organization led primarily by students, we rely entirely on sponsor donations and community support to bring our initiatives to life.</p>
+      </Container>
       <Container className="about-why-robotics">
+        <div className='about-why-robotics-video'>
           <iframe 
             width="1000" 
             height="563" 
@@ -126,10 +129,12 @@ export default function About() {
             allowfullscreen
           >
           </iframe>
-          <div className="about-why-robotics-text">
-            <h1>Why Do Robotics?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+          <p style={{ fontSize: '1rem'}}>Edited and produced by Bill Nguyen (c/o 26)</p>
+        </div>
+        <div className="about-why-robotics-text">
+          <h1>Why Do Robotics?</h1>
+          <p>FRC can be valuable to students in various ways, whether it is getting hands-on experience with technology, meeting a community with shared interests, or simply having fun building cool things.</p>
+        </div>
       </Container>
 
       <Container className='about-subteams'>
@@ -138,25 +143,25 @@ export default function About() {
         <div className='about-subteams-cards'>
           <SubteamCard
             title="Build Team"
-            description="The Build Team is responsible for designing and constructing the physical components of the robot. This includes mechanical design, fabrication, assembly, and maintenance. They work closely with the Programming Team to ensure that the robot meets all competition requirements and performs optimally."
+            description="The Build Team is responsible for designing and constructing the physical components of the robot. They work with tools and materials to create the robot's structure and mechanisms, using CAD software as a guide to transform ideas into reality."
             imgSrc={BuildTeamImg}
             imgAlt="Build Team"
           />
           <SubteamCard
             title="Electrical"
-            description="The Electrical Team is responsible for designing and implementing the robot's electrical systems, including wiring, sensors, and power distribution. They work closely with the Build Team to ensure that all electrical components are properly integrated and function as intended."
+            description="The Electrical Team is responsible for designing and implementing the robot's electrical systems, including wiring, sensors, and power distribution. In doing so, they bring together the work of Build Team and Programming to ensure that the robot functions correctly."
             imgSrc={ElectricalImg}
             imgAlt="Electrical Team"
           />
           <SubteamCard
             title="Programming"
-            description="The Programming Team is responsible for writing the code that controls the robot, including autonomous navigation and teleoperated control. They work closely with the Build Team to ensure that the software and hardware components integrate seamlessly."
+            description="The Programming Team is responsible for writing the code that brings the robot to life, including autonomous navigation and teleoperated control. Other than programming the robot, they also develop the team's scouting application for strategic data collection (as well as this website)."
             imgSrc={ProgrammingImg}
             imgAlt="Programming Team"
           />
           <SubteamCard
             title="Operations & Management"
-            description="The Operations & Management Team is responsible for overseeing the entire robotics program, including budgeting, scheduling, and team coordination. They ensure that all subteams work together effectively and that the project stays on track."
+            description="The Operations & Management Team is the heart of the robotics team, overseeing the entire robotics program, including budgeting, scheduling, and team coordination. They ensure that all subteams work together effectively and that the project stays on track."
             imgSrc={OperationsImg}
             imgAlt="Operations & Management Team"
           />

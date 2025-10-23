@@ -32,7 +32,7 @@ export default function Home() {
   //handle fade-in on scroll effect
   useEffect(() => {
     function onScroll() {
-      [h1ref, h2ref ].forEach(ref => {
+      [h1ref, h2ref].forEach(ref => {
         if (!ref.current) return;
         const top = ref.current.getBoundingClientRect().top;
         const triggerPoint = window.innerHeight * 0.7;
@@ -88,7 +88,7 @@ export default function Home() {
         <Container className="home-info">
           <Container className="home-header">
             <h1 ref={h1ref} style={{fontSize: '4rem', color: 'var(--primary-color-2)'}} className="fade-on-scroll">We're a robotics team located in Westminster, California</h1>
-            <p ref={h2ref} className="fade-on-scroll">Founded in 2020 as a non-profit, Team 8521 focuses on diversity, inclusion, and providing our members hands-on opportunities to practice real engineering and marketing.</p>
+            <p ref={h2ref} className="fade-on-scroll">Founded in 2020, Team 8521 is a student-led, non-profit organization that consists of passionate individuals who share a common interest in robotics. We participate in <a href="https://www.firstinspires.org/robotics/frc" target="_blank" rel="noopener noreferrer" style={{color: 'var(--hyperlink-color)'}}>FIRST Robotics Competition (FRC)</a>, a national program and community with thousands of teams worldwide.</p>
           </Container>
           <Container className="home-cards">
             <NavigationCard
