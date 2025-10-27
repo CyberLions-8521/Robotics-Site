@@ -1,67 +1,221 @@
-import React, { useState } from 'react'
-import RobbieMove from '../assets/images/robbie-move.jpg'
+import React from 'react'
+import { useEffect, useState, useCallback } from 'react'
+import { Container } from 'react-bootstrap'
+
+import SubteamCard from '../components/SubteamCard'
+import InfoSection from '../components/InfoSection'
+import TimelineItem from '../components/TimelineItem'
+
+//Background Images (currently pasted from sponsors page, but can import different backgrounds later)
+import BackgroundImg1 from '../assets/images/VenturaHype.JPG'
+import BackgroundImg2 from '../assets/images/AVRTeam2025.jpg'
+import BackgroundImg3 from '../assets/images/cyberlions-banner.jpg'
+import BackgroundImg4 from '../assets/images/fairboticsdriveteam1.jpg'
+import BackgroundImg5 from '../assets/images/AVRDriveTeam1.jpg'
+import BackgroundImg6 from '../assets/images/fairboticsalliance.jpg'
+
+//Subteam Images
+import BuildTeamImg from '../assets/images/BuildTeam.JPG'
+import ElectricalImg from '../assets/images/Electrical2.JPG'
+import ProgrammingImg from '../assets/images/Programming.jpg'
+import OperationsImg from '../assets/images/OperationsManagement.jpg'
+
+//Images for Info Sections
+import OutreachImg from '../assets/images/2025girlscouts.jpg'
+import CommunityImg from '../assets/images/VenturaHype.JPG'
+import JoinUsImg from '../assets/images/JoinUs.jpg'
+
+//Timeline Images
+import TimelineImg2020 from '../assets/images/FIRSTLogo.png'
+import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
+import TimelineImg2023 from '../assets/images/robbie-move.jpg'
+import TimelineImg2024 from '../assets/images/rommenus.jpg'
+import TimelineImg2025 from '../assets/images/tappy-2.jpg'
+
+const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
+
 export default function About() {
+  // State to hold calculated image height
+  const [imgHeight, setImgHeight] = useState(`${100 / images.length}vh`);
+  // Updates image height to match support-us-container height
+  const updateImgHeight = useCallback(() => {
+    const totalHeight = document.documentElement.scrollHeight;
+    setImgHeight(`${totalHeight / images.length}px`);
+  }, []);
 
-  let [selectedRole, setSelectedRole] = useState(0);
+  //Timeline Data
+  const timelineData = [
+    { year: 2020,
+      title: "Team Founded", 
+      description: "Team established in 2020",
+      imgSrc: TimelineImg2020,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2022,
+      title: "Rookie Year",
+      description: "Competed in Orange County Regional with a record of 8-8-0, winning the Rookie All-Star Award, Regional Finalists, and Highest Rookie Seed.",
+      imgSrc: TimelineImg2022,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2023,
+      title: "Charged Up",
+      description: "Competed in Orange County Regional and Silicon Valley Regional.",
+      imgSrc: TimelineImg2023,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2024,
+      title: "Crescendo",
+      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Spirit Award.",
+      imgSrc: TimelineImg2024,
+      imgAlt: "CyberLions Veteran"
+    },
+    {
+      year: 2025,
+      title: "REEFSCAPE",
+      description: "Competed in Orange County Regional and Aerospace Valley Regional. During our off-season competitions, we became alliance captains for the first time and won the Judges Award at Socal Showdown.",
+      imgSrc: TimelineImg2025,
+      imgAlt: "CyberLions Veteran"
+    }
+  ]
 
-  const roles = ['MECHANICAL', 'DESIGN', 'PROGRAMMING', 'ELECTRICAL', 'OPERATION MANAGEMENT'];
-  const rolesDescriptions = [
-    "Use machinery and power tools to fabricate prototypes for robot subsystems. You’re expected to organize and understand the mechanics of the robot and its assembly.",
-    "Learn design skills and rapid prototyping techniques through CAD and 3D printing. You're planning, designing, and experimenting with different designs to come up with a working robot.",
-    "Develop and integrate Java algorithms that satisfy the requirements of a functionable shooter, intake system, drivetrain and limelight. You'll operate on Github and Visual Studio Code to make the robot function.",
-    "Design and manage the robot's electrical board and distribution. You're going to be using wiring and connection techniques to make sure all electrical components are hooked up for the mechanisms to work properly.",
-    "Market the team for sponsorships and plan and coordinate club events. You're in charge of overseeing the club budget and FRC inventory and working closely with club advisors and IPT leads."
-  ];
+  useEffect(() => {
+    updateImgHeight(); // Run on mount
+    window.addEventListener('resize', updateImgHeight);
 
-  function handleSelectedRole(index) {
-    setSelectedRole(index);
-  }
+    // Run after all images load
+    const imgs = document.querySelectorAll('.background-img');
+    imgs.forEach(img => {
+      img.addEventListener('load', updateImgHeight);
+    });
+
+    return () => {
+      window.removeEventListener('resize', updateImgHeight);
+      imgs.forEach(img => {
+        img.removeEventListener('load', updateImgHeight);
+      });
+    };
+  }, [updateImgHeight, images.length]);
 
   return (
-    <div className='about-container'>
-      <section className='about-container-content'>
-        <header className='about-content-header'>
-          <p className='about-content-subtext'>
-            WHY EVEN HAVE CYBERLIONS?
-          </p>
-          <h1 className='about-content-header-text'>
-            CYBERLIONS PROVIDE HIGHSCHOOLERS WITH REAL-LIFE EXPERIENCE
-          </h1>
-          <p className='about-content-text'>
-            Our robotics team is challenged by strict rules and limited time and resources to raise funding, design a team brand, and work together to build competition-ready robots. 
-          </p>
-        </header>
-        <section className='about-subteam-container'>
-          <article className='about-subteam-selector'>
-            <h1>SUBTEAM ROLES</h1>
-            <ul className='about-subteam-selection'>
-              {roles.map((role, index) => {
-                return (
-                  <li key={index} 
-                      className={selectedRole === index ? 'about-subteam-selection-button selected' : 'about-subteam-selection-button'}
-                      onClick={() => handleSelectedRole(index)}>
-                    {role}
-                  </li>
-                )
-              })}
-            </ul>
-          </article>
-          <div className='about-subteam-divider'/>
-          <article className='about-subteam-details'>
-            {selectedRole !== null && <p>{rolesDescriptions[selectedRole]}</p>}
-          </article>
-        </section>
-        <section className='about-subteam-signup'>
-          <article className='about-subteam-signup-text'>  
-            <h1>Think You'll Fit In?</h1>
-            <p>We're always looking for new members. If being a CyberLion sounds right to you, sign up today!</p>
-            <a href="https://forms.gle/m2SS7en7DTRzL3qX6" className='about-subteam-signup-text' target="_blank" rel="noopener noreferrer">
-              <button>SIGN UP</button>
-            </a>
-          </article>
-          <img src={RobbieMove} alt='cyberlions preview'/>
-        </section>
-      </section>
+    <>
+    <div className='about-background'>
+      <div className='about-background-overlay'></div>
+      {images.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          className="background-img"
+          style={{ height: imgHeight }}
+          alt={`Background ${idx + 1}`}
+        />
+      ))}
     </div>
+
+    <Container className="about-container" fluid>
+      <Container className='about-header'>
+        <h1>About the CyberLions</h1>
+        <p style={{ textAlign: 'center' }}>Our team is dedicated to fostering a love for STEM and providing members with the opportunity to engage in valuable hands-on learning experiences, including leadership, teamwork, and problem-solving skills (and of course, working with robots). As a non-profit organization led primarily by students, we rely entirely on sponsor donations and community support to bring our initiatives to life.</p>
+      </Container>
+      <Container className="about-why-robotics">
+        <div className='about-why-robotics-video'>
+          <iframe 
+            width="1000" 
+            height="563" 
+            src="https://www.youtube.com/embed/8KKq_N7rqac?si=iWQP-olUheRZfCtI&autoplay=1&mute=1&loop=1&playlist=8KKq_N7rqac" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen
+          >
+          </iframe>
+          <p style={{ fontSize: '1rem'}}>Edited and produced by Bill Nguyen (c/o 26)</p>
+        </div>
+        <div className="about-why-robotics-text">
+          <h1>Why Do Robotics?</h1>
+          <p>FRC can be valuable to students in various ways, whether it is getting hands-on experience with technology, meeting a community with shared interests, or simply having fun building cool things.</p>
+        </div>
+      </Container>
+
+      <Container className='about-subteams'>
+        <h1>Real world experience</h1>
+        <p>Building robots allows students to gain hands-on experience with multiple fields and skills.</p>
+        <div className='about-subteams-cards'>
+          <SubteamCard
+            title="Build Team"
+            description="The Build Team is responsible for designing and constructing the physical components of the robot. They work with tools and materials to create the robot's structure and mechanisms, using CAD software as a guide to transform ideas into reality."
+            imgSrc={BuildTeamImg}
+            imgAlt="Build Team"
+          />
+          <SubteamCard
+            title="Electrical"
+            description="The Electrical Team is responsible for designing and implementing the robot's electrical systems, including wiring, sensors, and power distribution. In doing so, they bring together the work of Build Team and Programming to ensure that the robot functions correctly."
+            imgSrc={ElectricalImg}
+            imgAlt="Electrical Team"
+          />
+          <SubteamCard
+            title="Programming"
+            description="The Programming Team is responsible for writing the code that brings the robot to life, including autonomous navigation and teleoperated control. Other than programming the robot, they also develop the team's scouting application for strategic data collection (as well as this website)."
+            imgSrc={ProgrammingImg}
+            imgAlt="Programming Team"
+          />
+          <SubteamCard
+            title="Operations & Management"
+            description="The Operations & Management Team is the heart of the robotics team, overseeing the entire robotics program, including budgeting, scheduling, and team coordination. They ensure that all subteams work together effectively and that the project stays on track."
+            imgSrc={OperationsImg}
+            imgAlt="Operations & Management Team"
+          />
+        </div>
+
+        <Container className='about-outreach'>
+          <h1>Outreach & Impact</h1>
+          <InfoSection
+            imgSrc={OutreachImg}
+            imgAlt="Outreach Image"
+            description="Robotics is not only about gaining technical knowledge and skills, but also sharing it with others. As students of robotics ourselves, we make an effort to give back to our community through partnerships, workshops, and outreach events promoting STEM education through robotics."
+            imgLeft={true}
+          />
+        </Container>
+
+        <Container className='about-community'>
+          <h1>Community</h1>
+          <InfoSection
+            imgSrc={CommunityImg}
+            imgAlt="Community Image"
+            description="For many students, our team is more than just a robotics team - it's a community where they can connect with like-minded peers, build valuable relationships, and create lasting memories. Aside from building robots, our goal is to foster a welcoming environment where anyone can feel at home when working together."
+            imgLeft={false}
+          />
+        </Container>
+
+        <Container className='about-join-us'>
+          <h1>Join the Pride</h1>
+          <InfoSection
+            imgSrc={JoinUsImg}
+            imgAlt="Join Us Image"
+            description="Our robotics team is constantly growing, and we always look forward to welcoming new members who are eager to learn and contribute to the team. To join, students can reach out to us through our contacts or recruitment events such as Club Rush."
+            imgLeft={true}
+          />
+        </Container>
+
+        <Container className="about-timeline">
+          <h1>Our Journey</h1>
+          <Container className="about-timeline-items">
+            {timelineData.map((item, index) => (
+              <TimelineItem 
+                key={index}
+                year={item.year}
+                title={item.title}
+                description={item.description}
+                imgSrc={item.imgSrc}
+                imgAlt={item.imgAlt}
+              />
+            ))}
+          </Container>
+        </Container>
+
+
+      </Container>
+    </Container>
+    </>
   )
 }

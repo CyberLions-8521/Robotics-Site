@@ -1,54 +1,73 @@
-import { React, useRef, useEffect } from 'react'
+import { React, useEffect, useRef, useState } from 'react'
 import { Route, Routes, useLocation, Link } from 'react-router-dom'
+import { Container, Nav, Navbar, Form, Button } from 'react-bootstrap'
 import './App.css'
 
 import Home from './pages/Home'
 import About from './pages/About'
-import Newsletter from './pages/Newsletter'
-import OurRobots from './pages/OurRobots'
-import SupportUs from './pages/SupportUs'
+import Robots from './pages/Robots'
+import Sponsors from './pages/Sponsors'
 
-import SquareLogo from './assets/images/square-logo.png';
+import Logo from './assets/images/8521-logo.png'
+import StickerLogo from './assets/images/chillguy-sticker.png'
+import GitHubLogo from './assets/icons/socials/github_white.png'
+import InstagramLogo from './assets/icons/socials/instagram_white.png'
+import YoutubeLogo from './assets/icons/socials/youtube_white.png'
 
 export default function App() {
-
-    function openHome() {
-        window.location.href = '/';
-    }
-
-    let location = useLocation();
-    let nav = useRef();
     let footer = useRef();
-    
-    useEffect(() => {
-        let ourRobotsBGNav = 'nav-background-color-dark';
-        let ourRobotsBGFooter = 'footer-background-color-dark';
 
-        // The reason we only need this if statement is because the dark background overrides 
-        // the default background (CSS reads from top to bottom)
-        if (location.pathname === '/our-robots') {
-            nav.current.classList.add(ourRobotsBGNav);
-            footer.current.classList.add(ourRobotsBGFooter);
-        }
+    const location = useLocation();
+
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
+
+    //Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }, [location]);
+
+    //Footer form input change handler
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
+    //Footer form submission handler
+    const handleSubmit = e => {
+        e.preventDefault();
+        const mailto = `mailto:whslionsrobotics@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+        )}`;
+        window.location.href = mailto;
+    };
 
     return (
     <>
-        <div ref={nav} className='nav-background-color-default nav-background'>
-            <nav>
-                <section onClick={openHome} className='nav-branding'>
-                <img className='nav-branding-image-logo' src={SquareLogo} alt='Square Logo' />
-                <p className='nav-branding-logo-text'>Cyberlions 8521</p>
-                </section>
-
-                <ul>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/newsletter">Newsletter</Link></li>
-                    <li><Link to="/our-robots">Our Robots</Link></li>
-                    <li><Link to="/support-us">Support Us</Link></li>
-                </ul>
-            </nav>
-        </div>
+        <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default sticky-top">
+        <Container className='nav-container'>
+            <Navbar.Brand className="nav-brand" href="/">
+                <img 
+                    src={Logo}
+                    className="d-inline-block align-top nav-logo" 
+                    alt="CyberLions 8521 Logo" 
+                />
+                CyberLions 8521
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto nav-tabgroup">
+                <Nav.Link className="nav-tab" as={Link} to="/">Home</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/about">About</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/robots">Robots</Nav.Link>
+                <Nav.Link className="nav-tab" as={Link} to="/sponsors">Sponsors</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+        </Container>
+        </Navbar>
 
         {/* I prefer to create routes in the App.js file because it's not top level (index.js is) and I can use React hooks */}
         <Routes>
@@ -61,31 +80,83 @@ export default function App() {
                 element={<About />} 
             />
             <Route 
-                path="/newsletter" 
-                element={<Newsletter />} 
+                path="/robots" 
+                element={<Robots />} 
             />
             <Route 
-                path="/our-robots" 
-                element={<OurRobots />} 
-            />
-            <Route 
-                path="/support-us" 
-                element={<SupportUs />} 
+                path="/sponsors" 
+                element={<Sponsors />} 
             />
         </Routes>
 
-        <footer ref={footer} class='footer-background-color-default'>
-            <section className='footer-branding'>
-                <div className='brand-name'>
-                    <img className='footer-branding-image-logo' src={SquareLogo} alt='Square Logo' />
-                    <p className='footer-branding-logo-text'>Cyberlions 8521</p>
-                </div>
-                <div className='socials'>
-                    
-                </div>
-            </section>
-
-            <p className='footer-copyright'>©2024 Larry Le MIT License</p>
+        <footer ref={footer} className='footer-background-color-default'>
+            <img src={StickerLogo} alt="Sticker Logo" className='footer-sticker-logo' />
+            <Container className="footer-contact-container">
+                <h1>CONTACT US</h1>
+                <p>Westminster High School</p>
+                <p>14325 Goldenwest St., Westminster, CA 92683</p>
+                <p><strong>Email:</strong> whslionsrobotics@gmail.com</p>
+                <Container className="footer-socials-container">
+                    <a href="https://github.com/CyberLions-8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={GitHubLogo} alt="GitHub Logo" />
+                    </a>
+                    <a href="https://www.instagram.com/cyberlions8521/" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={InstagramLogo} alt="Instagram Logo" />
+                    </a>
+                    <a href="https://www.youtube.com/@cyberlions8521" target="_blank" rel="noopener noreferrer">
+                        <img className="footer-socials-icon" src={YoutubeLogo} alt="YouTube Logo" />
+                    </a>
+                </Container>
+            </Container>
+            <Container>
+                <Form onSubmit={handleSubmit}>
+                    <div className="footer-form">
+                        <Form.Group>
+                            <Form.Control 
+                                name="name" 
+                                className="footer-info-box"
+                                placeholder="Your Name"
+                                value={form.name}
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                                type="email" 
+                                name="email" 
+                                className="footer-info-box"
+                                placeholder="yourname@example.com"
+                                value={form.email} 
+                                onChange={handleChange} 
+                                required />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                                name="subject" 
+                                className="footer-info-box"
+                                placeholder="Subject"
+                                value={form.subject} 
+                                onChange={handleChange} 
+                                required />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Control 
+                                as="textarea" 
+                                rows={3} 
+                                name="message" 
+                                className="footer-message-box"
+                                placeholder="Your message here..."
+                                value={form.message} 
+                                onChange={handleChange} 
+                                required 
+                            />
+                        </Form.Group>
+                    </div>
+                    <Button type="submit" variant="primary" className="mt-3 footer-button">Send an Inquiry Through Email</Button>
+                </Form>
+            </Container>
+            <p className='footer-copyright'>©2025 by 8521 CyberLions</p>
         </footer>
     </>
     )
