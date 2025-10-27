@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Robotics-Site/static/css/main.f777959e.css",
+    "main.css": "/Robotics-Site/static/css/main.e577ee60.css",
     "main.js": "/Robotics-Site/static/js/main.bc2beead.js",
     "static/media/FRCoutreach.png": "/Robotics-Site/static/media/FRCoutreach.1bb7be847df49e149084.png",
     "static/media/VenturaTeam2.png": "/Robotics-Site/static/media/VenturaTeam2.80f9ad5a8ab3a3e7dd38.png",
@@ -41,11 +41,11 @@
     "static/media/FIRSTLogo.png": "/Robotics-Site/static/media/FIRSTLogo.408a5ee484ee2d77a72b.png",
     "static/media/youtube_white.png": "/Robotics-Site/static/media/youtube_white.fcc730eff7994ac3a028.png",
     "index.html": "/Robotics-Site/index.html",
-    "main.f777959e.css.map": "/Robotics-Site/static/css/main.f777959e.css.map",
+    "main.e577ee60.css.map": "/Robotics-Site/static/css/main.e577ee60.css.map",
     "main.bc2beead.js.map": "/Robotics-Site/static/js/main.bc2beead.js.map"
   },
   "entrypoints": [
-    "static/css/main.f777959e.css",
+    "static/css/main.e577ee60.css",
     "static/js/main.bc2beead.js"
   ]
 }
