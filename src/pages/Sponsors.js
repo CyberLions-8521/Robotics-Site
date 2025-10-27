@@ -6,11 +6,11 @@ import SponsorLogo from '../components/SponsorLogo'
 
 //Background Images
 import BackgroundImg1 from '../assets/images/FRCoutreach.png'
-import BackgroundImg2 from '../assets/images/AVRTeam2025.jpg'
-import BackgroundImg3 from '../assets/images/cyberlions-banner.jpg'
-import BackgroundImg4 from '../assets/images/fairboticsdriveteam1.jpg'
-import BackgroundImg5 from '../assets/images/edgar.png'
-import BackgroundImg6 from '../assets/images/fairboticsalliance.jpg'
+import BackgroundImg2 from '../assets/images/2025girlscouts.jpg'
+import BackgroundImg3 from '../assets/images/AVRVan.jpg'
+import BackgroundImg4 from '../assets/images/VenturaFood.JPG'
+import BackgroundImg5 from '../assets/images/VenturaTeam2.png'
+import BackgroundImg6 from '../assets/images/edgar.png'
 
 //Sponsor Logos
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'

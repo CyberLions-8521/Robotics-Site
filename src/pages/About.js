@@ -7,22 +7,22 @@ import InfoSection from '../components/InfoSection'
 import TimelineItem from '../components/TimelineItem'
 
 //Background Images (currently pasted from sponsors page, but can import different backgrounds later)
-import BackgroundImg1 from '../assets/images/FRCoutreach.png'
+import BackgroundImg1 from '../assets/images/VenturaHype.JPG'
 import BackgroundImg2 from '../assets/images/AVRTeam2025.jpg'
 import BackgroundImg3 from '../assets/images/cyberlions-banner.jpg'
 import BackgroundImg4 from '../assets/images/fairboticsdriveteam1.jpg'
-import BackgroundImg5 from '../assets/images/edgar.png'
+import BackgroundImg5 from '../assets/images/AVRDriveTeam1.jpg'
 import BackgroundImg6 from '../assets/images/fairboticsalliance.jpg'
 
 //Subteam Images
 import BuildTeamImg from '../assets/images/BuildTeam.JPG'
-import ElectricalImg from '../assets/images/Electrical.JPG'
+import ElectricalImg from '../assets/images/Electrical2.JPG'
 import ProgrammingImg from '../assets/images/Programming.jpg'
 import OperationsImg from '../assets/images/OperationsManagement.jpg'
 
 //Images for Info Sections
 import OutreachImg from '../assets/images/2025girlscouts.jpg'
-import CommunityImg from '../assets/images/AVRTeam2025.jpg'
+import CommunityImg from '../assets/images/VenturaHype.JPG'
 import JoinUsImg from '../assets/images/JoinUs.jpg'
 
 //Timeline Images
@@ -139,7 +139,7 @@ export default function About() {
 
       <Container className='about-subteams'>
         <h1>Real world experience</h1>
-        <p>Explanation of subteams</p>
+        <p>Building robots allows students to gain hands-on experience with multiple fields and skills.</p>
         <div className='about-subteams-cards'>
           <SubteamCard
             title="Build Team"
@@ -172,7 +172,7 @@ export default function About() {
           <InfoSection
             imgSrc={OutreachImg}
             imgAlt="Outreach Image"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="Robotics is not only about gaining technical knowledge and skills, but also sharing it with others. As students of robotics ourselves, we make an effort to give back to our community through partnerships, workshops, and outreach events promoting STEM education through robotics."
             imgLeft={true}
           />
         </Container>
@@ -182,7 +182,7 @@ export default function About() {
           <InfoSection
             imgSrc={CommunityImg}
             imgAlt="Community Image"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="For many students, our team is more than just a robotics team - it's a community where they can connect with like-minded peers, build valuable relationships, and create lasting memories. Aside from building robots, our goal is to foster a welcoming environment where anyone can feel at home when working together."
             imgLeft={false}
           />
         </Container>
@@ -192,7 +192,7 @@ export default function About() {
           <InfoSection
             imgSrc={JoinUsImg}
             imgAlt="Join Us Image"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="Our robotics team is constantly growing, and we always look forward to welcoming new members who are eager to learn and contribute to the team. To join, students can reach out to us through our contacts or recruitment events such as Club Rush."
             imgLeft={true}
           />
         </Container>

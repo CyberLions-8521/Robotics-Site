@@ -9,10 +9,10 @@ import AltLogo from '../assets/images/8521-alt-logo.png'
 
 //Banner Images
 import Banner1 from '../assets/images/AVRTeam2025.jpg'
-import Banner2 from '../assets/images/fairbotics.jpg'
+import Banner2 from '../assets/images/SoCalDriveTeam (2).jpg'
 import Banner3 from '../assets/images/fairboticsalliance.jpg'
-import Banner4 from '../assets/images/fairboticsdriveteam2.jpg'
-import Banner5 from '../assets/images/fairboticsdriveteam1.jpg'
+import Banner4 from '../assets/images/AVRDriveTeam2.jpg'
+import Banner5 from '../assets/images/VenturaHype.JPG'
 
 //Navigation Card Images
 import CardImg1 from '../assets/images/joshandnick.jpg'

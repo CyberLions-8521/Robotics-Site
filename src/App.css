@@ -62,8 +62,10 @@ body {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  padding-bottom: var(--footer-height);
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
 strong{
@@ -283,7 +285,7 @@ the following components can generally be used throughout any page of the websit
 }
 
 footer{
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   min-height: var(--footer-height);
@@ -296,6 +298,15 @@ footer{
   background: var(--primary-color-1);
   gap: 2.5rem;
   z-index: 10;
+}
+
+@media (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    padding: 2rem 0;
+    min-height: auto;
+    gap: 2rem;
+  }
 }
 
 .footer-form{
@@ -404,22 +415,8 @@ footer{
   pointer-events: none; /* allows carousel controls to be clickable */
 }
 
-@media (max-width: 1200px) {
-  .home-hero-header h1 {
-    font-size: 5rem;
-  }
-  .home-hero-header {
-    height: 40vh;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-hero-header h1 {
-    font-size: 2.5rem;
-  }
-  .home-hero-header {
-    height: 25vh;
-  }
+.home-hero-logo {
+  max-width: 50%;
 }
 
 .home-hero-header h1 {
@@ -428,6 +425,12 @@ footer{
   text-shadow: 0 4px 12px rgba(0,0,0,0.7);
   font-family: 'Koulen', sans-serif;
   margin: 0;
+}
+
+@media (max-width: 900px) {
+  .home-hero-header h1 {
+    font-size: 4rem;
+  }
 }
 
 .home-carousel {
@@ -461,6 +464,12 @@ footer{
   margin: 5rem 0;
 }
 
+@media (max-width: 900px) {
+  .home-cards {
+    flex-direction: column;
+  }
+}
+
 .home-sponsors {
   display: flex;
   justify-content: center;
@@ -468,6 +477,12 @@ footer{
   flex-direction: column;
   text-align: center;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 900px) {
+  .home-sponsors {
+    flex-direction: column;
+  }
 }
 
 .home-sponsors-logos {
