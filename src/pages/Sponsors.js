@@ -17,6 +17,7 @@ import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
 import eKadence from '../assets/sponsors/2025/eKadence.png'
+import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -78,7 +79,7 @@ export default function SupportUs() {
       <Container className='sponsor-tier'>
         <h1>Silver Lions</h1>
         <p>Contributions of over $500</p>
-        <p style={{fontSize: '1rem'}}>No sponsors in this category (yet) ^-^</p>
+        <SponsorLogo logoSrc={MidwaySanitary} altText="Midway Sanitary Logo" linkUrl="https://www.midwaycitysanitaryca.gov/" isBlack={false}/>
       </Container>
 
       <Container className='sponsor-tier'>
