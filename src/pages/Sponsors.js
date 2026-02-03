@@ -18,6 +18,7 @@ import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
 import eKadence from '../assets/sponsors/2025/eKadence.png'
 import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
+import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -73,6 +74,7 @@ export default function SupportUs() {
           <SponsorLogo logoSrc={eKadence} altText="eKadence Logo" linkUrl="https://ekadence.com/" isBlack={false} />
           <SponsorLogo logoSrc={WowLawGroup} altText="Wow Law Group Logo" linkUrl="https://www.wowlawgroup.com/" isBlack={false} />
           <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
+          <SponsorLogo logoSrc={NguyenFamily} altText="Nguyen Family Logo" linkUrl="" isBlack={false}/>
         </Container>
       </Container>
 

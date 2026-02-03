@@ -25,6 +25,7 @@ import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
 import eKadence from '../assets/sponsors/2025/eKadence.png'
 import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
+import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
 
 export default function Home() {
   const h1ref = useRef();
@@ -147,6 +148,12 @@ export default function Home() {
               logoSrc={MidwaySanitary}
               altText="Midway Sanitary Logo"
               linkUrl="https://www.midwaycitysanitaryca.gov/"
+              isBlack
+            />
+            <SponsorLogo
+              logoSrc={NguyenFamily}
+              altText="Nguyen Family Logo"
+              linkUrl=""
               isBlack
             />
           </Container>
