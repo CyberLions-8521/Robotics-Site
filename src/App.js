@@ -49,11 +49,11 @@ export default function App() {
     <>
         <Navbar expand="lg" className="bg-body-tertiary nav-background-color-default sticky-top">
         <Container className='nav-container'>
-            <Navbar.Brand className="nav-brand" href="/">
-                <img 
+            <Navbar.Brand className="nav-brand" href="#/">
+                <img
                     src={Logo}
-                    className="d-inline-block align-top nav-logo" 
-                    alt="CyberLions 8521 Logo" 
+                    className="d-inline-block align-top nav-logo"
+                    alt="CyberLions 8521 Logo"
                 />
                 CyberLions 8521
             </Navbar.Brand>
@@ -71,21 +71,21 @@ export default function App() {
 
         {/* I prefer to create routes in the App.js file because it's not top level (index.js is) and I can use React hooks */}
         <Routes>
-            <Route 
-                path="/" 
-                element={<Home />} 
+            <Route
+                path="/"
+                element={<Home />}
             />
-            <Route 
-                path="/about" 
-                element={<About />} 
+            <Route
+                path="/about"
+                element={<About />}
             />
-            <Route 
-                path="/robots" 
-                element={<Robots />} 
+            <Route
+                path="/robots"
+                element={<Robots />}
             />
-            <Route 
-                path="/sponsors" 
-                element={<Sponsors />} 
+            <Route
+                path="/sponsors"
+                element={<Sponsors />}
             />
         </Routes>
 
@@ -112,51 +112,51 @@ export default function App() {
                 <Form onSubmit={handleSubmit}>
                     <div className="footer-form">
                         <Form.Group>
-                            <Form.Control 
-                                name="name" 
+                            <Form.Control
+                                name="name"
                                 className="footer-info-box"
                                 placeholder="Your Name"
                                 value={form.name}
-                                onChange={handleChange} 
-                                required 
+                                onChange={handleChange}
+                                required
                             />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Control 
-                                type="email" 
-                                name="email" 
+                            <Form.Control
+                                type="email"
+                                name="email"
                                 className="footer-info-box"
                                 placeholder="yourname@example.com"
-                                value={form.email} 
-                                onChange={handleChange} 
+                                value={form.email}
+                                onChange={handleChange}
                                 required />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Control 
-                                name="subject" 
+                            <Form.Control
+                                name="subject"
                                 className="footer-info-box"
                                 placeholder="Subject"
-                                value={form.subject} 
-                                onChange={handleChange} 
+                                value={form.subject}
+                                onChange={handleChange}
                                 required />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Control 
-                                as="textarea" 
-                                rows={3} 
-                                name="message" 
+                            <Form.Control
+                                as="textarea"
+                                rows={3}
+                                name="message"
                                 className="footer-message-box"
                                 placeholder="Your message here..."
-                                value={form.message} 
-                                onChange={handleChange} 
-                                required 
+                                value={form.message}
+                                onChange={handleChange}
+                                required
                             />
                         </Form.Group>
                     </div>
                     <Button type="submit" variant="primary" className="mt-3 footer-button">Send an Inquiry Through Email</Button>
                 </Form>
             </Container>
-            <p className='footer-copyright'>©2025 by 8521 CyberLions</p>
+            <p className='footer-copyright'>©2026 by 8521 CyberLions</p>
         </footer>
     </>
     )
