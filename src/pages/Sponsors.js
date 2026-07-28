@@ -19,6 +19,8 @@ import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png
 import eKadence from '../assets/sponsors/2025/eKadence.png'
 import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
 import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
+import HotComTom from '../assets/sponsors/2024/HOTComTam.png'
+import Fabworks from '../assets/sponsors/2026/Fabworks.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -93,13 +95,10 @@ export default function SupportUs() {
       <Container className='sponsor-tier'>
         <h1>Other Supporters</h1>
         <p>Though not a formal sponsor, the following organizations have supported the team in other ways, such as providing products and services.</p>
-        <ul>
-          <li>
-            <a href="https://share.google/plhoQrRGBCeic3gj5" target="_blank" rel="noopener noreferrer">
-              HOT° Com Tam
-            </a>
-          </li>
-        </ul>
+        <Container className='sponsor-logos-container'>
+        <SponsorLogo logoSrc={HotComTom} altText="HOTCom Tam Logo" linkUrl="https://hotc.com/" isBlack={false}/>
+        <SponsorLogo logoSrc={Fabworks} altText="Fabworks Logo" linkUrl="https://www.fabworks.com/" isBlack={false}/>
+        </Container>
       </Container>
     </div>
 
