@@ -19,6 +19,7 @@ import BuildTeamImg from '../assets/images/BuildTeam.JPG'
 import ElectricalImg from '../assets/images/Electrical2.JPG'
 import ProgrammingImg from '../assets/images/Programming.jpg'
 import OperationsImg from '../assets/images/OperationsManagement.jpg'
+import CADImg from '../assets/images/CAD.jpg'
 
 //Images for Info Sections
 import OutreachImg from '../assets/images/2025girlscouts.jpg'
@@ -31,6 +32,7 @@ import TimelineImg2022 from '../assets/images/kevilry-2.jpg'
 import TimelineImg2023 from '../assets/images/robbie-move.jpg'
 import TimelineImg2024 from '../assets/images/rommenus.jpg'
 import TimelineImg2025 from '../assets/images/tappy-2.jpg'
+import TimelineImg2026 from '../assets/images/Billy.jpg'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -74,6 +76,12 @@ export default function About() {
       title: "REEFSCAPE",
       description: "Competed in Orange County Regional and Aerospace Valley Regional. During our off-season competitions, we became alliance captains for the first time and won the Judges Award at Socal Showdown.",
       imgSrc: TimelineImg2025,
+      imgAlt: "CyberLions Veteran"
+    },
+    { year: 2026,
+      title: "REBUILT",
+      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Sprit Award in OCR.",
+      imgSrc: TimelineImg2026,
       imgAlt: "CyberLions Veteran"
     }
   ]
@@ -164,6 +172,12 @@ export default function About() {
             description="The Operations & Management Team is the heart of the robotics team, overseeing the entire robotics program, including budgeting, scheduling, and team coordination. They ensure that all subteams work together effectively and that the project stays on track."
             imgSrc={OperationsImg}
             imgAlt="Operations & Management Team"
+          />
+          <SubteamCard
+            title="CAD & Fabrication"
+            description="The CAD Team is responsible for creating detailed designs and models of the robot using computer-aided design software and 3D printing needed materials. They work closely with the Build Team to ensure that designs are feasible and can be manufactured effectively."
+            imgSrc={CADImg}
+            imgAlt="CAD Team"
           />
         </div>
 
