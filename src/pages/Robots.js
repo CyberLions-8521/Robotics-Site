@@ -1,6 +1,7 @@
 import React from 'react'
 import RobotShowcase from '../components/RobotShowcase'
 
+import Robot2026 from '../assets/images/Billy.jpg'
 import Robot2025 from '../assets/images/tappy-field-2025.jpg'
 import Robot2024 from '../assets/images/rommenus.jpg'
 import Robot2023 from '../assets/images/robbie.jpg'
@@ -9,6 +10,21 @@ import Robot2022 from '../assets/images/kevilry-2.jpg'
 export default function OurRobots() {
   return (
     <>
+    <RobotShowcase
+        robotBGImage={Robot2026}
+        robotYear={'REBUILT 2026'}
+        robotName={'Pini Pana Jones'}
+        robotSpecs={
+          {
+            one: 'Swerve Drivebase',
+            two: 'Autoalignment System',
+            three: 'Slapdown Intake'
+          }
+        }
+        CADLink=''
+        codeLink='https://github.com/CyberLions-8521/REBUILT-2026'
+      />
+    
       <RobotShowcase
         robotBGImage={Robot2025}
         robotYear={'Reefscape 2025'}
