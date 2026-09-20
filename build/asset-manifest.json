@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Robotics-Site/static/css/main.b9a75756.css",
-    "main.js": "/Robotics-Site/static/js/main.c5a68cd6.js",
+    "main.js": "/Robotics-Site/static/js/main.c91b4bbf.js",
     "static/media/CAD.jpg": "/Robotics-Site/static/media/CAD.3a2502b45e6cd7e1dbbd.jpg",
     "static/media/Billy.jpg": "/Robotics-Site/static/media/Billy.cbae33874bb21c6f5b25.jpg",
     "static/media/FRCoutreach.png": "/Robotics-Site/static/media/FRCoutreach.1bb7be847df49e149084.png",
@@ -33,6 +33,7 @@
     "static/media/chillguy-sticker.png": "/Robotics-Site/static/media/chillguy-sticker.aeaacad38b41f235f41f.png",
     "static/media/cyberlions-banner.jpg": "/Robotics-Site/static/media/cyberlions-banner.c9ca0151d1afc8ce7c5b.jpg",
     "static/media/robbie-move.jpg": "/Robotics-Site/static/media/robbie-move.c2b878f5ce297e5889f1.jpg",
+    "static/media/SafetyCentric.png": "/Robotics-Site/static/media/SafetyCentric.2647405760827e892516.png",
     "static/media/NguyenFamily.png": "/Robotics-Site/static/media/NguyenFamily.c3ddbe41fb5628ede5ed.png",
     "static/media/MidwaySanitary.png": "/Robotics-Site/static/media/MidwaySanitary.bb288a9da7de2f130a31.png",
     "static/media/BAE-Systems.png": "/Robotics-Site/static/media/BAE-Systems.d2a830d245a1bc8d127c.png",
@@ -48,10 +49,10 @@
     "static/media/youtube_white.png": "/Robotics-Site/static/media/youtube_white.fcc730eff7994ac3a028.png",
     "index.html": "/Robotics-Site/index.html",
     "main.b9a75756.css.map": "/Robotics-Site/static/css/main.b9a75756.css.map",
-    "main.c5a68cd6.js.map": "/Robotics-Site/static/js/main.c5a68cd6.js.map"
+    "main.c91b4bbf.js.map": "/Robotics-Site/static/js/main.c91b4bbf.js.map"
   },
   "entrypoints": [
     "static/css/main.b9a75756.css",
-    "static/js/main.c5a68cd6.js"
+    "static/js/main.c91b4bbf.js"
   ]
 }
