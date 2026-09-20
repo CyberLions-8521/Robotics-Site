@@ -22,6 +22,7 @@ import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
 import HotComTom from '../assets/sponsors/2024/HOTComTam.png'
 import Fabworks from '../assets/sponsors/2026/Fabworks.png'
 import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
+import SendCutSend from '../assets/sponsors/2026/SendCutSend.png' 
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -85,6 +86,7 @@ export default function SupportUs() {
         <h1>Silver Lions</h1>
         <p>Contributions of over $350</p>
         <SponsorLogo logoSrc={MidwaySanitary} altText="Midway Sanitary Logo" linkUrl="https://www.midwaycitysanitaryca.gov/" isBlack={false}/>
+        <SponsorLogo logoSrc={SafetyCentric} altText="Safety Centric Logo" linkUrl="https://www.safety-centric.com/" isBlack={false}/>
       </Container>
 
       <Container className='sponsor-tier'>
@@ -99,7 +101,7 @@ export default function SupportUs() {
         <Container className='sponsor-logos-container'>
         <SponsorLogo logoSrc={HotComTom} altText="HOTCom Tam Logo" linkUrl="https://hotc.com/" isBlack={false}/>
         <SponsorLogo logoSrc={Fabworks} altText="Fabworks Logo" linkUrl="https://www.fabworks.com/" isBlack={false}/>
-        <SponsorLogo logoSrc={SafetyCentric} altText="Safety Centric Logo" linkUrl="https://www.safety-centric.com/" isBlack={false}/>
+        <SponsorLogo logoSrc={SendCutSend} altText="SendCutSend Logo" linkUrl="https://sendcutsend.com/" isBlack={false}/>
         </Container>
       </Container>
     </div>
