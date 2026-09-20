@@ -21,6 +21,7 @@ import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
 import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
 import HotComTom from '../assets/sponsors/2024/HOTComTam.png'
 import Fabworks from '../assets/sponsors/2026/Fabworks.png'
+import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -70,7 +71,7 @@ export default function SupportUs() {
     <div className="fade-on-load">
       <Container className='sponsor-tier'>
         <h1>Golden Lions</h1>
-        <p>Contributions of over $1000</p>
+        <p>Contributions of over $750</p>
         <Container className='sponsor-logos-container'>
           <SponsorLogo logoSrc={GeneHaasFoundation} altText="Gene Haas Foundation Logo" linkUrl="https://www.genehaasfoundation.org/" isBlack={false} />
           <SponsorLogo logoSrc={eKadence} altText="eKadence Logo" linkUrl="https://ekadence.com/" isBlack={false} />
@@ -82,22 +83,23 @@ export default function SupportUs() {
 
       <Container className='sponsor-tier'>
         <h1>Silver Lions</h1>
-        <p>Contributions of over $500</p>
+        <p>Contributions of over $350</p>
         <SponsorLogo logoSrc={MidwaySanitary} altText="Midway Sanitary Logo" linkUrl="https://www.midwaycitysanitaryca.gov/" isBlack={false}/>
       </Container>
 
       <Container className='sponsor-tier'>
         <h1>Bronze Lions</h1>
-        <p>Contributions of over $50</p>
+        <p>Contributions of over $150</p>
         <p style={{fontSize: '1rem'}}>No sponsors in this category (yet) ^-^</p>
       </Container>
 
       <Container className='sponsor-tier'>
         <h1>Other Supporters</h1>
-        <p>Though not a formal sponsor, the following organizations have supported the team in other ways, such as providing products and services.</p>
+        <p>Though not a formal sponsor, the following organizations have supported the team in other ways, such as providing products,services and discounts!</p>
         <Container className='sponsor-logos-container'>
         <SponsorLogo logoSrc={HotComTom} altText="HOTCom Tam Logo" linkUrl="https://hotc.com/" isBlack={false}/>
         <SponsorLogo logoSrc={Fabworks} altText="Fabworks Logo" linkUrl="https://www.fabworks.com/" isBlack={false}/>
+        <SponsorLogo logoSrc={SafetyCentric} altText="Safety Centric Logo" linkUrl="https://www.safety-centric.com/" isBlack={false}/>
         </Container>
       </Container>
     </div>
