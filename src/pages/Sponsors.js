@@ -23,6 +23,7 @@ import HotComTom from '../assets/sponsors/2024/HOTComTam.png'
 import Fabworks from '../assets/sponsors/2026/Fabworks.png'
 import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
 import SendCutSend from '../assets/sponsors/2026/SendCutSend.png' 
+import HBUHSD from '../assets/sponsors/2026/HBUHSD.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -75,10 +76,9 @@ export default function SupportUs() {
         <p>Contributions of over $750</p>
         <Container className='sponsor-logos-container'>
           <SponsorLogo logoSrc={GeneHaasFoundation} altText="Gene Haas Foundation Logo" linkUrl="https://www.genehaasfoundation.org/" isBlack={false} />
-          <SponsorLogo logoSrc={eKadence} altText="eKadence Logo" linkUrl="https://ekadence.com/" isBlack={false} />
           <SponsorLogo logoSrc={WowLawGroup} altText="Wow Law Group Logo" linkUrl="https://www.wowlawgroup.com/" isBlack={false} />
           <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
-          <SponsorLogo logoSrc={NguyenFamily} altText="Nguyen Family Logo" linkUrl="" isBlack={false}/>
+          <SponsorLogo logoSrc={HBUHSD} altText="HBUHSD Logo" linkUrl="https://www.hbuhsd.edu/" isBlack={false} />
         </Container>
       </Container>
 
@@ -99,7 +99,6 @@ export default function SupportUs() {
         <h1>Other Supporters</h1>
         <p>Though not a formal sponsor, the following organizations have supported the team in other ways, such as providing products,services and discounts!</p>
         <Container className='sponsor-logos-container'>
-        <SponsorLogo logoSrc={HotComTom} altText="HOTCom Tam Logo" linkUrl="https://hotc.com/" isBlack={false}/>
         <SponsorLogo logoSrc={Fabworks} altText="Fabworks Logo" linkUrl="https://www.fabworks.com/" isBlack={false}/>
         <SponsorLogo logoSrc={SendCutSend} altText="SendCutSend Logo" linkUrl="https://sendcutsend.com/" isBlack={false}/>
         </Container>
