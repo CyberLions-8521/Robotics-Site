@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Robotics-Site/static/css/main.b9a75756.css",
-    "main.js": "/Robotics-Site/static/js/main.284f79df.js",
+    "main.js": "/Robotics-Site/static/js/main.84f73279.js",
     "static/media/CAD.jpg": "/Robotics-Site/static/media/CAD.3a2502b45e6cd7e1dbbd.jpg",
     "static/media/Billy.jpg": "/Robotics-Site/static/media/Billy.cbae33874bb21c6f5b25.jpg",
     "static/media/FRCoutreach.png": "/Robotics-Site/static/media/FRCoutreach.1bb7be847df49e149084.png",
@@ -19,6 +19,7 @@
     "static/media/SoCalDriveTeam (2).jpg": "/Robotics-Site/static/media/SoCalDriveTeam (2).99b7dc5362e62d1b30ce.jpg",
     "static/media/kevilry.jpg": "/Robotics-Site/static/media/kevilry.e67a4483e08affe241a0.jpg",
     "static/media/AVRDriveTeam1.jpg": "/Robotics-Site/static/media/AVRDriveTeam1.0e1a9dbc20e1eeaa5424.jpg",
+    "static/media/HBUHSD.png": "/Robotics-Site/static/media/HBUHSD.312404d4f78eaf316942.png",
     "static/media/AVRDriveTeam2.jpg": "/Robotics-Site/static/media/AVRDriveTeam2.3a9977d3ac2cdd0d03eb.jpg",
     "static/media/edgar.png": "/Robotics-Site/static/media/edgar.47649fa05bd3f3611c13.png",
     "static/media/OperationsManagement.jpg": "/Robotics-Site/static/media/OperationsManagement.6f3cfd7acd914f77e2f0.jpg",
@@ -50,10 +51,10 @@
     "static/media/youtube_white.png": "/Robotics-Site/static/media/youtube_white.fcc730eff7994ac3a028.png",
     "index.html": "/Robotics-Site/index.html",
     "main.b9a75756.css.map": "/Robotics-Site/static/css/main.b9a75756.css.map",
-    "main.284f79df.js.map": "/Robotics-Site/static/js/main.284f79df.js.map"
+    "main.84f73279.js.map": "/Robotics-Site/static/js/main.84f73279.js.map"
   },
   "entrypoints": [
     "static/css/main.b9a75756.css",
-    "static/js/main.284f79df.js"
+    "static/js/main.84f73279.js"
   ]
 }
