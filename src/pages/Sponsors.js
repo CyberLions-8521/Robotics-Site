@@ -16,14 +16,12 @@ import BackgroundImg6 from '../assets/images/edgar.png'
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
-import eKadence from '../assets/sponsors/2025/eKadence.png'
 import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
-import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
-import HotComTom from '../assets/sponsors/2024/HOTComTam.png'
 import Fabworks from '../assets/sponsors/2026/Fabworks.png'
 import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
 import SendCutSend from '../assets/sponsors/2026/SendCutSend.png' 
 import HBUHSD from '../assets/sponsors/2026/HBUHSD.png'
+import Intuitive from '../assets/sponsors/2026/Intuitive.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -79,6 +77,7 @@ export default function SupportUs() {
           <SponsorLogo logoSrc={WowLawGroup} altText="Wow Law Group Logo" linkUrl="https://www.wowlawgroup.com/" isBlack={false} />
           <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
           <SponsorLogo logoSrc={HBUHSD} altText="HBUHSD Logo" linkUrl="https://www.hbuhsd.edu/" isBlack={false} />
+          <SponsorLogo logoSrc={Intuitive} altText="Intuitive Logo" linkUrl="https://www.intuitive-foundation.org/" isBlack={false} />
         </Container>
       </Container>
 

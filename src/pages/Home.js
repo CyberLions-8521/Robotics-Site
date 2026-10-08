@@ -23,9 +23,10 @@ import CardImg3 from '../assets/images/FRCoutreach.png'
 import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
-import eKadence from '../assets/sponsors/2025/eKadence.png'
 import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
-import NguyenFamily from '../assets/sponsors/2025/NguyenFamily.png'
+import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
+import HBUHSD from '../assets/sponsors/2026/HBUHSD.png'
+import Intuitive from '../assets/sponsors/2026/Intuitive.png'
 
 export default function Home() {
   const h1ref = useRef();
@@ -139,9 +140,9 @@ export default function Home() {
               isBlack
             />
             <SponsorLogo
-              logoSrc={eKadence}
-              altText="eKadence Logo"
-              linkUrl="https://ekadence.org/"
+              logoSrc={Intuitive}
+              altText="Intuitive Logo"
+              linkUrl="https://www.intuitive-foundation.org/"
               isBlack
             />
             <SponsorLogo
@@ -151,9 +152,15 @@ export default function Home() {
               isBlack
             />
             <SponsorLogo
-              logoSrc={NguyenFamily}
-              altText="Nguyen Family Logo"
-              linkUrl=""
+              logoSrc={SafetyCentric}
+              altText="Safety Centric Logo"
+              linkUrl="https://www.safety-centric.com/"
+              isBlack
+            />
+            <SponsorLogo
+              logoSrc={HBUHSD}
+              altText="HBUHSD Logo"
+              linkUrl="https://www.hbuhsd.edu/"
               isBlack
             />
           </Container>
