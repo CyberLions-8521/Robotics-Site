@@ -203,7 +203,7 @@ the following components can generally be used throughout any page of the websit
   max-height: 15rem;
   max-width: 25rem; 
   object-fit: contain;
-  transition: 0.3s;
+  transition: transform 0.3s;
 }
 
 .logo-black {
@@ -211,9 +211,9 @@ the following components can generally be used throughout any page of the websit
 }
 
 .sponsor-logo:hover {
-  max-height: 17rem;
-  max-width: 27rem;
-  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  transform: scale(1.1);
 }
 /* ==================================================================================================================================== */
 /* BOOTSTRAP MODIFICATIONS */
