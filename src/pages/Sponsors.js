@@ -13,15 +13,16 @@ import BackgroundImg5 from '../assets/images/VenturaTeam2.png'
 import BackgroundImg6 from '../assets/images/edgar.png'
 
 //Sponsor Logos
-import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
-import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
 import Fabworks from '../assets/sponsors/2026/Fabworks.png'
 import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
 import SendCutSend from '../assets/sponsors/2026/SendCutSend.png' 
 import HBUHSD from '../assets/sponsors/2026/HBUHSD.png'
 import Intuitive from '../assets/sponsors/2026/Intuitive.png'
+import Nguyen from '../assets/sponsors/2025/NguyenFamily.png'
+import OnlineMetals from '../assets/sponsors/2026/OnlineMetals.png'
+import Anonymous from '../assets/sponsors/2026/Anonymous.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -74,18 +75,19 @@ export default function SupportUs() {
         <p>Contributions of over $750</p>
         <Container className='sponsor-logos-container'>
           <SponsorLogo logoSrc={GeneHaasFoundation} altText="Gene Haas Foundation Logo" linkUrl="https://www.genehaasfoundation.org/" isBlack={false} />
-          <SponsorLogo logoSrc={WowLawGroup} altText="Wow Law Group Logo" linkUrl="https://www.wowlawgroup.com/" isBlack={false} />
+          <SponsorLogo logoSrc={Nguyen} altText="Nguyen Logo" isBlack={false} />
           <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
           <SponsorLogo logoSrc={HBUHSD} altText="HBUHSD Logo" linkUrl="https://www.hbuhsd.edu/" isBlack={false} />
-          <SponsorLogo logoSrc={Intuitive} altText="Intuitive Logo" linkUrl="https://www.intuitive-foundation.org/" isBlack={false} />
+          <SponsorLogo logoSrc={Intuitive} altText="Intuitive Logo" linkUrl="https://www.intuitive-foundation.org/" isBlack={true} />
         </Container>
       </Container>
 
       <Container className='sponsor-tier'>
         <h1>Silver Lions</h1>
         <p>Contributions of over $350</p>
-        <SponsorLogo logoSrc={MidwaySanitary} altText="Midway Sanitary Logo" linkUrl="https://www.midwaycitysanitaryca.gov/" isBlack={false}/>
         <SponsorLogo logoSrc={SafetyCentric} altText="Safety Centric Logo" linkUrl="https://www.safety-centric.com/" isBlack={false}/>
+        <SponsorLogo logoSrc={OnlineMetals} altText="OnlineMetals Logo" linkUrl="https://www.onlinemetals.com/" isBlack={false}/>
+        <SponsorLogo logoSrc={Anonymous} altText="Anonymous Logo" isBlack={false}/>
       </Container>
 
       <Container className='sponsor-tier'>
