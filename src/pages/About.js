@@ -80,7 +80,7 @@ export default function About() {
     },
     { year: 2026,
       title: "REBUILT",
-      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Sprit Award in OCR.",
+      description: "Competed in Orange County Regional and Ventura Regional, winning the Team Sprit Award in OCR. Participated in Socal Showdown up to Semi-Finalists.",
       imgSrc: TimelineImg2026,
       imgAlt: "CyberLions Veteran"
     }

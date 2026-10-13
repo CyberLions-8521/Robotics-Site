@@ -20,13 +20,14 @@ import CardImg2 from '../assets/images/kevilry.jpg'
 import CardImg3 from '../assets/images/FRCoutreach.png'
 
 //Sponsor Logos
-import WowLawGroup from '../assets/sponsors/2024/wow-law-group-2.png'
 import BAESystems from '../assets/sponsors/2024/BAE-Systems.png'
 import GeneHaasFoundation from '../assets/sponsors/2025/Gene-Haas-Foundation.png'
-import MidwaySanitary from '../assets/sponsors/2025/MidwaySanitary.png'
 import SafetyCentric from '../assets/sponsors/2026/SafetyCentric.png'
 import HBUHSD from '../assets/sponsors/2026/HBUHSD.png'
 import Intuitive from '../assets/sponsors/2026/Intuitive.png'
+import Nguyen from '../assets/sponsors/2025/NguyenFamily.png'
+import OnlineMetals from '../assets/sponsors/2026/OnlineMetals.png'
+import Anonymous from '../assets/sponsors/2026/Anonymous.png'
 
 export default function Home() {
   const h1ref = useRef();
@@ -122,12 +123,6 @@ export default function Home() {
           <p>Team 8521 CyberLions is proud to be sponsored by:</p>
           <Container className="home-sponsors-logos">
             <SponsorLogo
-              logoSrc={WowLawGroup}
-              altText="Wow Law Group Logo"
-              linkUrl="https://www.wowlawgroup.com/"
-              isBlack
-            />
-            <SponsorLogo
               logoSrc={BAESystems}
               altText="BAE Systems Logo"
               linkUrl="https://www.baesystems.com/en"
@@ -143,12 +138,10 @@ export default function Home() {
               logoSrc={Intuitive}
               altText="Intuitive Logo"
               linkUrl="https://www.intuitive-foundation.org/"
-              isBlack
             />
             <SponsorLogo
-              logoSrc={MidwaySanitary}
-              altText="Midway Sanitary Logo"
-              linkUrl="https://www.midwaycitysanitaryca.gov/"
+              logoSrc={Nguyen}
+              altText="Nguyen Logo"
               isBlack
             />
             <SponsorLogo
@@ -161,6 +154,17 @@ export default function Home() {
               logoSrc={HBUHSD}
               altText="HBUHSD Logo"
               linkUrl="https://www.hbuhsd.edu/"
+              isBlack
+            />
+            <SponsorLogo
+              logoSrc={OnlineMetals}
+              altText="OnlineMetals Logo"
+              linkUrl="https://www.onlinemetals.com/"
+              isBlack
+            />
+            <SponsorLogo
+              logoSrc={Anonymous}
+              altText="Anonymous Logo"
               isBlack
             />
           </Container>
