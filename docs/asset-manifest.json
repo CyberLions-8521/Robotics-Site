@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Robotics-Site/static/css/main.7238be6a.css",
-    "main.js": "/Robotics-Site/static/js/main.aec6069f.js",
+    "main.js": "/Robotics-Site/static/js/main.503c164b.js",
     "static/media/CAD.jpg": "/Robotics-Site/static/media/CAD.3a2502b45e6cd7e1dbbd.jpg",
     "static/media/Billy.jpg": "/Robotics-Site/static/media/Billy.cbae33874bb21c6f5b25.jpg",
     "static/media/FRCoutreach.png": "/Robotics-Site/static/media/FRCoutreach.1bb7be847df49e149084.png",
@@ -24,6 +24,7 @@
     "static/media/edgar.png": "/Robotics-Site/static/media/edgar.47649fa05bd3f3611c13.png",
     "static/media/OperationsManagement.jpg": "/Robotics-Site/static/media/OperationsManagement.6f3cfd7acd914f77e2f0.jpg",
     "static/media/fairboticsdriveteam1.jpg": "/Robotics-Site/static/media/fairboticsdriveteam1.aab524d82f9c9bcb126c.jpg",
+    "static/media/JapaneseAuto.png": "/Robotics-Site/static/media/JapaneseAuto.45ddadf2167df57684ac.png",
     "static/media/Programming.jpg": "/Robotics-Site/static/media/Programming.94ccbba445bb96fe9274.jpg",
     "static/media/robbie.jpg": "/Robotics-Site/static/media/robbie.2e0ea8e8393d78f9815c.jpg",
     "static/media/kevilry-2.jpg": "/Robotics-Site/static/media/kevilry-2.ef45e778cf1c63e41b43.jpg",
@@ -50,10 +51,10 @@
     "static/media/youtube_white.png": "/Robotics-Site/static/media/youtube_white.fcc730eff7994ac3a028.png",
     "index.html": "/Robotics-Site/index.html",
     "main.7238be6a.css.map": "/Robotics-Site/static/css/main.7238be6a.css.map",
-    "main.aec6069f.js.map": "/Robotics-Site/static/js/main.aec6069f.js.map"
+    "main.503c164b.js.map": "/Robotics-Site/static/js/main.503c164b.js.map"
   },
   "entrypoints": [
     "static/css/main.7238be6a.css",
-    "static/js/main.aec6069f.js"
+    "static/js/main.503c164b.js"
   ]
 }

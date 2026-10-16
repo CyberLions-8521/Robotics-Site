@@ -23,6 +23,7 @@ import Intuitive from '../assets/sponsors/2026/Intuitive.png'
 import Nguyen from '../assets/sponsors/2025/NguyenFamily.png'
 import OnlineMetals from '../assets/sponsors/2026/OnlineMetals.png'
 import Anonymous from '../assets/sponsors/2026/Anonymous.png'
+import JapaneseAuto from '../assets/sponsors/2026/JapaneseAuto.png'
 
 const images = [BackgroundImg1, BackgroundImg2, BackgroundImg3, BackgroundImg4, BackgroundImg5, BackgroundImg6];
 
@@ -79,6 +80,7 @@ export default function SupportUs() {
           <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
           <SponsorLogo logoSrc={HBUHSD} altText="HBUHSD Logo" linkUrl="https://www.hbuhsd.edu/" isBlack={false} />
           <SponsorLogo logoSrc={Intuitive} altText="Intuitive Logo" linkUrl="https://www.intuitive-foundation.org/" isBlack={true} />
+          <SponsorLogo logoSrc={JapaneseAuto} altText="Japanese Auto Logo" linkUrl="https://www.japaneseauto.com/" isBlack={false} />
         </Container>
       </Container>
 
