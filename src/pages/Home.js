@@ -28,6 +28,7 @@ import Intuitive from '../assets/sponsors/2026/Intuitive.png'
 import Nguyen from '../assets/sponsors/2025/NguyenFamily.png'
 import OnlineMetals from '../assets/sponsors/2026/OnlineMetals.png'
 import Anonymous from '../assets/sponsors/2026/Anonymous.png'
+import JapaneseAuto from '../assets/sponsors/2026/JapaneseAuto.png'
 
 export default function Home() {
   const h1ref = useRef();
@@ -161,6 +162,12 @@ export default function Home() {
               altText="OnlineMetals Logo"
               linkUrl="https://www.onlinemetals.com/"
               isBlack
+            />
+            <SponsorLogo
+              logoSrc={JapaneseAuto}
+              altText="Japanese Auto Logo"
+              linkUrl="https://www.japaneseautocenter.com/"
+              isBlack 
             />
             <SponsorLogo
               logoSrc={Anonymous}
