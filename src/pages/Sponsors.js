@@ -77,10 +77,9 @@ export default function SupportUs() {
         <Container className='sponsor-logos-container'>
           <SponsorLogo logoSrc={GeneHaasFoundation} altText="Gene Haas Foundation Logo" linkUrl="https://www.genehaasfoundation.org/" isBlack={false} />
           <SponsorLogo logoSrc={Nguyen} altText="Nguyen Logo" isBlack={false} />
-          <SponsorLogo logoSrc={BAESystems} altText="BAE Systems Logo" linkUrl="https://www.baesystems.com/" isBlack={false} />
           <SponsorLogo logoSrc={HBUHSD} altText="HBUHSD Logo" linkUrl="https://www.hbuhsd.edu/" isBlack={false} />
           <SponsorLogo logoSrc={Intuitive} altText="Intuitive Logo" linkUrl="https://www.intuitive-foundation.org/" isBlack={true} />
-          <SponsorLogo logoSrc={JapaneseAuto} altText="Japanese Auto Logo" linkUrl="https://www.japaneseauto.com/" isBlack={false} />
+          <SponsorLogo logoSrc={JapaneseAuto} altText="Japanese Auto Logo" linkUrl="https://www.japaneseautocenter.com/" isBlack={false} />
         </Container>
       </Container>
 
