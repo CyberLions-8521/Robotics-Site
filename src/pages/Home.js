@@ -124,12 +124,6 @@ export default function Home() {
           <p>Team 8521 CyberLions is proud to be sponsored by:</p>
           <Container className="home-sponsors-logos">
             <SponsorLogo
-              logoSrc={BAESystems}
-              altText="BAE Systems Logo"
-              linkUrl="https://www.baesystems.com/en"
-              isBlack
-            />
-            <SponsorLogo
               logoSrc={GeneHaasFoundation}
               altText="Gene Haas Foundation Logo"
               linkUrl="https://www.ghaasfoundation.org/"
